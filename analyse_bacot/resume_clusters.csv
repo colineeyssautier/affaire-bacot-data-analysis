@@ -1,0 +1,7 @@
+﻿cluster,n_documents,mots_cles,narratif_dominant,score_moyen,pct_articles,pct_commentaires
+0,98,"bacot, femmes, violences, valérie bacot, valérie",silence_collectif,37.7,87.8,12.2
+1,87,"bacot, valérie bacot, valérie, ans, prison",silence_collectif,36.9,93.1,6.9
+2,28,"scène, testud, sylvie testud, sylvie, théâtre",silence_collectif,30.5,100.0,0.0
+3,511,"justice, valérie, femme, vie, enfants",soutien_victime,6.6,1.0,99.0
+4,192,"bacot, valérie bacot, valérie, ans, daniel",silence_collectif,63.0,99.5,0.5
+5,202,"courage, valérie, enfants, toi, bravo",soutien_victime,6.6,0.0,100.0

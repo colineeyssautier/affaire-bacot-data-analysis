@@ -1,0 +1,3454 @@
+{
+  "emprise": {
+    "label": "Emprise",
+    "description": "Comment le mécanisme d'emprise est nommé, expliqué ou contesté",
+    "total": 29,
+    "par_source": {
+      "jsl_j1": 4,
+      "jsl_j2": 6,
+      "jsl_j3": 10,
+      "jsl_verdict": 2,
+      "senat": 7
+    },
+    "comptages": {
+      "legitimation": 0,
+      "questionnement": 0,
+      "explication": 6,
+      "neutre": 23
+    },
+    "pourcentages": {
+      "legitimation": 0.0,
+      "questionnement": 0.0,
+      "explication": 20.7,
+      "neutre": 79.3
+    },
+    "occurrences": [
+      {
+        "variante": "emprise",
+        "contexte_gauche": "te, NDLR). Je n'ai pas passé la page. Je vis encore sous son",
+        "terme": "emprise",
+        "contexte_droite": ". Les psychiatres ont dit que peut-être, après le procès...\"",
+        "position": 29283,
+        "contexte_complet": "e lui (Daniel Polette, NDLR). Je n'ai pas passé la page. Je vis encore sous son emprise. Les psychiatres ont dit que peut-être, après le procès...\"\n10 h 15 : L'exposé",
+        "source": "jsl_j1",
+        "contexte_classe": "explication"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "s du commun, l'histoire de Valérie Bacot, femme battue, sous",
+        "terme": "emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 32540,
+        "contexte_complet": "rrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sous emprise",
+        "contexte_gauche": "e hors du commun, l'histoire de Valérie Bacot, femme battue,",
+        "terme": "sous emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 32535,
+        "contexte_complet": "e. Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sous son emprise",
+        "contexte_gauche": "iel Polette, NDLR). Je n'ai pas passé la page. Je vis encore",
+        "terme": "sous son emprise",
+        "contexte_droite": ". Les psychiatres ont dit que peut-être, après le procès...\"",
+        "position": 29274,
+        "contexte_complet": "bat contre lui (Daniel Polette, NDLR). Je n'ai pas passé la page. Je vis encore sous son emprise. Les psychiatres ont dit que peut-être, après le procès...\"\n10 h 15 : L'exposé",
+        "source": "jsl_j1",
+        "contexte_classe": "explication"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "pour cacher le crime. Valérie a même affirmé qu'il avait une",
+        "terme": "emprise",
+        "contexte_droite": "sur elle.\n>> L'accusée s'est braquée sur les questions de l'",
+        "position": 1022,
+        "contexte_complet": "les choses en main pour cacher le crime. Valérie a même affirmé qu'il avait une emprise sur elle.\n>> L'accusée s'est braquée sur les questions de l'accusation, refusan",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "z les enseignements de votre thérapie ainsi : \"Lucas a de l'",
+        "terme": "emprise",
+        "contexte_droite": "sur moi\" ?\" Réponse obscure de l'accusée.\n\"Vous percevez que",
+        "position": 3386,
+        "contexte_complet": "ujourd'hui vous lisez les enseignements de votre thérapie ainsi : \"Lucas a de l'emprise sur moi\" ?\" Réponse obscure de l'accusée.\n\"Vous percevez que Lucas lui même a u",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "ostituait\" \", répond le magistrat.\n17 h 25 : \"Lucas a eu une",
+        "terme": "emprise",
+        "contexte_droite": "sur moi, lui aussi\"\nL'interrogatoire de l'accusée continue.\n",
+        "position": 3992,
+        "contexte_complet": "me battait et me prostituait\" \", répond le magistrat.\n17 h 25 : \"Lucas a eu une emprise sur moi, lui aussi\"\nL'interrogatoire de l'accusée continue.\n\"Vous vous doutiez",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": " histoire. C'était le compagnon de sa fille.\n\"Lucas a eu une",
+        "terme": "emprise",
+        "contexte_droite": "sur moi, lui aussi\", répond Valérie Bacot. Qui dit que maint",
+        "position": 4555,
+        "contexte_complet": "re étrange de cette histoire. C'était le compagnon de sa fille.\n\"Lucas a eu une emprise sur moi, lui aussi\", répond Valérie Bacot. Qui dit que maintenant, elle en est",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "s du commun, l'histoire de Valérie Bacot, femme battue, sous",
+        "terme": "emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 27988,
+        "contexte_complet": "rrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sous emprise",
+        "contexte_gauche": "e hors du commun, l'histoire de Valérie Bacot, femme battue,",
+        "terme": "sous emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 27983,
+        "contexte_complet": "e. Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "es.\"\n18 h 30 : \"Valérie n'a pas été aidée dès le départ\"\n\"L'",
+        "terme": "emprise",
+        "contexte_droite": ", c'est pas une fatalité, non plus ?\", demande l'avocat géné",
+        "position": 2468,
+        "contexte_complet": "de trouver des excuses.\"\n18 h 30 : \"Valérie n'a pas été aidée dès le départ\"\n\"L'emprise, c'est pas une fatalité, non plus ?\", demande l'avocat général à la soeur de Da",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "nt comprendre comment Valérie a pu se laisser briser par son",
+        "terme": "emprise",
+        "contexte_droite": ".\n>> On a beaucoup entendu les mots \"monstre\", \"violences\", ",
+        "position": 8427,
+        "contexte_complet": "courage, mais disent comprendre comment Valérie a pu se laisser briser par son emprise.\n>> On a beaucoup entendu les mots \"monstre\", \"violences\", \"armes\", \"peur\" ce m",
+        "source": "jsl_j3",
+        "contexte_classe": "explication"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "ienne compagne de Daniel\n15 h 15 : \"Il y avait une espèce d'",
+        "terme": "emprise",
+        "contexte_droite": "qui me retenait\"\nRégine explique qu'elle s'est sortie des gr",
+        "position": 10850,
+        "contexte_complet": "avec moi\nRégine, ancienne compagne de Daniel\n15 h 15 : \"Il y avait une espèce d'emprise qui me retenait\"\nRégine explique qu'elle s'est sortie des griffes de Daniel qua",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "le croyais mais j'étais une gamine. Il y avait une espèce d'",
+        "terme": "emprise",
+        "contexte_droite": "qui me retenait.\"\nElle explique que les accès de colère de D",
+        "position": 11095,
+        "contexte_complet": "ureuse, du moins je le croyais mais j'étais une gamine. Il y avait une espèce d'emprise qui me retenait.\"\nElle explique que les accès de colère de Daniel, \"je pensais",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "Régine explique à quel point c'est difficile de sortir de l'",
+        "terme": "emprise",
+        "contexte_droite": "de quelqu'un comme ça, \"qui vous éloigne de tout le monde...",
+        "position": 11433,
+        "contexte_complet": "dans sa chambre...\"\nRégine explique à quel point c'est difficile de sortir de l'emprise de quelqu'un comme ça, \"qui vous éloigne de tout le monde...\nJ'ai réussi aussi",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "ellement fermé. Photo JSL/K.B.\n10 h 55 : \"Je n'exclus pas l'",
+        "terme": "emprise",
+        "contexte_droite": "\"\nLa mère de Valérie Bacot répond à l'avocat général Jallet.",
+        "position": 21301,
+        "contexte_complet": "à La Clayette, actuellement fermé. Photo JSL/K.B.\n10 h 55 : \"Je n'exclus pas l'emprise\"\nLa mère de Valérie Bacot répond à l'avocat général Jallet.\n\"En procédure, Valé",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "i, je voyais une relation amoureuse, mais je n'exclus pas l'",
+        "terme": "emprise",
+        "contexte_droite": ", il avait du pouvoir sur elle.\"\n10 h 45 : \"Votre fille a ét",
+        "position": 21628,
+        "contexte_complet": "tait amoureuse ?\n-Oui, je voyais une relation amoureuse, mais je n'exclus pas l'emprise, il avait du pouvoir sur elle.\"\n10 h 45 : \"Votre fille a été violée par l'homme",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "pour cacher le crime. Valérie a même affirmé qu'il avait une",
+        "terme": "emprise",
+        "contexte_droite": "sur elle.\n- Revivez le déroulement de la 2e journée du procè",
+        "position": 32340,
+        "contexte_complet": "les choses en main pour cacher le crime. Valérie a même affirmé qu'il avait une emprise sur elle.\n- Revivez le déroulement de la 2e journée du procès en cliquant ici.",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "s du commun, l'histoire de Valérie Bacot, femme battue, sous",
+        "terme": "emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 32787,
+        "contexte_complet": "rrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sous emprise",
+        "contexte_gauche": "e hors du commun, l'histoire de Valérie Bacot, femme battue,",
+        "terme": "sous emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 32782,
+        "contexte_complet": "e. Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "s du commun, l'histoire de Valérie Bacot, femme battue, sous",
+        "terme": "emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 4624,
+        "contexte_complet": "rrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sous emprise",
+        "contexte_gauche": "e hors du commun, l'histoire de Valérie Bacot, femme battue,",
+        "terme": "sous emprise",
+        "contexte_droite": ", contrainte de se prostituer...et même violée dans son enfa",
+        "position": 4619,
+        "contexte_complet": "e. Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui es",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "l est très dur de vivre avec. Vous réalisez maintenant cette",
+        "terme": "emprise",
+        "contexte_droite": "qui vous mange. À cette époque-là, je ne m'en rendais pas co",
+        "position": 5218,
+        "contexte_complet": "souffre toujours. Il est très dur de vivre avec. Vous réalisez maintenant cette emprise qui vous mange. À cette époque-là, je ne m'en rendais pas compte. J'avais plutô",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "ez pas la force et la possibilité de vous défendre face à l'",
+        "terme": "emprise",
+        "contexte_droite": "? Quel regard portez-vous sur ce parcours de violences très ",
+        "position": 8210,
+        "contexte_complet": "é à ce que vous n'ayez pas la force et la possibilité de vous défendre face à l'emprise ? Quel regard portez-vous sur ce parcours de violences très jeune dans le cadre",
+        "source": "senat",
+        "contexte_classe": "explication"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "ment que je peux être quelqu'un de bien. J'ai toujours cette",
+        "terme": "emprise",
+        "contexte_droite": "me poussant à croire que je ne suis rien de tout cela. Je ve",
+        "position": 10676,
+        "contexte_complet": "prouver intérieurement que je peux être quelqu'un de bien. J'ai toujours cette emprise me poussant à croire que je ne suis rien de tout cela. Je veux pouvoir me dire",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "tout procès, ont pour la première fois évoqué les notions d'",
+        "terme": "emprise",
+        "contexte_droite": "et de syndrome de femme battue, qui n'apparaissaient jamais ",
+        "position": 27104,
+        "contexte_complet": "pierre angulaire de tout procès, ont pour la première fois évoqué les notions d'emprise et de syndrome de femme battue, qui n'apparaissaient jamais dans de tels rappor",
+        "source": "senat",
+        "contexte_classe": "explication"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": " en évidence la soumission à une forme de manipulation et d'",
+        "terme": "emprise",
+        "contexte_droite": "évidente de toute puissance incarnée par le personnage de so",
+        "position": 30187,
+        "contexte_complet": "reux indices mettant en évidence la soumission à une forme de manipulation et d'emprise évidente de toute puissance incarnée par le personnage de son mari, vécu comme",
+        "source": "senat",
+        "contexte_classe": "explication"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "ir pu être imaginé pour la sauver elle, sujet aliénée par l'",
+        "terme": "emprise",
+        "contexte_droite": ", mais bien pour sauver ses enfants. »\nIl était important de",
+        "position": 30872,
+        "contexte_complet": "semble ne jamais avoir pu être imaginé pour la sauver elle, sujet aliénée par l'emprise, mais bien pour sauver ses enfants. »\nIl était important de le souligner. Aujou",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "emprise",
+        "contexte_gauche": "r.\nPour une femme maltraitée, s'il y a encore une quelconque",
+        "terme": "emprise",
+        "contexte_droite": "vis-à-vis de l'enfant, l'autorité parentale est un échec pou",
+        "position": 58533,
+        "contexte_complet": "cussion pourra aider.\nPour une femme maltraitée, s'il y a encore une quelconque emprise vis-à-vis de l'enfant, l'autorité parentale est un échec pour la maman. Elle ag",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      }
+    ]
+  },
+  "savait": {
+    "label": "Tout le monde savait",
+    "description": "Le silence collectif et la complicité passive de l'entourage",
+    "total": 14,
+    "par_source": {
+      "jsl_j1": 3,
+      "jsl_j2": 2,
+      "jsl_j3": 3,
+      "jsl_verdict": 0,
+      "senat": 6
+    },
+    "comptages": {
+      "accusation": 0,
+      "explication": 0,
+      "institution": 0,
+      "neutre": 14
+    },
+    "pourcentages": {
+      "accusation": 0.0,
+      "explication": 0.0,
+      "institution": 0.0,
+      "neutre": 100.0
+    },
+    "occurrences": [
+      {
+        "variante": "savait",
+        "contexte_gauche": " déjà vue rentrer tard en larmes et partir se cacher.\"\n\"Elle",
+        "terme": "savait",
+        "contexte_droite": "pertinemment que si elle partait ou un des enfants partait, ",
+        "position": 10035,
+        "contexte_complet": "ement, mais je l'ai déjà vue rentrer tard en larmes et partir se cacher.\"\n\"Elle savait pertinemment que si elle partait ou un des enfants partait, elle allait s'en pr",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savaient",
+        "contexte_gauche": "l qu'on connaissait.\"\n\"Comment étaient vos enfants ?\n-Ils ne",
+        "terme": "savaient",
+        "contexte_droite": "pas trop ce qu'ils faisaient...\"\n12 h 55 : \"Je me souviens j",
+        "position": 21052,
+        "contexte_complet": "?\" \"C'était le seul qu'on connaissait.\"\n\"Comment étaient vos enfants ?\n-Ils ne savaient pas trop ce qu'ils faisaient...\"\n12 h 55 : \"Je me souviens juste d'avoir fermé",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "au courant",
+        "contexte_gauche": "n qui a duré \"trois-quatre mois\". \"Ses enfants n'étaient pas",
+        "terme": "au courant",
+        "contexte_droite": ", mais je pense qu'ils devaient s'en douter.\"\nIl qualifie la",
+        "position": 5866,
+        "contexte_complet": "il admet une liaison qui a duré \"trois-quatre mois\". \"Ses enfants n'étaient pas au courant, mais je pense qu'ils devaient s'en douter.\"\nIl qualifie la situation de l'époq",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savait",
+        "contexte_gauche": " le crime car \"c'était la logique d'aller vers quelqu'un qui",
+        "terme": "savait",
+        "contexte_droite": "ce qui se passait.\n-Laissons la logique de côté. Car la logi",
+        "position": 3755,
+        "contexte_complet": "as en premier après le crime car \"c'était la logique d'aller vers quelqu'un qui savait ce qui se passait.\n-Laissons la logique de côté. Car la logique, ça aurait peut",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savaient",
+        "contexte_gauche": "choses qu'ils n'ont jamais dites à moi, je pensais qu'ils ne",
+        "terme": "savaient",
+        "contexte_droite": "pas, j'essayais de les préserver, je ne savais pas qu'ils se",
+        "position": 8977,
+        "contexte_complet": "qu'ils ont dit des choses qu'ils n'ont jamais dites à moi, je pensais qu'ils ne savaient pas, j'essayais de les préserver, je ne savais pas qu'ils se rendaient compte d",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savait",
+        "contexte_gauche": "sûr. Je lui ai fait confiance et je continuerai.\n17 h 25 : \"",
+        "terme": "Savait",
+        "contexte_droite": "-on, à Baudemont, qu'elle vivait en couple avec son violeur ",
+        "position": 6805,
+        "contexte_complet": "sidente.\n-Oui, bien sûr. Je lui ai fait confiance et je continuerai.\n17 h 25 : \"Savait-on, à Baudemont, qu'elle vivait en couple avec son violeur ?\"\nSandrine Dubouis",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savait",
+        "contexte_gauche": " déposition spontanée. La présidente n'a qu'une question : \"",
+        "terme": "Savait",
+        "contexte_droite": "-on, à Baudemont, qu'elle vivait en couple avec son violeur ",
+        "position": 6970,
+        "contexte_complet": "a terminé sa longue déposition spontanée. La présidente n'a qu'une question : \"Savait-on, à Baudemont, qu'elle vivait en couple avec son violeur ?\n-Je ne savais pas",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savaient",
+        "contexte_gauche": "ça a pu arriver.\n-De votre côté ?\n-De mon côté.\n-Les enfants",
+        "terme": "savaient",
+        "contexte_droite": "?\n-C'est possible.\"\nElle dit que c'est arrivé une fois. \"A l",
+        "position": 28625,
+        "contexte_complet": "ns votre couple ?\n-ça a pu arriver.\n-De votre côté ?\n-De mon côté.\n-Les enfants savaient ?\n-C'est possible.\"\nElle dit que c'est arrivé une fois. \"A la boutique ?\", dema",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savait",
+        "contexte_gauche": "nte -Audition de Mme Valérie Bacot, auteure de Tout le monde",
+        "terme": "savait",
+        "contexte_droite": ", accompagnée de son avocate, Maître Nathalie Tomasini\nMme A",
+        "position": 125,
+        "contexte_complet": "ick Billon, présidente -Audition de Mme Valérie Bacot, auteure de Tout le monde savait, accompagnée de son avocate, Maître Nathalie Tomasini\nMme Annick Billon, présid",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savait",
+        "contexte_gauche": "demande.\nValérie Bacot, vous êtes l'auteure de Tout le monde",
+        "terme": "savait",
+        "contexte_droite": ", un livre témoignage publié le 12 mai dernier. Dans cet ouv",
+        "position": 640,
+        "contexte_complet": "uite en vidéo à la demande.\nValérie Bacot, vous êtes l'auteure de Tout le monde savait, un livre témoignage publié le 12 mai dernier. Dans cet ouvrage, aussi poignant",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savait",
+        "contexte_gauche": "Elle a tout fait pour que cette femme soit libérée, car elle",
+        "terme": "savait",
+        "contexte_droite": "que la place de Jacqueline Sauvage n'était pas en prison.\nPo",
+        "position": 23607,
+        "contexte_complet": "société a répondu. Elle a tout fait pour que cette femme soit libérée, car elle savait que la place de Jacqueline Sauvage n'était pas en prison.\nPourquoi dis-je que l",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "savaient",
+        "contexte_gauche": " Là aussi, l'institution a-t-elle échoué, alors que les gens",
+        "terme": "savaient",
+        "contexte_droite": "? Le cas échéant, comment ? Si vous préférez ne pas répondre",
+        "position": 13040,
+        "contexte_complet": "vous sur son état ? Là aussi, l'institution a-t-elle échoué, alors que les gens savaient ? Le cas échéant, comment ? Si vous préférez ne pas répondre, Maître Tomasini p",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "tout le monde savait",
+        "contexte_gauche": "illon, présidente -Audition de Mme Valérie Bacot, auteure de",
+        "terme": "Tout le monde savait",
+        "contexte_droite": ", accompagnée de son avocate, Maître Nathalie Tomasini\nMme A",
+        "position": 111,
+        "contexte_complet": "nce de Mme Annick Billon, présidente -Audition de Mme Valérie Bacot, auteure de Tout le monde savait, accompagnée de son avocate, Maître Nathalie Tomasini\nMme Annick Billon, présid",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "tout le monde savait",
+        "contexte_gauche": "en vidéo à la demande.\nValérie Bacot, vous êtes l'auteure de",
+        "terme": "Tout le monde savait",
+        "contexte_droite": ", un livre témoignage publié le 12 mai dernier. Dans cet ouv",
+        "position": 626,
+        "contexte_complet": "nible par la suite en vidéo à la demande.\nValérie Bacot, vous êtes l'auteure de Tout le monde savait, un livre témoignage publié le 12 mai dernier. Dans cet ouvrage, aussi poignant",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      }
+    ]
+  },
+  "victime": {
+    "label": "Statut de victime",
+    "description": "Comment le statut de victime de Valérie est affirmé, nuancé ou contesté",
+    "total": 39,
+    "par_source": {
+      "jsl_j1": 1,
+      "jsl_j2": 0,
+      "jsl_j3": 6,
+      "jsl_verdict": 1,
+      "senat": 31
+    },
+    "comptages": {
+      "affirmation": 15,
+      "contestation": 2,
+      "ambivalence": 5,
+      "neutre": 17
+    },
+    "pourcentages": {
+      "affirmation": 38.5,
+      "contestation": 5.1,
+      "ambivalence": 12.8,
+      "neutre": 43.6
+    },
+    "occurrences": [
+      {
+        "variante": "victime",
+        "contexte_gauche": " d'enquête. \"Deux nous brossent un portrait... Elles ont été",
+        "terme": "victime",
+        "contexte_droite": "s de violences conjugales de sa part.\" Il euphémise en décri",
+        "position": 18435,
+        "contexte_complet": "récise le directeur d'enquête. \"Deux nous brossent un portrait... Elles ont été victimes de violences conjugales de sa part.\" Il euphémise en décrivant \"des scènes un",
+        "source": "jsl_j1",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "\"monstre\", de \"diable\", \"toujours violent\". \"Valérie est une",
+        "terme": "victime",
+        "contexte_droite": "\".\nAlain Polette : « Mon frère Daniel était un monstre, quel",
+        "position": 13556,
+        "contexte_complet": "fiant son frère de \"monstre\", de \"diable\", \"toujours violent\". \"Valérie est une victime\".\nAlain Polette : « Mon frère Daniel était un monstre, quelqu'un d'inhumain, de",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "le était dedans. Ce qu'il a fait à Valérie, c'est pas lui la",
+        "terme": "victime",
+        "contexte_droite": ", c'est elle. Elle mérite que la liberté.\"\n12 h 40 : \"J'ai u",
+        "position": 15782,
+        "contexte_complet": "diable, car le diable était dedans. Ce qu'il a fait à Valérie, c'est pas lui la victime, c'est elle. Elle mérite que la liberté.\"\n12 h 40 : \"J'ai un avis mais je préfè",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": " par moi je dirais, au début.\n-Elle vous a dit qu'elle était",
+        "terme": "victime",
+        "contexte_droite": "de violences, prostituée par son mari ?\n-Non. Jamais elle ne",
+        "position": 16642,
+        "contexte_complet": "lièrement, une fois par moi je dirais, au début.\n-Elle vous a dit qu'elle était victime de violences, prostituée par son mari ?\n-Non. Jamais elle ne me l'a confié. Apr",
+        "source": "jsl_j3",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "nomie et vous fuir. A l'audience ici, elle dit qu'elle était",
+        "terme": "victime",
+        "contexte_droite": "de viols... Et vous vous dites qu'elle était amoureuse ?\n-Ou",
+        "position": 21500,
+        "contexte_complet": "it trouver son autonomie et vous fuir. A l'audience ici, elle dit qu'elle était victime de viols... Et vous vous dites qu'elle était amoureuse ?\n-Oui, je voyais une re",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime de",
+        "contexte_gauche": " par moi je dirais, au début.\n-Elle vous a dit qu'elle était",
+        "terme": "victime de",
+        "contexte_droite": "violences, prostituée par son mari ?\n-Non. Jamais elle ne me",
+        "position": 16642,
+        "contexte_complet": "lièrement, une fois par moi je dirais, au début.\n-Elle vous a dit qu'elle était victime de violences, prostituée par son mari ?\n-Non. Jamais elle ne me l'a confié. Après",
+        "source": "jsl_j3",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime de",
+        "contexte_gauche": "nomie et vous fuir. A l'audience ici, elle dit qu'elle était",
+        "terme": "victime de",
+        "contexte_droite": "viols... Et vous vous dites qu'elle était amoureuse ?\n-Oui, ",
+        "position": 21500,
+        "contexte_complet": "it trouver son autonomie et vous fuir. A l'audience ici, elle dit qu'elle était victime de viols... Et vous vous dites qu'elle était amoureuse ?\n-Oui, je voyais une relat",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "un nouveau combat maintenant, pour toutes les autres femmes,",
+        "terme": "victime",
+        "contexte_droite": "s de violences. Je ne suis pas soulagée, non, je suis vidée.",
+        "position": 1241,
+        "contexte_complet": "ut le monde. C'est un nouveau combat maintenant, pour toutes les autres femmes, victimes de violences. Je ne suis pas soulagée, non, je suis vidée. (...) Je pourrai êt",
+        "source": "jsl_verdict",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ne Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage,",
+        "terme": "victime",
+        "contexte_droite": "de violences conjugales et graciée en 2016 par le Président ",
+        "position": 1760,
+        "contexte_complet": "onsoeur Maître Janine Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la République po",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ié en 2020. Votre cabinet est spécialisé dans la défense des",
+        "terme": "victime",
+        "contexte_droite": "s de violences et de harcèlement, notamment pour les cas de ",
+        "position": 2050,
+        "contexte_complet": "ense légitime, publié en 2020. Votre cabinet est spécialisé dans la défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "lle a rencontrés, comme malheureusement de nombreuses femmes",
+        "terme": "victime",
+        "contexte_droite": "s de violences, pour réussir à s'échapper de cette situation",
+        "position": 2924,
+        "contexte_complet": "des obstacles qu'elle a rencontrés, comme malheureusement de nombreuses femmes victimes de violences, pour réussir à s'échapper de cette situation et à porter plainte",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ons juridiques de ce procès, son combat en faveur des femmes",
+        "terme": "victime",
+        "contexte_droite": "s de violences ainsi que les évolutions souhaitables de notr",
+        "position": 3283,
+        "contexte_complet": "loppe les implications juridiques de ce procès, son combat en faveur des femmes victimes de violences ainsi que les évolutions souhaitables de notre législation en mat",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": " ce que vous souhaitez nous relater.\nVous avez également été",
+        "terme": "victime",
+        "contexte_droite": "très jeune d'agression dans votre famille. Vous aviez cinq a",
+        "position": 7918,
+        "contexte_complet": "le temps de relater ce que vous souhaitez nous relater.\nVous avez également été victime très jeune d'agression dans votre famille. Vous aviez cinq ans. Lorsque vous te",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": " Ils sont à 100 % avec moi dans ce combat visant à aider les",
+        "terme": "victime",
+        "contexte_droite": "s de maltraitance. Ils en ont besoin, eux aussi.\nMme Annick ",
+        "position": 12679,
+        "contexte_complet": "fait avec ma mère. Ils sont à 100 % avec moi dans ce combat visant à aider les victimes de maltraitance. Ils en ont besoin, eux aussi.\nMme Annick Billon, présidente.",
+        "source": "senat",
+        "contexte_classe": "ambivalence"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "s avons eu pour la première fois l'impression qu'une accusée",
+        "terme": "victime",
+        "contexte_droite": ", qui s'était tue durant vingt-quatre ans, était non seuleme",
+        "position": 20774,
+        "contexte_complet": "sens ? D'abord, nous avons eu pour la première fois l'impression qu'une accusée victime, qui s'était tue durant vingt-quatre ans, était non seulement écoutée, mais aus",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "pt de légitime défense différée. Elle a estimé qu'une femme,",
+        "terme": "victime",
+        "contexte_droite": "de violences ou non, restait un justiciable comme un autre, ",
+        "position": 23362,
+        "contexte_complet": "e qu'était ce concept de légitime défense différée. Elle a estimé qu'une femme, victime de violences ou non, restait un justiciable comme un autre, et devait se voir a",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "nsidéré qu'avant d'être une accusée, Valérie Bacot était une",
+        "terme": "victime",
+        "contexte_droite": ", et ce depuis l'enfance. Elle était une enfant maltraitée, ",
+        "position": 24300,
+        "contexte_complet": "part, la cour a considéré qu'avant d'être une accusée, Valérie Bacot était une victime, et ce depuis l'enfance. Elle était une enfant maltraitée, battue par sa mère,",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "t noter l'absence d'interdiction d'entrer en contact avec la",
+        "terme": "victime",
+        "contexte_droite": ". S'en est suivi l'inimaginable, un permis de visite consent",
+        "position": 25402,
+        "contexte_complet": "ectionnelle, il faut noter l'absence d'interdiction d'entrer en contact avec la victime. S'en est suivi l'inimaginable, un permis de visite consenti par les autorités,",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "condamné à verser 40 000 francs de dommages et intérêts à sa",
+        "terme": "victime",
+        "contexte_droite": ". Cette somme n'a jamais été sollicitée par l'administrateur",
+        "position": 25917,
+        "contexte_complet": "dernier avait été condamné à verser 40 000 francs de dommages et intérêts à sa victime. Cette somme n'a jamais été sollicitée par l'administrateur d'une quelconque ma",
+        "source": "senat",
+        "contexte_classe": "contestation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "r si ces propos sont fondés. Rien n'a été fait.\nLe statut de",
+        "terme": "victime",
+        "contexte_droite": "a été reconnu, de même que les dysfonctionnements du système",
+        "position": 26903,
+        "contexte_complet": "d'enquêter pour voir si ces propos sont fondés. Rien n'a été fait.\nLe statut de victime a été reconnu, de même que les dysfonctionnements du système police-justice. En",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "oger sur nos failles dans la prise en charge et le suivi des",
+        "terme": "victime",
+        "contexte_droite": "s, mais aussi sur notre droit. À la lumière de ce qui se pas",
+        "position": 31623,
+        "contexte_complet": "doivent nous interroger sur nos failles dans la prise en charge et le suivi des victimes, mais aussi sur notre droit. À la lumière de ce qui se passe à l'étranger, et",
+        "source": "senat",
+        "contexte_classe": "ambivalence"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "uvel alinéa ainsi rédigé : «l'impact de ces violences sur la",
+        "terme": "victime",
+        "contexte_droite": "est pris en compte pour l'application des articles 122-1, 12",
+        "position": 32010,
+        "contexte_complet": "habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces violences sur la victime est pris en compte pour l'application des articles 122-1, 122-2 et 122-5 lorsqu",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": " conjugales qui entraînent des traumatismes certains sur les",
+        "terme": "victime",
+        "contexte_droite": "s devront systématiquement être prises en compte comme une c",
+        "position": 32233,
+        "contexte_complet": "rmes, les violences conjugales qui entraînent des traumatismes certains sur les victimes devront systématiquement être prises en compte comme une cause d'irresponsabil",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "s conjugales, au fait que l'enfant doit être considéré comme",
+        "terme": "victime",
+        "contexte_droite": ". Ce doit être une infraction autonome. Sur ce sujet aussi, ",
+        "position": 35821,
+        "contexte_complet": "en cas de violences conjugales, au fait que l'enfant doit être considéré comme victime. Ce doit être une infraction autonome. Sur ce sujet aussi, j'aimerais l'assenti",
+        "source": "senat",
+        "contexte_classe": "ambivalence"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ui me semble être une avancée majeure pour la protection des",
+        "terme": "victime",
+        "contexte_droite": "s.\nComme vous, j'ai été touchée par le témoignage de Valérie",
+        "position": 36538,
+        "contexte_complet": "personne battue, qui me semble être une avancée majeure pour la protection des victimes.\nComme vous, j'ai été touchée par le témoignage de Valérie Bacot, mais aussi p",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "vrage et son courage. Au travers de son témoignage, d'autres",
+        "terme": "victime",
+        "contexte_droite": "s oseront peut-être se déclarer. Il a montré la limite des p",
+        "position": 36695,
+        "contexte_complet": "is aussi par son ouvrage et son courage. Au travers de son témoignage, d'autres victimes oseront peut-être se déclarer. Il a montré la limite des politiques publiques.",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ent pour que les enfants témoins soient considérés comme des",
+        "terme": "victime",
+        "contexte_droite": "s pour avoir une représentation ad hoc. Ils peuvent avoir de",
+        "position": 38389,
+        "contexte_complet": "lutte personnellement pour que les enfants témoins soient considérés comme des victimes pour avoir une représentation ad hoc. Ils peuvent avoir des intérêts différent",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "e petite remarque sur l'amendement sénatorial. On dit que la",
+        "terme": "victime",
+        "contexte_droite": "doit être considérée comme relevant des articles visés. En l",
+        "position": 38852,
+        "contexte_complet": "ttue, j'ai juste une petite remarque sur l'amendement sénatorial. On dit que la victime doit être considérée comme relevant des articles visés. En l'occurrence, nous n",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "s articles visés. En l'occurrence, nous ne parlons pas de la",
+        "terme": "victime",
+        "contexte_droite": ", mais bien de l'auteur. C'est bien lui qui subit ce syndrom",
+        "position": 38959,
+        "contexte_complet": "e comme relevant des articles visés. En l'occurrence, nous ne parlons pas de la victime, mais bien de l'auteur. C'est bien lui qui subit ce syndrome, raison pour laque",
+        "source": "senat",
+        "contexte_classe": "ambivalence"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "aquelle il sera considéré comme pénalement irresponsable. La",
+        "terme": "victime",
+        "contexte_droite": "l'est par définition. Il faut bien employer le terme « auteu",
+        "position": 39103,
+        "contexte_complet": "rome, raison pour laquelle il sera considéré comme pénalement irresponsable. La victime l'est par définition. Il faut bien employer le terme « auteur » et non « victim",
+        "source": "senat",
+        "contexte_classe": "contestation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "finition. Il faut bien employer le terme « auteur » et non «",
+        "terme": "victime",
+        "contexte_droite": "».\nMme Laurence Cohen. - Même si nous travaillons sur ce suj",
+        "position": 39184,
+        "contexte_complet": "ictime l'est par définition. Il faut bien employer le terme « auteur » et non « victime ».\nMme Laurence Cohen. - Même si nous travaillons sur ce sujet depuis de nombre",
+        "source": "senat",
+        "contexte_classe": "ambivalence"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "oute profitant toujours à l'accusé, il ne profite jamais aux",
+        "terme": "victime",
+        "contexte_droite": "s, et en particulier aux femmes et aux enfants. Toutes les f",
+        "position": 43441,
+        "contexte_complet": "t des enfants. Le doute profitant toujours à l'accusé, il ne profite jamais aux victimes, et en particulier aux femmes et aux enfants. Toutes les femmes ayant eu affai",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "a rien de plus fort que la parole incarnée et portée par une",
+        "terme": "victime",
+        "contexte_droite": ". Je ne demande pas à toutes les victimes de ne faire que ce",
+        "position": 48400,
+        "contexte_complet": "pourtant qu'il n'y a rien de plus fort que la parole incarnée et portée par une victime. Je ne demande pas à toutes les victimes de ne faire que cela. Certaines ont la",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ée et portée par une victime. Je ne demande pas à toutes les",
+        "terme": "victime",
+        "contexte_droite": "s de ne faire que cela. Certaines ont la force de caractère ",
+        "position": 48440,
+        "contexte_complet": "ue la parole incarnée et portée par une victime. Je ne demande pas à toutes les victimes de ne faire que cela. Certaines ont la force de caractère et l'envie nécessair",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "e nous allons vous aider à penser le contraire. Vous êtes la",
+        "terme": "victime",
+        "contexte_droite": ". Vous n'êtes pas en cause dans cette histoire.\nVous avez ég",
+        "position": 50982,
+        "contexte_complet": "force. J'espère que nous allons vous aider à penser le contraire. Vous êtes la victime. Vous n'êtes pas en cause dans cette histoire.\nVous avez également indiqué « ja",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "e semble tout de même qu'avec la libération de la parole des",
+        "terme": "victime",
+        "contexte_droite": "s, il est impensable que l'un des motifs entravant leur remi",
+        "position": 64586,
+        "contexte_complet": "t un problème. Il me semble tout de même qu'avec la libération de la parole des victimes, il est impensable que l'un des motifs entravant leur remise en liberté soit l",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime",
+        "contexte_gauche": "ntière, contradiction patente entre ce qui se passe pour les",
+        "terme": "victime",
+        "contexte_droite": "s et la rigidité, la mauvaise foi d'une partie de l'institut",
+        "position": 64914,
+        "contexte_complet": "tionnement à part entière, contradiction patente entre ce qui se passe pour les victimes et la rigidité, la mauvaise foi d'une partie de l'institution judiciaire.\nMme",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "victime de",
+        "contexte_gauche": "ne Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage,",
+        "terme": "victime de",
+        "contexte_droite": "violences conjugales et graciée en 2016 par le Président de ",
+        "position": 1760,
+        "contexte_complet": "onsoeur Maître Janine Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la République pour",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "victime de",
+        "contexte_gauche": "pt de légitime défense différée. Elle a estimé qu'une femme,",
+        "terme": "victime de",
+        "contexte_droite": "violences ou non, restait un justiciable comme un autre, et ",
+        "position": 23362,
+        "contexte_complet": "e qu'était ce concept de légitime défense différée. Elle a estimé qu'une femme, victime de violences ou non, restait un justiciable comme un autre, et devait se voir appl",
+        "source": "senat",
+        "contexte_classe": "affirmation"
+      }
+    ]
+  },
+  "choix": {
+    "label": "La question du choix",
+    "description": "Si Valérie avait ou non une alternative à l'acte",
+    "total": 9,
+    "par_source": {
+      "jsl_j1": 2,
+      "jsl_j2": 2,
+      "jsl_j3": 2,
+      "jsl_verdict": 0,
+      "senat": 3
+    },
+    "comptages": {
+      "negation": 0,
+      "affirmation": 1,
+      "nuance": 0,
+      "neutre": 8
+    },
+    "pourcentages": {
+      "negation": 0.0,
+      "affirmation": 11.1,
+      "nuance": 0.0,
+      "neutre": 88.9
+    },
+    "occurrences": [
+      {
+        "variante": "décider",
+        "contexte_gauche": "ui.\"\nLa présidente rappelle que, devant le juge au moment de",
+        "terme": "décider",
+        "contexte_droite": "son émancipation en vue de s'installer avec Daniel Polette, ",
+        "position": 26333,
+        "contexte_complet": "nceinte de lui ?\n-Oui.\"\nLa présidente rappelle que, devant le juge au moment de décider son émancipation en vue de s'installer avec Daniel Polette, Valérie Bacot avait",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "solution",
+        "contexte_gauche": "evrotante.\n-Est-ce que vous comprenez qu'il y avait d'autres",
+        "terme": "solution",
+        "contexte_droite": "s que de tuer ? répond le magistrat. Il énumère des aides so",
+        "position": 2155,
+        "contexte_complet": "it-elle, la voix chevrotante.\n-Est-ce que vous comprenez qu'il y avait d'autres solutions que de tuer ? répond le magistrat. Il énumère des aides sociales possibles.\n\"M",
+        "source": "jsl_j1",
+        "contexte_classe": "affirmation"
+      },
+      {
+        "variante": "choix",
+        "contexte_gauche": "de à vue, untel a dit ça, untel a dit ça, et j'avais plus le",
+        "terme": "choix",
+        "contexte_droite": ".\"\nSur sa liaison avec Lucas : \"C'était juste quelques mois,",
+        "position": 4337,
+        "contexte_complet": "d'accord. Et en garde à vue, untel a dit ça, untel a dit ça, et j'avais plus le choix.\"\nSur sa liaison avec Lucas : \"C'était juste quelques mois, comme ça, avant d'a",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "choix",
+        "contexte_gauche": "s.\n\"Vous aviez dit au juge d'instruction \"Je n'avais plus le",
+        "terme": "choix",
+        "contexte_droite": ".\" C'est quoi ?, demande la présidente.\n-Il fallait que je p",
+        "position": 6976,
+        "contexte_complet": "ciennes déclarations.\n\"Vous aviez dit au juge d'instruction \"Je n'avais plus le choix.\" C'est quoi ?, demande la présidente.\n-Il fallait que je protège mes enfants,",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "choix",
+        "contexte_gauche": "it plus grand, il est parti avec son père, j'ai respecté son",
+        "terme": "choix",
+        "contexte_droite": ".\n-Pourquoi cette scission ?, demande la présidente Céline T",
+        "position": 28225,
+        "contexte_complet": "ome. Christophe était plus grand, il est parti avec son père, j'ai respecté son choix.\n-Pourquoi cette scission ?, demande la présidente Céline Therme.\n-Je sais pas,",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "solution",
+        "contexte_gauche": "Ce qu'elle a vécu n'est pas normal, mais il y avait d'autres",
+        "terme": "solution",
+        "contexte_droite": "s (que de le tuer, NDLR), elle n'était pas complètement isol",
+        "position": 23072,
+        "contexte_complet": "de la présidente.\n-Ce qu'elle a vécu n'est pas normal, mais il y avait d'autres solutions (que de le tuer, NDLR), elle n'était pas complètement isolée, elle parlait à s",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "choix",
+        "contexte_gauche": "femmes battues pendant de longues années, qui n'ont d'autres",
+        "terme": "choix",
+        "contexte_droite": "que de tuer leur conjoint violent pour s'en sortir. En 2012,",
+        "position": 21836,
+        "contexte_complet": "particulier de ces femmes battues pendant de longues années, qui n'ont d'autres choix que de tuer leur conjoint violent pour s'en sortir. En 2012, j'avais même évoqu",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "solution",
+        "contexte_gauche": " sur le dossier. À la campagne, nous n'avons pas accès à ces",
+        "terme": "solution",
+        "contexte_droite": "s. J'ai découvert le 3919 au tribunal. Je ne connaissais pas",
+        "position": 17384,
+        "contexte_complet": "ard, en travaillant sur le dossier. À la campagne, nous n'avons pas accès à ces solutions. J'ai découvert le 3919 au tribunal. Je ne connaissais pas le numéro de téléph",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "solution",
+        "contexte_gauche": "i m'a montré des cartes avec des QR codes. J'ai trouvé cette",
+        "terme": "solution",
+        "contexte_droite": "très intéressante. Elle peut être très discrète. J'ai demand",
+        "position": 18158,
+        "contexte_complet": "e femme gendarme qui m'a montré des cartes avec des QR codes. J'ai trouvé cette solution très intéressante. Elle peut être très discrète. J'ai demandé ce que je pouvais",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      }
+    ]
+  },
+  "legitime_defense": {
+    "label": "Légitime défense",
+    "description": "Le cadre juridique et son absence dans le droit français",
+    "total": 20,
+    "par_source": {
+      "jsl_j1": 1,
+      "jsl_j2": 1,
+      "jsl_j3": 1,
+      "jsl_verdict": 1,
+      "senat": 16
+    },
+    "comptages": {
+      "soutien": 0,
+      "technique": 4,
+      "comparaison": 0,
+      "neutre": 16
+    },
+    "pourcentages": {
+      "soutien": 0.0,
+      "technique": 20.0,
+      "comparaison": 0.0,
+      "neutre": 80.0
+    },
+    "occurrences": [
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "aire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ", Alexandra Lange... même combat ?\"\nEt l'ensemble de nos suj",
+        "position": 33484,
+        "contexte_complet": "de la vérité judiciaire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"Jacqueline Sauvage, Alexandra Lange... même combat ?\"\nEt l'ensemble de nos sujets.\n\"Dossier Bacot,",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "aire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ", Alexandra Lange... même combat ?\"\nEt l'ensemble de nos suj",
+        "position": 28932,
+        "contexte_complet": "de la vérité judiciaire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"Jacqueline Sauvage, Alexandra Lange... même combat ?\"\nEt l'ensemble de nos sujets.\n\"Dossier Bacot,",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "aire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ", Alexandra Lange... même combat ?\"\nEt l'ensemble de nos suj",
+        "position": 33731,
+        "contexte_complet": "de la vérité judiciaire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"Jacqueline Sauvage, Alexandra Lange... même combat ?\"\nEt l'ensemble de nos sujets.\n\"Dossier Bacot,",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "aire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ", Alexandra Lange... même combat ?\"\nEt l'ensemble de nos suj",
+        "position": 5528,
+        "contexte_complet": "de la vérité judiciaire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"Jacqueline Sauvage, Alexandra Lange... même combat ?\"\nEt l'ensemble de nos sujets.\n\"Dossier Bacot,",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "ée du meurtre de son conjoint violent sur le fondement de la",
+        "terme": "légitime défense",
+        "contexte_droite": ". Celle-ci avait à l'époque été retenue, car les critères de",
+        "position": 21389,
+        "contexte_complet": "ndra Lange, acquittée du meurtre de son conjoint violent sur le fondement de la légitime défense. Celle-ci avait à l'époque été retenue, car les critères de la légitime défense",
+        "source": "senat",
+        "contexte_classe": "technique"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "elle-ci avait à l'époque été retenue, car les critères de la",
+        "terme": "légitime défense",
+        "contexte_droite": "étaient réunis dans ce cas précis, avec les critères de conc",
+        "position": 21469,
+        "contexte_complet": "légitime défense. Celle-ci avait à l'époque été retenue, car les critères de la légitime défense étaient réunis dans ce cas précis, avec les critères de concomitance et de prop",
+        "source": "senat",
+        "contexte_classe": "technique"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "à évoquée en 2012, pour un cas réunissant les critères de la",
+        "terme": "légitime défense",
+        "contexte_droite": "classique. Je me souviens très bien que l'avocat général Luc",
+        "position": 22465,
+        "contexte_complet": "ire, je l'avais déjà évoquée en 2012, pour un cas réunissant les critères de la légitime défense classique. Je me souviens très bien que l'avocat général Luc Frémiot, lorsque j",
+        "source": "senat",
+        "contexte_classe": "technique"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "ndre ce genre de plaidoirie en France sur une présomption de",
+        "terme": "légitime défense",
+        "contexte_droite": "des femmes violentées, ou même sur une légitime défense diff",
+        "position": 22721,
+        "contexte_complet": "ns pas prêts à entendre ce genre de plaidoirie en France sur une présomption de légitime défense des femmes violentées, ou même sur une légitime défense différée.\nEn 2016-2017,",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "n de légitime défense des femmes violentées, ou même sur une",
+        "terme": "légitime défense",
+        "contexte_droite": "différée.\nEn 2016-2017, il y a eu l'affaire Jacqueline Sauva",
+        "position": 22777,
+        "contexte_complet": "sur une présomption de légitime défense des femmes violentées, ou même sur une légitime défense différée.\nEn 2016-2017, il y a eu l'affaire Jacqueline Sauvage, graciée à deux",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "iaire. Dès l'instant où nous sortions de la définition de la",
+        "terme": "légitime défense",
+        "contexte_droite": "classique, avec un acte d'attaque, d'agression, et un acte d",
+        "position": 23084,
+        "contexte_complet": "l'institution judiciaire. Dès l'instant où nous sortions de la définition de la légitime défense classique, avec un acte d'attaque, d'agression, et un acte de défense dans le m",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "iciaire s'est braquée et a demandé ce qu'était ce concept de",
+        "terme": "légitime défense",
+        "contexte_droite": "différée. Elle a estimé qu'une femme, victime de violences o",
+        "position": 23307,
+        "contexte_complet": ", l'institution judiciaire s'est braquée et a demandé ce qu'était ce concept de légitime défense différée. Elle a estimé qu'une femme, victime de violences ou non, restait un j",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "mmes et pour des hommes, à commencer par la définition de la",
+        "terme": "légitime défense",
+        "contexte_droite": ". Lorsque ce texte a été écrit, il traitait de rapports entr",
+        "position": 61331,
+        "contexte_complet": "é écrits par des hommes et pour des hommes, à commencer par la définition de la légitime défense. Lorsque ce texte a été écrit, il traitait de rapports entre deux hommes de cor",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": " 122-6 du code pénal, parlant davantage de la présomption de",
+        "terme": "légitime défense",
+        "contexte_droite": "et du renversement de la charge de la preuve qui permettrait",
+        "position": 61878,
+        "contexte_complet": "mentaire, l'article 122-6 du code pénal, parlant davantage de la présomption de légitime défense et du renversement de la charge de la preuve qui permettrait aux femmes d'évoqu",
+        "source": "senat",
+        "contexte_classe": "technique"
+      },
+      {
+        "variante": "légitime défense",
+        "contexte_gauche": "trait aux femmes d'évoquer plus facilement le bénéfice de la",
+        "terme": "légitime défense",
+        "contexte_droite": ". C'est un autre sujet.\nJe voudrais revenir sur l'interventi",
+        "position": 62011,
+        "contexte_complet": "a preuve qui permettrait aux femmes d'évoquer plus facilement le bénéfice de la légitime défense. C'est un autre sujet.\nJe voudrais revenir sur l'intervention du seul sénateur",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "défense différée",
+        "contexte_gauche": "time défense des femmes violentées, ou même sur une légitime",
+        "terme": "défense différée",
+        "contexte_droite": ".\nEn 2016-2017, il y a eu l'affaire Jacqueline Sauvage, grac",
+        "position": 22786,
+        "contexte_complet": "présomption de légitime défense des femmes violentées, ou même sur une légitime défense différée.\nEn 2016-2017, il y a eu l'affaire Jacqueline Sauvage, graciée à deux reprises",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "défense différée",
+        "contexte_gauche": "'est braquée et a demandé ce qu'était ce concept de légitime",
+        "terme": "défense différée",
+        "contexte_droite": ". Elle a estimé qu'une femme, victime de violences ou non, r",
+        "position": 23316,
+        "contexte_complet": "tution judiciaire s'est braquée et a demandé ce qu'était ce concept de légitime défense différée. Elle a estimé qu'une femme, victime de violences ou non, restait un justiciabl",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "consoeur Maître Janine Bonaggiunta. Vous aviez aussi défendu",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ", victime de violences conjugales et graciée en 2016 par le ",
+        "position": 1740,
+        "contexte_complet": "aux côtés de votre consoeur Maître Janine Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la Répu",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "e connais Valérie Boyer depuis 2016, avant même l'affaire de",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ". Nous avons souvent travaillé de concert sur l'élaboration ",
+        "position": 19796,
+        "contexte_complet": "acot aujourd'hui.\nJe connais Valérie Boyer depuis 2016, avant même l'affaire de Jacqueline Sauvage. Nous avons souvent travaillé de concert sur l'élaboration de propositions de l",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "légitime défense différée.\nEn 2016-2017, il y a eu l'affaire",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": ", graciée à deux reprises par le Président de la République ",
+        "position": 22838,
+        "contexte_complet": "s, ou même sur une légitime défense différée.\nEn 2016-2017, il y a eu l'affaire Jacqueline Sauvage, graciée à deux reprises par le Président de la République François Hollande. N",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "jacqueline sauvage",
+        "contexte_gauche": "ue cette femme soit libérée, car elle savait que la place de",
+        "terme": "Jacqueline Sauvage",
+        "contexte_droite": "n'était pas en prison.\nPourquoi dis-je que le verdict de l'a",
+        "position": 23630,
+        "contexte_complet": "a tout fait pour que cette femme soit libérée, car elle savait que la place de Jacqueline Sauvage n'était pas en prison.\nPourquoi dis-je que le verdict de l'affaire Valérie Baco",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      }
+    ]
+  },
+  "violence": {
+    "label": "Les violences",
+    "description": "Comment les violences subies sont nommées, quantifiées, qualifiées",
+    "total": 161,
+    "par_source": {
+      "jsl_j1": 26,
+      "jsl_j2": 19,
+      "jsl_j3": 23,
+      "jsl_verdict": 2,
+      "senat": 91
+    },
+    "comptages": {
+      "enumeration": 18,
+      "minimisation": 8,
+      "gravite": 39,
+      "neutre": 96
+    },
+    "pourcentages": {
+      "enumeration": 11.2,
+      "minimisation": 5.0,
+      "gravite": 24.2,
+      "neutre": 59.6
+    },
+    "occurrences": [
+      {
+        "variante": "violence",
+        "contexte_gauche": ". Il a notamment soutenu que deux tentatives de dénoncer les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales à la gendarmerie avaient été effectuées par les",
+        "position": 634,
+        "contexte_complet": "dre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants. Sans succè",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "art des enfants à la gendarmerie pour tenter de dénoncer les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales. \"J'ai du mal à vous croire...\", réagit le magi",
+        "position": 5214,
+        "contexte_complet": "prétendues de la part des enfants à la gendarmerie pour tenter de dénoncer les violences conjugales. \"J'ai du mal à vous croire...\", réagit le magistrat.\n\"Je vous jure",
+        "source": "jsl_j1",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " \"Absolument pas.\" Il explique rien ne laissait présager des",
+        "terme": "violence",
+        "contexte_droite": "s intrafamiliales, selon lui, avant qu'il ne connaisse un pe",
+        "position": 9407,
+        "contexte_complet": "nte au jeune homme. \"Absolument pas.\" Il explique rien ne laissait présager des violences intrafamiliales, selon lui, avant qu'il ne connaisse un peu mieux la famille.",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "roblèmes, il me retrouverait...\"\n\"Avez-vous vu des scènes de",
+        "terme": "violence",
+        "contexte_droite": "s sur Valérie Bacot ?, demande la présidente.\nNon, pas direc",
+        "position": 9886,
+        "contexte_complet": "oin, j'aurais des problèmes, il me retrouverait...\"\n\"Avez-vous vu des scènes de violences sur Valérie Bacot ?, demande la présidente.\nNon, pas directement, mais je l'ai",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " pousse la porte d'un commissariat pour déposer plainte pour",
+        "terme": "violence",
+        "contexte_droite": "s conjugales, certaines plaintes ne sont toujours pas prises",
+        "position": 12317,
+        "contexte_complet": "1, lorsqu'une femme pousse la porte d'un commissariat pour déposer plainte pour violences conjugales, certaines plaintes ne sont toujours pas prises ?\" demande Me Tomas",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "qu'aurait entrepris Valérie et ses enfants pour dénoncer les",
+        "terme": "violence",
+        "contexte_droite": "s de Daniel dans leur vie de famille. Ces derniers avaient i",
+        "position": 14019,
+        "contexte_complet": "oque les démarches qu'aurait entrepris Valérie et ses enfants pour dénoncer les violences de Daniel dans leur vie de famille. Ces derniers avaient indiqué avoir tenté d",
+        "source": "jsl_j1",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "\"Deux nous brossent un portrait... Elles ont été victimes de",
+        "terme": "violence",
+        "contexte_droite": "s conjugales de sa part.\" Il euphémise en décrivant \"des scè",
+        "position": 18447,
+        "contexte_complet": "recteur d'enquête. \"Deux nous brossent un portrait... Elles ont été victimes de violences conjugales de sa part.\" Il euphémise en décrivant \"des scènes un peu particuli",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "sans jamais prononcer le mot concret. Après avoir raconté la",
+        "terme": "violence",
+        "contexte_droite": "de la passe avec le client, puis le retour de Daniel énervé ",
+        "position": 21249,
+        "contexte_complet": "e tir mortel, mais sans jamais prononcer le mot concret. Après avoir raconté la violence de la passe avec le client, puis le retour de Daniel énervé dans la voiture, el",
+        "source": "jsl_j1",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "st tout.\"\nMais la présidente lui parle ensuite des premières",
+        "terme": "violence",
+        "contexte_droite": "s sexuelles. Et Valérie Bacot explique comment tout a commen",
+        "position": 27459,
+        "contexte_complet": "Peut-être deux. C'est tout.\"\nMais la présidente lui parle ensuite des premières violences sexuelles. Et Valérie Bacot explique comment tout a commencé.\n\"Il ne voulait p",
+        "source": "jsl_j1",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": ". Il a notamment soutenu que deux tentatives de dénoncer les",
+        "terme": "violences",
+        "contexte_droite": "conjugales à la gendarmerie avaient été effectuées par les e",
+        "position": 634,
+        "contexte_complet": "dre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants. Sans succès",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "art des enfants à la gendarmerie pour tenter de dénoncer les",
+        "terme": "violences",
+        "contexte_droite": "conjugales. \"J'ai du mal à vous croire...\", réagit le magist",
+        "position": 5214,
+        "contexte_complet": "prétendues de la part des enfants à la gendarmerie pour tenter de dénoncer les violences conjugales. \"J'ai du mal à vous croire...\", réagit le magistrat.\n\"Je vous jure",
+        "source": "jsl_j1",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " \"Absolument pas.\" Il explique rien ne laissait présager des",
+        "terme": "violences",
+        "contexte_droite": "intrafamiliales, selon lui, avant qu'il ne connaisse un peu ",
+        "position": 9407,
+        "contexte_complet": "nte au jeune homme. \"Absolument pas.\" Il explique rien ne laissait présager des violences intrafamiliales, selon lui, avant qu'il ne connaisse un peu mieux la famille.\nI",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "roblèmes, il me retrouverait...\"\n\"Avez-vous vu des scènes de",
+        "terme": "violences",
+        "contexte_droite": "sur Valérie Bacot ?, demande la présidente.\nNon, pas directe",
+        "position": 9886,
+        "contexte_complet": "oin, j'aurais des problèmes, il me retrouverait...\"\n\"Avez-vous vu des scènes de violences sur Valérie Bacot ?, demande la présidente.\nNon, pas directement, mais je l'ai",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " pousse la porte d'un commissariat pour déposer plainte pour",
+        "terme": "violences",
+        "contexte_droite": "conjugales, certaines plaintes ne sont toujours pas prises ?",
+        "position": 12317,
+        "contexte_complet": "1, lorsqu'une femme pousse la porte d'un commissariat pour déposer plainte pour violences conjugales, certaines plaintes ne sont toujours pas prises ?\" demande Me Tomasi",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "qu'aurait entrepris Valérie et ses enfants pour dénoncer les",
+        "terme": "violences",
+        "contexte_droite": "de Daniel dans leur vie de famille. Ces derniers avaient ind",
+        "position": 14019,
+        "contexte_complet": "oque les démarches qu'aurait entrepris Valérie et ses enfants pour dénoncer les violences de Daniel dans leur vie de famille. Ces derniers avaient indiqué avoir tenté de",
+        "source": "jsl_j1",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "\"Deux nous brossent un portrait... Elles ont été victimes de",
+        "terme": "violences",
+        "contexte_droite": "conjugales de sa part.\" Il euphémise en décrivant \"des scène",
+        "position": 18447,
+        "contexte_complet": "recteur d'enquête. \"Deux nous brossent un portrait... Elles ont été victimes de violences conjugales de sa part.\" Il euphémise en décrivant \"des scènes un peu particuliè",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "st tout.\"\nMais la présidente lui parle ensuite des premières",
+        "terme": "violences",
+        "contexte_droite": "sexuelles. Et Valérie Bacot explique comment tout a commencé",
+        "position": 27459,
+        "contexte_complet": "Peut-être deux. C'est tout.\"\nMais la présidente lui parle ensuite des premières violences sexuelles. Et Valérie Bacot explique comment tout a commencé.\n\"Il ne voulait pa",
+        "source": "jsl_j1",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "me, vous l'avez amenée, c'est pour vous protéger d'un client",
+        "terme": "violent",
+        "contexte_droite": ", ou pour l'utiliser contre votre mari ?\n-Un peu des deux\", ",
+        "position": 21981,
+        "contexte_complet": "lui demande : \"L'arme, vous l'avez amenée, c'est pour vous protéger d'un client violent, ou pour l'utiliser contre votre mari ?\n-Un peu des deux\", répond Valérie Bacot",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": " que je faisais quelque chose de pas comme il faut, il était",
+        "terme": "violent",
+        "contexte_droite": ". Au départ c'était des grosses claques, puis c'est devenu d",
+        "position": 25041,
+        "contexte_complet": "\"Dès qu'il trouvait que je faisais quelque chose de pas comme il faut, il était violent. Au départ c'était des grosses claques, puis c'est devenu des coups de pied ou",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "orce de ses parents. Et une mère qui buvait et était parfois",
+        "terme": "violent",
+        "contexte_droite": "e. \"Quand elle me punissait, c'était avec le martinet. Danie",
+        "position": 27193,
+        "contexte_complet": "urtout après le divorce de ses parents. Et une mère qui buvait et était parfois violente. \"Quand elle me punissait, c'était avec le martinet. Daniel, il me défendait.\"",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "t avec le martinet. Daniel, il me défendait.\"\n\"Lui, il était",
+        "terme": "violent",
+        "contexte_droite": "avec vous ?, demande la présidente.\n\"Non, il m'a mis une cal",
+        "position": 27296,
+        "contexte_complet": "e punissait, c'était avec le martinet. Daniel, il me défendait.\"\n\"Lui, il était violent avec vous ?, demande la présidente.\n\"Non, il m'a mis une calotte une fois. Peut",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violente",
+        "contexte_gauche": "orce de ses parents. Et une mère qui buvait et était parfois",
+        "terme": "violente",
+        "contexte_droite": ". \"Quand elle me punissait, c'était avec le martinet. Daniel",
+        "position": 27193,
+        "contexte_complet": "urtout après le divorce de ses parents. Et une mère qui buvait et était parfois violente. \"Quand elle me punissait, c'était avec le martinet. Daniel, il me défendait.\"",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": ". Il a notamment soutenu que deux tentatives de dénoncer les",
+        "terme": "violences conjugales",
+        "contexte_droite": "à la gendarmerie avaient été effectuées par les enfants. San",
+        "position": 634,
+        "contexte_complet": "dre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants. Sans succès.\n>> Le dir",
+        "source": "jsl_j1",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "art des enfants à la gendarmerie pour tenter de dénoncer les",
+        "terme": "violences conjugales",
+        "contexte_droite": ". \"J'ai du mal à vous croire...\", réagit le magistrat.\n\"Je v",
+        "position": 5214,
+        "contexte_complet": "prétendues de la part des enfants à la gendarmerie pour tenter de dénoncer les violences conjugales. \"J'ai du mal à vous croire...\", réagit le magistrat.\n\"Je vous jure que c'est v",
+        "source": "jsl_j1",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": " pousse la porte d'un commissariat pour déposer plainte pour",
+        "terme": "violences conjugales",
+        "contexte_droite": ", certaines plaintes ne sont toujours pas prises ?\" demande ",
+        "position": 12317,
+        "contexte_complet": "1, lorsqu'une femme pousse la porte d'un commissariat pour déposer plainte pour violences conjugales, certaines plaintes ne sont toujours pas prises ?\" demande Me Tomasini, avocate",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "\"Deux nous brossent un portrait... Elles ont été victimes de",
+        "terme": "violences conjugales",
+        "contexte_droite": "de sa part.\" Il euphémise en décrivant \"des scènes un peu pa",
+        "position": 18447,
+        "contexte_complet": "recteur d'enquête. \"Deux nous brossent un portrait... Elles ont été victimes de violences conjugales de sa part.\" Il euphémise en décrivant \"des scènes un peu particulières\" de men",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "e totale solidarité envers leur mère. Décrivant un climat de",
+        "terme": "violence",
+        "contexte_droite": "voire de terreur instauré par leur père au domicile.\n>> Tout",
+        "position": 333,
+        "contexte_complet": ". Ils ont montré une totale solidarité envers leur mère. Décrivant un climat de violence voire de terreur instauré par leur père au domicile.\n>> Toutefois, questionnés",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "lle s'est rendue compte que d'autres femmes avaient subi des",
+        "terme": "violence",
+        "contexte_droite": "s conjugales. \"J'ai compris avec les services sociaux que c'",
+        "position": 5281,
+        "contexte_complet": "en pleurs comment elle s'est rendue compte que d'autres femmes avaient subi des violences conjugales. \"J'ai compris avec les services sociaux que c'était pas tout de ma",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "l'enquête.\nJe pense qu'à force elle serait morte à cause des",
+        "terme": "violence",
+        "contexte_droite": "s qu'on subissait\nDylan, fils de Valérie Bacot\n11 h 45 : \"Je",
+        "position": 19507,
+        "contexte_complet": "ne audition durant l'enquête.\nJe pense qu'à force elle serait morte à cause des violences qu'on subissait\nDylan, fils de Valérie Bacot\n11 h 45 : \"Je sais pas comment ça",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "enterrer son père.\nDylan aussi attaque sa déposition par les",
+        "terme": "violence",
+        "contexte_droite": "s du père : 'Il pouvait nous en mettre une sans aucune raiso",
+        "position": 21974,
+        "contexte_complet": "dans les bois pour enterrer son père.\nDylan aussi attaque sa déposition par les violences du père : 'Il pouvait nous en mettre une sans aucune raison. Au début, je croy",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "e Valérie Bacot. Et il est toujours sceptique concernant les",
+        "terme": "violence",
+        "contexte_droite": "s au quotidien.\n\"On nous décrit Daniel Polette comme un tyra",
+        "position": 22584,
+        "contexte_complet": "uestionne le fils de Valérie Bacot. Et il est toujours sceptique concernant les violences au quotidien.\n\"On nous décrit Daniel Polette comme un tyran domestique et un v",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " ensuite des deux visites à la gendarmerie pour dénoncer les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales que les enfants soutiennent avoir effectuées. L",
+        "position": 23622,
+        "contexte_complet": "Le fils Bacot parle ensuite des deux visites à la gendarmerie pour dénoncer les violences conjugales que les enfants soutiennent avoir effectuées. La présidente lui dem",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": ". Il a notamment soutenu que deux tentatives de dénoncer les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales à la gendarmerie avaient été effectuées par les",
+        "position": 27566,
+        "contexte_complet": "dre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants. Sans succè",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "lle s'est rendue compte que d'autres femmes avaient subi des",
+        "terme": "violences",
+        "contexte_droite": "conjugales. \"J'ai compris avec les services sociaux que c'ét",
+        "position": 5281,
+        "contexte_complet": "en pleurs comment elle s'est rendue compte que d'autres femmes avaient subi des violences conjugales. \"J'ai compris avec les services sociaux que c'était pas tout de ma",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "l'enquête.\nJe pense qu'à force elle serait morte à cause des",
+        "terme": "violences",
+        "contexte_droite": "qu'on subissait\nDylan, fils de Valérie Bacot\n11 h 45 : \"Je s",
+        "position": 19507,
+        "contexte_complet": "ne audition durant l'enquête.\nJe pense qu'à force elle serait morte à cause des violences qu'on subissait\nDylan, fils de Valérie Bacot\n11 h 45 : \"Je sais pas comment ça",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "enterrer son père.\nDylan aussi attaque sa déposition par les",
+        "terme": "violences",
+        "contexte_droite": "du père : 'Il pouvait nous en mettre une sans aucune raison.",
+        "position": 21974,
+        "contexte_complet": "dans les bois pour enterrer son père.\nDylan aussi attaque sa déposition par les violences du père : 'Il pouvait nous en mettre une sans aucune raison. Au début, je croya",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "e Valérie Bacot. Et il est toujours sceptique concernant les",
+        "terme": "violences",
+        "contexte_droite": "au quotidien.\n\"On nous décrit Daniel Polette comme un tyran ",
+        "position": 22584,
+        "contexte_complet": "uestionne le fils de Valérie Bacot. Et il est toujours sceptique concernant les violences au quotidien.\n\"On nous décrit Daniel Polette comme un tyran domestique et un vi",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " ensuite des deux visites à la gendarmerie pour dénoncer les",
+        "terme": "violences",
+        "contexte_droite": "conjugales que les enfants soutiennent avoir effectuées. La ",
+        "position": 23622,
+        "contexte_complet": "Le fils Bacot parle ensuite des deux visites à la gendarmerie pour dénoncer les violences conjugales que les enfants soutiennent avoir effectuées. La présidente lui dema",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": ". Il a notamment soutenu que deux tentatives de dénoncer les",
+        "terme": "violences",
+        "contexte_droite": "conjugales à la gendarmerie avaient été effectuées par les e",
+        "position": 27566,
+        "contexte_complet": "dre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants. Sans succès",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "n nous décrit Daniel Polette comme un tyran domestique et un",
+        "terme": "violent",
+        "contexte_droite": "quotidien. Pourtant, on n'a aucun certificat médical, c'est ",
+        "position": 22671,
+        "contexte_complet": "es au quotidien.\n\"On nous décrit Daniel Polette comme un tyran domestique et un violent quotidien. Pourtant, on n'a aucun certificat médical, c'est quand même curieux\"",
+        "source": "jsl_j2",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "l'ambiance qui régnait au sein du foyer. Il décrit un père \"",
+        "terme": "violent",
+        "contexte_droite": "\".\n\"Il était violent avec votre mère ?, demande la président",
+        "position": 25095,
+        "contexte_complet": "e le questionne sur l'ambiance qui régnait au sein du foyer. Il décrit un père \"violent\".\n\"Il était violent avec votre mère ?, demande la présidente.\n-Oui. Vraiment.\n-",
+        "source": "jsl_j2",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "ait au sein du foyer. Il décrit un père \"violent\".\n\"Il était",
+        "terme": "violent",
+        "contexte_droite": "avec votre mère ?, demande la présidente.\n-Oui. Vraiment.\n-V",
+        "position": 25115,
+        "contexte_complet": "l'ambiance qui régnait au sein du foyer. Il décrit un père \"violent\".\n\"Il était violent avec votre mère ?, demande la présidente.\n-Oui. Vraiment.\n-Vous l'avez vu ?\n-Pa",
+        "source": "jsl_j2",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "lle s'est rendue compte que d'autres femmes avaient subi des",
+        "terme": "violences conjugales",
+        "contexte_droite": ". \"J'ai compris avec les services sociaux que c'était pas to",
+        "position": 5281,
+        "contexte_complet": "en pleurs comment elle s'est rendue compte que d'autres femmes avaient subi des violences conjugales. \"J'ai compris avec les services sociaux que c'était pas tout de ma faute, que",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": " ensuite des deux visites à la gendarmerie pour dénoncer les",
+        "terme": "violences conjugales",
+        "contexte_droite": "que les enfants soutiennent avoir effectuées. La présidente ",
+        "position": 23622,
+        "contexte_complet": "Le fils Bacot parle ensuite des deux visites à la gendarmerie pour dénoncer les violences conjugales que les enfants soutiennent avoir effectuées. La présidente lui demande les dat",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": ". Il a notamment soutenu que deux tentatives de dénoncer les",
+        "terme": "violences conjugales",
+        "contexte_droite": "à la gendarmerie avaient été effectuées par les enfants. San",
+        "position": 27566,
+        "contexte_complet": "dre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants. Sans succès.\n>> Le dir",
+        "source": "jsl_j2",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "uteau et un 22 long rifle...\nElle raconte d'autres scènes de",
+        "terme": "violence",
+        "contexte_droite": "terribles, Daniel qui terrorisait sa famille.\n\"A 13 ans, j'a",
+        "position": 1464,
+        "contexte_complet": "ous la gorge, un couteau et un 22 long rifle...\nElle raconte d'autres scènes de violence terribles, Daniel qui terrorisait sa famille.\n\"A 13 ans, j'ai avalé des cachets",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "st dans la lignée des précédents. Elle raconte des scènes de",
+        "terme": "violence",
+        "contexte_droite": "très dures, \"on devait nettoyer le sang sur les murs... Ma s",
+        "position": 4151,
+        "contexte_complet": "n très énergique, est dans la lignée des précédents. Elle raconte des scènes de violence très dures, \"on devait nettoyer le sang sur les murs... Ma soeur a été traumati",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " son emprise.\n>> On a beaucoup entendu les mots \"monstre\", \"",
+        "terme": "violence",
+        "contexte_droite": "s\", \"armes\", \"peur\" ce mercredi après-midi.\nEt l'on attend m",
+        "position": 8482,
+        "contexte_complet": "e laisser briser par son emprise.\n>> On a beaucoup entendu les mots \"monstre\", \"violences\", \"armes\", \"peur\" ce mercredi après-midi.\nEt l'on attend maintenant le témoign",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " tombée. Il était plutôt indifférent.\"\nElle raconte quelques",
+        "terme": "violence",
+        "contexte_droite": "s, la présence des armes, \"c'est pas grand chose par rapport",
+        "position": 9867,
+        "contexte_complet": "Polette et j'étais tombée. Il était plutôt indifférent.\"\nElle raconte quelques violences, la présence des armes, \"c'est pas grand chose par rapport à ce qu'a vécu Valé",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ennes compagnes de Daniel Polette. Elle décrit des scènes de",
+        "terme": "violence",
+        "contexte_droite": "très précises, qui remontent à près de 45 ans mais qui sembl",
+        "position": 11794,
+        "contexte_complet": "ine, l'une des anciennes compagnes de Daniel Polette. Elle décrit des scènes de violence très précises, qui remontent à près de 45 ans mais qui semblent l'émouvoir enco",
+        "source": "jsl_j3",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "reuse de lui. Je suis tombée enceinte à 15 ans et demi.\"\n\"La",
+        "terme": "violence",
+        "contexte_droite": "est rentrée dans notre vie crescendo. C'est un homme qui buv",
+        "position": 12053,
+        "contexte_complet": "Je suis tombée amoureuse de lui. Je suis tombée enceinte à 15 ans et demi.\"\n\"La violence est rentrée dans notre vie crescendo. C'est un homme qui buvait, violent, un jo",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " notre Grand format publié en novembre 2019. Il illustre les",
+        "terme": "violence",
+        "contexte_droite": "s subies dans leur enfance qu'ont décrites le petit frère et",
+        "position": 14800,
+        "contexte_complet": "ssin est extrait de notre Grand format publié en novembre 2019. Il illustre les violences subies dans leur enfance qu'ont décrites le petit frère et la plus petite sœur",
+        "source": "jsl_j3",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "evant sa soeur qui est assise. Sans un regard.\n12 h 30 : Les",
+        "terme": "violence",
+        "contexte_droite": "s ? \"Jamais elle ne me l'a confié\"\nJérome raconte ce qu'il a",
+        "position": 16352,
+        "contexte_complet": "Bacot passe juste devant sa soeur qui est assise. Sans un regard.\n12 h 30 : Les violences ? \"Jamais elle ne me l'a confié\"\nJérome raconte ce qu'il a perçu des premières",
+        "source": "jsl_j3",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " dirais, au début.\n-Elle vous a dit qu'elle était victime de",
+        "terme": "violence",
+        "contexte_droite": "s, prostituée par son mari ?\n-Non. Jamais elle ne me l'a con",
+        "position": 16653,
+        "contexte_complet": "une fois par moi je dirais, au début.\n-Elle vous a dit qu'elle était victime de violences, prostituée par son mari ?\n-Non. Jamais elle ne me l'a confié. Après c'est vra",
+        "source": "jsl_j3",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "e lui demande de parler de Daniel Polette.\n\"Il y avait de la",
+        "terme": "violence",
+        "contexte_droite": "physique ?\n-Je ne m'en rappelle plus. J'ai tendance à oublie",
+        "position": 18375,
+        "contexte_complet": "rents. La présidente lui demande de parler de Daniel Polette.\n\"Il y avait de la violence physique ?\n-Je ne m'en rappelle plus. J'ai tendance à oublier ce qui ne m'intér",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "tions de l'accusation qui remettent en cause l'intensité des",
+        "terme": "violence",
+        "contexte_droite": "s subies par Valérie et la réalité des tentatives de signale",
+        "position": 30850,
+        "contexte_complet": "référence aux questions de l'accusation qui remettent en cause l'intensité des violences subies par Valérie et la réalité des tentatives de signalement à la gendarmeri",
+        "source": "jsl_j3",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "e totale solidarité envers leur mère. Décrivant un climat de",
+        "terme": "violence",
+        "contexte_droite": "voire de terreur instauré par leur père au domicile.\n>> Tout",
+        "position": 31714,
+        "contexte_complet": ". Ils ont montré une totale solidarité envers leur mère. Décrivant un climat de violence voire de terreur instauré par leur père au domicile.\n>> Toutefois, questionnés",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " son emprise.\n>> On a beaucoup entendu les mots \"monstre\", \"",
+        "terme": "violences",
+        "contexte_droite": "\", \"armes\", \"peur\" ce mercredi après-midi.\nEt l'on attend ma",
+        "position": 8482,
+        "contexte_complet": "e laisser briser par son emprise.\n>> On a beaucoup entendu les mots \"monstre\", \"violences\", \"armes\", \"peur\" ce mercredi après-midi.\nEt l'on attend maintenant le témoigna",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " tombée. Il était plutôt indifférent.\"\nElle raconte quelques",
+        "terme": "violences",
+        "contexte_droite": ", la présence des armes, \"c'est pas grand chose par rapport ",
+        "position": 9867,
+        "contexte_complet": "Polette et j'étais tombée. Il était plutôt indifférent.\"\nElle raconte quelques violences, la présence des armes, \"c'est pas grand chose par rapport à ce qu'a vécu Valér",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " notre Grand format publié en novembre 2019. Il illustre les",
+        "terme": "violences",
+        "contexte_droite": "subies dans leur enfance qu'ont décrites le petit frère et l",
+        "position": 14800,
+        "contexte_complet": "ssin est extrait de notre Grand format publié en novembre 2019. Il illustre les violences subies dans leur enfance qu'ont décrites le petit frère et la plus petite sœur",
+        "source": "jsl_j3",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "evant sa soeur qui est assise. Sans un regard.\n12 h 30 : Les",
+        "terme": "violences",
+        "contexte_droite": "? \"Jamais elle ne me l'a confié\"\nJérome raconte ce qu'il a p",
+        "position": 16352,
+        "contexte_complet": "Bacot passe juste devant sa soeur qui est assise. Sans un regard.\n12 h 30 : Les violences ? \"Jamais elle ne me l'a confié\"\nJérome raconte ce qu'il a perçu des premières",
+        "source": "jsl_j3",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " dirais, au début.\n-Elle vous a dit qu'elle était victime de",
+        "terme": "violences",
+        "contexte_droite": ", prostituée par son mari ?\n-Non. Jamais elle ne me l'a conf",
+        "position": 16653,
+        "contexte_complet": "une fois par moi je dirais, au début.\n-Elle vous a dit qu'elle était victime de violences, prostituée par son mari ?\n-Non. Jamais elle ne me l'a confié. Après c'est vrai",
+        "source": "jsl_j3",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "tions de l'accusation qui remettent en cause l'intensité des",
+        "terme": "violences",
+        "contexte_droite": "subies par Valérie et la réalité des tentatives de signaleme",
+        "position": 30850,
+        "contexte_complet": "référence aux questions de l'accusation qui remettent en cause l'intensité des violences subies par Valérie et la réalité des tentatives de signalement à la gendarmerie",
+        "source": "jsl_j3",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "l, \"je pensais que c'était de ma faute.\n\"Javais déjà un père",
+        "terme": "violent",
+        "contexte_droite": ". Alors le père de mon fils violent... je croyais que c'étai",
+        "position": 11228,
+        "contexte_complet": "de colère de Daniel, \"je pensais que c'était de ma faute.\n\"Javais déjà un père violent. Alors le père de mon fils violent... je croyais que c'était normal.\nIl y avait",
+        "source": "jsl_j3",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "ute.\n\"Javais déjà un père violent. Alors le père de mon fils",
+        "terme": "violent",
+        "contexte_droite": "... je croyais que c'était normal.\nIl y avait toujours des a",
+        "position": 11263,
+        "contexte_complet": "ue c'était de ma faute.\n\"Javais déjà un père violent. Alors le père de mon fils violent... je croyais que c'était normal.\nIl y avait toujours des armes. Dans sa voitur",
+        "source": "jsl_j3",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "rentrée dans notre vie crescendo. C'est un homme qui buvait,",
+        "terme": "violent",
+        "contexte_droite": ", un jour il s'est planté devant moi avec sa carabine à cano",
+        "position": 12127,
+        "contexte_complet": "\"\n\"La violence est rentrée dans notre vie crescendo. C'est un homme qui buvait, violent, un jour il s'est planté devant moi avec sa carabine à canon scié, il m'a deman",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "é, qualifiant son frère de \"monstre\", de \"diable\", \"toujours",
+        "terme": "violent",
+        "contexte_droite": "\". \"Valérie est une victime\".\nAlain Polette : « Mon frère Da",
+        "position": 13529,
+        "contexte_complet": "iel Polette a déposé, qualifiant son frère de \"monstre\", de \"diable\", \"toujours violent\". \"Valérie est une victime\".\nAlain Polette : « Mon frère Daniel était un monstr",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "re ignoble, tel qu'il a toujours été. Je l'ai toujours connu",
+        "terme": "violent",
+        "contexte_droite": ". Avec des armes, qu'il a toujours eu. Quand il arrivait, on",
+        "position": 15200,
+        "contexte_complet": "portement de cet être ignoble, tel qu'il a toujours été. Je l'ai toujours connu violent. Avec des armes, qu'il a toujours eu. Quand il arrivait, on avait l'obligation",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ombat maintenant, pour toutes les autres femmes, victimes de",
+        "terme": "violence",
+        "contexte_droite": "s. Je ne suis pas soulagée, non, je suis vidée. (...) Je pou",
+        "position": 1253,
+        "contexte_complet": "C'est un nouveau combat maintenant, pour toutes les autres femmes, victimes de violences. Je ne suis pas soulagée, non, je suis vidée. (...) Je pourrai être là pour me",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ombat maintenant, pour toutes les autres femmes, victimes de",
+        "terme": "violences",
+        "contexte_droite": ". Je ne suis pas soulagée, non, je suis vidée. (...) Je pour",
+        "position": 1253,
+        "contexte_complet": "C'est un nouveau combat maintenant, pour toutes les autres femmes, victimes de violences. Je ne suis pas soulagée, non, je suis vidée. (...) Je pourrai être là pour mes",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "nta. Vous aviez aussi défendu Jacqueline Sauvage, victime de",
+        "terme": "violence",
+        "contexte_droite": "s conjugales et graciée en 2016 par le Président de la Répub",
+        "position": 1771,
+        "contexte_complet": "tre Janine Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la République pour le meurtr",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "Votre cabinet est spécialisé dans la défense des victimes de",
+        "terme": "violence",
+        "contexte_droite": "s et de harcèlement, notamment pour les cas de violences con",
+        "position": 2062,
+        "contexte_complet": "e, publié en 2020. Votre cabinet est spécialisé dans la défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales et intrafami",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "es de violences et de harcèlement, notamment pour les cas de",
+        "terme": "violence",
+        "contexte_droite": "s conjugales et intrafamiliales. Vous combattez régulièremen",
+        "position": 2117,
+        "contexte_complet": "défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales et intrafamiliales. Vous combattez régulièrement la notion de « syn",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "e », qui décrédibilise la parole des mères qui dénoncent les",
+        "terme": "violence",
+        "contexte_droite": "s commises par leur conjoint ou ex-conjoint sur les enfants.",
+        "position": 2293,
+        "contexte_complet": "aliénation parentale », qui décrédibilise la parole des mères qui dénoncent les violences commises par leur conjoint ou ex-conjoint sur les enfants. Vous avez également",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "trés, comme malheureusement de nombreuses femmes victimes de",
+        "terme": "violence",
+        "contexte_droite": "s, pour réussir à s'échapper de cette situation et à porter ",
+        "position": 2936,
+        "contexte_complet": "es qu'elle a rencontrés, comme malheureusement de nombreuses femmes victimes de violences, pour réussir à s'échapper de cette situation et à porter plainte. Afin aussi",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "es de ce procès, son combat en faveur des femmes victimes de",
+        "terme": "violence",
+        "contexte_droite": "s ainsi que les évolutions souhaitables de notre législation",
+        "position": 3295,
+        "contexte_complet": "plications juridiques de ce procès, son combat en faveur des femmes victimes de violences ainsi que les évolutions souhaitables de notre législation en matière de lutte",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "aitables de notre législation en matière de lutte contre les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales.\nNous sommes ici au sein de la délégation aux d",
+        "position": 3395,
+        "contexte_complet": "les évolutions souhaitables de notre législation en matière de lutte contre les violences conjugales.\nNous sommes ici au sein de la délégation aux droits des femmes et",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "vons travaillé pendant de longs mois sur la lutte contre les",
+        "terme": "violence",
+        "contexte_droite": "s faites aux femmes. Nous avons abordé d'autres sujets depui",
+        "position": 3928,
+        "contexte_complet": "ères années, nous avons travaillé pendant de longs mois sur la lutte contre les violences faites aux femmes. Nous avons abordé d'autres sujets depuis. Notre dernier rap",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " évoqués dans ce rapport. La question de la lutte contre les",
+        "terme": "violence",
+        "contexte_droite": "s faites aux femmes en fait partie, avec une difficulté supp",
+        "position": 4295,
+        "contexte_complet": "les femmes ont été évoqués dans ce rapport. La question de la lutte contre les violences faites aux femmes en fait partie, avec une difficulté supplémentaire dans les",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "endre ce qui vous est arrivé, pensez-vous que ce parcours de",
+        "terme": "violence",
+        "contexte_droite": "s et cette amnésie traumatique ont contribué à ce que vous n",
+        "position": 8079,
+        "contexte_complet": "ous tentez de comprendre ce qui vous est arrivé, pensez-vous que ce parcours de violences et cette amnésie traumatique ont contribué à ce que vous n'ayez pas la force e",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ace à l'emprise ? Quel regard portez-vous sur ce parcours de",
+        "terme": "violence",
+        "contexte_droite": "s très jeune dans le cadre familial, dans une enceinte qui a",
+        "position": 8263,
+        "contexte_complet": "de vous défendre face à l'emprise ? Quel regard portez-vous sur ce parcours de violences très jeune dans le cadre familial, dans une enceinte qui aurait dû vous protég",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " l'État, la société dans son ensemble. Ce sont des années de",
+        "terme": "violence",
+        "contexte_droite": ", de maltraitance et d'agressions physiques et sexuelles... ",
+        "position": 11097,
+        "contexte_complet": "par l'institution, l'État, la société dans son ensemble. Ce sont des années de violence, de maltraitance et d'agressions physiques et sexuelles... Vous avez parlé de h",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ait voter un certain nombre de textes pour lutter contre les",
+        "terme": "violence",
+        "contexte_droite": "s intrafamiliales et conjugales. J'ai également parlé de la ",
+        "position": 18878,
+        "contexte_complet": "asini. Nous avons fait voter un certain nombre de textes pour lutter contre les violences intrafamiliales et conjugales. J'ai également parlé de la loi contre la prosti",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "e être possibles aujourd'hui ? Comment réussir à enrayer ces",
+        "terme": "violence",
+        "contexte_droite": "s sur tous nos territoires, dont nos territoires ultramarins",
+        "position": 19163,
+        "contexte_complet": "ourraient-ils encore être possibles aujourd'hui ? Comment réussir à enrayer ces violences sur tous nos territoires, dont nos territoires ultramarins ?\nMaître Nathalie T",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "tion de propositions de loi en faveur de la lutte contre les",
+        "terme": "violence",
+        "contexte_droite": "s faites aux femmes et contre les féminicides, et pour les e",
+        "position": 19930,
+        "contexte_complet": "ncert sur l'élaboration de propositions de loi en faveur de la lutte contre les violences faites aux femmes et contre les féminicides, et pour les enfants maltraités, e",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "'années, lorsque j'ai créé mon cabinet entièrement dédié aux",
+        "terme": "violence",
+        "contexte_droite": "s faites aux femmes et aux enfants ? Je pense que les mental",
+        "position": 21044,
+        "contexte_complet": "puis une douzaine d'années, lorsque j'ai créé mon cabinet entièrement dédié aux violences faites aux femmes et aux enfants ? Je pense que les mentalités ont évolué de m",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "sée à l'acte lors d'une soirée où elle avait subi une énième",
+        "terme": "violence",
+        "contexte_droite": "de la part de son conjoint violent. Elle avait été acquittée",
+        "position": 22052,
+        "contexte_complet": "une femme était passée à l'acte lors d'une soirée où elle avait subi une énième violence de la part de son conjoint violent. Elle avait été acquittée, alors qu'elle l'a",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ime défense différée. Elle a estimé qu'une femme, victime de",
+        "terme": "violence",
+        "contexte_droite": "s ou non, restait un justiciable comme un autre, et devait s",
+        "position": 23373,
+        "contexte_complet": "ce concept de légitime défense différée. Elle a estimé qu'une femme, victime de violences ou non, restait un justiciable comme un autre, et devait se voir appliquer les",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " 12 ans par son beau-père. S'en suivront plusieurs années de",
+        "terme": "violence",
+        "contexte_droite": "s conjugales de toute sorte, psychologiques, physiques, sexu",
+        "position": 24622,
+        "contexte_complet": "violée dès l'âge de 12 ans par son beau-père. S'en suivront plusieurs années de violences conjugales de toute sorte, psychologiques, physiques, sexuelles. Elle subira e",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "psychologiques, physiques, sexuelles. Elle subira ensuite la",
+        "terme": "violence",
+        "contexte_droite": "ultime : la prostitution par son propre conjoint.\nLa cour a ",
+        "position": 24720,
+        "contexte_complet": "es de toute sorte, psychologiques, physiques, sexuelles. Elle subira ensuite la violence ultime : la prostitution par son propre conjoint.\nLa cour a entendu les dysfonc",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ient plus libres qu'elle. Ils l'ont fait. Ils ont dénoncé la",
+        "terme": "violence",
+        "contexte_droite": ", mais aussi la prostitution. Ils n'ont absolument pas été p",
+        "position": 26511,
+        "contexte_complet": "pe. Ses enfants étaient plus libres qu'elle. Ils l'ont fait. Ils ont dénoncé la violence, mais aussi la prostitution. Ils n'ont absolument pas été pris au sérieux, car",
+        "source": "senat",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " reconnaît et décrit aujourd'hui les effets traumatiques des",
+        "terme": "violence",
+        "contexte_droite": "s répétées, il a été proposé d'ajouter dans l'article 222-14",
+        "position": 31810,
+        "contexte_complet": "de la science, qui reconnaît et décrit aujourd'hui les effets traumatiques des violences répétées, il a été proposé d'ajouter dans l'article 222-14 du code pénal, qui",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ajouter dans l'article 222-14 du code pénal, qui réprime les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales habituelles, un nouvel alinéa ainsi rédigé : «l",
+        "position": 31910,
+        "contexte_complet": "il a été proposé d'ajouter dans l'article 222-14 du code pénal, qui réprime les violences conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces viole",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "abituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces",
+        "terme": "violence",
+        "contexte_droite": "s sur la victime est pris en compte pour l'application des a",
+        "position": 31993,
+        "contexte_complet": "lences conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces violences sur la victime est pris en compte pour l'application des articles 122-1, 122-2",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "responsabilité pénale est engagée. » En d'autres termes, les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales qui entraînent des traumatismes certains sur le",
+        "position": 32163,
+        "contexte_complet": "t 122-5 lorsque sa responsabilité pénale est engagée. » En d'autres termes, les violences conjugales qui entraînent des traumatismes certains sur les victimes devront s",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "de cette délégation, nous faisons ici de la lutte contre les",
+        "terme": "violence",
+        "contexte_droite": "s faites aux femmes une priorité. Je ne peux commencer ce pr",
+        "position": 33117,
+        "contexte_complet": "semble des membres de cette délégation, nous faisons ici de la lutte contre les violences faites aux femmes une priorité. Je ne peux commencer ce propos sans avoir un m",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": " contrôle de leurs actes et de leur discernement suite à des",
+        "terme": "violence",
+        "contexte_droite": "s inqualifiables et répétées durant des années. C'est une ré",
+        "position": 34850,
+        "contexte_complet": "hommes, perdent le contrôle de leurs actes et de leur discernement suite à des violences inqualifiables et répétées durant des années. C'est une réalité.\nJe voudrais i",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "nstitutions qui n'ont pas protégé une mineure ayant subi des",
+        "terme": "violence",
+        "contexte_droite": "s.\nCe témoignage nous montre toute la nécessité d'aboutir, e",
+        "position": 35675,
+        "contexte_complet": "al d'attaquer les institutions qui n'ont pas protégé une mineure ayant subi des violences.\nCe témoignage nous montre toute la nécessité d'aboutir, en cas de violences c",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "moignage nous montre toute la nécessité d'aboutir, en cas de",
+        "terme": "violence",
+        "contexte_droite": "s conjugales, au fait que l'enfant doit être considéré comme",
+        "position": 35752,
+        "contexte_complet": "es violences.\nCe témoignage nous montre toute la nécessité d'aboutir, en cas de violences conjugales, au fait que l'enfant doit être considéré comme victime. Ce doit êt",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "\nMesdames, merci pour vos témoignages. Il est évident que la",
+        "terme": "violence",
+        "contexte_droite": "continue là où la parole s'arrête. Lorsqu'on est écouté, mai",
+        "position": 37171,
+        "contexte_complet": "rée par la société.\nMesdames, merci pour vos témoignages. Il est évident que la violence continue là où la parole s'arrête. Lorsqu'on est écouté, mais aussi entendu, on",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "chaque fois raconter ce qui s'est passé, et donc revivre les",
+        "terme": "violence",
+        "contexte_droite": "s subies, alors que vous voulez, à juste titre, les oublier.",
+        "position": 39558,
+        "contexte_complet": "ible. Vous devez à chaque fois raconter ce qui s'est passé, et donc revivre les violences subies, alors que vous voulez, à juste titre, les oublier. Elles sont impossib",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "émoignage comme celui-ci nous fait toucher l'immensité de la",
+        "terme": "violence",
+        "contexte_droite": "et de la haine des femmes, de la perversité à leur encontre.",
+        "position": 42394,
+        "contexte_complet": "la vôtre, chaque témoignage comme celui-ci nous fait toucher l'immensité de la violence et de la haine des femmes, de la perversité à leur encontre. Nous vivons collec",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "arences. Je pense qu'elle est historiquement complice de ces",
+        "terme": "violence",
+        "contexte_droite": "s faites aux femmes et aux enfants. Le code pénal n'a, selon",
+        "position": 42773,
+        "contexte_complet": "défaillances, des carences. Je pense qu'elle est historiquement complice de ces violences faites aux femmes et aux enfants. Le code pénal n'a, selon moi, jamais été con",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "protéger les femmes ou les enfants de la domination et de la",
+        "terme": "violence",
+        "contexte_droite": "masculines. C'est un angle mort de notre système pénal et ju",
+        "position": 42930,
+        "contexte_complet": "ais été conçu pour protéger les femmes ou les enfants de la domination et de la violence masculines. C'est un angle mort de notre système pénal et judiciaire. L'ensembl",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ésentation d'enfant, permettant aux hommes de poursuivre des",
+        "terme": "violence",
+        "contexte_droite": "s post-séparation. Il interdit aux femmes de protéger leurs ",
+        "position": 43887,
+        "contexte_complet": "le délit de non-présentation d'enfant, permettant aux hommes de poursuivre des violences post-séparation. Il interdit aux femmes de protéger leurs enfants des violence",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ration. Il interdit aux femmes de protéger leurs enfants des",
+        "terme": "violence",
+        "contexte_droite": "s sexuelles ou physiques commises contre eux. Je me suis heu",
+        "position": 43967,
+        "contexte_complet": "violences post-séparation. Il interdit aux femmes de protéger leurs enfants des violences sexuelles ou physiques commises contre eux. Je me suis heurtée à un mur dès qu",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "qu'une femme a été confrontée à la prostitution et a subi la",
+        "terme": "violence",
+        "contexte_droite": ", il est d'autant plus détestable. Personne ne m'enlèvera de",
+        "position": 49612,
+        "contexte_complet": "je le disais. Lorsqu'une femme a été confrontée à la prostitution et a subi la violence, il est d'autant plus détestable. Personne ne m'enlèvera de l'esprit qu'il y a",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "Elle agit pour l'enfant. Si elle sait qu'il y a un risque de",
+        "terme": "violence",
+        "contexte_droite": ", de manipulation envers l'enfant, elle ne pourra jamais por",
+        "position": 58674,
+        "contexte_complet": "hec pour la maman. Elle agit pour l'enfant. Si elle sait qu'il y a un risque de violence, de manipulation envers l'enfant, elle ne pourra jamais porter plainte ou se sa",
+        "source": "senat",
+        "contexte_classe": "minimisation"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "ot apporte une pierre fondamentale dans le combat contre les",
+        "terme": "violence",
+        "contexte_droite": "s conjugales. La médiatisation autour de ce type d'affaires,",
+        "position": 64112,
+        "contexte_complet": "nage de Valérie Bacot apporte une pierre fondamentale dans le combat contre les violences conjugales. La médiatisation autour de ce type d'affaires, de ces femmes qui t",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violence",
+        "contexte_gauche": "iale, les femmes auront aussi du mal à sortir des cercles de",
+        "terme": "violence",
+        "contexte_droite": "s dans les foyers. L'autonomie économique est aussi un moyen",
+        "position": 65927,
+        "contexte_complet": "é économique, salariale, les femmes auront aussi du mal à sortir des cercles de violences dans les foyers. L'autonomie économique est aussi un moyen de se libérer pour",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "nta. Vous aviez aussi défendu Jacqueline Sauvage, victime de",
+        "terme": "violences",
+        "contexte_droite": "conjugales et graciée en 2016 par le Président de la Républi",
+        "position": 1771,
+        "contexte_complet": "tre Janine Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la République pour le meurtre",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "Votre cabinet est spécialisé dans la défense des victimes de",
+        "terme": "violences",
+        "contexte_droite": "et de harcèlement, notamment pour les cas de violences conju",
+        "position": 2062,
+        "contexte_complet": "e, publié en 2020. Votre cabinet est spécialisé dans la défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales et intrafamil",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "es de violences et de harcèlement, notamment pour les cas de",
+        "terme": "violences",
+        "contexte_droite": "conjugales et intrafamiliales. Vous combattez régulièrement ",
+        "position": 2117,
+        "contexte_complet": "défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales et intrafamiliales. Vous combattez régulièrement la notion de « synd",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "e », qui décrédibilise la parole des mères qui dénoncent les",
+        "terme": "violences",
+        "contexte_droite": "commises par leur conjoint ou ex-conjoint sur les enfants. V",
+        "position": 2293,
+        "contexte_complet": "aliénation parentale », qui décrédibilise la parole des mères qui dénoncent les violences commises par leur conjoint ou ex-conjoint sur les enfants. Vous avez également",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "trés, comme malheureusement de nombreuses femmes victimes de",
+        "terme": "violences",
+        "contexte_droite": ", pour réussir à s'échapper de cette situation et à porter p",
+        "position": 2936,
+        "contexte_complet": "es qu'elle a rencontrés, comme malheureusement de nombreuses femmes victimes de violences, pour réussir à s'échapper de cette situation et à porter plainte. Afin aussi q",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "es de ce procès, son combat en faveur des femmes victimes de",
+        "terme": "violences",
+        "contexte_droite": "ainsi que les évolutions souhaitables de notre législation e",
+        "position": 3295,
+        "contexte_complet": "plications juridiques de ce procès, son combat en faveur des femmes victimes de violences ainsi que les évolutions souhaitables de notre législation en matière de lutte",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "aitables de notre législation en matière de lutte contre les",
+        "terme": "violences",
+        "contexte_droite": "conjugales.\nNous sommes ici au sein de la délégation aux dro",
+        "position": 3395,
+        "contexte_complet": "les évolutions souhaitables de notre législation en matière de lutte contre les violences conjugales.\nNous sommes ici au sein de la délégation aux droits des femmes et à",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "vons travaillé pendant de longs mois sur la lutte contre les",
+        "terme": "violences",
+        "contexte_droite": "faites aux femmes. Nous avons abordé d'autres sujets depuis.",
+        "position": 3928,
+        "contexte_complet": "ères années, nous avons travaillé pendant de longs mois sur la lutte contre les violences faites aux femmes. Nous avons abordé d'autres sujets depuis. Notre dernier rapp",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " évoqués dans ce rapport. La question de la lutte contre les",
+        "terme": "violences",
+        "contexte_droite": "faites aux femmes en fait partie, avec une difficulté supplé",
+        "position": 4295,
+        "contexte_complet": "les femmes ont été évoqués dans ce rapport. La question de la lutte contre les violences faites aux femmes en fait partie, avec une difficulté supplémentaire dans les t",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "endre ce qui vous est arrivé, pensez-vous que ce parcours de",
+        "terme": "violences",
+        "contexte_droite": "et cette amnésie traumatique ont contribué à ce que vous n'a",
+        "position": 8079,
+        "contexte_complet": "ous tentez de comprendre ce qui vous est arrivé, pensez-vous que ce parcours de violences et cette amnésie traumatique ont contribué à ce que vous n'ayez pas la force et",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ace à l'emprise ? Quel regard portez-vous sur ce parcours de",
+        "terme": "violences",
+        "contexte_droite": "très jeune dans le cadre familial, dans une enceinte qui aur",
+        "position": 8263,
+        "contexte_complet": "de vous défendre face à l'emprise ? Quel regard portez-vous sur ce parcours de violences très jeune dans le cadre familial, dans une enceinte qui aurait dû vous protége",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ait voter un certain nombre de textes pour lutter contre les",
+        "terme": "violences",
+        "contexte_droite": "intrafamiliales et conjugales. J'ai également parlé de la lo",
+        "position": 18878,
+        "contexte_complet": "asini. Nous avons fait voter un certain nombre de textes pour lutter contre les violences intrafamiliales et conjugales. J'ai également parlé de la loi contre la prostit",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "e être possibles aujourd'hui ? Comment réussir à enrayer ces",
+        "terme": "violences",
+        "contexte_droite": "sur tous nos territoires, dont nos territoires ultramarins ?",
+        "position": 19163,
+        "contexte_complet": "ourraient-ils encore être possibles aujourd'hui ? Comment réussir à enrayer ces violences sur tous nos territoires, dont nos territoires ultramarins ?\nMaître Nathalie To",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "tion de propositions de loi en faveur de la lutte contre les",
+        "terme": "violences",
+        "contexte_droite": "faites aux femmes et contre les féminicides, et pour les enf",
+        "position": 19930,
+        "contexte_complet": "ncert sur l'élaboration de propositions de loi en faveur de la lutte contre les violences faites aux femmes et contre les féminicides, et pour les enfants maltraités, en",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "'années, lorsque j'ai créé mon cabinet entièrement dédié aux",
+        "terme": "violences",
+        "contexte_droite": "faites aux femmes et aux enfants ? Je pense que les mentalit",
+        "position": 21044,
+        "contexte_complet": "puis une douzaine d'années, lorsque j'ai créé mon cabinet entièrement dédié aux violences faites aux femmes et aux enfants ? Je pense que les mentalités ont évolué de ma",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ime défense différée. Elle a estimé qu'une femme, victime de",
+        "terme": "violences",
+        "contexte_droite": "ou non, restait un justiciable comme un autre, et devait se ",
+        "position": 23373,
+        "contexte_complet": "ce concept de légitime défense différée. Elle a estimé qu'une femme, victime de violences ou non, restait un justiciable comme un autre, et devait se voir appliquer les",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " 12 ans par son beau-père. S'en suivront plusieurs années de",
+        "terme": "violences",
+        "contexte_droite": "conjugales de toute sorte, psychologiques, physiques, sexuel",
+        "position": 24622,
+        "contexte_complet": "violée dès l'âge de 12 ans par son beau-père. S'en suivront plusieurs années de violences conjugales de toute sorte, psychologiques, physiques, sexuelles. Elle subira en",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " reconnaît et décrit aujourd'hui les effets traumatiques des",
+        "terme": "violences",
+        "contexte_droite": "répétées, il a été proposé d'ajouter dans l'article 222-14 d",
+        "position": 31810,
+        "contexte_complet": "de la science, qui reconnaît et décrit aujourd'hui les effets traumatiques des violences répétées, il a été proposé d'ajouter dans l'article 222-14 du code pénal, qui r",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ajouter dans l'article 222-14 du code pénal, qui réprime les",
+        "terme": "violences",
+        "contexte_droite": "conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'i",
+        "position": 31910,
+        "contexte_complet": "il a été proposé d'ajouter dans l'article 222-14 du code pénal, qui réprime les violences conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces violen",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "abituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces",
+        "terme": "violences",
+        "contexte_droite": "sur la victime est pris en compte pour l'application des art",
+        "position": 31993,
+        "contexte_complet": "lences conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces violences sur la victime est pris en compte pour l'application des articles 122-1, 122-2",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "responsabilité pénale est engagée. » En d'autres termes, les",
+        "terme": "violences",
+        "contexte_droite": "conjugales qui entraînent des traumatismes certains sur les ",
+        "position": 32163,
+        "contexte_complet": "t 122-5 lorsque sa responsabilité pénale est engagée. » En d'autres termes, les violences conjugales qui entraînent des traumatismes certains sur les victimes devront sy",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "de cette délégation, nous faisons ici de la lutte contre les",
+        "terme": "violences",
+        "contexte_droite": "faites aux femmes une priorité. Je ne peux commencer ce prop",
+        "position": 33117,
+        "contexte_complet": "semble des membres de cette délégation, nous faisons ici de la lutte contre les violences faites aux femmes une priorité. Je ne peux commencer ce propos sans avoir un mo",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": " contrôle de leurs actes et de leur discernement suite à des",
+        "terme": "violences",
+        "contexte_droite": "inqualifiables et répétées durant des années. C'est une réal",
+        "position": 34850,
+        "contexte_complet": "hommes, perdent le contrôle de leurs actes et de leur discernement suite à des violences inqualifiables et répétées durant des années. C'est une réalité.\nJe voudrais in",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "nstitutions qui n'ont pas protégé une mineure ayant subi des",
+        "terme": "violences",
+        "contexte_droite": ".\nCe témoignage nous montre toute la nécessité d'aboutir, en",
+        "position": 35675,
+        "contexte_complet": "al d'attaquer les institutions qui n'ont pas protégé une mineure ayant subi des violences.\nCe témoignage nous montre toute la nécessité d'aboutir, en cas de violences co",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "moignage nous montre toute la nécessité d'aboutir, en cas de",
+        "terme": "violences",
+        "contexte_droite": "conjugales, au fait que l'enfant doit être considéré comme v",
+        "position": 35752,
+        "contexte_complet": "es violences.\nCe témoignage nous montre toute la nécessité d'aboutir, en cas de violences conjugales, au fait que l'enfant doit être considéré comme victime. Ce doit êtr",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "chaque fois raconter ce qui s'est passé, et donc revivre les",
+        "terme": "violences",
+        "contexte_droite": "subies, alors que vous voulez, à juste titre, les oublier. E",
+        "position": 39558,
+        "contexte_complet": "ible. Vous devez à chaque fois raconter ce qui s'est passé, et donc revivre les violences subies, alors que vous voulez, à juste titre, les oublier. Elles sont impossibl",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "arences. Je pense qu'elle est historiquement complice de ces",
+        "terme": "violences",
+        "contexte_droite": "faites aux femmes et aux enfants. Le code pénal n'a, selon m",
+        "position": 42773,
+        "contexte_complet": "défaillances, des carences. Je pense qu'elle est historiquement complice de ces violences faites aux femmes et aux enfants. Le code pénal n'a, selon moi, jamais été conç",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ésentation d'enfant, permettant aux hommes de poursuivre des",
+        "terme": "violences",
+        "contexte_droite": "post-séparation. Il interdit aux femmes de protéger leurs en",
+        "position": 43887,
+        "contexte_complet": "le délit de non-présentation d'enfant, permettant aux hommes de poursuivre des violences post-séparation. Il interdit aux femmes de protéger leurs enfants des violences",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ration. Il interdit aux femmes de protéger leurs enfants des",
+        "terme": "violences",
+        "contexte_droite": "sexuelles ou physiques commises contre eux. Je me suis heurt",
+        "position": 43967,
+        "contexte_complet": "violences post-séparation. Il interdit aux femmes de protéger leurs enfants des violences sexuelles ou physiques commises contre eux. Je me suis heurtée à un mur dès que",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "ot apporte une pierre fondamentale dans le combat contre les",
+        "terme": "violences",
+        "contexte_droite": "conjugales. La médiatisation autour de ce type d'affaires, d",
+        "position": 64112,
+        "contexte_complet": "nage de Valérie Bacot apporte une pierre fondamentale dans le combat contre les violences conjugales. La médiatisation autour de ce type d'affaires, de ces femmes qui tu",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences",
+        "contexte_gauche": "iale, les femmes auront aussi du mal à sortir des cercles de",
+        "terme": "violences",
+        "contexte_droite": "dans les foyers. L'autonomie économique est aussi un moyen d",
+        "position": 65927,
+        "contexte_complet": "é économique, salariale, les femmes auront aussi du mal à sortir des cercles de violences dans les foyers. L'autonomie économique est aussi un moyen de se libérer pour é",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "ar le Président de la République pour le meurtre de son mari",
+        "terme": "violent",
+        "contexte_droite": ". Vous êtes coauteure, avec votre consoeur Maître Bonaggiunt",
+        "position": 1873,
+        "contexte_complet": "t graciée en 2016 par le Président de la République pour le meurtre de son mari violent. Vous êtes coauteure, avec votre consoeur Maître Bonaggiunta, d'un livre intitu",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "éfendu Alexandra Lange, acquittée du meurtre de son conjoint",
+        "terme": "violent",
+        "contexte_droite": "sur le fondement de la légitime défense. Celle-ci avait à l'",
+        "position": 21358,
+        "contexte_complet": "2012, nous avions défendu Alexandra Lange, acquittée du meurtre de son conjoint violent sur le fondement de la légitime défense. Celle-ci avait à l'époque été retenue,",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "s années, qui n'ont d'autres choix que de tuer leur conjoint",
+        "terme": "violent",
+        "contexte_droite": "pour s'en sortir. En 2012, j'avais même évoqué l'affaire Ang",
+        "position": 21868,
+        "contexte_complet": "s pendant de longues années, qui n'ont d'autres choix que de tuer leur conjoint violent pour s'en sortir. En 2012, j'avais même évoqué l'affaire Angélique Lavallée. Au",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "le avait subi une énième violence de la part de son conjoint",
+        "terme": "violent",
+        "contexte_droite": ". Elle avait été acquittée, alors qu'elle l'avait tué de dos",
+        "position": 22088,
+        "contexte_complet": "d'une soirée où elle avait subi une énième violence de la part de son conjoint violent. Elle avait été acquittée, alors qu'elle l'avait tué de dos et que ni les critè",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "en France sur une présomption de légitime défense des femmes",
+        "terme": "violent",
+        "contexte_droite": "ées, ou même sur une légitime défense différée.\nEn 2016-2017",
+        "position": 22749,
+        "contexte_complet": "enre de plaidoirie en France sur une présomption de légitime défense des femmes violentées, ou même sur une légitime défense différée.\nEn 2016-2017, il y a eu l'affair",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "toute petite. Elle a ensuite été une jeune femme violée puis",
+        "terme": "violent",
+        "contexte_droite": "ée dans le huis clos conjugal. Elle sera violée dès l'âge de",
+        "position": 24494,
+        "contexte_complet": "lorsqu'elle était toute petite. Elle a ensuite été une jeune femme violée puis violentée dans le huis clos conjugal. Elle sera violée dès l'âge de 12 ans par son beau",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "trois enfants viennent vous voir en disant que leur mère est",
+        "terme": "violent",
+        "contexte_droite": "ée et que leur père la prostitue, la moindre des choses sera",
+        "position": 26744,
+        "contexte_complet": "e. Lorsque deux ou trois enfants viennent vous voir en disant que leur mère est violentée et que leur père la prostitue, la moindre des choses serait pourtant d'enquêt",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": " hyper vigilance permanente, et du caractère imprévisible et",
+        "terme": "violent",
+        "contexte_droite": "de son époux, qui a enfermé Mme Bacot dans la certitude que ",
+        "position": 30630,
+        "contexte_complet": "onséquence de cette hyper vigilance permanente, et du caractère imprévisible et violent de son époux, qui a enfermé Mme Bacot dans la certitude que seul ce geste pourr",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "ais insister sur l'instauration de peines planchers pour les",
+        "terme": "violent",
+        "contexte_droite": "s conjugaux. Je souhaite que nous allions plus loin sur le s",
+        "position": 34994,
+        "contexte_complet": "e réalité.\nJe voudrais insister sur l'instauration de peines planchers pour les violents conjugaux. Je souhaite que nous allions plus loin sur le sujet. Je suis surpri",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "ation entre un homme, un dominant, un bourreau, et une femme",
+        "terme": "violent",
+        "contexte_droite": "ée. Je remets en cause ce texte depuis longtemps. Nous avons",
+        "position": 61571,
+        "contexte_complet": "x rapports de domination entre un homme, un dominant, un bourreau, et une femme violentée. Je remets en cause ce texte depuis longtemps. Nous avons travaillé sur ce su",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violent",
+        "contexte_gauche": "que tout le monde se connaît que c'est compliqué. Ces femmes",
+        "terme": "violent",
+        "contexte_droite": "ées sont animées par deux sentiments : la peur, d'une part, ",
+        "position": 62365,
+        "contexte_complet": "st justement parce que tout le monde se connaît que c'est compliqué. Ces femmes violentées sont animées par deux sentiments : la peur, d'une part, mais également la ho",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violents",
+        "contexte_gauche": "ais insister sur l'instauration de peines planchers pour les",
+        "terme": "violents",
+        "contexte_droite": "conjugaux. Je souhaite que nous allions plus loin sur le suj",
+        "position": 34994,
+        "contexte_complet": "e réalité.\nJe voudrais insister sur l'instauration de peines planchers pour les violents conjugaux. Je souhaite que nous allions plus loin sur le sujet. Je suis surpris",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "nta. Vous aviez aussi défendu Jacqueline Sauvage, victime de",
+        "terme": "violences conjugales",
+        "contexte_droite": "et graciée en 2016 par le Président de la République pour le",
+        "position": 1771,
+        "contexte_complet": "tre Janine Bonaggiunta. Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la République pour le meurtre de son mar",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "es de violences et de harcèlement, notamment pour les cas de",
+        "terme": "violences conjugales",
+        "contexte_droite": "et intrafamiliales. Vous combattez régulièrement la notion d",
+        "position": 2117,
+        "contexte_complet": "défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales et intrafamiliales. Vous combattez régulièrement la notion de « syndrome d'alié",
+        "source": "senat",
+        "contexte_classe": "enumeration"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "aitables de notre législation en matière de lutte contre les",
+        "terme": "violences conjugales",
+        "contexte_droite": ".\nNous sommes ici au sein de la délégation aux droits des fe",
+        "position": 3395,
+        "contexte_complet": "les évolutions souhaitables de notre législation en matière de lutte contre les violences conjugales.\nNous sommes ici au sein de la délégation aux droits des femmes et à l'égalité,",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": " 12 ans par son beau-père. S'en suivront plusieurs années de",
+        "terme": "violences conjugales",
+        "contexte_droite": "de toute sorte, psychologiques, physiques, sexuelles. Elle s",
+        "position": 24622,
+        "contexte_complet": "violée dès l'âge de 12 ans par son beau-père. S'en suivront plusieurs années de violences conjugales de toute sorte, psychologiques, physiques, sexuelles. Elle subira ensuite la vi",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "ajouter dans l'article 222-14 du code pénal, qui réprime les",
+        "terme": "violences conjugales",
+        "contexte_droite": "habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ce",
+        "position": 31910,
+        "contexte_complet": "il a été proposé d'ajouter dans l'article 222-14 du code pénal, qui réprime les violences conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces violences sur la",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "responsabilité pénale est engagée. » En d'autres termes, les",
+        "terme": "violences conjugales",
+        "contexte_droite": "qui entraînent des traumatismes certains sur les victimes de",
+        "position": 32163,
+        "contexte_complet": "t 122-5 lorsque sa responsabilité pénale est engagée. » En d'autres termes, les violences conjugales qui entraînent des traumatismes certains sur les victimes devront systématiquem",
+        "source": "senat",
+        "contexte_classe": "gravite"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "moignage nous montre toute la nécessité d'aboutir, en cas de",
+        "terme": "violences conjugales",
+        "contexte_droite": ", au fait que l'enfant doit être considéré comme victime. Ce",
+        "position": 35752,
+        "contexte_complet": "es violences.\nCe témoignage nous montre toute la nécessité d'aboutir, en cas de violences conjugales, au fait que l'enfant doit être considéré comme victime. Ce doit être une infra",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "violences conjugales",
+        "contexte_gauche": "ot apporte une pierre fondamentale dans le combat contre les",
+        "terme": "violences conjugales",
+        "contexte_droite": ". La médiatisation autour de ce type d'affaires, de ces femm",
+        "position": 64112,
+        "contexte_complet": "nage de Valérie Bacot apporte une pierre fondamentale dans le combat contre les violences conjugales. La médiatisation autour de ce type d'affaires, de ces femmes qui tuent leur co",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      }
+    ]
+  },
+  "verdict": {
+    "label": "Le verdict",
+    "description": "Comment la condamnation est perçue — juste, clément, sévère",
+    "total": 55,
+    "par_source": {
+      "jsl_j1": 5,
+      "jsl_j2": 0,
+      "jsl_j3": 2,
+      "jsl_verdict": 18,
+      "senat": 30
+    },
+    "comptages": {
+      "clemence": 15,
+      "severite": 1,
+      "indulgence": 12,
+      "neutre": 27
+    },
+    "pourcentages": {
+      "clemence": 27.3,
+      "severite": 1.8,
+      "indulgence": 21.8,
+      "neutre": 49.1
+    },
+    "occurrences": [
+      {
+        "variante": "condamnation",
+        "contexte_gauche": "e durant une grande partie de son adolescence par Daniel, la",
+        "terme": "condamnation",
+        "contexte_droite": "ne porte que sur trois agressions sexuelles, commises trois ",
+        "position": 13651,
+        "contexte_complet": "ite avoir été violée durant une grande partie de son adolescence par Daniel, la condamnation ne porte que sur trois agressions sexuelles, commises trois soirs consécutifs.",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "condamnation",
+        "contexte_gauche": "térêt à me laisser faire.\"\nLa présidente rappelle ensuite la",
+        "terme": "condamnation",
+        "contexte_droite": "de Daniel Polette, pour trois agressions sexuelles, en 1996.",
+        "position": 28004,
+        "contexte_complet": "se vite, j'avais intérêt à me laisser faire.\"\nLa présidente rappelle ensuite la condamnation de Daniel Polette, pour trois agressions sexuelles, en 1996. \"Les faits ont été",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "viols mais d'agressions sexuelles. Vous vous souvenez quelle",
+        "terme": "peine",
+        "contexte_droite": "il a eu ?\n\"Non. C'est un passage de ma vie où personne ne m'",
+        "position": 28199,
+        "contexte_complet": "ne parlait plus de viols mais d'agressions sexuelles. Vous vous souvenez quelle peine il a eu ?\n\"Non. C'est un passage de ma vie où personne ne m'a expliqué ce qu'il",
+        "source": "jsl_j1",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "evoir à mes enfants. J'ai besoin de ce procès pour savoir ma",
+        "terme": "peine",
+        "contexte_droite": ", quand je vais les revoir. Ce procès, c'est encore mon comb",
+        "position": 29130,
+        "contexte_complet": "moi, j'ai dit au revoir à mes enfants. J'ai besoin de ce procès pour savoir ma peine, quand je vais les revoir. Ce procès, c'est encore mon combat contre lui (Danie",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": "fait, le résultat au tribunal, tout ça.\"\nIl a été condamné à",
+        "terme": "quatre ans",
+        "contexte_droite": "de prison, rappelle la présidente.\nElle explique aussi qu'au",
+        "position": 28348,
+        "contexte_complet": "xpliqué ce qu'il a fait, le résultat au tribunal, tout ça.\"\nIl a été condamné à quatre ans de prison, rappelle la présidente.\nElle explique aussi qu'au dossier, il est pr",
+        "source": "jsl_j1",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "4 ans",
+        "contexte_gauche": "primée dans nos colonnes dès 2019.\n\"Il y a 30 ans, j'avais 2",
+        "terme": "4 ans",
+        "contexte_droite": ", j'ai appris de la bouche de ma soeur Monique ce qu'il lui ",
+        "position": 4880,
+        "contexte_complet": "in), elle s'était exprimée dans nos colonnes dès 2019.\n\"Il y a 30 ans, j'avais 24 ans, j'ai appris de la bouche de ma soeur Monique ce qu'il lui avait fait subir : v",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "4 ans",
+        "contexte_gauche": " blague.\nJe suis très en colère contre la justice. Il a pris",
+        "terme": "4 ans",
+        "contexte_droite": "et n'est resté en prison que 2 ans et demi.Je suis choquée. ",
+        "position": 5646,
+        "contexte_complet": "On se dit c'est une blague.\nJe suis très en colère contre la justice. Il a pris 4 ans et n'est resté en prison que 2 ans et demi.Je suis choquée. S'il était resté pl",
+        "source": "jsl_j3",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": " le monde est encore à l'intérieur de la salle.\n20 h 19 : le",
+        "terme": "verdict",
+        "contexte_droite": "est rendu\nValérie Bacot est déclarée coupable d'assassinat. ",
+        "position": 1860,
+        "contexte_complet": "core se tenir. Tout le monde est encore à l'intérieur de la salle.\n20 h 19 : le verdict est rendu\nValérie Bacot est déclarée coupable d'assassinat. La préméditation es",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "e.\n20 h 05 : Après 4 h 30 de délibéré, la cour va rendre son",
+        "terme": "verdict",
+        "contexte_droite": ". Les avocates rentrent dans la salle. Ainsi que la famille ",
+        "position": 3218,
+        "contexte_complet": "evenue dans la salle.\n20 h 05 : Après 4 h 30 de délibéré, la cour va rendre son verdict. Les avocates rentrent dans la salle. Ainsi que la famille de Valérie Bacot.\n19",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "longer et dormir dans la salle des témoins où elle attend le",
+        "terme": "verdict",
+        "contexte_droite": ". Le palais de justice se remplit doucement, entre journalis",
+        "position": 3461,
+        "contexte_complet": "rie Bacot a pu s’allonger et dormir dans la salle des témoins où elle attend le verdict. Le palais de justice se remplit doucement, entre journalistes et public.\nLe ju",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "s réquisitions. L'audience a pu reprendre 1h40 plus tard.\n>>",
+        "terme": "Verdict",
+        "contexte_droite": "attendu dans la soirée\nPour lire tous les événements de la j",
+        "position": 4123,
+        "contexte_complet": "compris le sens des réquisitions. L'audience a pu reprendre 1h40 plus tard.\n>> Verdict attendu dans la soirée\nPour lire tous les événements de la journée en détail, l",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "condamnée",
+        "contexte_gauche": "di :\n>> La cour l'a déclarée coupable d'assassinat, mais l'a",
+        "terme": "condamnée",
+        "contexte_droite": "à une peine qui ne la renvoie pas en prison.\n>> Elle est con",
+        "position": 245,
+        "contexte_complet": "st achevé ce vendredi :\n>> La cour l'a déclarée coupable d'assassinat, mais l'a condamnée à une peine qui ne la renvoie pas en prison.\n>> Elle est condamnée à quatre ans",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "condamnée",
+        "contexte_gauche": "née à une peine qui ne la renvoie pas en prison.\n>> Elle est",
+        "terme": "condamnée",
+        "contexte_droite": "à quatre ans de prison, dont trois avec sursis.\n>> L'accusée",
+        "position": 312,
+        "contexte_complet": "at, mais l'a condamnée à une peine qui ne la renvoie pas en prison.\n>> Elle est condamnée à quatre ans de prison, dont trois avec sursis.\n>> L'accusée, ressortie libre d",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "condamnée",
+        "contexte_gauche": "'assassinat. La préméditation est retenue.\nValérie Bacot est",
+        "terme": "condamnée",
+        "contexte_droite": "à quatre ans de prison, dont trois ans avec sursis probatoir",
+        "position": 1976,
+        "contexte_complet": "déclarée coupable d'assassinat. La préméditation est retenue.\nValérie Bacot est condamnée à quatre ans de prison, dont trois ans avec sursis probatoire et obligation de",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "condamnée",
+        "contexte_gauche": "eure aux réquisitions, d'une année.\nValérie Bacot est certes",
+        "terme": "condamnée",
+        "contexte_droite": "à une année de prison ferme, mais cette année a été purgée d",
+        "position": 2346,
+        "contexte_complet": "rononcée est inférieure aux réquisitions, d'une année.\nValérie Bacot est certes condamnée à une année de prison ferme, mais cette année a été purgée dans le cadre de la",
+        "source": "jsl_verdict",
+        "contexte_classe": "severite"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "l'a déclarée coupable d'assassinat, mais l'a condamnée à une",
+        "terme": "peine",
+        "contexte_droite": "qui ne la renvoie pas en prison.\n>> Elle est condamnée à qua",
+        "position": 261,
+        "contexte_complet": "dredi :\n>> La cour l'a déclarée coupable d'assassinat, mais l'a condamnée à une peine qui ne la renvoie pas en prison.\n>> Elle est condamnée à quatre ans de prison,",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "allet, avocat général, a répondu au JSL. Il avait requis une",
+        "terme": "peine",
+        "contexte_droite": "sans incarcération.\n21 h 24 : Une sortie dans l'allégresse\nV",
+        "position": 637,
+        "contexte_complet": "e la défense\nEric Jallet, avocat général, a répondu au JSL. Il avait requis une peine sans incarcération.\n21 h 24 : Une sortie dans l'allégresse\nValérie Bacot a effe",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "lérie Bacot qu'elle sortirait libre du palais de justice.\nLa",
+        "terme": "peine",
+        "contexte_droite": "prononcée est inférieure aux réquisitions, d'une année.\nValé",
+        "position": 2259,
+        "contexte_complet": "nte a expliqué à Valérie Bacot qu'elle sortirait libre du palais de justice.\nLa peine prononcée est inférieure aux réquisitions, d'une année.\nValérie Bacot est certe",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": " Plus tôt dans la journée, l'avocat général avait requis une",
+        "terme": "peine",
+        "contexte_droite": "de 5 années de prison dont 4 avec sursis. C'est-à-dire une p",
+        "position": 3788,
+        "contexte_complet": "t jurisprudence.\n>> Plus tôt dans la journée, l'avocat général avait requis une peine de 5 années de prison dont 4 avec sursis. C'est-à-dire une peine clémente qui n",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "e de 5 années de prison dont 4 avec sursis. C'est-à-dire une",
+        "terme": "peine",
+        "contexte_droite": "clémente qui ne renverrait pas Valérie Bacot derrière les ba",
+        "position": 3853,
+        "contexte_complet": "ait requis une peine de 5 années de prison dont 4 avec sursis. C'est-à-dire une peine clémente qui ne renverrait pas Valérie Bacot derrière les barreaux, celle-ci ay",
+        "source": "jsl_verdict",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": "ine qui ne la renvoie pas en prison.\n>> Elle est condamnée à",
+        "terme": "quatre ans",
+        "contexte_droite": "de prison, dont trois avec sursis.\n>> L'accusée, ressortie l",
+        "position": 324,
+        "contexte_complet": "condamnée à une peine qui ne la renvoie pas en prison.\n>> Elle est condamnée à quatre ans de prison, dont trois avec sursis.\n>> L'accusée, ressortie libre du palais, a d",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": " La préméditation est retenue.\nValérie Bacot est condamnée à",
+        "terme": "quatre ans",
+        "contexte_droite": "de prison, dont trois ans avec sursis probatoire et obligati",
+        "position": 1988,
+        "contexte_complet": "pable d'assassinat. La préméditation est retenue.\nValérie Bacot est condamnée à quatre ans de prison, dont trois ans avec sursis probatoire et obligation de soins pendant",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "sursis",
+        "contexte_gauche": "> Elle est condamnée à quatre ans de prison, dont trois avec",
+        "terme": "sursis",
+        "contexte_droite": ".\n>> L'accusée, ressortie libre du palais, a dit quelques mo",
+        "position": 362,
+        "contexte_complet": "ie pas en prison.\n>> Elle est condamnée à quatre ans de prison, dont trois avec sursis.\n>> L'accusée, ressortie libre du palais, a dit quelques mots (écouter ci-desso",
+        "source": "jsl_verdict",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "sursis",
+        "contexte_gauche": "ot est condamnée à quatre ans de prison, dont trois ans avec",
+        "terme": "sursis",
+        "contexte_droite": "probatoire et obligation de soins pendant trois ans. Elle ne",
+        "position": 2030,
+        "contexte_complet": "etenue.\nValérie Bacot est condamnée à quatre ans de prison, dont trois ans avec sursis probatoire et obligation de soins pendant trois ans. Elle ne sera pas incarcéré",
+        "source": "jsl_verdict",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sursis",
+        "contexte_gauche": "ral avait requis une peine de 5 années de prison dont 4 avec",
+        "terme": "sursis",
+        "contexte_droite": ". C'est-à-dire une peine clémente qui ne renverrait pas Valé",
+        "position": 3828,
+        "contexte_complet": "rnée, l'avocat général avait requis une peine de 5 années de prison dont 4 avec sursis. C'est-à-dire une peine clémente qui ne renverrait pas Valérie Bacot derrière l",
+        "source": "jsl_verdict",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "orité parentale notamment.\nLe procès de Valérie Bacot et son",
+        "terme": "verdict",
+        "contexte_droite": ", rendu au mois de juin dernier, feront date. Ils ont d'aill",
+        "position": 20139,
+        "contexte_complet": "blèmes liés à l'autorité parentale notamment.\nLe procès de Valérie Bacot et son verdict, rendu au mois de juin dernier, feront date. Ils ont d'ailleurs déjà fait date.",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": " ans d'emprisonnement, dont trois ans de sursis.\nPourquoi ce",
+        "terme": "verdict",
+        "contexte_droite": "fera-t-il date à mon sens ? D'abord, nous avons eu pour la p",
+        "position": 20665,
+        "contexte_complet": "clémente de quatre ans d'emprisonnement, dont trois ans de sursis.\nPourquoi ce verdict fera-t-il date à mon sens ? D'abord, nous avons eu pour la première fois l'impr",
+        "source": "senat",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "ueline Sauvage n'était pas en prison.\nPourquoi dis-je que le",
+        "terme": "verdict",
+        "contexte_droite": "de l'affaire Valérie Bacot a changé les choses et qu'il marq",
+        "position": 23695,
+        "contexte_complet": "ue la place de Jacqueline Sauvage n'était pas en prison.\nPourquoi dis-je que le verdict de l'affaire Valérie Bacot a changé les choses et qu'il marquera les esprits ?",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": " bien que c'est cette fois une cour d'assises qui a rendu un",
+        "terme": "verdict",
+        "contexte_droite": "et s'est autorisée à prendre en considération la personnalit",
+        "position": 23854,
+        "contexte_complet": "prits ? Nous voyons bien que c'est cette fois une cour d'assises qui a rendu un verdict et s'est autorisée à prendre en considération la personnalité particulière de l",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "ourir elle-même, mais pour protéger ses enfants.\nPourquoi ce",
+        "terme": "verdict",
+        "contexte_droite": "? D'une part, la cour a considéré qu'avant d'être une accusé",
+        "position": 24205,
+        "contexte_complet": "n pas pour ne pas mourir elle-même, mais pour protéger ses enfants.\nPourquoi ce verdict ? D'une part, la cour a considéré qu'avant d'être une accusée, Valérie Bacot ét",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "faire autrement en l'état actuel du droit positif.\nEnfin, ce",
+        "terme": "verdict",
+        "contexte_droite": "a ému la société civile dans son ensemble. Il est aussi une ",
+        "position": 28075,
+        "contexte_complet": "ude. Il ne pouvait faire autrement en l'état actuel du droit positif.\nEnfin, ce verdict a ému la société civile dans son ensemble. Il est aussi une rencontre de person",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": "emble. Il est aussi une rencontre de personnalités, c'est un",
+        "terme": "verdict",
+        "contexte_droite": "d'humanité. Valérie est une femme authentique qui provoque u",
+        "position": 28180,
+        "contexte_complet": "civile dans son ensemble. Il est aussi une rencontre de personnalités, c'est un verdict d'humanité. Valérie est une femme authentique qui provoque une empathie immédia",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "verdict",
+        "contexte_gauche": " reconnue et soulignée par la cour, ce qui explique aussi ce",
+        "terme": "verdict",
+        "contexte_droite": "clément.\nMme Annick Billon, présidente. - Merci beaucoup pou",
+        "position": 32645,
+        "contexte_complet": "a plus élevée a été reconnue et soulignée par la cour, ce qui explique aussi ce verdict clément.\nMme Annick Billon, présidente. - Merci beaucoup pour ce témoignage qui",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "condamnée",
+        "contexte_gauche": "e cinq jours de procès, le tribunal de Saône-et-Loire vous a",
+        "terme": "condamnée",
+        "contexte_droite": "le 25 juin 2021 à une peine de quatre ans de prison, dont tr",
+        "position": 1138,
+        "contexte_complet": ". Mais, à l'issue de cinq jours de procès, le tribunal de Saône-et-Loire vous a condamnée le 25 juin 2021 à une peine de quatre ans de prison, dont trois avec sursis. Vo",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "condamnée",
+        "contexte_gauche": "au terme du procès, je vous le rappelle. Elle a pourtant été",
+        "terme": "condamnée",
+        "contexte_droite": "à une peine clémente de quatre ans d'emprisonnement, dont tr",
+        "position": 20564,
+        "contexte_complet": "e même été retenue au terme du procès, je vous le rappelle. Elle a pourtant été condamnée à une peine clémente de quatre ans d'emprisonnement, dont trois ans de sursis.",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "condamnation",
+        "contexte_gauche": "dont trois ans de sursis, c'est une peine clémente face à la",
+        "terme": "condamnation",
+        "contexte_droite": "qu'encourait Valérie. Elle risquait en effet la perpétuité, ",
+        "position": 20317,
+        "contexte_complet": "d'emprisonnement, dont trois ans de sursis, c'est une peine clémente face à la condamnation qu'encourait Valérie. Elle risquait en effet la perpétuité, avec deux circonsta",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "condamnation",
+        "contexte_gauche": "avorables à la protection des femmes et à la poursuite et la",
+        "terme": "condamnation",
+        "contexte_droite": "des auteurs. Le système pénal fonctionne sur une quasi-préso",
+        "position": 43231,
+        "contexte_complet": "ant de machines défavorables à la protection des femmes et à la poursuite et la condamnation des auteurs. Le système pénal fonctionne sur une quasi-présomption de mensonge",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "condamnation",
+        "contexte_gauche": " euro symbolique de dommages et intérêts. Ce n'était pas une",
+        "terme": "condamnation",
+        "contexte_droite": "financière que nous demandions, mais bien la reconnaissance ",
+        "position": 62975,
+        "contexte_complet": "t n'a demandé qu'un euro symbolique de dommages et intérêts. Ce n'était pas une condamnation financière que nous demandions, mais bien la reconnaissance de la responsabilit",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "condamnation",
+        "contexte_gauche": " bien la reconnaissance de la responsabilité de l'État et sa",
+        "terme": "condamnation",
+        "contexte_droite": ". Je pense, comme vous, qu'il faut des condamnations et des ",
+        "position": 63085,
+        "contexte_complet": "us demandions, mais bien la reconnaissance de la responsabilité de l'État et sa condamnation. Je pense, comme vous, qu'il faut des condamnations et des sanctions fortes de",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "condamnation",
+        "contexte_gauche": "tat et sa condamnation. Je pense, comme vous, qu'il faut des",
+        "terme": "condamnation",
+        "contexte_droite": "s et des sanctions fortes de cette nature. Si nous ne sancti",
+        "position": 63136,
+        "contexte_complet": "sponsabilité de l'État et sa condamnation. Je pense, comme vous, qu'il faut des condamnations et des sanctions fortes de cette nature. Si nous ne sanctionnons pas, ces situ",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "nal de Saône-et-Loire vous a condamnée le 25 juin 2021 à une",
+        "terme": "peine",
+        "contexte_droite": "de quatre ans de prison, dont trois avec sursis. Vous êtes d",
+        "position": 1170,
+        "contexte_complet": "de procès, le tribunal de Saône-et-Loire vous a condamnée le 25 juin 2021 à une peine de quatre ans de prison, dont trois avec sursis. Vous êtes donc ressortie libre",
+        "source": "senat",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": " ces syndromes qui existent véritablement, mais que les gens",
+        "terme": "peine",
+        "contexte_droite": "nt à comprendre ou assimiler.\nDans les campagnes, nous avons",
+        "position": 7190,
+        "contexte_complet": "à faire reconnaître ces syndromes qui existent véritablement, mais que les gens peinent à comprendre ou assimiler.\nDans les campagnes, nous avons accès à beaucoup mo",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "ais chaque jour lorsque je déposais mon enfant à l'école. Je",
+        "terme": "peine",
+        "contexte_droite": "à comprendre ces choses-là. Je veux les changer.\nUn gendarme",
+        "position": 15717,
+        "contexte_complet": "uelqu'un que je voyais chaque jour lorsque je déposais mon enfant à l'école. Je peine à comprendre ces choses-là. Je veux les changer.\nUn gendarme doit selon moi éco",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "re ans d'emprisonnement, dont trois ans de sursis, c'est une",
+        "terme": "peine",
+        "contexte_droite": "clémente face à la condamnation qu'encourait Valérie. Elle r",
+        "position": 20292,
+        "contexte_complet": "éjà fait date. Quatre ans d'emprisonnement, dont trois ans de sursis, c'est une peine clémente face à la condamnation qu'encourait Valérie. Elle risquait en effet la",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "ès, je vous le rappelle. Elle a pourtant été condamnée à une",
+        "terme": "peine",
+        "contexte_droite": "clémente de quatre ans d'emprisonnement, dont trois ans de s",
+        "position": 20580,
+        "contexte_complet": "ue au terme du procès, je vous le rappelle. Elle a pourtant été condamnée à une peine clémente de quatre ans d'emprisonnement, dont trois ans de sursis.\nPourquoi ce",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "peine",
+        "contexte_gauche": "'est une réalité.\nJe voudrais insister sur l'instauration de",
+        "terme": "peine",
+        "contexte_droite": "s planchers pour les violents conjugaux. Je souhaite que nou",
+        "position": 34968,
+        "contexte_complet": "urant des années. C'est une réalité.\nJe voudrais insister sur l'instauration de peines planchers pour les violents conjugaux. Je souhaite que nous allions plus loin",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": "ône-et-Loire vous a condamnée le 25 juin 2021 à une peine de",
+        "terme": "quatre ans",
+        "contexte_droite": "de prison, dont trois avec sursis. Vous êtes donc ressortie ",
+        "position": 1179,
+        "contexte_complet": ", le tribunal de Saône-et-Loire vous a condamnée le 25 juin 2021 à une peine de quatre ans de prison, dont trois avec sursis. Vous êtes donc ressortie libre du tribunal a",
+        "source": "senat",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": "uin dernier, feront date. Ils ont d'ailleurs déjà fait date.",
+        "terme": "Quatre ans",
+        "contexte_droite": "d'emprisonnement, dont trois ans de sursis, c'est une peine ",
+        "position": 20227,
+        "contexte_complet": "rendu au mois de juin dernier, feront date. Ils ont d'ailleurs déjà fait date. Quatre ans d'emprisonnement, dont trois ans de sursis, c'est une peine clémente face à la",
+        "source": "senat",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": "pelle. Elle a pourtant été condamnée à une peine clémente de",
+        "terme": "quatre ans",
+        "contexte_droite": "d'emprisonnement, dont trois ans de sursis.\nPourquoi ce verd",
+        "position": 20598,
+        "contexte_complet": "cès, je vous le rappelle. Elle a pourtant été condamnée à une peine clémente de quatre ans d'emprisonnement, dont trois ans de sursis.\nPourquoi ce verdict fera-t-il date",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": "ession qu'une accusée victime, qui s'était tue durant vingt-",
+        "terme": "quatre ans",
+        "contexte_droite": ", était non seulement écoutée, mais aussi entendue par une c",
+        "position": 20812,
+        "contexte_complet": "première fois l'impression qu'une accusée victime, qui s'était tue durant vingt-quatre ans, était non seulement écoutée, mais aussi entendue par une cour d'assises, et mê",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "quatre ans",
+        "contexte_gauche": " entravée par un délai de prescription extrêmement court, de",
+        "terme": "quatre ans",
+        "contexte_droite": ", pour l'engager. Nous avons réussi à l'engager, car en avri",
+        "position": 63410,
+        "contexte_complet": "ilité de l'État est entravée par un délai de prescription extrêmement court, de quatre ans, pour l'engager. Nous avons réussi à l'engager, car en avril 2021 - la jurispru",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      },
+      {
+        "variante": "sursis",
+        "contexte_gauche": "in 2021 à une peine de quatre ans de prison, dont trois avec",
+        "terme": "sursis",
+        "contexte_droite": ". Vous êtes donc ressortie libre du tribunal après avoir déj",
+        "position": 1217,
+        "contexte_complet": "condamnée le 25 juin 2021 à une peine de quatre ans de prison, dont trois avec sursis. Vous êtes donc ressortie libre du tribunal après avoir déjà effectué une année",
+        "source": "senat",
+        "contexte_classe": "indulgence"
+      },
+      {
+        "variante": "sursis",
+        "contexte_gauche": "jà fait date. Quatre ans d'emprisonnement, dont trois ans de",
+        "terme": "sursis",
+        "contexte_droite": ", c'est une peine clémente face à la condamnation qu'encoura",
+        "position": 20274,
+        "contexte_complet": "s ont d'ailleurs déjà fait date. Quatre ans d'emprisonnement, dont trois ans de sursis, c'est une peine clémente face à la condamnation qu'encourait Valérie. Elle ris",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "sursis",
+        "contexte_gauche": "e clémente de quatre ans d'emprisonnement, dont trois ans de",
+        "terme": "sursis",
+        "contexte_droite": ".\nPourquoi ce verdict fera-t-il date à mon sens ? D'abord, n",
+        "position": 20645,
+        "contexte_complet": "ondamnée à une peine clémente de quatre ans d'emprisonnement, dont trois ans de sursis.\nPourquoi ce verdict fera-t-il date à mon sens ? D'abord, nous avons eu pour la",
+        "source": "senat",
+        "contexte_classe": "clemence"
+      },
+      {
+        "variante": "libérée",
+        "contexte_gauche": "ociété a répondu. Elle a tout fait pour que cette femme soit",
+        "terme": "libérée",
+        "contexte_droite": ", car elle savait que la place de Jacqueline Sauvage n'était",
+        "position": 23589,
+        "contexte_complet": "été posée, et la société a répondu. Elle a tout fait pour que cette femme soit libérée, car elle savait que la place de Jacqueline Sauvage n'était pas en prison.\nPour",
+        "source": "senat",
+        "contexte_classe": "neutre"
+      }
+    ]
+  }
+}

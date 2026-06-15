@@ -1,0 +1,668 @@
+[
+  {
+    "texte": "Justice / Chalon-sur-Saône Procès de Valérie Bacot : \"Vous ne comprenez pas ce que je vivais\"\nCe qu'il faut retenir de la journée de lundi\n>> L'accusée a longuement été interrogée sur sa vie, sa relation avec Daniel Polette, puis sur le meurtre.",
+    "locuteur": "valerie_bacot",
+    "type": "legitimation_juridique",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 245,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.8,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Le segment décrit de manière neutre les faits de la journée d'audience.",
+      "mots_cles_detectes": [
+        "procès",
+        "Valérie Bacot",
+        "interrogée"
+      ]
+    }
+  },
+  {
+    "texte": "Elle explique aussi qu'au dossier, il est précisé que Valérie Bacot a visité Daniel seulement deux fois au parloir. \"Les autres visites ont été refusées.\" Valérie Bacot certifie qu'il y en a eu bien davantage.",
+    "locuteur": "valerie_bacot",
+    "type": "legitimation_juridique",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 209,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "senat",
+      "registre": "factuel",
+      "justification": "Le segment met en évidence un désaccord entre les informations officielles et le témoignage de Valérie Bacot, soulignant un potentiel problème institutionnel.",
+      "mots_cles_detectes": [
+        "dossier",
+        "visites",
+        "refusées"
+      ]
+    }
+  },
+  {
+    "texte": ">> Elle a dit plusieurs fois qu'elle ne \"voulait pas le tuer\". >> Son gendre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants.",
+    "locuteur": "narrateur",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 230,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Le segment évoque l'échec des tentatives de dénoncer les violences conjugales à la gendarmerie.",
+      "mots_cles_detectes": [
+        "violences conjugales",
+        "gendarmerie",
+        "tentatives de dénoncer"
+      ]
+    }
+  },
+  {
+    "texte": "\"Est-ce qu'on a récupéré la décision de justice de 1995 ? Je ne me souviens plus.\"\n15 h 17 : \"On a entendu tous les gendarmes, aucun ne nous a dit qu'il avait reçu la famille Bacot\"\nLe gendarme évoque les démarches qu'aurait entrepris Valérie et ses enfants pour dénoncer les violences de Daniel dans leur vie de famille.",
+    "locuteur": "narrateur",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 321,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "senat",
+      "registre": "factuel",
+      "justification": "Le segment évoque l'inaction des institutions face aux violences subies par Valérie Bacot.",
+      "mots_cles_detectes": [
+        "décision de justice",
+        "gendarmes",
+        "démarches",
+        "dénnoncer les violences"
+      ]
+    }
+  },
+  {
+    "texte": "\"Daniel a eu trois compagnes, trois enfants\" (avant Valérie, NDLR) précise le directeur d'enquête. \"Deux nous brossent un portrait... Elles ont été victimes de violences conjugales de sa part.\" Il euphémise en décrivant \"des scènes un peu particulières\" de menaces avec une arme, de coups, narrées par l'une des ex-compagnes de Daniel.",
+    "locuteur": "narrateur",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 335,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "expert",
+      "registre": "factuel",
+      "justification": "Le segment met en lumière les antécédents de violences conjugales de Daniel, montrant que les institutions ou les proches n'ont pas agi pour empêcher ces violences",
+      "mots_cles_detectes": [
+        "violences conjugales",
+        "menaces",
+        "coups"
+      ]
+    }
+  },
+  {
+    "texte": "Allez casse-toi, ferme ta gueule, c'est fait c'est fait, maintenant on n'en parle plus.\" \"\n16 h 12 : l'audition du directeur d'enquête est terminée. L'audience est suspendue jusqu'à 16 h 30. 15 h 58 : \"Certaines plaintes ne sont toujours pas prises\"\n\"Est-ce que vous savez qu'en 2021, lorsqu'une femme pousse la porte d'un commissariat pour déposer plainte pour violences conjugales, certaines plaintes ne sont toujours pas prises ?\" demande Me Tomas …",
+    "locuteur": "defense",
+    "type": "temoignage_survie",
+    "score": 2,
+    "source": "jsl_j1",
+    "longueur": 492,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Critique de l'inaction institutionnelle face aux violences conjugales",
+      "mots_cles_detectes": [
+        "plaintes",
+        "violences conjugales",
+        "commissariat"
+      ]
+    }
+  },
+  {
+    "texte": "Sans succès. >> Le directeur d'enquête a été entendu. Mardi matin, les enfants de Valérie doivent notamment être entendus. 20 h 50 : L'audience est suspendue, elle reprendra mardi à 9 heures. 20 h 25 : \"Il me disait que j'étais une merde\"\nC'est la défense qui questionne l'accusée.",
+    "locuteur": "defense",
+    "type": "temoignage_survie",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 281,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.8,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Le segment décrit de manière neutre le déroulement de l'audience.",
+      "mots_cles_detectes": [
+        "audience",
+        "enquête",
+        "entendus"
+      ]
+    }
+  },
+  {
+    "texte": "-C'est surtout les mots, répond Valérie Bacot. C'est ce qui reste le plus.\"\nSur les questions de Me Tomasini ensuite, Valérie parle du contrôle de son téléphone, du fait qu'elle ne sortait quasiment pas, était chronométrée pour les courses...",
+    "locuteur": "defense",
+    "type": "temoignage_survie",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 242,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.8,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "La déposition de Valérie Bacot décrit les violences et le contrôle subis.",
+      "mots_cles_detectes": [
+        "contrôle",
+        "chronométrée",
+        "mot"
+      ]
+    }
+  },
+  {
+    "texte": "Une fois il m'a dit que si j'emmenais sa fille loin, j'aurais des problèmes, il me retrouverait...\"\n\"Avez-vous vu des scènes de violences sur Valérie Bacot ?, demande la présidente. Non, pas directement, mais je l'ai déjà vue rentrer tard en larmes et partir se cacher.\"\n\"Elle savait pertinemment que si elle partait ou un des enfants partait, elle allait s'en prendre une et ce serait la fin\", affirme le gendre à propos de Valérie.",
+    "locuteur": "valerie_bacot",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 433,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.8,
+      "locuteur_probable": "temoin_familial",
+      "registre": "emotionnel",
+      "justification": "Le segment décrit des menaces et des violences psychologiques subies par Valérie Bacot, ainsi que des conséquences de ses éventuelles tentatives de fuir.",
+      "mots_cles_detectes": [
+        "violences",
+        "problemes",
+        "larmes",
+        "cacher"
+      ]
+    }
+  },
+  {
+    "texte": "Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui est devenu ensuite son époux, a suscité l'intérêt de très nombreux médias et suscité l'émoi de l'opinion.",
+    "locuteur": "valerie_bacot",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 272,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.8,
+      "locuteur_probable": "senat",
+      "registre": "factuel",
+      "justification": "Le segment présente une description objective des faits de l'affaire Valérie Bacot.",
+      "mots_cles_detectes": [
+        "crime",
+        "femme battue",
+        "emprise",
+        "prostitution",
+        "viol"
+      ]
+    }
+  },
+  {
+    "texte": "Après avoir raconté la violence de la passe avec le client, puis le retour de Daniel énervé dans la voiture, elle dit : \"Je me souviens juste d'avoir fermé les yeux. Cette odeur et cette lumière...\"\nLa présidente ramène la question à des éléments terre à terre.",
+    "locuteur": "valerie_bacot",
+    "type": "temoignage_survie",
+    "score": 2,
+    "source": "jsl_j1",
+    "longueur": 261,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.9,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "emotionnel",
+      "justification": "Le segment présente un récit personnel et émotionnel de Valérie Bacot sur les violences subies.",
+      "mots_cles_detectes": [
+        "violence",
+        "Daniel",
+        "odeur",
+        "lumiere",
+        "fermé les yeux"
+      ]
+    }
+  },
+  {
+    "texte": "Interrogée sur le somnifère, encore, et sur l'arme, l'accusée finit par admettre qu'elle a apporté le revolver dans la voiture. 20 h 05 : \"Vous ne comprenez rien, c'est ça le problème...\"\nL'avocat général questionne Valérie Bacot.",
+    "locuteur": "defense",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 230,
+    "classification_llm": {
+      "categorie": "RENRVERSEMENT_VICTIMAIRE",
+      "confiance": 0.8,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Le segment montre l'accusée se défendant face à des questions qui remettent en question ses actes.",
+      "mots_cles_detectes": [
+        "Interrogée",
+        "admettre",
+        "problème"
+      ]
+    }
+  },
+  {
+    "texte": "\"Monsieur, la vérité, elle est où ? Vous avez fait des réponses à mes questions, et dit absolument le contraire à Me Tomasini. Où est la vérité ?\"\nLe témoin respire, longuement, mais ne répond pas. L'avocat général repose la même question.",
+    "locuteur": "defense",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 239,
+    "classification_llm": {
+      "categorie": "RENVERSEMENT_VICTIMAIRE",
+      "confiance": 0.8,
+      "locuteur_probable": "accusation",
+      "registre": "juridique",
+      "justification": "L'avocat général remet en question les dires de Valérie Bacot, laissant entendre qu'elle pourrait mentir ou avoir des versions contradictoires.",
+      "mots_cles_detectes": [
+        "vérité",
+        "contradiction",
+        "questions"
+      ]
+    }
+  },
+  {
+    "texte": "Et le gendre finit par admettre :\n\"Oui, on en avait parlé, oui le message je savais de quoi il s'agissait.\"\nLe témoin se retire ensuite après de nouvelles questions de Me Tomasini autour de ce message.",
+    "locuteur": "defense",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 201,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.9,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Description neutre des faits du procès sans dimension émotionnelle ou argumentative",
+      "mots_cles_detectes": [
+        "témoin",
+        "message",
+        "Me Tomasini"
+      ]
+    }
+  },
+  {
+    "texte": "\"On a même fait des recherches au Canada, pas de Daniel\"\nLe directeur d'enquête\n14 h 35 : \"Le médecin de famille avait dit qu'il n'y avait pas de problèmes particuliers\"\nLe directeur d'enquête expose ce que les investigations ont permis de savoir sur l'enfance de Valérie.",
+    "locuteur": "narrateur",
+    "type": "silence_institutionnel",
+    "score": 2,
+    "source": "jsl_j1",
+    "longueur": 272,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "senat",
+      "registre": "factuel",
+      "justification": "Le segment évoque les recherches effectuées et les témoignages recueillis, notamment celui d'un médecin, pour comprendre l'enfance de Valérie, ce qui suggère une focalisation sur les carences institutionnelles dans la prise en charge de la victime.",
+      "mots_cles_detectes": [
+        "enfance",
+        "médecin de famille",
+        "recherches"
+      ]
+    }
+  },
+  {
+    "texte": "Il cite ce témoignage singulier du médecin de famille qui, au moment de la procédure de 1995 à l'encontre de Daniel Polette pour agressions sexuelles, avait déclaré qu'il n'y avait \"pas de problèmes particuliers, qu'elle semblait éprouver un attachement fort envers son beau-père\".",
+    "locuteur": "narrateur",
+    "type": "silence_institutionnel",
+    "score": 2,
+    "source": "jsl_j1",
+    "longueur": 281,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "expert",
+      "registre": "factuel",
+      "justification": "Le segment évoque un manque d'action ou de prise en compte des violences subies par Valérie Bacot de la part d'un professionnel de santé",
+      "mots_cles_detectes": [
+        "médecin de famille",
+        "1995",
+        "agressions sexuelles",
+        "attachement"
+      ]
+    }
+  },
+  {
+    "texte": "\"Pourquoi ce bois ?\" \"C'était le seul qu'on connaissait.\"\n\"Comment étaient vos enfants ? -Ils ne savaient pas trop ce qu'ils faisaient...\"\n12 h 55 : \"Je me souviens juste d'avoir fermé les yeux\"\nL'accusée raconte le tir mortel, mais sans jamais prononcer le mot concret.",
+    "locuteur": "narrateur",
+    "type": "silence_institutionnel",
+    "score": 2,
+    "source": "jsl_j1",
+    "longueur": 270,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.9,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "La parole de Valérie Bacot décrit directement les faits liés à la mort de son mari, sans émotion explicite.",
+      "mots_cles_detectes": [
+        "tir mortel",
+        "fermé les yeux"
+      ]
+    }
+  },
+  {
+    "texte": "répond le magistrat. Il énumère des aides sociales possibles. \"Mais je ne savais pas tout ça... -Vous ne savez pas car vous n'êtes pas allée voir les gendarmes.\"\nValérie Bacot répète que l'avocat général ne comprend pas ce qu'elle vivait.\"On nous dit qu'il y aura peut-être une mesure d'éloignement après enquête et nous on doit rentrer chez nous...",
+    "locuteur": "defense",
+    "type": "legitimation_juridique",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 349,
+    "classification_llm": {
+      "categorie": "RENVERSEMENT_VICTIMAIRE",
+      "confiance": 0.8,
+      "locuteur_probable": "magistrat",
+      "registre": "factuel",
+      "justification": "Le magistrat remet en question les choix de Valérie Bacot en la confrontant à son manque de connaissance des aides sociales et en lui reprochant de ne pas avoir contacté les gendarmes.",
+      "mots_cles_detectes": [
+        "aides sociales",
+        "gendarmes",
+        "comprend pas"
+      ]
+    }
+  },
+  {
+    "texte": "La présidente calme les débats. 20 heures : \"Il y a quelques petites choses qui me font rebondir\"\nValérie Bacot est entendue. Elle confirme les deux visites à la gendarmerie, d'emblée. \"Il y a quelques petites choses qui me font rebondir.\" Elle raconte un épisode où des gendarmes l'avaient vue en tenue légère au bord de la route, \"c'était sans équivoque ce que je faisais là, et ils n'avaient pas cherché à savoir quoi que ce soit...\"\nElle maintien …",
+    "locuteur": "valerie_bacot",
+    "type": "renversement_victimaire",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 499,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Valérie Bacot relate son expérience de visites à la gendarmerie où les gendarmes n'ont pas réagi à sa situation de proxénétisme.",
+      "mots_cles_detectes": [
+        "gendarmerie",
+        "gendarmes",
+        "rebondir"
+      ]
+    }
+  },
+  {
+    "texte": "\"Je n'avais pas son numéro. Je n'avais pas de forfait me permettant d'envoyer un message par Messenger...\"\n19 h 40 : L'audience est suspendue 15 minutes. Valérie Bacot sera entendue ensuite. 19 h 33 : \"Elle est où la vérité ?\"\nLa présidente reprend la parole et s'adresse au gendre.",
+    "locuteur": "valerie_bacot",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 282,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.9,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Le segment décrit de manière neutre les événements de l'audience.",
+      "mots_cles_detectes": [
+        "audience",
+        "suspendue",
+        "présidente"
+      ]
+    }
+  },
+  {
+    "texte": "\"Il y avait certainement d'autres choses à faire (que de tuer Daniel, NDLR), mais... ce qui est fait est fait.\"\nJe ne recommencerai certainement jamais. Le gendre de Valérie Bacot\n18 h 30 : \"Avec les garçons, on décide de prendre les chaussures, les pelles, les gants, et d'aller enterrer le corps.\"\nC'est toujours l'audition du gendre.",
+    "locuteur": "valerie_bacot",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 336,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.8,
+      "locuteur_probable": "gendre",
+      "registre": "factuel",
+      "justification": "Le texte décrit de manière neutre les faits relatés par le gendre de Valérie Bacot.",
+      "mots_cles_detectes": [
+        "tuer",
+        "enterrer",
+        "corps"
+      ]
+    }
+  },
+  {
+    "texte": "Il est questionné sur les événements juste après la mort de Daniel Polette, une fois que Valérie Bacot l'a prévenu et qu'ils ont retrouvé ses fils aînés. \"Il était environ minuit 30. \"Avec les garçons, on décide de prendre les chaussures, les pelles, les gants, et d'aller enterrer le corps.",
+    "locuteur": "valerie_bacot",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 291,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.9,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Description neutre des faits après la mort de Daniel Polette",
+      "mots_cles_detectes": [
+        "mort",
+        "enterrer",
+        "corps"
+      ]
+    }
+  },
+  {
+    "texte": "\"Je voulais juste me protéger\". La première partie de son interrogatoire avait permis de revenir sur son enfance et sa vie conjugale avec Daniel Polette. >> Reprise des débats à 14 h. Me Tomasini, fait le point d'une première matinée éprouvante pour l'accusée\n12 h 58 : \"Est-ce que vous avez voulu le tuer ?\" \"Non\"\nLa présidente demande à Valérie Bacot si elle a voulu tuer son mari.",
+    "locuteur": "defense",
+    "type": "renversement_victimaire",
+    "score": 2,
+    "source": "jsl_j1",
+    "longueur": 383,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.8,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Valérie Bacot répond à une question sur son intention de tuer son mari",
+      "mots_cles_detectes": [
+        "tuer",
+        "mari",
+        "valerie_bacot"
+      ]
+    }
+  },
+  {
+    "texte": "Ce message n'a pas été retrouvé par les enquêteurs. C'est la mère du gendre qui en a parlé, disant que c'est Valérie qui le lui avait envoyé juste après le crime. 19 h 15 : \"C'est tous ensemble qu'on a décidé de l'enterrer\"\nLa défense questionne le gendre.",
+    "locuteur": "defense",
+    "type": "renversement_victimaire",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 256,
+    "classification_llm": {
+      "categorie": "NARRATION_FACTUELLE",
+      "confiance": 0.9,
+      "locuteur_probable": "narrateur",
+      "registre": "factuel",
+      "justification": "Le texte décrit de manière neutre les faits liés à l'enquête et au procès.",
+      "mots_cles_detectes": [
+        "message",
+        "enquêteurs",
+        "défense",
+        "gendre"
+      ]
+    }
+  },
+  {
+    "texte": "\"La réponse de Paray-le-Monial, ça a été que ce n'était pas leur secteur. Et à La Clayette, ils ont dit que Madame devait venir elle-même, mais en nous envoyant péter...\"\n\"On a réellement été à ces deux foutues gendarmeries\", répète le témoin face aux doutes réitérés par l'avocat général Eric Jallet.",
+    "locuteur": "defense",
+    "type": "renversement_victimaire",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 301,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.9,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Le segment décrit l'inaction des institutions (gendarmeries) face aux demandes d'aide.",
+      "mots_cles_detectes": [
+        "gendarmeries",
+        "silence",
+        "inaction"
+      ]
+    }
+  },
+  {
+    "texte": "Et une mère qui buvait et était parfois violente. \"Quand elle me punissait, c'était avec le martinet. Daniel, il me défendait.\"\n\"Lui, il était violent avec vous ?, demande la présidente. \"Non, il m'a mis une calotte une fois.",
+    "locuteur": "accusation",
+    "type": "temoignage_survie",
+    "score": 4,
+    "source": "jsl_j1",
+    "longueur": 225,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.9,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Description des expériences d'enfance avec violence et défense par Daniel",
+      "mots_cles_detectes": [
+        "violente",
+        "punissait",
+        "défendait"
+      ]
+    }
+  },
+  {
+    "texte": "Il l'interroge sur les deux visites prétendues de la part des enfants à la gendarmerie pour tenter de dénoncer les violences conjugales. \"J'ai du mal à vous croire...\", réagit le magistrat. \"Je vous jure que c'est vrai\", explique le gendre.",
+    "locuteur": "accusation",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 240,
+    "classification_llm": {
+      "categorie": "RENVERSEMENT_VICTIMAIRE",
+      "confiance": 0.8,
+      "locuteur_probable": "accusation",
+      "registre": "factuel",
+      "justification": "Le magistrat exprime ses doutes sur les déclarations de Valérie Bacot, remettant en question sa crédibilité.",
+      "mots_cles_detectes": [
+        "mal à vous croire",
+        "je vous jure que c'est vrai"
+      ]
+    }
+  },
+  {
+    "texte": "Qui l'a mise dans la voiture ? Elle a toujours, face aux enquêteurs, dit que c'était elle. Mais là... \"Je ne sais plus.\"\nLa présidente lui demande : \"L'arme, vous l'avez amenée, c'est pour vous protéger d'un client violent, ou pour l'utiliser contre votre mari ?",
+    "locuteur": "accusation",
+    "type": "temoignage_survie",
+    "score": 3,
+    "source": "jsl_j1",
+    "longueur": 262,
+    "classification_llm": {
+      "categorie": "RENVERSEMENT_VICTIMAIRE",
+      "confiance": 0.8,
+      "locuteur_probable": "senat",
+      "registre": "jurydique",
+      "justification": "La présidente remet en question les déclarations de Valérie Bacot, l'interrogeant sur ses intentions et son rôle dans les événements.",
+      "mots_cles_detectes": [
+        "arme",
+        "protéger",
+        "client violent",
+        "mari"
+      ]
+    }
+  },
+  {
+    "texte": "On a fait ça histoire d'avoir un peu de temps pour nous.\"\nLa présidente lui demande si l'idée de prévenir les gendarmes leur a traversé l'esprit. \"Ben... On s'est fait justice soi-même et c'était certainement pas la bonne décision.\"\n18 h 14 : \"C'est moi qui ai écrasé le somnifère\"\nL'audition du gendre se poursuit.",
+    "locuteur": "accusation",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 315,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.8,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Le segment décrit les faits et les décisions prises par la victime dans un registre factuel.",
+      "mots_cles_detectes": [
+        "justice",
+        "décision",
+        "somnifère"
+      ]
+    }
+  },
+  {
+    "texte": "\"Vous aviez déclaré que Valérie vous avait dit qu'elle n'en pouvait plus, qu'il fallait le tuer. Vous vous en souvenez ?, demande la présidente. -Je ne m'en souviens plus. -Vous ne vous en souvenez plus...",
+    "locuteur": "accusation",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 205,
+    "classification_llm": {
+      "categorie": "RENVERSEMENT_VICTIMAIRE",
+      "confiance": 0.8,
+      "locuteur_probable": "accusation",
+      "registre": "factuel",
+      "justification": "La présidente remet en question la parole de Valérie Bacot, ce qui caractérise un renversement victimnaire.",
+      "mots_cles_detectes": [
+        "ne vous en souvenez plus",
+        "avouer",
+        "tuer"
+      ]
+    }
+  },
+  {
+    "texte": "\"Vous aviez dit à l'époque qu'elle avait dit prendre l'arme avec elle pour essayer d'en finir. Vous confirmez ? -Je ne savais pas si elle allait le faire ce soir-là, je me suis dit que si elle le faisait pas, elle n'allait jamais le faire et sa fille allait devoir se prostituer...\"\nEst-ce que vous l'avez encouragée ?\", questionne la présidente Céline Therme.",
+    "locuteur": "accusation",
+    "type": "dimension_emotionnelle",
+    "score": 0,
+    "source": "jsl_j1",
+    "longueur": 360,
+    "classification_llm": {
+      "categorie": "TEMOIGNAGE_SURVIE",
+      "confiance": 0.8,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "emotionnel",
+      "justification": "Le texte décrit directement les violences subies et l'emprise exercée par le mari, ainsi que la peur pour la fille et l'absence perçue d'alternative.",
+      "mots_cles_detectes": [
+        "prendre l'arme",
+        "en finir",
+        "prostituer"
+      ]
+    }
+  },
+  {
+    "texte": "demande la présidente. Lucas répond \"oui\" et détaille une visite à la gendarmerie de Paray. Puis à La Clayette : \"Ils nous ont dit qu'on était des trous du cul\", on est repartis et on s'est dit qu'on ne pouvait rien faire.",
+    "locuteur": "accusation",
+    "type": "renversement_victimaire",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 222,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "temoin",
+      "registre": "factuel",
+      "justification": "Le segment décrit une visite à la gendarmerie et le sentiment d'impuissance ressenti après une réponse négative",
+      "mots_cles_detectes": [
+        "gendarmerie",
+        "on ne pouvait rien faire"
+      ]
+    }
+  },
+  {
+    "texte": "\"Il m'avait dit : si tu parles, tu y passes.\"\n16 h 40 : l'audience reprend avec la lecture des auditions de Carole Granet, absente (lire plus bas). Elle avait révélé le crime à la gendarmerie en mai 2017.",
+    "locuteur": "narrateur",
+    "type": "renversement_victimaire",
+    "score": 1,
+    "source": "jsl_j1",
+    "longueur": 204,
+    "classification_llm": {
+      "categorie": "SILENCE_INSTITUTIONNEL",
+      "confiance": 0.8,
+      "locuteur_probable": "valerie_bacot",
+      "registre": "factuel",
+      "justification": "Le segment décrit une menace faite à Valérie Bacot pour la dissuader de parler, ce qui est lié au thème du silence institutionnel.",
+      "mots_cles_detectes": [
+        "si tu parles",
+        "tu y passes",
+        "revele le crime"
+      ]
+    }
+  }
+]

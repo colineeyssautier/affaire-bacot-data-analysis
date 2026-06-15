@@ -1,0 +1,10 @@
+{
+  "liveServer.settings.ignoreFiles": [
+    "data/**",
+    "corpus_bacot/**",
+    "analyse_bacot/**",
+    "playwright_profile/**",
+    "**/*.csv",
+    "**/*.json"
+  ]
+}

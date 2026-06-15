@@ -1,0 +1,2371 @@
+{
+  "meta": {
+    "sources": {
+      "jsl_j1": {
+        "titre": "Procès Valérie Bacot — Jour 1 (JSL live)",
+        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/21/suivez-le-proces-de-valerie-bacot",
+        "date": "2021-06-21",
+        "mots": 5792,
+        "desc": "Ouverture du procès, premières audiences, présentation des faits.",
+        "n_unites": 104
+      },
+      "jsl_j2": {
+        "titre": "Procès Valérie Bacot — Jour 2 (JSL live)",
+        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/22/proces-de-valerie-bacot-suivez-en-direct-la-deuxieme-journee-d-audience",
+        "date": "2021-06-22",
+        "mots": 4999,
+        "desc": "Dépositions des témoins, questions de la cour.",
+        "n_unites": 96
+      },
+      "jsl_j3": {
+        "titre": "Procès Valérie Bacot — Jour 3 (JSL live)",
+        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/23/suivez-le-proces-de-valerie-bacot",
+        "date": "2021-06-23",
+        "mots": 6010,
+        "desc": "Retranscription quasi-directe des audiences par Le Journal de Saône-et-Loire. Document primaire exceptionnel.",
+        "n_unites": 98
+      },
+      "jsl_verdict": {
+        "titre": "Procès Valérie Bacot — Verdict (JSL live)",
+        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/25/proces-de-valerie-bacot-l-heure-du-verdict",
+        "date": "2021-06-25",
+        "mots": 960,
+        "desc": "Plaidoiries finales, réquisitions, verdict : 4 ans dont 3 avec sursis.",
+        "n_unites": 18
+      },
+      "senat": {
+        "titre": "Déposition au Sénat — Délégation aux droits des femmes",
+        "url": "https://www.senat.fr/compte-rendu-commissions/20211101/ddf_bacot.html",
+        "date": "2021-11-04",
+        "mots": 11090,
+        "desc": "Compte rendu officiel de la déposition de Valérie Bacot devant le Sénat, avec questions et réponses.",
+        "n_unites": 223
+      }
+    },
+    "n_unites_total": 539,
+    "n_unites_selec": 222
+  },
+  "locuteurs": {
+    "valerie_bacot": {
+      "label": "Valérie Bacot",
+      "couleur": "bleu",
+      "description": "Parole directe de Valérie Bacot — témoignage, déposition, réponses",
+      "marqueurs": [
+        "valérie bacot",
+        "valérie :",
+        "elle dit",
+        "elle répond",
+        "elle explique",
+        "elle témoigne",
+        "elle raconte",
+        "elle confie",
+        "valérie explique",
+        "valérie dit",
+        "valérie répond",
+        "« je ",
+        "« on ",
+        "« il m",
+        "« il nous",
+        "« j'avais",
+        "valérie bacot explique",
+        "valérie bacot dit"
+      ]
+    },
+    "defense": {
+      "label": "Défense & avocats",
+      "couleur": "vert",
+      "description": "Arguments des avocats de la défense — Nathalie Tomasini et autres",
+      "marqueurs": [
+        "tomasini",
+        "maître",
+        "avocat",
+        "la défense",
+        "défenseur",
+        "plaidoirie",
+        "plaide",
+        "défense argue",
+        "l'avocat",
+        "me tomasini",
+        "nathalie tomasini"
+      ]
+    },
+    "accusation": {
+      "label": "Accusation & parquet",
+      "couleur": "rouge",
+      "description": "Parole du procureur, réquisitions, questions de la cour",
+      "marqueurs": [
+        "procureur",
+        "parquet",
+        "réquisition",
+        "le président",
+        "la présidente",
+        "la cour",
+        "magistrat",
+        "question :",
+        "le juge",
+        "la juge",
+        "interroge",
+        "demande à valérie"
+      ]
+    },
+    "expert": {
+      "label": "Experts & témoins",
+      "couleur": "orange",
+      "description": "Psychiatres, psychologues, témoins cités à la barre",
+      "marqueurs": [
+        "expert",
+        "psychiatre",
+        "psychologue",
+        "témoin",
+        "docteur",
+        "professeur",
+        "expertise",
+        "selon l'expert",
+        "l'expert explique",
+        "le témoin"
+      ]
+    },
+    "senat": {
+      "label": "Sénatrices & institutions",
+      "couleur": "violet",
+      "description": "Questions et interventions des sénatrices, associations",
+      "marqueurs": [
+        "billon",
+        "annick billon",
+        "sénatrice",
+        "sénatrices",
+        "la délégation",
+        "présidente",
+        "association",
+        "nous toutes",
+        "fédération"
+      ]
+    },
+    "narrateur": {
+      "label": "Narration journalistique",
+      "couleur": "gris",
+      "description": "Description factuelle du journaliste, contexte, ambiance",
+      "marqueurs": [
+        "l'audience",
+        "la salle",
+        "l'auditoire",
+        "le tribunal",
+        "les assises",
+        "l'atmosphère",
+        "chalon-sur-saône"
+      ]
+    }
+  },
+  "typologie": {
+    "temoignage_survie": {
+      "label": "Témoignage de survie",
+      "description": "Valérie décrit les violences subies, l'emprise, l'absence d'alternative",
+      "couleur": "#2c4a6e",
+      "termes": [
+        "peur",
+        "peureux",
+        "terreur",
+        "terrifié",
+        "violence",
+        "violent",
+        "frapper",
+        "frappé",
+        "battre",
+        "battu",
+        "viol",
+        "violer",
+        "prostituée",
+        "prostitution",
+        "proxénète",
+        "proxénétisme",
+        "survie",
+        "survivre",
+        "pas le choix",
+        "aucun choix",
+        "pas d'autre",
+        "échappatoire",
+        "emprise",
+        "contrôle",
+        "je ne pouvais pas",
+        "impossible",
+        "protéger",
+        "enfants"
+      ]
+    },
+    "legitimation_juridique": {
+      "label": "Légitimation juridique",
+      "description": "Arguments sur la légitime défense, le droit, la qualification des faits",
+      "couleur": "#4a6741",
+      "termes": [
+        "légitime défense",
+        "défense différée",
+        "loi",
+        "juridique",
+        "droit",
+        "code pénal",
+        "qualification",
+        "requalifier",
+        "jacqueline sauvage",
+        "réforme",
+        "jurisprudence",
+        "état de nécessité",
+        "contrainte",
+        "préméditation",
+        "assassinat",
+        "meurtre",
+        "crime passionnel"
+      ]
+    },
+    "emprise_expliquee": {
+      "label": "Emprise expliquée",
+      "description": "Mécanisme d'emprise décrit et expliqué — par experts, avocats ou Valérie",
+      "couleur": "#8b3a2a",
+      "termes": [
+        "emprise",
+        "emprise psychologique",
+        "cycle de la violence",
+        "syndrome",
+        "traumatisme",
+        "conditionnement",
+        "manipulation",
+        "isolation",
+        "isolement",
+        "dépendance",
+        "soumission",
+        "contrôle coercitif",
+        "dominé",
+        "dominée",
+        "stockholm",
+        "résignation",
+        "intériorisation"
+      ]
+    },
+    "silence_institutionnel": {
+      "label": "Silence institutionnel",
+      "description": "Ce que l'entourage, les institutions, la société n'ont pas fait",
+      "couleur": "#5a4a3a",
+      "termes": [
+        "savait",
+        "savaient",
+        "tout le monde savait",
+        "silence",
+        "taire",
+        "complice",
+        "complicité",
+        "entourage",
+        "famille",
+        "institution",
+        "école",
+        "médecin",
+        "assistante sociale",
+        "signalement",
+        "protection",
+        "n'a rien fait",
+        "rien dit",
+        "fermé les yeux",
+        "ignoré",
+        "toléré"
+      ]
+    },
+    "renversement_victimaire": {
+      "label": "Renversement victimaire",
+      "description": "Moments où Valérie est questionnée comme suspecte ou responsable",
+      "couleur": "#c0392b",
+      "termes": [
+        "pourquoi pas",
+        "pourquoi ne pas",
+        "partir",
+        "quitter",
+        "appeler",
+        "police",
+        "gendarmerie",
+        "préméditation",
+        "prémédité",
+        "choix",
+        "elle aurait pu",
+        "elle pouvait",
+        "responsabilité",
+        "mais quand même",
+        "n'empêche",
+        "voulu",
+        "décidé",
+        "planifié"
+      ]
+    },
+    "politisation": {
+      "label": "Politisation & cadrage systémique",
+      "description": "Féminisme, réformes, dimension politique et sociétale",
+      "couleur": "#6c3483",
+      "termes": [
+        "féminicide",
+        "féminisme",
+        "féministe",
+        "patriarcat",
+        "violences faites aux femmes",
+        "violences conjugales",
+        "systémique",
+        "structurel",
+        "inégalité",
+        "réforme",
+        "loi",
+        "changer",
+        "société",
+        "nous toutes",
+        "continuum",
+        "droits des femmes"
+      ]
+    },
+    "dimension_emotionnelle": {
+      "label": "Dimension émotionnelle",
+      "description": "Registre émotionnel — larmes, honte, dignité, empathie",
+      "couleur": "#1a6b8a",
+      "termes": [
+        "pleure",
+        "larmes",
+        "sanglots",
+        "émotion",
+        "émue",
+        "bouleversé",
+        "bouleversée",
+        "honte",
+        "humiliation",
+        "dignité",
+        "courage",
+        "force",
+        "fragilité",
+        "silence",
+        "voix brisée",
+        "tête baissée",
+        "salle en larmes",
+        "applaudissement"
+      ]
+    }
+  },
+  "stats": {
+    "total": {
+      "par_locuteur": {
+        "valerie_bacot": 138,
+        "narrateur": 206,
+        "defense": 74,
+        "accusation": 88,
+        "expert": 16,
+        "senat": 17
+      },
+      "par_type": {
+        "legitimation_juridique": 39,
+        "temoignage_survie": 240,
+        "dimension_emotionnelle": 149,
+        "silence_institutionnel": 52,
+        "renversement_victimaire": 42,
+        "politisation": 9,
+        "emprise_expliquee": 8
+      },
+      "par_locuteur_et_type": {
+        "valerie_bacot_legitimation_juridique": 11,
+        "narrateur_temoignage_survie": 123,
+        "defense_temoignage_survie": 21,
+        "valerie_bacot_temoignage_survie": 51,
+        "defense_dimension_emotionnelle": 32,
+        "narrateur_silence_institutionnel": 31,
+        "defense_legitimation_juridique": 4,
+        "valerie_bacot_renversement_victimaire": 7,
+        "valerie_bacot_dimension_emotionnelle": 57,
+        "defense_renversement_victimaire": 9,
+        "accusation_temoignage_survie": 34,
+        "accusation_dimension_emotionnelle": 40,
+        "accusation_renversement_victimaire": 7,
+        "narrateur_renversement_victimaire": 17,
+        "defense_silence_institutionnel": 6,
+        "valerie_bacot_silence_institutionnel": 11,
+        "expert_renversement_victimaire": 2,
+        "expert_dimension_emotionnelle": 4,
+        "narrateur_legitimation_juridique": 17,
+        "accusation_legitimation_juridique": 4,
+        "accusation_silence_institutionnel": 2,
+        "expert_temoignage_survie": 7,
+        "accusation_politisation": 1,
+        "narrateur_dimension_emotionnelle": 8,
+        "senat_legitimation_juridique": 2,
+        "senat_temoignage_survie": 4,
+        "expert_emprise_expliquee": 2,
+        "narrateur_emprise_expliquee": 5,
+        "senat_silence_institutionnel": 2,
+        "senat_dimension_emotionnelle": 8,
+        "narrateur_politisation": 5,
+        "expert_legitimation_juridique": 1,
+        "valerie_bacot_emprise_expliquee": 1,
+        "defense_politisation": 2,
+        "senat_politisation": 1
+      }
+    },
+    "par_source": {
+      "jsl_j1": {
+        "par_locuteur": {
+          "valerie_bacot": 40,
+          "narrateur": 22,
+          "defense": 18,
+          "accusation": 21,
+          "expert": 3
+        },
+        "par_type": {
+          "legitimation_juridique": 4,
+          "temoignage_survie": 43,
+          "dimension_emotionnelle": 36,
+          "silence_institutionnel": 12,
+          "renversement_victimaire": 9
+        },
+        "par_locuteur_et_type": {
+          "valerie_bacot_legitimation_juridique": 2,
+          "narrateur_temoignage_survie": 11,
+          "defense_temoignage_survie": 3,
+          "valerie_bacot_temoignage_survie": 17,
+          "defense_dimension_emotionnelle": 10,
+          "narrateur_silence_institutionnel": 8,
+          "defense_legitimation_juridique": 1,
+          "valerie_bacot_renversement_victimaire": 1,
+          "valerie_bacot_dimension_emotionnelle": 17,
+          "defense_renversement_victimaire": 3,
+          "accusation_temoignage_survie": 12,
+          "accusation_dimension_emotionnelle": 8,
+          "accusation_renversement_victimaire": 1,
+          "narrateur_renversement_victimaire": 2,
+          "defense_silence_institutionnel": 1,
+          "valerie_bacot_silence_institutionnel": 3,
+          "expert_renversement_victimaire": 2,
+          "expert_dimension_emotionnelle": 1,
+          "narrateur_legitimation_juridique": 1
+        }
+      },
+      "jsl_j2": {
+        "par_locuteur": {
+          "narrateur": 15,
+          "accusation": 29,
+          "valerie_bacot": 33,
+          "defense": 16,
+          "expert": 3
+        },
+        "par_type": {
+          "temoignage_survie": 39,
+          "dimension_emotionnelle": 35,
+          "legitimation_juridique": 5,
+          "silence_institutionnel": 7,
+          "renversement_victimaire": 10
+        },
+        "par_locuteur_et_type": {
+          "narrateur_temoignage_survie": 9,
+          "accusation_dimension_emotionnelle": 13,
+          "valerie_bacot_temoignage_survie": 12,
+          "defense_legitimation_juridique": 1,
+          "defense_dimension_emotionnelle": 7,
+          "valerie_bacot_dimension_emotionnelle": 13,
+          "defense_temoignage_survie": 6,
+          "valerie_bacot_silence_institutionnel": 4,
+          "accusation_temoignage_survie": 11,
+          "accusation_renversement_victimaire": 3,
+          "valerie_bacot_renversement_victimaire": 3,
+          "valerie_bacot_legitimation_juridique": 1,
+          "accusation_legitimation_juridique": 1,
+          "expert_dimension_emotionnelle": 2,
+          "accusation_silence_institutionnel": 1,
+          "narrateur_legitimation_juridique": 2,
+          "narrateur_renversement_victimaire": 2,
+          "defense_renversement_victimaire": 2,
+          "narrateur_silence_institutionnel": 2,
+          "expert_temoignage_survie": 1
+        }
+      },
+      "jsl_j3": {
+        "par_locuteur": {
+          "valerie_bacot": 26,
+          "accusation": 26,
+          "narrateur": 34,
+          "defense": 10,
+          "expert": 2
+        },
+        "par_type": {
+          "dimension_emotionnelle": 28,
+          "temoignage_survie": 49,
+          "legitimation_juridique": 6,
+          "renversement_victimaire": 9,
+          "politisation": 1,
+          "silence_institutionnel": 5
+        },
+        "par_locuteur_et_type": {
+          "valerie_bacot_dimension_emotionnelle": 11,
+          "valerie_bacot_temoignage_survie": 9,
+          "accusation_dimension_emotionnelle": 14,
+          "narrateur_temoignage_survie": 24,
+          "defense_temoignage_survie": 6,
+          "defense_dimension_emotionnelle": 2,
+          "narrateur_legitimation_juridique": 3,
+          "accusation_renversement_victimaire": 3,
+          "expert_temoignage_survie": 2,
+          "valerie_bacot_legitimation_juridique": 3,
+          "narrateur_renversement_victimaire": 4,
+          "accusation_temoignage_survie": 8,
+          "accusation_politisation": 1,
+          "valerie_bacot_silence_institutionnel": 2,
+          "narrateur_dimension_emotionnelle": 1,
+          "narrateur_silence_institutionnel": 2,
+          "defense_renversement_victimaire": 1,
+          "defense_silence_institutionnel": 1,
+          "valerie_bacot_renversement_victimaire": 1
+        }
+      },
+      "jsl_verdict": {
+        "par_locuteur": {
+          "valerie_bacot": 12,
+          "defense": 4,
+          "accusation": 2
+        },
+        "par_type": {
+          "legitimation_juridique": 3,
+          "dimension_emotionnelle": 10,
+          "temoignage_survie": 4,
+          "silence_institutionnel": 1
+        },
+        "par_locuteur_et_type": {
+          "valerie_bacot_legitimation_juridique": 2,
+          "defense_dimension_emotionnelle": 2,
+          "valerie_bacot_dimension_emotionnelle": 6,
+          "valerie_bacot_temoignage_survie": 3,
+          "accusation_dimension_emotionnelle": 2,
+          "valerie_bacot_silence_institutionnel": 1,
+          "defense_legitimation_juridique": 1,
+          "defense_temoignage_survie": 1
+        }
+      },
+      "senat": {
+        "par_locuteur": {
+          "defense": 26,
+          "valerie_bacot": 27,
+          "narrateur": 135,
+          "senat": 17,
+          "accusation": 10,
+          "expert": 8
+        },
+        "par_type": {
+          "silence_institutionnel": 27,
+          "dimension_emotionnelle": 40,
+          "temoignage_survie": 105,
+          "legitimation_juridique": 21,
+          "emprise_expliquee": 8,
+          "renversement_victimaire": 14,
+          "politisation": 8
+        },
+        "par_locuteur_et_type": {
+          "defense_silence_institutionnel": 4,
+          "defense_dimension_emotionnelle": 11,
+          "valerie_bacot_silence_institutionnel": 1,
+          "narrateur_temoignage_survie": 79,
+          "narrateur_legitimation_juridique": 11,
+          "narrateur_silence_institutionnel": 19,
+          "defense_temoignage_survie": 5,
+          "valerie_bacot_temoignage_survie": 10,
+          "senat_legitimation_juridique": 2,
+          "senat_temoignage_survie": 4,
+          "valerie_bacot_dimension_emotionnelle": 10,
+          "accusation_temoignage_survie": 3,
+          "expert_emprise_expliquee": 2,
+          "narrateur_dimension_emotionnelle": 7,
+          "narrateur_emprise_expliquee": 5,
+          "senat_silence_institutionnel": 2,
+          "senat_dimension_emotionnelle": 8,
+          "narrateur_renversement_victimaire": 9,
+          "narrateur_politisation": 5,
+          "expert_temoignage_survie": 4,
+          "defense_legitimation_juridique": 1,
+          "accusation_legitimation_juridique": 3,
+          "valerie_bacot_legitimation_juridique": 3,
+          "expert_legitimation_juridique": 1,
+          "defense_renversement_victimaire": 3,
+          "expert_dimension_emotionnelle": 1,
+          "valerie_bacot_emprise_expliquee": 1,
+          "accusation_dimension_emotionnelle": 3,
+          "defense_politisation": 2,
+          "valerie_bacot_renversement_victimaire": 2,
+          "senat_politisation": 1,
+          "accusation_silence_institutionnel": 1
+        }
+      }
+    }
+  },
+  "unites": [
+    {
+      "texte": "Justice / Chalon-sur-Saône Procès de Valérie Bacot : \"Vous ne comprenez pas ce que je vivais\"\nCe qu'il faut retenir de la journée de lundi\n>> L'accusée a longuement été interrogée sur sa vie, sa relation avec Daniel Polette, puis sur le meurtre.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 245
+    },
+    {
+      "texte": "Elle explique aussi qu'au dossier, il est précisé que Valérie Bacot a visité Daniel seulement deux fois au parloir. \"Les autres visites ont été refusées.\" Valérie Bacot certifie qu'il y en a eu bien davantage.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 209
+    },
+    {
+      "texte": ">> Elle a dit plusieurs fois qu'elle ne \"voulait pas le tuer\". >> Son gendre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 230
+    },
+    {
+      "texte": "\"Est-ce qu'on a récupéré la décision de justice de 1995 ? Je ne me souviens plus.\"\n15 h 17 : \"On a entendu tous les gendarmes, aucun ne nous a dit qu'il avait reçu la famille Bacot\"\nLe gendarme évoque les démarches qu'aurait entrepris Valérie et ses enfants pour dénoncer les violences de Daniel dans leur vie de famille.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 321
+    },
+    {
+      "texte": "\"Daniel a eu trois compagnes, trois enfants\" (avant Valérie, NDLR) précise le directeur d'enquête. \"Deux nous brossent un portrait... Elles ont été victimes de violences conjugales de sa part.\" Il euphémise en décrivant \"des scènes un peu particulières\" de menaces avec une arme, de coups, narrées par l'une des ex-compagnes de Daniel.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 335
+    },
+    {
+      "texte": "Allez casse-toi, ferme ta gueule, c'est fait c'est fait, maintenant on n'en parle plus.\" \"\n16 h 12 : l'audition du directeur d'enquête est terminée. L'audience est suspendue jusqu'à 16 h 30. 15 h 58 : \"Certaines plaintes ne sont toujours pas prises\"\n\"Est-ce que vous savez qu'en 2021, lorsqu'une femme pousse la porte d'un commissariat pour déposer plainte pour violences conjugales, certaines plaintes ne sont toujours pas prises ?\" demande Me Tomas …",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j1",
+      "longueur": 492
+    },
+    {
+      "texte": "Sans succès. >> Le directeur d'enquête a été entendu. Mardi matin, les enfants de Valérie doivent notamment être entendus. 20 h 50 : L'audience est suspendue, elle reprendra mardi à 9 heures. 20 h 25 : \"Il me disait que j'étais une merde\"\nC'est la défense qui questionne l'accusée.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 281
+    },
+    {
+      "texte": "-C'est surtout les mots, répond Valérie Bacot. C'est ce qui reste le plus.\"\nSur les questions de Me Tomasini ensuite, Valérie parle du contrôle de son téléphone, du fait qu'elle ne sortait quasiment pas, était chronométrée pour les courses...",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 242
+    },
+    {
+      "texte": "Une fois il m'a dit que si j'emmenais sa fille loin, j'aurais des problèmes, il me retrouverait...\"\n\"Avez-vous vu des scènes de violences sur Valérie Bacot ?, demande la présidente. Non, pas directement, mais je l'ai déjà vue rentrer tard en larmes et partir se cacher.\"\n\"Elle savait pertinemment que si elle partait ou un des enfants partait, elle allait s'en prendre une et ce serait la fin\", affirme le gendre à propos de Valérie.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 433
+    },
+    {
+      "texte": "Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui est devenu ensuite son époux, a suscité l'intérêt de très nombreux médias et suscité l'émoi de l'opinion.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 272
+    },
+    {
+      "texte": "Après avoir raconté la violence de la passe avec le client, puis le retour de Daniel énervé dans la voiture, elle dit : \"Je me souviens juste d'avoir fermé les yeux. Cette odeur et cette lumière...\"\nLa présidente ramène la question à des éléments terre à terre.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j1",
+      "longueur": 261
+    },
+    {
+      "texte": "Interrogée sur le somnifère, encore, et sur l'arme, l'accusée finit par admettre qu'elle a apporté le revolver dans la voiture. 20 h 05 : \"Vous ne comprenez rien, c'est ça le problème...\"\nL'avocat général questionne Valérie Bacot.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 230
+    },
+    {
+      "texte": "\"Monsieur, la vérité, elle est où ? Vous avez fait des réponses à mes questions, et dit absolument le contraire à Me Tomasini. Où est la vérité ?\"\nLe témoin respire, longuement, mais ne répond pas. L'avocat général repose la même question.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 239
+    },
+    {
+      "texte": "Et le gendre finit par admettre :\n\"Oui, on en avait parlé, oui le message je savais de quoi il s'agissait.\"\nLe témoin se retire ensuite après de nouvelles questions de Me Tomasini autour de ce message.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 201
+    },
+    {
+      "texte": "\"On a même fait des recherches au Canada, pas de Daniel\"\nLe directeur d'enquête\n14 h 35 : \"Le médecin de famille avait dit qu'il n'y avait pas de problèmes particuliers\"\nLe directeur d'enquête expose ce que les investigations ont permis de savoir sur l'enfance de Valérie.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "jsl_j1",
+      "longueur": 272
+    },
+    {
+      "texte": "Il cite ce témoignage singulier du médecin de famille qui, au moment de la procédure de 1995 à l'encontre de Daniel Polette pour agressions sexuelles, avait déclaré qu'il n'y avait \"pas de problèmes particuliers, qu'elle semblait éprouver un attachement fort envers son beau-père\".",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "jsl_j1",
+      "longueur": 281
+    },
+    {
+      "texte": "\"Pourquoi ce bois ?\" \"C'était le seul qu'on connaissait.\"\n\"Comment étaient vos enfants ? -Ils ne savaient pas trop ce qu'ils faisaient...\"\n12 h 55 : \"Je me souviens juste d'avoir fermé les yeux\"\nL'accusée raconte le tir mortel, mais sans jamais prononcer le mot concret.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "jsl_j1",
+      "longueur": 270
+    },
+    {
+      "texte": "répond le magistrat. Il énumère des aides sociales possibles. \"Mais je ne savais pas tout ça... -Vous ne savez pas car vous n'êtes pas allée voir les gendarmes.\"\nValérie Bacot répète que l'avocat général ne comprend pas ce qu'elle vivait.\"On nous dit qu'il y aura peut-être une mesure d'éloignement après enquête et nous on doit rentrer chez nous...",
+      "locuteur": "defense",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 349
+    },
+    {
+      "texte": "La présidente calme les débats. 20 heures : \"Il y a quelques petites choses qui me font rebondir\"\nValérie Bacot est entendue. Elle confirme les deux visites à la gendarmerie, d'emblée. \"Il y a quelques petites choses qui me font rebondir.\" Elle raconte un épisode où des gendarmes l'avaient vue en tenue légère au bord de la route, \"c'était sans équivoque ce que je faisais là, et ils n'avaient pas cherché à savoir quoi que ce soit...\"\nElle maintien …",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 499
+    },
+    {
+      "texte": "\"Je n'avais pas son numéro. Je n'avais pas de forfait me permettant d'envoyer un message par Messenger...\"\n19 h 40 : L'audience est suspendue 15 minutes. Valérie Bacot sera entendue ensuite. 19 h 33 : \"Elle est où la vérité ?\"\nLa présidente reprend la parole et s'adresse au gendre.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 282
+    },
+    {
+      "texte": "\"Il y avait certainement d'autres choses à faire (que de tuer Daniel, NDLR), mais... ce qui est fait est fait.\"\nJe ne recommencerai certainement jamais. Le gendre de Valérie Bacot\n18 h 30 : \"Avec les garçons, on décide de prendre les chaussures, les pelles, les gants, et d'aller enterrer le corps.\"\nC'est toujours l'audition du gendre.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 336
+    },
+    {
+      "texte": "Il est questionné sur les événements juste après la mort de Daniel Polette, une fois que Valérie Bacot l'a prévenu et qu'ils ont retrouvé ses fils aînés. \"Il était environ minuit 30. \"Avec les garçons, on décide de prendre les chaussures, les pelles, les gants, et d'aller enterrer le corps.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 291
+    },
+    {
+      "texte": "\"Je voulais juste me protéger\". La première partie de son interrogatoire avait permis de revenir sur son enfance et sa vie conjugale avec Daniel Polette. >> Reprise des débats à 14 h. Me Tomasini, fait le point d'une première matinée éprouvante pour l'accusée\n12 h 58 : \"Est-ce que vous avez voulu le tuer ?\" \"Non\"\nLa présidente demande à Valérie Bacot si elle a voulu tuer son mari.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 2,
+      "source": "jsl_j1",
+      "longueur": 383
+    },
+    {
+      "texte": "Ce message n'a pas été retrouvé par les enquêteurs. C'est la mère du gendre qui en a parlé, disant que c'est Valérie qui le lui avait envoyé juste après le crime. 19 h 15 : \"C'est tous ensemble qu'on a décidé de l'enterrer\"\nLa défense questionne le gendre.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 256
+    },
+    {
+      "texte": "\"La réponse de Paray-le-Monial, ça a été que ce n'était pas leur secteur. Et à La Clayette, ils ont dit que Madame devait venir elle-même, mais en nous envoyant péter...\"\n\"On a réellement été à ces deux foutues gendarmeries\", répète le témoin face aux doutes réitérés par l'avocat général Eric Jallet.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 301
+    },
+    {
+      "texte": "Et une mère qui buvait et était parfois violente. \"Quand elle me punissait, c'était avec le martinet. Daniel, il me défendait.\"\n\"Lui, il était violent avec vous ?, demande la présidente. \"Non, il m'a mis une calotte une fois.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 4,
+      "source": "jsl_j1",
+      "longueur": 225
+    },
+    {
+      "texte": "Il l'interroge sur les deux visites prétendues de la part des enfants à la gendarmerie pour tenter de dénoncer les violences conjugales. \"J'ai du mal à vous croire...\", réagit le magistrat. \"Je vous jure que c'est vrai\", explique le gendre.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 240
+    },
+    {
+      "texte": "Qui l'a mise dans la voiture ? Elle a toujours, face aux enquêteurs, dit que c'était elle. Mais là... \"Je ne sais plus.\"\nLa présidente lui demande : \"L'arme, vous l'avez amenée, c'est pour vous protéger d'un client violent, ou pour l'utiliser contre votre mari ?",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j1",
+      "longueur": 262
+    },
+    {
+      "texte": "On a fait ça histoire d'avoir un peu de temps pour nous.\"\nLa présidente lui demande si l'idée de prévenir les gendarmes leur a traversé l'esprit. \"Ben... On s'est fait justice soi-même et c'était certainement pas la bonne décision.\"\n18 h 14 : \"C'est moi qui ai écrasé le somnifère\"\nL'audition du gendre se poursuit.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 315
+    },
+    {
+      "texte": "\"Vous aviez déclaré que Valérie vous avait dit qu'elle n'en pouvait plus, qu'il fallait le tuer. Vous vous en souvenez ?, demande la présidente. -Je ne m'en souviens plus. -Vous ne vous en souvenez plus...",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 205
+    },
+    {
+      "texte": "\"Vous aviez dit à l'époque qu'elle avait dit prendre l'arme avec elle pour essayer d'en finir. Vous confirmez ? -Je ne savais pas si elle allait le faire ce soir-là, je me suis dit que si elle le faisait pas, elle n'allait jamais le faire et sa fille allait devoir se prostituer...\"\nEst-ce que vous l'avez encouragée ?\", questionne la présidente Céline Therme.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 360
+    },
+    {
+      "texte": "demande la présidente. Lucas répond \"oui\" et détaille une visite à la gendarmerie de Paray. Puis à La Clayette : \"Ils nous ont dit qu'on était des trous du cul\", on est repartis et on s'est dit qu'on ne pouvait rien faire.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 222
+    },
+    {
+      "texte": "\"Il m'avait dit : si tu parles, tu y passes.\"\n16 h 40 : l'audience reprend avec la lecture des auditions de Carole Granet, absente (lire plus bas). Elle avait révélé le crime à la gendarmerie en mai 2017.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 204
+    },
+    {
+      "texte": "Notamment le fait que \"Valérie a indiqué avoir récupéré l'arme et l'avoir mise dans un sac en plastique avec d'autres affaires avant de partir pour la passe\". Après la passe et le départ du client, lorsque Daniel est remonté à l'avant de la voiture, \"elle tire dans l'espace entre le siège et l'appuie-tête.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 307
+    },
+    {
+      "texte": "Réponse : \"Je ne sais pas. Si vous le dites.\"\n15 h 55 : \"Vous n'avez rien trouvé ?\"\nL'avocat général Eric Jallet demande à l'enquêteur si, au-delà du cercle familial, des éléments de preuves laissant penser à des maltraitances au sein du foyer ont pu être relevés dans l'entourage, au sein du village.",
+      "locuteur": "defense",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 301
+    },
+    {
+      "texte": "Et explique qu'elles ne permettent pas d'apprendre d'éléments déterminants. Mais qu'elles révèlent que Valérie entretient une liaison avec son gendre, le compagnon de sa fille. Il développe ensuite le résultat des déclarations en garde à vue de Valérie Bacot et des membres de sa famille, après les interpellations survenues le 2 octobre 2017.",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 343
+    },
+    {
+      "texte": "Il raconte tout d'abord comment Carole Granet, mère du compagnon de la fille de Valérie Bacot, a raconté le crime dans les détails, le 29 mai 2017. \"Elle a expliqué l'avoir su très vite n'avoir rien dit plus tôt par crainte d'être poursuivie pour non-dénonciation de crime\".",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 274
+    },
+    {
+      "texte": "9 h 10 : Le jury de jugement va être tiré au sort. Six jurés doivent être désignés, plus trois jurés supplémentaires en cas de défaillance d'un des titulaires. 9 h 06 : la cour est entrée, l'audience est ouverte\nVeste noire et haut bleu, cheveux tirés en queue de cheval, Valérie Bacot est appelée à la barre pour décliner son identité.",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 336
+    },
+    {
+      "texte": "9 h 37 : Un témoin crucial ne sera pas là\nl'appel des témoins nous apprend que Carole Granet, la femme qui a révélé le crime à la gendarmerie et devait être entendue ce lundi après-midi, ne sera pas présente pour de graves et sérieuses raisons de santé.",
+      "locuteur": "expert",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 253
+    },
+    {
+      "texte": "Puis deux témoins cruciaux doivent être interrogés. Carole Granet, la femme qui a dénoncé le crime à la gendarmerie, le 29 mai 2017, 14 mois après la disparition de Daniel Polette. Puis son fils, un personnage central de l’affaire.",
+      "locuteur": "expert",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 231
+    },
+    {
+      "texte": "Au total, près d’une vingtaine de médias sont présents, sur accréditation. 7 h 30 : Le programme de la journée\nCette première matinée d’audience sera tout d’abord consacrée au tirage au sort des jurés et à l’appel des témoins.",
+      "locuteur": "expert",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j1",
+      "longueur": 226
+    },
+    {
+      "texte": "même combat ?\"\nEt l'ensemble de nos sujets. \"Dossier Bacot, les archives du JSL\"\ncliquez sur les deux flèches en bas à droite pour une visualisation en plein écran",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j1",
+      "longueur": 163
+    },
+    {
+      "texte": "Ils ont montré une totale solidarité envers leur mère. Décrivant un climat de violence voire de terreur instauré par leur père au domicile. >> Toutefois, questionnés sur la responsabilité de chacun dans les actes durant le week-end du crime, ils ont été mis en face de certaines contradictions dans leurs déclarations successives.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j2",
+      "longueur": 330
+    },
+    {
+      "texte": "11 h 30 : \"On avait la peur qu'il se relève et nous tue\"\nDylan est interrogé sur l'enterrement du corps du père. \"On avait la peur qu'il se relève et nous tue. Et peur ensuite jusqu'à l'arrestation, qu'on soit séparés.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j2",
+      "longueur": 218
+    },
+    {
+      "texte": ">> Elle a dit plusieurs fois qu'elle ne \"voulait pas le tuer\". >> Son gendre a été interrogé. Il a notamment soutenu que deux tentatives de dénoncer les violences conjugales à la gendarmerie avaient été effectuées par les enfants.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j2",
+      "longueur": 230
+    },
+    {
+      "texte": ">> Durant l'après-midi, après l'audition des experts gendarme, balisticien et légiste, Valérie Bacot a été interrogée sur les faits. >> \"La cour est perdue face à vos différentes versions\" a réagi la présidente face à l'accusée.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 228
+    },
+    {
+      "texte": "\"Vous vous doutiez qu'à un moment vous alliez vous faire arrêter ?, demande la présidente. -Oui, et on se disait que c'était hors de question d'impliquer Dylan (son fils aîné, NDLR), on se mettait d'accord.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 206
+    },
+    {
+      "texte": "\"Vous disiez quoi aux gens ?, demande la présidente Therme. -Ce que Lucas nous disait de dire. Qu'il était parti.\"\n17 h 05 : \"On a suivi les instructions de Lucas\"\nValérie doit répondre sur l'après-crime.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 204
+    },
+    {
+      "texte": "Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui est devenu ensuite son époux, a suscité l'intérêt de très nombreux médias et suscité l'émoi de l'opinion.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j2",
+      "longueur": 272
+    },
+    {
+      "texte": "C'était le compagnon de sa fille. \"Lucas a eu une emprise sur moi, lui aussi\", répond Valérie Bacot. Qui dit que maintenant, elle en est sortie et ne fait plus confiance à personne. 17 h 10 : \"Le message, c'est impossible\"\nLa présidente poursuit son interrogatoire.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 265
+    },
+    {
+      "texte": "\"J'étais perdue\"\nElle raconte en pleurs comment elle s'est rendue compte que d'autres femmes avaient subi des violences conjugales. \"J'ai compris avec les services sociaux que c'était pas tout de ma faute, que d'autres femmes avaient subi la même chose que moi avant.\"\nElle raconte cette période durant laquelle Daniel était officiellement disparu, pas encore découvert mort.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 375
+    },
+    {
+      "texte": ">> L'accusée s'est braquée sur les questions de l'accusation, refusant de répondre davantage à l'avocat général qui la questionnait sur les éléments de préméditation. L'audience reprendra mercredi à 9 heures.",
+      "locuteur": "defense",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 208
+    },
+    {
+      "texte": "L'audition de la mère de l'accusée sera très attendue. 18 h 20 : l'audience est suspendue jusqu'au lendemain. 17 h 50 : la présidente fait circuler des photos du dossier. 17 h 45 : \"Je supporte plus les feux d'artifice, ça me fait revivre ce moment-là\"\nMe Tomasini interroge sa cliente sur son état d'esprit au moment des faits.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 328
+    },
+    {
+      "texte": "Celle-ci n'a jamais été retrouvée. Il s'agit du modèle d'arme similaire fourni par l'expert balisticien.\"\nL'avocat général demande à l'expert si, à une courte distance, le tireur visant la nuque peut se douter du caractère immédiatement létal d'un tel tir.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 256
+    },
+    {
+      "texte": "Valérie arrivait parfois à lui dire non.\"\nValérie Bacot ce mardi à l'audience. Photo JSL/K.B. 13 heures : \"C'était pour l'endormir\"\nQuestionnée par l'avocat général, Karline parle du somnifère : \"C'était pour l'endormir\".",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 221
+    },
+    {
+      "texte": "Valérie répond qu'elle était à bout, perdue, qu'elle a agi dans un tourbillon. Question : \"Vous avez dit avoir vu comme un éclair, quand vous avez tiré.\"\n-Oui. C'est pour ça qu'aujourd'hui je supporte plus les feux d'artifice, les trucs comme ça...",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 248
+    },
+    {
+      "texte": "Valérie Bacot ne lui répond plus et c'est maintenant à la défense de la questionner. 17 h 30 : \"C'est le moment d'essayer de comprendre \"\nLa présidente a terminé son interrogatoire. L'accusée a à plusieurs reprises dit que Lucas a été très entreprenant, avant et après le crime.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 278
+    },
+    {
+      "texte": "La recherche de résidus de tirs dans la 807 confirme qu'il y en a. \"Il y a eu un tir d'arme à feu dans cette voiture\", acquiesce le gendarme. Pourtant, rappelle la présidente, \"Valérie Bacot a tantôt parlé de la 806, tantôt de la 807 (les deux véhicules du couple) comme étant la voiture dans laquelle ça s'est passé, donc on s'est posé des questions\", dit la présidente.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 371
+    },
+    {
+      "texte": "Et il est toujours sceptique concernant les violences au quotidien. \"On nous décrit Daniel Polette comme un tyran domestique et un violent quotidien. Pourtant, on n'a aucun certificat médical, c'est quand même curieux\", souligne l'avocat général.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 4,
+      "source": "jsl_j2",
+      "longueur": 246
+    },
+    {
+      "texte": "Et moi mes enfants, c'est toute ma vie. -Mais c'est bien vous qui décidez d'enterrer le corps ? -Sinon je perdais mes enfants. Vous n'avez jamais pensé à tuer votre mari ? -J'ai plus rien à dire. -C'est pourtant toute la question de ce procès\", déplore l'avocat général Eric Jallet.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 282
+    },
+    {
+      "texte": "-Non je n'en ai pas le souvenir.\"\nC'est pourtant ce qu'il avait dit lors d'une audition durant l'enquête. Je pense qu'à force elle serait morte à cause des violences qu'on subissait\nDylan, fils de Valérie Bacot\n11 h 45 : \"Je sais pas comment ça aurait pu finir autrement\"\nL'avocat général questionne Dylan.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 306
+    },
+    {
+      "texte": "Valérie Bacot sanglote en répondant, de manière désordonnée et sur un ton rapide. \"Le message envoyé à Lucas (\"ça y est, c'est fait\"), c'est impossible, maintient-elle. J'avais pas son numéro, et pas internet hors de chez moi avec mon téléphone.\"\nElle répond aux questions sur la gestion de sa vie de famille après le crime, les différents déménagements, les rendez-vous avec l'assistante sociale...",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 399
+    },
+    {
+      "texte": "Il recentre : \"C'est le moment d'essayer de comprendre ce qui s'est passé à ce moment-là.\"\nValérie Bacot explique être allée voir Lucas en premier après le crime car \"c'était la logique d'aller vers quelqu'un qui savait ce qui se passait.",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 238
+    },
+    {
+      "texte": "Valérie Bacot avait déclaré ne pas se souvenir avoir effectué le geste d'armer, rappelle la présidente. \"Il faut armer, avec cettearme, c'est nécessaire\", répond le balisticien, formel. 14 h 35 : \"Le corps était enterré à moins d'un mètre\"\nL'audience reprend avec l'audition du médecin légiste.",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 294
+    },
+    {
+      "texte": "-Oui. -En fait non. Mais vous le croyez ?\"\n10 heures : Somnifère : \"C'est qui, il ?\"\nLa présidente reparle du somnifère à Kevin. \"Devant le tribunal pour enfants en novembre 2019, vous aviez déclaré \"Il prépare café et met le somnifère.\" C'est qui, il ?\"\n-Lucas (le gendre, NDLR).\"\nLe fils Bacot parle ensuite des deux visites à la gendarmerie pour dénoncer les violences conjugales que les enfants soutiennent avoir effectuées.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 4,
+      "source": "jsl_j2",
+      "longueur": 428
+    },
+    {
+      "texte": "La présidente lit les déclarations de Valérie durant l'instruction, mais aussi devant le tribunal pour enfants en novembre 2019 au procès de ses enfants, au sujet de la décision d'emmener l'arme dans la voiture pour se rendre au rendez-vous de prostitution.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j2",
+      "longueur": 257
+    },
+    {
+      "texte": "\"Il était violent avec votre mère ?, demande la présidente. -Oui. Vraiment. -Vous l'avez vu ? -Pas vraiment mais on la voyait pleurer, même des fois elle boîtait...\"\nIl explique que Daniel Polette faisait peur à toute la famille.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j2",
+      "longueur": 229
+    },
+    {
+      "texte": "Et en garde à vue, untel a dit ça, untel a dit ça, et j'avais plus le choix.\"\nSur sa liaison avec Lucas : \"C'était juste quelques mois, comme ça, avant d'aller en prison.\"\nLa présidente relance sur le caractère étrange de cette histoire.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 237
+    },
+    {
+      "texte": "12h35 : \"J'ai rien vu de mes yeux, mais je sais que Lucas voulait le faire\"\nLa présidente questionne Karline. \"Il a été question d'un divorce, une fois ? -Il nous en a parlé mais nous a dit ensuite que c'était pour voir notre réaction, qu'il ne la quitterait jamais.\"\nLa présidente aborde maintenant le week-end des faits.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 322
+    },
+    {
+      "texte": "Qu'en dites-vous ? -C'est plus lui qui a décidé\", soutient le fils Bacot/Polette. Comment on vit le fait d'avoir participé collectivement à enterrer son père dans les bois en pleine nuit ?, demande la présidente.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 212
+    },
+    {
+      "texte": "-Oui.\"\n16 h 45 : \"Ces versions sont radicalement opposées\"\nLa présidente confronte Valérie Bacot à ses anciennes déclarations. \"Vous aviez dit au juge d'instruction \"Je n'avais plus le choix.\" C'est quoi ?, demande la présidente.",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 229
+    },
+    {
+      "texte": "-Oui je l'ai su, j'ai jamais su quoi en penser. Mais je sais qu'elle a pas voulu me faire du mal.\"\n\"Ma fille et lui sont séparés, personne ne voit à notre rapprochement d'inconvénient particulier\" : Ce sont des lignes du livre de Valérie Bacot sorti en mai, à propos de sa relation avec Lucas.",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 293
+    },
+    {
+      "texte": "Il confirme qu'il aimait les armes et en possédait. Il affirme qu'il a \"à peu près entendu\" ce qu'a dit son père à sa soeur, peu avant le crime, et que Valérie Bacot présente comme le fait qui l'a décidée à passer à l'action.",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 225
+    },
+    {
+      "texte": "Elle reprendra à 16 h 25\nLa présidente indique vouloir présenter différentes photos figurant au dossier, et illustrant les lieux des faits, les repères géographiques... ainsi que des portraits de Daniel Polette, et de Valérie Bacot adolescente lors de la procédure de 1995.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 273
+    },
+    {
+      "texte": "Ses services ont procédé à des recherches de traces dans la maison, dans le véhicule, sur le cadavre de Daniel Polette. \"Dans la maison, des traces de sang ont été relevées à deux endroits. Sur la moquette dans la chambre à l'étage, et sur le parquet du couloir.",
+      "locuteur": "accusation",
+      "type": "legitimation_juridique",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 262
+    },
+    {
+      "texte": "Décomposition avancée. Il est proche d'un état de momification.\" Il détaille les quelques vêtements qui restaient sur le corps, ou à proximité. 15 h 25 : \"Pas de trace de médicament\"\nL'audition de l'expert balisticien est terminée.",
+      "locuteur": "expert",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 231
+    },
+    {
+      "texte": "-Je sais pas, mais il nous interdisait tant de trucs. -Pourtant vous aviez une petite amie. -Lucas et ma copine étaient les seuls qu'on invitait à la maison.\"\nLe témoin convient que \"souhaiter la mort, ça ne se fait pas\".",
+      "locuteur": "expert",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j2",
+      "longueur": 221
+    },
+    {
+      "texte": "\"Le décès peut prendre combien de temps ?, demande la présidente. -C'est une histoire de minute mais la perte de conscience est immédiate.\"\n13 h 20 : fin de l'audition de David Borde. L'audience est suspendue jusqu'à 14 h 30\n13 h 02 : \"J'ai su, j'ai rien dit\"\nL'audition de Karline est terminée.",
+      "locuteur": "accusation",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 295
+    },
+    {
+      "texte": "David Borde est appelé à la barre. Cet homme de 27 ans, qui un lien de parenté éloigné avec Lucas, a été mis en examen dans ce dossier pour non-dénonciation de crime mais un non-lieu a été prononcé. \"J'ai su, j'ai rien dit\", résume David Borde à la barre, qui explique avoir fait la connaissance de la famille Bacot/Polette en 2017, après le meurtre.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 2,
+      "source": "jsl_j2",
+      "longueur": 350
+    },
+    {
+      "texte": "L'audience démarre à 9 h. À lire aussi : Justice / Chalon-sur-Saône. Procès de Valérie Bacot : \"Vous ne comprenez pas ce que je vivais\"\nCe qu'il faut retenir de la première journée d'audience\n>> L'accusée a longuement été interrogée sur sa vie, sa relation avec Daniel Polette, puis sur le meurtre.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 298
+    },
+    {
+      "texte": "Daniel n'avait pas voulu boire le café, lui trouvant un gout bizarre. Depuis le début de l'audience, les questions posées à chacun portent sur ceci :\n-qui a eu l'idée du somnifère, qui l'a écrasé, qui l'a mis dans le verre ?",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 224
+    },
+    {
+      "texte": "La seule fois où elle avait travaillé, pour la mairie, j'avais dû la rappeler en la suppliant de revenir car il allait nous tuer. Alors j'ai cherché, trouvé ses cartes de visite avec marqué escort girl dessus, j'ai cherché sur internet parce que je savais pas ce que ça voulait dire...\"\nSa déposition est très posée et claire.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 326
+    },
+    {
+      "texte": "\"Elle aurait pu faire autrement, votre mère, non ?, questionne l'avocat général. -Pas à ce que je sache. Mon frère a été voir les gendarmes, ils ont rien fait. Je sais pas comment ça aurait pu finir autrement.\"\nDylan évoque les femmes qui meurent sous les coups de leurs conjoints.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 281
+    },
+    {
+      "texte": "Le fils assure qu'il prenait des gifles régulièrement, des coups à la tête. Qu'il ne se confiait à personne car il n'avait pas d'amis à l'extérieur. \"Je parlais à personne.\"\nRevient la question de \"pourquoi ne pas être partis ?\" posée par l'avocat général.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 256
+    },
+    {
+      "texte": "\"Il y en a beaucoup.\" Il dit ensuite que les langues se délient, \"les femmes deviennent un peu plus égales aux hommes\". Photo ci-dessous : La maison à Chassenard où la famille Bacot s'était installée, peu avant les interpellations.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 231
+    },
+    {
+      "texte": "Au début, je croyais que dans toutes les familles c'était comme ça. Depuis que j'ai rencontré celle de ma copine je me rends compte que ça peut être différent. On a toujours vécu dans la douleur. On subissait ses ordres, fallait pas réfléchir.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 243
+    },
+    {
+      "texte": "Concernant la décision et l'acte d'enterrer le corps, \"on était traumatisés et on suivait ce qu'ils nous disaient de faire\", avait déclaré le témoin devant le tribunal pour enfants de Mâcon. \"Hier, le gendre a dit que c'était une décision collective, à 4\", rappelle la présidente.",
+      "locuteur": "expert",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_j2",
+      "longueur": 280
+    },
+    {
+      "texte": "C'est le premier témoin de cette 3e journée. 8 h 40 : prise de parole de Florian Maïly, du comité de soutien de Valérie\nLe porte-parole du comité de soutien de Valérie Bacot déclare devant les médias son \"admiration pour le courage\" de l'accusée et son \"incompréhension\" face à la teneur des débats.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 299
+    },
+    {
+      "texte": "Justice / Chalon-sur-Saône Procès de Valérie Bacot : l'effroyable témoignage de la soeur de Daniel\nCe qu'il faut retenir de la journée de mercredi\n>> La mère de Valérie Bacot, longuement entendue le matin, a donné sa version de l'enfance de sa fille.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 250
+    },
+    {
+      "texte": "\"A 13 ans, j'ai avalé des cachets, je voulais mourir.\" Elle explique que personne ne voyait ou écoutait ce qui lui arrivait. \"C'est mon plus grand regret, ne pas l'avoir tué lui.\" Elle raconte comment elle s'est cachée à Paris, dans la rue, à 16 ans, pour fuir son foyer.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 271
+    },
+    {
+      "texte": "Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui est devenu ensuite son époux, a suscité l'intérêt de très nombreux médias et suscité l'émoi de l'opinion.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j3",
+      "longueur": 272
+    },
+    {
+      "texte": "Il m'a amenée dans la chambre, couchée, m'a dit ça restera entre nous sinon... il m'a mis les armes sous la gorge, un couteau et un 22 long rifle... Elle raconte d'autres scènes de violence terribles, Daniel qui terrorisait sa famille.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j3",
+      "longueur": 235
+    },
+    {
+      "texte": "Elle raconte des scènes de violence très dures, \"on devait nettoyer le sang sur les murs... Ma soeur a été traumatisée, il a bousillé sa vie.\"\nMireille explique qu'elle n'avait pas de contact avec Valérie par la suite et n'a pas pu l'aider.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j3",
+      "longueur": 240
+    },
+    {
+      "texte": "Etre heureux et gagner contre lui encore. On ne vit pas encore dans le même univers que vous tous.\"\n19 h 10 : l'audition de Monique Polette est terminée. C'était le dernier témoin de la journée, la présidente lit désormais quelques pièces de la procédure.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 255
+    },
+    {
+      "texte": "La responsable c'est elle, et son papa aussi un peu. Mireille Polette\n17 h 55 : \"Elle travaille bien\"\nPhilippe Devers, chef d'équipe dans l'entreprise où elle travaille, est entendu par la cour. Il explique qu'elle bosse bien, qu'il n'y a \"aucun souci.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 252
+    },
+    {
+      "texte": "J'ai réussi aussi parce que j'avais trois grands frères, ça a aidé. (...) Mais quand on connait rien d'autre, on pense que c'est normal.\"\n15 heures : \"J'étais amoureuse. J'avais 15 ans et demi\"\nLa cour entend Régine, l'une des anciennes compagnes de Daniel Polette.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 265
+    },
+    {
+      "texte": "\"Javais déjà un père violent. Alors le père de mon fils violent... je croyais que c'était normal. Il y avait toujours des armes. Dans sa voiture, dans sa chambre...\"\nRégine explique à quel point c'est difficile de sortir de l'emprise de quelqu'un comme ça, \"qui vous éloigne de tout le monde...",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 5,
+      "source": "jsl_j3",
+      "longueur": 294
+    },
+    {
+      "texte": "\"Je suis tombée amoureuse de lui. Je suis tombée enceinte à 15 ans et demi.\"\n\"La violence est rentrée dans notre vie crescendo. C'est un homme qui buvait, violent, un jour il s'est planté devant moi avec sa carabine à canon scié, il m'a demandé où j'étais, qu'on m'avait vue avec un homme, il m'a dit monte dans la voiture, j'ai eu la peur de ma vie...",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 5,
+      "source": "jsl_j3",
+      "longueur": 352
+    },
+    {
+      "texte": ">> On a beaucoup entendu les mots \"monstre\", \"violences\", \"armes\", \"peur\" ce mercredi après-midi. Et l'on attend maintenant le témoignage de deux des soeurs de Daniel, qui ont déjà par le passé expliqué lui vouer une certaine haine...",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j3",
+      "longueur": 234
+    },
+    {
+      "texte": "A l'audience ici, elle dit qu'elle était victime de viols... Et vous vous dites qu'elle était amoureuse ? -Oui, je voyais une relation amoureuse, mais je n'exclus pas l'emprise, il avait du pouvoir sur elle.\"\n10 h 45 : \"Votre fille a été violée par l'homme avec lequel vous vivez...\"\nL'avocat général souligne la légèreté de la réaction de la mère.\"Votre fille a été violée par l'homme avec lequel vous vivez, c'est insupportable, or vous n'avez pas …",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 4,
+      "source": "jsl_j3",
+      "longueur": 584
+    },
+    {
+      "texte": "Valérie a déposé une plainte pour complicité de viols par omission à l'encontre de sa mère, a indiqué la défense. >> L'un des frères de Daniel Polette a déposé, qualifiant son frère de \"monstre\", de \"diable\", \"toujours violent\".",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_j3",
+      "longueur": 228
+    },
+    {
+      "texte": "\"Je pense qu'il est né comme ça, y'a un moment faut arrêter de trouver des excuses.\"\n18 h 30 : \"Valérie n'a pas été aidée dès le départ\"\n\"L'emprise, c'est pas une fatalité, non plus ?\", demande l'avocat général à la soeur de Daniel Polette.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 240
+    },
+    {
+      "texte": "\"Valérie n'a pas été aidée dès le départ. Et chaque personne est différente. Même pour Michèle, la précédente compagne, ça n'a pas été simple ! Mireille Polette est ensuite questionnée par la défense.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 200
+    },
+    {
+      "texte": "Des pièces sont versées au débat par la défense. 13 h 40 : L'audience est suspendue jusqu'à 14 h 45\nCe qu'il faut retenir de la matinée :\n>> L'audition de la mère de Valérie a duré plus de deux heures.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_j3",
+      "longueur": 201
+    },
+    {
+      "texte": "Elle a repris son souffle après une déposition tendue comme une arbalète. Sa personnalité extrêmement vive et son (très) franc-parler ont déjà marqué l'auditoire, qui a pu mettre un visage et une voix sur celle qui avait brisé la loi du silence face à Daniel Polette.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 267
+    },
+    {
+      "texte": "Une fois il m'a pris les cheveux, tapé la tête contre le tableau de bord, mon fils était à l'arrière, il s'est fait pipi dessus. Deux km plus loin, j'ai réussi à ouvrir la portière et sauté. Il s'est arrêté pour me rattraper et me donner des coups de poing dans le ventre.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 272
+    },
+    {
+      "texte": "-Valérie.\"\nDerrière, Valérie fait non de la tête... Les visites au parloir. 10 h : \"Valérie disait \"je lui en veux pas, faut pas qu'il aille en prison\"\"\nLa mère répond sur la procédure de 1995. \"Qui a dénoncé les faits d'agression sexuelle ?",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 241
+    },
+    {
+      "texte": "Et là il serait rentré et ça aurait été un carnage ! Il les auraient tué là, peut-être.\"\nLa présidente lui fait remarquer qu'une ex-femme de Polette avait, avec son aide, réussi à le quitter. \"Oui mais la différence c'est que Valérie était seule.\"\n18 h 15 : \"On nettoyait le sang sur les murs\"\nMireille Polette raconte ensuite l'enfance avec son frère Daniel, et son témoignage, tenu sur un ton très énergique, est dans la lignée des précédents.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 445
+    },
+    {
+      "texte": "Après je sais pas, c'est facile de dire mais quand on est en face, c'est nettement moins simple...\"\n10 h 20 : \"Valérie a crû comprendre qu'elle devait partir avec lui\"\nJoëlle Aubague, mère de Valérie, est questionnée par la présidente sur la sortie de prison de Daniel.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 269
+    },
+    {
+      "texte": "Valérie\"\nLa mère répond encore à la présidente, sur les faits quand Daniel était incarcéré. \"Je veux bien reconnaître que j'ai pas assumé ce que j'aurais dû, j'ai voulu laisser une chance. Mais on a été deux à écrire pour soutenir M.Polette, Valérie aussi a écrit.",
+      "locuteur": "accusation",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 264
+    },
+    {
+      "texte": "\"Si Valérie m'avait fait un signe, je vous jure que j'aurais pris ses enfants, je lui aurais pris un appartement, je l'aurais cachée...\" Il raconte qu'il a réussi une fois à frapper son frère. \"C'était toute ma haine qui est ressortie.\"\n\"Monstre, c'est un mot trop gentil pour lui\", dit le témoin sur une question de la défense.",
+      "locuteur": "expert",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j3",
+      "longueur": 328
+    },
+    {
+      "texte": "Témoin attendu : c'est elle qui avait poussé à dénoncer les faits de viol commis sur Valérie en 1995. Dernière de la fratrie Polette (jumelle d'Alain qui a déposé ce matin), elle s'était exprimée dans nos colonnes dès 2019.",
+      "locuteur": "expert",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 223
+    },
+    {
+      "texte": "J'ai su sa situation judiciaire, mais je n'ai pas eu de réticence, tout le monde a droit a une deuxième chance.\"\n17 h 40 : \"Elle a pu montrer ses qualités\"\nAudition de Jean-Michel Commaret, employeur actuel de Valérie Bacot.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 224
+    },
+    {
+      "texte": "-La justice le réincarcère pas, elle est majeure, déterminée. Je fais quoi ?\", répond la mère. Elle raconte ensuite comment elle a suivi de très loin la vie conjugale de sa fille. \"Ils semblaient bien de l'extérieur mais il faut être dans la maison pour savoir ce qu'il s'y passe, et c'était un huis clos.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 305
+    },
+    {
+      "texte": "Je me suis renseignée pour faire réincarcérer Monsieur, il y a eu bras de fer et Valérie a soutenu Daniel contre moi. En 1996, il avait été condamné à cinq ans d'interdiction de ses droits civiques et civils, et ils sont partis ensemble en 1998 !\"\n9 h 05 : \"Je m'appelle Joëlle Aubague, j'ai 65 ans\"\nLa mère de Valérie Bacot est appelée à la barre.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 348
+    },
+    {
+      "texte": "\"Je l'ai recrutée en 2019 suite à un entretien où j'ai pu reconnaître certaines qualités.\" Un stage, puis un CDI. \"Vu son implication, son intégration... Elle a même pris des responsabilités, été responsable Covid, candidate et élue déléguée du personnel.\" Il s'agit d'une entreprise de plâtrerie-peinture.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 306
+    },
+    {
+      "texte": "A partir de là, c'était... la soeur qui manque. Mais plus de liberté pour moi.\"\nIl a renoué contact avec elle quand il a eu 18 ans. 12 h 05 : \"J'avais pas trop de contacts avec elle\"\nL'audience est reprise.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 206
+    },
+    {
+      "texte": "-Ce sont les soeurs de Daniel, je crois. -Comment s'est passée son interpellation ? -ça a été très compliqué, il avait su qu'il se passait quelque chose, on était à la gendarmerie avec mon fils et quand on est rentré à la maison il était caché dans une des sous-pentes de la maison.\"\n-Comment avez-vous vécu cette procédure ?",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 325
+    },
+    {
+      "texte": "-Pas vraiment, il a toujours commandé, en fait.\"\nJe me demande s'il avait un coeur\nAlain Polette\n(ce dessin est extrait de notre Grand format publié en novembre 2019. Il illustre les violences subies dans leur enfance qu'ont décrites le petit frère et la plus petite sœur de Daniel Polette)\n13 heures : \"J'habitais la maison du diable\"\nLa cour entend Alain Polette, frère de Daniel.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j3",
+      "longueur": 382
+    },
+    {
+      "texte": "Elle lui demande de raconter son enfance. Il a six ans de moins que Valérie et donc peu de souvenirs d'avant la séparation de ses parents. La présidente lui demande de parler de Daniel Polette. \"Il y avait de la violence physique ?",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "jsl_j3",
+      "longueur": 231
+    },
+    {
+      "texte": "\"Votre entreprise compte sur elle ?,demande la présidente. -Oui, bien sûr. Je lui ai fait confiance et je continuerai. 17 h 25 : \"Savait-on, à Baudemont, qu'elle vivait en couple avec son violeur ?\"\nSandrine Dubouis a terminé sa longue déposition spontanée.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 257
+    },
+    {
+      "texte": "\"Je fais partie de cette société qui n'a pas tendu la main à Valérie. Elle était là sans être là, faisait un peu partie du décor. Une statuette qu'on aurait pu déplacer, elle n'aurait rien dit, rien fait.\"\n16 h 42 : l'audience est suspendue jusqu'à 17 h\nTrois témoignages, trois fois plus de superlatifs\n>> Trois anciennes compagnes de Daniel Polette viennent de témoigner successivement devant la cour d'assises de Saône-et-Loire.",
+      "locuteur": "accusation",
+      "type": "politisation",
+      "score": 2,
+      "source": "jsl_j3",
+      "longueur": 431
+    },
+    {
+      "texte": "ça fait 35 ans que j'ai divorcé et j'arrive pas à l'oublier , il a gâché ma vie.\" Elle explique s'en être sortie grâce à son entourage. Elle avait environ 18 ans quand elle l'a rencontré. \"Je suis allée voir un avocat en cachette , je suis allée chez une copine, je lui ai laissé un mot, \"je ne peux plus continuer comme ça, on divorce\".",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 337
+    },
+    {
+      "texte": "-Valérie dit qu'elle vous l'a dit bien avant. -Non. Sinon j'aurais bougé. -Elle dit que vous auriez répondu que tant que ça reste dans la famille... -Certainement pas, ce n'est pas notre fonctionnement...",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 204
+    },
+    {
+      "texte": "Je voulais pas, j'étais jeune. Il était plutôt indifférent. Vers la fin de ma grossesse, j'ai failli perdre mon bébé, parce que... (elle éclate en sanglots) j'avais emprunté la mobylette de la mémé Polette et j'étais tombée.",
+      "locuteur": "narrateur",
+      "type": "dimension_emotionnelle",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 224
+    },
+    {
+      "texte": "\"Vous avez fait un travail pour occulter cette facette de votre vie ? -J'ai plutôt tendance à penser à demain qu'aux mauvaises choses du passé.\"\nJérome Bacot parle de devoirs d'école, de choses dérisoires.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 205
+    },
+    {
+      "texte": "Elle décline toute responsabilité. \"L'affaire en elle-même, je n'en sais pas grand chose, voire rien, les ponts ont été coupés avec Valérie le 31 août 1998 quand elle est partie avec Daniel Polette. Avant, il n'y avait rien de particulier, nous avions une vie de famille normale, les soucis sont arrivés quand on s'est mis ensemble avec Daniel Polette (en 1992, NDLR).",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 368
+    },
+    {
+      "texte": "Il n'a aucun souvenir du jour de l'arrestation de Daniel en 1995. \"Quelle est l'ambiance à la maison quand il est incarcéré ? -Euhhhhhh... (il grimace longuement) au départ je sais pas trop. Après, la fin, je me souviens juste avant qu'il rentre.\"\nMaître Tomasini : « La mère de Valérie a-t-elle conscience de sa responsabilité dans l'acte que Valérie a commis ?",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 362
+    },
+    {
+      "texte": "11 h 10. Agression sexuelle du grand frère sur Valérie : \"Tant que ça reste dans la famille...\"\nLa défense interroge la mère, Joëlle Aubague. Me Tomasini lui demande si elle a le souvenir d'une agression sexuelle commise par le grand frère de Valérie sur elle, enfant.",
+      "locuteur": "defense",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 268
+    },
+    {
+      "texte": "La mère de Valérie Bacot\nLa mère affirme qu'elle n'a pas voulu signer, tout comme le père de Valérie, la demande d'émancipation. La présidente explique que \"la note d'audience se termine par un non-renouvellement de l'assistance éducative.",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "jsl_j3",
+      "longueur": 239
+    },
+    {
+      "texte": "20 h 19 : le verdict est rendu\nValérie Bacot est déclarée coupable d'assassinat. La préméditation est retenue. Valérie Bacot est condamnée à quatre ans de prison, dont trois ans avec sursis probatoire et obligation de soins pendant trois ans.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 2,
+      "source": "jsl_verdict",
+      "longueur": 242
+    },
+    {
+      "texte": "Justice Valérie Bacot libre : \"Un nouveau combat maintenant, pour toutes les autres femmes\"\nCe qu'il faut retenir de l'issue du procès\nLe procès de Valérie Bacot s'est achevé ce vendredi :\n>> La cour l'a déclarée coupable d'assassinat, mais l'a condamnée à une peine qui ne la renvoie pas en prison.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 299
+    },
+    {
+      "texte": "Réaction de Me Bonaggiunta, avocate de la défense\nEric Jallet, avocat général, a répondu au JSL. Il avait requis une peine sans incarcération. 21 h 24 : Une sortie dans l'allégresse\nValérie Bacot a effectué une sortie du palais de justice marquée par l'allégresse de ses soutiens, qui l'ont applaudie à plusieurs reprises, lorsqu'elle a redescendu le boulevard devant le palais pour regagner son domicile.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_verdict",
+      "longueur": 405
+    },
+    {
+      "texte": ">> Plus tôt dans la journée, l'avocat général avait requis une peine de 5 années de prison dont 4 avec sursis. C'est-à-dire une peine clémente qui ne renverrait pas Valérie Bacot derrière les barreaux, celle-ci ayant déjà fait un an de détention provisoire.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_verdict",
+      "longueur": 257
+    },
+    {
+      "texte": "Un véritable bain de foule. 20 h 55 : Valérie Bacot répond à quelques questions de la presse puis sort du tribunal. On entend des applaudissements. Les mots de Valérie Bacot : \"Je remercie la cour, et tout le soutien que j'ai eu, de tout le monde.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 247
+    },
+    {
+      "texte": "Elle est restée assise à la barre, prostrée, sans un bruit, sans aucune force, sans réaction. Ses proches la soutiennent en attendant la tenue de l'audience civile. 20 h 15 : Valérie Bacot s'entretient avec sa fille, assise sur sa chaise adossée aux bancs de la défense.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 270
+    },
+    {
+      "texte": "20 h 50 : la cour lui laisse l'autorité parentale. L'audience est levée. 20 h 45 : l'audience civile se tient maintenant. Tout le monde est d'accord pour que Valérie Bacot conserve l'autorité parentale sur son fils mineur.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_verdict",
+      "longueur": 222
+    },
+    {
+      "texte": "C'est un nouveau combat maintenant, pour toutes les autres femmes, victimes de violences. Je ne suis pas soulagée, non, je suis vidée. (...) Je pourrai être là pour mes enfants et ma petite-fille.\"\nLes mots de Valérie Bacot à la sortie de la salle.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_verdict",
+      "longueur": 248
+    },
+    {
+      "texte": "Derrière ce crime hors du commun, l'histoire de Valérie Bacot, femme battue, sous emprise, contrainte de se prostituer...et même violée dans son enfance par celui qui est devenu ensuite son époux, a suscité l'intérêt de très nombreux médias et suscité l'émoi de l'opinion.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "jsl_verdict",
+      "longueur": 272
+    },
+    {
+      "texte": "Nos articles d'analyse. \"Pourquoi l'affaire Bacot est devenue un sujet national\"\n\"Procès Bacot : l'heure de la vérité judiciaire\"\n\"Valérie Bacot, la femme battue qui ne se tait plus\"\n\"Jacqueline Sauvage, Alexandra Lange...",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 222
+    },
+    {
+      "texte": "Elle ne sera pas incarcérée à nouveau. Une partie du public a applaudi lorsque la présidente a expliqué à Valérie Bacot qu'elle sortirait libre du palais de justice. La peine prononcée est inférieure aux réquisitions, d'une année.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_verdict",
+      "longueur": 230
+    },
+    {
+      "texte": "\"Avant de lever l'audience pénale, la cour tient à vous souhaiter de retrouver la paix et la sérénité\", a conclu la présidente. Elle a levé l'audience à 20 h 28. Valérie Bacot, vacillante, est restée assise sur sa chaise tout au long du rendu du délibéré et même quelques minutes après.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "jsl_verdict",
+      "longueur": 286
+    },
+    {
+      "texte": "La cour n'est pas encore revenue dans la salle. 20 h 05 : Après 4 h 30 de délibéré, la cour va rendre son verdict. Les avocates rentrent dans la salle. Ainsi que la famille de Valérie Bacot. 19 h 28 : La cour et les jurés délibèrent depuis quatre heures maintenant\nValérie Bacot a pu s’allonger et dormir dans la salle des témoins où elle attend le verdict.",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 357
+    },
+    {
+      "texte": "Le palais de justice se remplit doucement, entre journalistes et public. Le jury s'est retiré pour délibérer à 15 h 20. >> En défense, Me Tomasini a plaidé l'irresponsabilité pénale, et donc l'acquittement, demandant un jugement qui ferait jurisprudence.",
+      "locuteur": "defense",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 254
+    },
+    {
+      "texte": ">> Valérie Bacot a fait un malaise vagal au moment où elle a compris le sens des réquisitions. L'audience a pu reprendre 1h40 plus tard. >> Verdict attendu dans la soirée\nPour lire tous les événements de la journée en détail, lisez notre direct ici >>> Procès de Valérie Bacot : Pas d'incarcération requise contre Valérie Bacot, la défense plaide l'acquittement\nLe procès d'une affaire hors norme\nIl y a cinq ans, une femme tuait son mari et décidait …",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "jsl_verdict",
+      "longueur": 558
+    },
+    {
+      "texte": "Jeudi 4 novembre 2021\n- Présidence de Mme Annick Billon, présidente -Audition de Mme Valérie Bacot, auteure de Tout le monde savait, accompagnée de son avocate, Maître Nathalie Tomasini\nMme Annick Billon, présidente.",
+      "locuteur": "defense",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "senat",
+      "longueur": 216
+    },
+    {
+      "texte": "Quel regard portez-vous sur son état ? Là aussi, l'institution a-t-elle échoué, alors que les gens savaient ? Le cas échéant, comment ? Si vous préférez ne pas répondre, Maître Tomasini peut prendre la parole.",
+      "locuteur": "defense",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "senat",
+      "longueur": 209
+    },
+    {
+      "texte": "Je ne peux commencer ce propos sans avoir un mot pour Maître Tomasini. Nous avons écouté dans un silence religieux son intervention. Nous comprenons pourquoi, depuis des années, elle est parvenue à faire évoluer le regard de la société sur les drames exposés ce matin par Valérie Bacot.",
+      "locuteur": "defense",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "senat",
+      "longueur": 286
+    },
+    {
+      "texte": "- Mes chers collègues, nous avons le plaisir de recevoir aujourd'hui Valérie Bacot et son conseil, Maître Nathalie Tomasini, accompagnées de Maître Iris Pajot. Je vous remercie d'être avec nous ce matin.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 203
+    },
+    {
+      "texte": "Cette intervention revêt un caractère différent de ce que vous connaissez, je suppose. Maître Tomasini, vous êtes l'avocate de Valérie Bacot, que vous avez défendue aux côtés de votre consoeur Maître Janine Bonaggiunta.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 219
+    },
+    {
+      "texte": "J'espère pouvoir faire avancer ces sujets. Mme Annick Billon, présidente. - Merci pour votre témoignage émouvant, glaçant et saisissant. C'est une leçon de vie, aussi. Je vais donner la parole à Maître Nathalie Tomasini.",
+      "locuteur": "defense",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 220
+    },
+    {
+      "texte": "Je rappelle que notre réunion fait l'objet d'une retransmission en direct sur le site Internet du Sénat et qu'elle sera disponible par la suite en vidéo à la demande. Valérie Bacot, vous êtes l'auteure de Tout le monde savait, un livre témoignage publié le 12 mai dernier.",
+      "locuteur": "valerie_bacot",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "senat",
+      "longueur": 272
+    },
+    {
+      "texte": "Je pense qu'elle est historiquement complice de ces violences faites aux femmes et aux enfants. Le code pénal n'a, selon moi, jamais été conçu pour protéger les femmes ou les enfants de la domination et de la violence masculines.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 7,
+      "source": "senat",
+      "longueur": 229
+    },
+    {
+      "texte": "Elle était une enfant maltraitée, battue par sa mère, violée par son propre frère lorsqu'elle était toute petite. Elle a ensuite été une jeune femme violée puis violentée dans le huis clos conjugal. Elle sera violée dès l'âge de 12 ans par son beau-père.",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 6,
+      "source": "senat",
+      "longueur": 254
+    },
+    {
+      "texte": "À la lumière de ce qui se passe à l'étranger, et aussi de l'évolution de la science, qui reconnaît et décrit aujourd'hui les effets traumatiques des violences répétées, il a été proposé d'ajouter dans l'article 222-14 du code pénal, qui réprime les violences conjugales habituelles, un nouvel alinéa ainsi rédigé : «l'impact de ces violences sur la victime est pris en compte pour l'application des articles 122-1, 122-2 et 122-5 lorsque sa responsab …",
+      "locuteur": "narrateur",
+      "type": "temoignage_survie",
+      "score": 6,
+      "source": "senat",
+      "longueur": 475
+    },
+    {
+      "texte": "Dès l'instant où nous sortions de la définition de la légitime défense classique, avec un acte d'attaque, d'agression, et un acte de défense dans le même temps et avec deux actions proportionnelles, l'institution judiciaire s'est braquée et a demandé ce qu'était ce concept de légitime défense différée.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 3,
+      "source": "senat",
+      "longueur": 303
+    },
+    {
+      "texte": "Nous nous sommes appuyées sur un texte complémentaire, l'article 122-6 du code pénal, parlant davantage de la présomption de légitime défense et du renversement de la charge de la preuve qui permettrait aux femmes d'évoquer plus facilement le bénéfice de la légitime défense.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 3,
+      "source": "senat",
+      "longueur": 275
+    },
+    {
+      "texte": "Je signale à ce sujet que bon nombre de textes de lois, et pas des moindres, ont été écrits par des hommes et pour des hommes, à commencer par la définition de la légitime défense. Lorsque ce texte a été écrit, il traitait de rapports entre deux hommes de corpulence identique.",
+      "locuteur": "narrateur",
+      "type": "legitimation_juridique",
+      "score": 2,
+      "source": "senat",
+      "longueur": 277
+    },
+    {
+      "texte": "Le plus grand était majeur. Le deuxième a été en foyer. Les petits ont été séparés. Ma fille est tombée dans une famille formidable. Pas mon fils. La famille où il a été accueilli ne devrait à mon sens même pas être famille d'accueil.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 3,
+      "source": "senat",
+      "longueur": 234
+    },
+    {
+      "texte": "J'ai appris lors du jugement que mon plus jeune enfant avait dit à l'école que ça criait à la maison et qu'il n'était pas bien. Pourquoi la personne à qui il en a parlé n'a-t-elle rien fait, rien dit ?",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "senat",
+      "longueur": 201
+    },
+    {
+      "texte": "Nous vivons collectivement dans une forme de déni et de silence de l'ensemble des maltraitances infligées aux femmes et aux enfants. Contrairement à mes collègues, je ne crois pas que l'institution dysfonctionne, qu'elle ait des défaillances, des carences.",
+      "locuteur": "narrateur",
+      "type": "silence_institutionnel",
+      "score": 2,
+      "source": "senat",
+      "longueur": 256
+    },
+    {
+      "texte": "Votre cabinet est spécialisé dans la défense des victimes de violences et de harcèlement, notamment pour les cas de violences conjugales et intrafamiliales. Vous combattez régulièrement la notion de « syndrome d'aliénation parentale », qui décrédibilise la parole des mères qui dénoncent les violences commises par leur conjoint ou ex-conjoint sur les enfants.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 7,
+      "source": "senat",
+      "longueur": 360
+    },
+    {
+      "texte": "Vous aviez aussi défendu Jacqueline Sauvage, victime de violences conjugales et graciée en 2016 par le Président de la République pour le meurtre de son mari violent. Vous êtes coauteure, avec votre consoeur Maître Bonaggiunta, d'un livre intitulé Une défense légitime, publié en 2020.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 4,
+      "source": "senat",
+      "longueur": 285
+    },
+    {
+      "texte": "Afin aussi qu'elle nous dise quels sont aujourd'hui ses projets et comment la vie peut continuer après toute cette détresse. Je donnerai ensuite la parole à Maître Tomasini afin qu'elle développe les implications juridiques de ce procès, son combat en faveur des femmes victimes de violences ainsi que les évolutions souhaitables de notre législation en matière de lutte contre les violences conjugales.",
+      "locuteur": "defense",
+      "type": "temoignage_survie",
+      "score": 4,
+      "source": "senat",
+      "longueur": 403
+    },
+    {
+      "texte": "S'en suivront plusieurs années de violences conjugales de toute sorte, psychologiques, physiques, sexuelles. Elle subira ensuite la violence ultime : la prostitution par son propre conjoint. La cour a entendu les dysfonctionnements du système police-justice et le fait que la société n'a pas pu protéger Valérie Bacot.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 6,
+      "source": "senat",
+      "longueur": 318
+    },
+    {
+      "texte": "Quel regard portez-vous sur ce parcours de violences très jeune dans le cadre familial, dans une enceinte qui aurait dû vous protéger ? Mme Valérie Bacot. - Quand j'étais petite, je ne comprenais pas.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 3,
+      "source": "senat",
+      "longueur": 200
+    },
+    {
+      "texte": "Vous avez également permis la reconnaissance du syndrome de la femme battue lors du procès de Valérie Bacot, justement. Avec la prise en compte de ce syndrome, vous prônez la prise en considération des mécanismes complexes, psychiques et psychiatriques, qui permettent d'expliquer ce qui se passe dans la tête d'une femme battue depuis des années, qui en vient à tuer son agresseur.",
+      "locuteur": "valerie_bacot",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "senat",
+      "longueur": 382
+    },
+    {
+      "texte": "Nous sommes ici au sein de la délégation aux droits des femmes et à l'égalité, composée d'hommes et de femmes engagés sur ces thématiques. J'en profite pour remercier Valérie Boyer, qui nous a mis en contact et nous a permis d'organiser cette audition.",
+      "locuteur": "senat",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 252
+    },
+    {
+      "texte": "Mme Annick Billon, présidente. - Vous avez évoqué la difficulté de parler. Aviez-vous connaissance des dispositifs existants (3919, Centre d'information sur les droits des femmes et des familles (CIDFF), associations...) ?",
+      "locuteur": "senat",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 222
+    },
+    {
+      "texte": "Je souligne également l'engagement des nouvelles sénatrices et nouveaux sénateurs sur ces sujets au quotidien, dans l'hémicycle comme dans leurs territoires respectifs. Ces dernières années, nous avons travaillé pendant de longs mois sur la lutte contre les violences faites aux femmes.",
+      "locuteur": "senat",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "senat",
+      "longueur": 286
+    },
+    {
+      "texte": "Ils en ont besoin, eux aussi. Mme Annick Billon, présidente. - Nous l'avons dit, l'État, l'institution et les gendarmes ont échoué à vous protéger. Nous avons dressé cette année un bilan sur l'application de la loi sur la prostitution.",
+      "locuteur": "senat",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "senat",
+      "longueur": 235
+    },
+    {
+      "texte": "S'en est suivi l'inimaginable, un permis de visite consenti par les autorités, estampillé « République française », autorisant Valérie à aller voir son propre violeur en détention avec sa mère. Il y a aussi eu des carences de l'Union départementale des associations familiales (UDAF) et de l'administrateur ad hoc qui représentaient à l'époque cette enfant devant le tribunal correctionnel lors du procès de Daniel Polette.",
+      "locuteur": "senat",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "senat",
+      "longueur": 423
+    },
+    {
+      "texte": "Comme vous, j'ai été touchée par le témoignage de Valérie Bacot, mais aussi par son ouvrage et son courage. Au travers de son témoignage, d'autres victimes oseront peut-être se déclarer. Il a montré la limite des politiques publiques.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 1,
+      "source": "senat",
+      "longueur": 234
+    },
+    {
+      "texte": "Je vous cède immédiatement la parole, en vous remerciant d'être avec nous aujourd'hui. Mme Valérie Bacot. - Merci beaucoup de me laisser m'exprimer pour ce qui est mon combat, pour moi, mais aussi pour toutes les autres.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 220
+    },
+    {
+      "texte": "Comment voient-ils leur mère, qui vit aujourd'hui pour eux ? Mme Valérie Bacot. - Nous allons tous très bien. C'est le principal. Ils me voient comme une mère normale. Il n'y a pas de différence. C'est mon combat à moi, ils savent que j'en ai besoin, mais c'est aussi leur combat à eux.",
+      "locuteur": "valerie_bacot",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 286
+    },
+    {
+      "texte": "Vous en sortir ? Vous avez peur de mourir, tout le temps. Alors, vous ne faites rien, parce que vous savez ce qui pourrait vous arriver. J'ai été abandonnée par tous les systèmes, dont le juge pour enfants lorsque j'étais petite.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "senat",
+      "longueur": 229
+    },
+    {
+      "texte": "C'est encore assez compliqué, pour moi, de le faire. J'ai vraiment honte de ce que j'ai fait. Il ne m'est pas simple d'avancer à cause de cela. Depuis la prison, le jugement, j'ai appris ce qu'est le syndrome de la femme battue.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "senat",
+      "longueur": 228
+    },
+    {
+      "texte": "Il y a également eu des failles du parquet dans la fonction de protection à l'enfance de Valérie, et bien d'autres dysfonctionnements. Citons le fait que les enfants de Mme Bacot se sont présentés à plusieurs reprises à la gendarmerie.",
+      "locuteur": "accusation",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "senat",
+      "longueur": 235
+    },
+    {
+      "texte": "Ces syndromes sont bel et bien là. Je n'arrive pas à les faire disparaître. Je vis dans le présent, je pense au futur, mais intérieurement, je vis dans le passé. C'est très compliqué pour moi. Je remercie les psychiatres et psychologues ayant expliqué énormément de choses au tribunal.",
+      "locuteur": "expert",
+      "type": "emprise_expliquee",
+      "score": 1,
+      "source": "senat",
+      "longueur": 285
+    },
+    {
+      "texte": "Ce syndrome est reconnu en psychiatrie. Nous sommes bien confrontés à une altération du jugement. Tous les experts le disent. Je me permets de souligner qu'on pourrait, dans ces conditions, lister toutes les irresponsabilités pénales et les considérer également comme un permis de tuer.",
+      "locuteur": "expert",
+      "type": "emprise_expliquee",
+      "score": 1,
+      "source": "senat",
+      "longueur": 286
+    },
+    {
+      "texte": "Je pense surtout aux autres, aussi. Des gens dans la rue viennent me dire que je suis courageuse. Non. Moi, je ressens une honte. Je ne veux pas que les gens pensent que je suis courageuse et que j'ai bien agi.",
+      "locuteur": "narrateur",
+      "type": "dimension_emotionnelle",
+      "score": 3,
+      "source": "senat",
+      "longueur": 210
+    },
+    {
+      "texte": "Je vous admire pour votre courage, votre sensibilité, votre clairvoyance, la générosité dont vous faites preuve, l'amour que vous dégagez. Malgré tout ce que vous avez vécu, on sent en vous une force, une puissance d'amour.",
+      "locuteur": "narrateur",
+      "type": "dimension_emotionnelle",
+      "score": 2,
+      "source": "senat",
+      "longueur": 223
+    },
+    {
+      "texte": "Elles défendent la cause de toutes les femmes avec beaucoup d'énergie. Merci pour votre témoignage, pour votre courage. Je vous souhaite de tout coeur de rebondir. Vous n'oublierez sûrement pas, mais ce sera la force qui vous permettra de recommencer une autre vie.",
+      "locuteur": "narrateur",
+      "type": "dimension_emotionnelle",
+      "score": 2,
+      "source": "senat",
+      "longueur": 265
+    },
+    {
+      "texte": "Nous relevons enfin de nombreux indices mettant en évidence la soumission à une forme de manipulation et d'emprise évidente de toute puissance incarnée par le personnage de son mari, vécu comme un tyran domestique ayant droit de vie et de mort sur chaque personne du foyer, voire restant un élément persécuteur interne au-delà de son décès, ce qui confirme un syndrome de la femme battue avéré.",
+      "locuteur": "narrateur",
+      "type": "emprise_expliquee",
+      "score": 4,
+      "source": "senat",
+      "longueur": 394
+    },
+    {
+      "texte": "le sénateur pour leurs interventions riches en questions et propositions. Je suis en parfait accord avec les propos de Madame Rossignol sur la complicité de la société dominée par le patriarcat, ce qui n'empêche pas de constater les dysfonctionnements.",
+      "locuteur": "narrateur",
+      "type": "emprise_expliquee",
+      "score": 2,
+      "source": "senat",
+      "longueur": 252
+    },
+    {
+      "texte": "Mon Dieu, jamais je n'aurais pensé que quelqu'un me dirait ça. Moi, je ressens plutôt du mépris. Je le ressentais déjà avant, mais c'est encore le cas maintenant, un peu plus. Mon objectif, c'est de faire connaître ces syndromes, que les gens qui les vivent s'en rendent compte.",
+      "locuteur": "narrateur",
+      "type": "emprise_expliquee",
+      "score": 1,
+      "source": "senat",
+      "longueur": 278
+    },
+    {
+      "texte": "J'espère changer cette mentalité. Mme Annick Billon, présidente. - Merci beaucoup. Vous avez un parcours difficile. Prenez le temps de relater ce que vous souhaitez nous relater. Vous avez également été victime très jeune d'agression dans votre famille.",
+      "locuteur": "senat",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "senat",
+      "longueur": 253
+    },
+    {
+      "texte": "Cette dernière, à sa façon, en l'écoutant, en prononçant sa sanction clémente, et par les propos tenus par sa présidente, a essayé de rattraper les erreurs et les fautes commises par d'autres institutions avant elle.",
+      "locuteur": "senat",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "senat",
+      "longueur": 216
+    },
+    {
+      "texte": "Mme Annick Jacquemet. - Je fais partie des nouvelles sénatrices, j'ai été élue il y a un an. Vous m'avez prise aux tripes par ce que vous avez expliqué, par la vie que vous avez menée, par vos paroles empreintes d'une forte émotion.",
+      "locuteur": "senat",
+      "type": "dimension_emotionnelle",
+      "score": 1,
+      "source": "senat",
+      "longueur": 232
+    },
+    {
+      "texte": "Je veux pouvoir me dire que je suis capable de faire quelque chose de bien. J'en ai besoin pour réussir à me reconstruire et à me considérer comme normale. Mme Annick Billon, présidente. - Merci beaucoup.",
+      "locuteur": "senat",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 204
+    },
+    {
+      "texte": "Si vous ne pouvez pas sortir de chez vous, vous ne pouvez pas vous rendre dans une association, même si vous la connaissez. Il existe des dispositifs qui peuvent fonctionner pour certaines, mais pas pour d'autres.",
+      "locuteur": "senat",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 213
+    },
+    {
+      "texte": "Cette information peut être utile à tous, pour les élèves eux-mêmes comme pour leur famille, leurs camarades, leurs proches. Je terminerai en évoquant l'accueil et l'écoute que les femmes peuvent rencontrer dans les postes de police et de gendarmerie.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 2,
+      "source": "senat",
+      "longueur": 251
+    },
+    {
+      "texte": "Si on se rend à la gendarmerie, ce n'est pas pour rien. Il faut prendre le temps pour se faire entendre, pour se sentir en sécurité, pour dire la vérité. Il faut également savoir que quelque chose sera mis en place derrière.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "senat",
+      "longueur": 224
+    },
+    {
+      "texte": "Je n'aurais de toute façon pas pu appeler moi-même, puisqu'il disposait d'un listing détaillé de mes appels. J'étais surveillée. Je n'aurais donc pas été capable de le faire, que ce soit par Internet ou par téléphone.",
+      "locuteur": "narrateur",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "senat",
+      "longueur": 217
+    },
+    {
+      "texte": "Son histoire infantile est marquée par des carences éducatives sévères, puis par des mauvais traitements physiques et sexuels. Manifestement, les repères fondamentaux structurels semblent faire défaut chez cette femme chez qui on retrouve une non-différenciation des générations, une non-différenciation entre «dangereux» et «protecteur», des difficultés percées au symbolique et donc à la loi.",
+      "locuteur": "narrateur",
+      "type": "politisation",
+      "score": 2,
+      "source": "senat",
+      "longueur": 394
+    },
+    {
+      "texte": "Comment voulez-vous que nous nous ouvrions à ces personnes si elles ne nous croient pas, si elles nous font comprendre que nous avons cherché ce qui nous arrive ? Nous devons changer et remédier à beaucoup de choses.",
+      "locuteur": "narrateur",
+      "type": "politisation",
+      "score": 1,
+      "source": "senat",
+      "longueur": 216
+    },
+    {
+      "texte": "Pourquoi ce verdict fera-t-il date à mon sens ? D'abord, nous avons eu pour la première fois l'impression qu'une accusée victime, qui s'était tue durant vingt-quatre ans, était non seulement écoutée, mais aussi entendue par une cour d'assises, et même par la société dans son ensemble.",
+      "locuteur": "narrateur",
+      "type": "politisation",
+      "score": 1,
+      "source": "senat",
+      "longueur": 285
+    },
+    {
+      "texte": "Rien n'a été fait. Le statut de victime a été reconnu, de même que les dysfonctionnements du système police-justice. En outre, des rapports d'expertise, pierre angulaire de tout procès, ont pour la première fois évoqué les notions d'emprise et de syndrome de femme battue, qui n'apparaissaient jamais dans de tels rapports auparavant.",
+      "locuteur": "expert",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "senat",
+      "longueur": 334
+    },
+    {
+      "texte": "Justement, vos enfants ont-ils été pris en charge comme témoins ? Je lutte personnellement pour que les enfants témoins soient considérés comme des victimes pour avoir une représentation ad hoc. Ils peuvent avoir des intérêts différents de ceux de leur mère.",
+      "locuteur": "expert",
+      "type": "temoignage_survie",
+      "score": 2,
+      "source": "senat",
+      "longueur": 258
+    },
+    {
+      "texte": "Elle avait été acquittée sur le fondement du syndrome de la femme battue, évoqué par un expert spécialisé en victimologie en 1990. Cette affaire, je l'avais déjà évoquée en 2012, pour un cas réunissant les critères de la légitime défense classique.",
+      "locuteur": "expert",
+      "type": "temoignage_survie",
+      "score": 1,
+      "source": "senat",
+      "longueur": 248
+    },
+    {
+      "texte": "Je me souviens très bien que l'avocat général Luc Frémiot, lorsque je lui en avais parlé, m'avait dit que je pouvais l'évoquer, mais que nous n'étions pas prêts à entendre ce genre de plaidoirie en France sur une présomption de légitime défense des femmes violentées, ou même sur une légitime défense différée.",
+      "locuteur": "defense",
+      "type": "legitimation_juridique",
+      "score": 3,
+      "source": "senat",
+      "longueur": 310
+    },
+    {
+      "texte": "Finalement, la cour d'assises a essayé de répondre à ces défaillances et à ces fautes conduites à votre endroit et à celui de vos enfants. J'ai ensuite la conviction profonde que tant qu'aucune décision juridique ne retiendra la responsabilité, fut-elle symbolique, de ces institutions, nous n'avancerons pas.",
+      "locuteur": "accusation",
+      "type": "legitimation_juridique",
+      "score": 2,
+      "source": "senat",
+      "longueur": 309
+    },
+    {
+      "texte": "En 2016-2017, il y a eu l'affaire Jacqueline Sauvage, graciée à deux reprises par le Président de la République François Hollande. Nous avons assisté là à un bras de fer entre le pouvoir politique et l'institution judiciaire.",
+      "locuteur": "accusation",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 225
+    },
+    {
+      "texte": "Nous avons réussi à l'engager, car en avril 2021 - la jurisprudence de la Cour de cassation est extrêmement récente - nous avons évoqué le fait que le point de départ du délai de prescription ne correspondait pas aux faits en eux-mêmes, mais à la connaissance de ceux-ci.",
+      "locuteur": "accusation",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 271
+    },
+    {
+      "texte": "C'est d'ailleurs ce que j'ai plaidé. Je me suis appuyée sur l'amendement de Valérie Boyer. J'ai indiqué à la cour : « le 25 mai dernier, les sénateurs se sont fondés sur l'histoire de Valérie Bacot pour adopter en première lecture une proposition de loi sur l'irresponsabilité pénale, et ce sur recommandation de la commission des lois.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 2,
+      "source": "senat",
+      "longueur": 336
+    },
+    {
+      "texte": "Elle a tout fait pour que cette femme soit libérée, car elle savait que la place de Jacqueline Sauvage n'était pas en prison. Pourquoi dis-je que le verdict de l'affaire Valérie Bacot a changé les choses et qu'il marquera les esprits ?",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 235
+    },
+    {
+      "texte": "Je travaille sur ces thématiques avec Valérie Boyer, sénatrice, depuis de longues années. Dans cet amendement, il est indiqué que les situations particulièrement dramatiques, comme celle vécue par Valérie Bacot, doivent nous interroger sur nos failles dans la prise en charge et le suivi des victimes, mais aussi sur notre droit.",
+      "locuteur": "valerie_bacot",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 329
+    },
+    {
+      "texte": "Dans le cadre de ma plaidoirie, j'ai été au-delà des conclusions de l'expert judiciaire psychiatre, le docteur Prieur, qui a évoqué une haute, très haute, altération du discernement de Valérie Bacot, sans vouloir aller jusqu'à une abolition totale.",
+      "locuteur": "expert",
+      "type": "legitimation_juridique",
+      "score": 1,
+      "source": "senat",
+      "longueur": 248
+    },
+    {
+      "texte": "La poursuite de l'État évoquée par Maître Tomasini ne répond pas à un esprit de vengeance. Il y a des responsabilités individuelles, pas uniquement institutionnelles. La prise de conscience individuelle des personnes qui ne prennent pas la mesure de ce que vous vivez plaide vraiment pour une formation spécifique à tous les niveaux : Éducation nationale, Police, Gendarmerie...",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 3,
+      "source": "senat",
+      "longueur": 378
+    },
+    {
+      "texte": "Vous le savez, cet accueil et l'accompagnement ne sont pas optimaux. Nous le répétons depuis de nombreuses années. Les agents sont sensibilisés dans les écoles de police ou de gendarmerie, à travers une parole portée par un avocat ou une association militante.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 2,
+      "source": "senat",
+      "longueur": 260
+    },
+    {
+      "texte": "Elle a voulu les sauver. Ils l'ont sauvée, eux aussi. Elle était aussi entourée d'un comité de soutien très bienveillant et structuré, de ses avocates, et d'une présidente de cour d'assises à laquelle je veux rendre honneur.",
+      "locuteur": "defense",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "senat",
+      "longueur": 224
+    },
+    {
+      "texte": "C'est pour cette raison que je pense que nous sommes sur le bon chemin, bien que notre combat ne soit pas terminé. J'ai repris quelques lignes des conclusions du rapport d'expertise psychiatrique du docteur Prieur, qui ont été évoquées, mais aussi entendues par la cour : « l'entretien révèle essentiellement des carences affectives et éducatives précoces.",
+      "locuteur": "expert",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 356
+    },
+    {
+      "texte": "Nous ne retrouvons pas d'élément clinique en faveur d'une personnalité obsessionnelle, phobique, psychosomatique classique, mais une altération des capacités d'adaptation avec hyper vigilance, anxiété généralisée, réminiscence diurne et nocturne des mauvais traitements subis, attaques de panique, conduite phobique qui confirment l'existence d'un syndrome de stress post-traumatique majeur chez Mme Valérie Bacot.",
+      "locuteur": "valerie_bacot",
+      "type": "emprise_expliquee",
+      "score": 1,
+      "source": "senat",
+      "longueur": 414
+    },
+    {
+      "texte": "J'imagine que, dans nos têtes, nous nous interrogeons tous sur le nombre de personnes dans le même cas aujourd'hui. Combien d'autres manquements ? Comment une mineure, après avoir vécu ce qu'elle a vécu, a-t-elle pu retourner rendre visite à son bourreau en prison avec un cachet de la République française ?",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 308
+    },
+    {
+      "texte": "On peut savoir qu'on n'est pas seuls, qu'on est entendus et protégés. C'est tout de même le rôle d'un État comme le nôtre de le faire. Merci beaucoup. Merci, Madame la Présidente. Mme Dominique Vérien.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 201
+    },
+    {
+      "texte": "La médiatisation autour de ce type d'affaires, de ces femmes qui tuent leur conjoint pour ne pas mourir, est pourtant relativement mal vue par la majorité des cours de justice. Les parquets évoquent assez facilement des troubles à l'ordre public, ce qui va compromettre la remise en liberté de certaines de ces femmes en détention provisoire à la suite de leur geste.",
+      "locuteur": "accusation",
+      "type": "dimension_emotionnelle",
+      "score": 0,
+      "source": "senat",
+      "longueur": 367
+    },
+    {
+      "texte": "Ils n'en sont pas sortis avec une conviction aussi affirmée que nous l'aurions souhaité. Parfois, leurs propos sont railleurs. Ils estiment qu'un avocat intervient parce que c'est son gagne-pain, qu'une association militante est représentée par des « féministes qui nous font encore chier ».",
+      "locuteur": "defense",
+      "type": "politisation",
+      "score": 1,
+      "source": "senat",
+      "longueur": 291
+    },
+    {
+      "texte": "Beaucoup de choses me semblent inadmissibles. J'espère réussir à en changer certaines. Si nous nous y mettons à plusieurs, je pense que nous pouvons y parvenir. Maître Nathalie Tomasini. - Je remercie Mmes les sénatrices et M.",
+      "locuteur": "defense",
+      "type": "politisation",
+      "score": 1,
+      "source": "senat",
+      "longueur": 226
+    },
+    {
+      "texte": "Ils lui ont dit « on sait qui tu es, on va te pourrir ». Ce n'est pas logique. On nous demande d'aller à la gendarmerie s'il nous arrive quelque chose. Si on ne change pas les mentalités, c'est comme un chien qui se mord la queue.",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "senat",
+      "longueur": 230
+    },
+    {
+      "texte": "Valérie Bacot n'a demandé qu'un euro symbolique de dommages et intérêts. Ce n'était pas une condamnation financière que nous demandions, mais bien la reconnaissance de la responsabilité de l'État et sa condamnation.",
+      "locuteur": "valerie_bacot",
+      "type": "renversement_victimaire",
+      "score": 1,
+      "source": "senat",
+      "longueur": 215
+    },
+    {
+      "texte": "Nous devons changer les choses pour avancer. Mme Annick Billon, présidente. - Merci. Vous contribuez largement au changement de la société par votre parole. Mme Valérie Bacot. - C'est pour ça que je suis là.",
+      "locuteur": "senat",
+      "type": "politisation",
+      "score": 2,
+      "source": "senat",
+      "longueur": 207
+    },
+    {
+      "texte": "C'est un autre sujet. Je voudrais revenir sur l'intervention du seul sénateur présent dans cet hémicycle. Vous vous interrogez sur l'absence d'un entourage pour aider Mme Bacot dans un village, puisque tout le monde se connaît, à l'inverse d'une ville.",
+      "locuteur": "accusation",
+      "type": "silence_institutionnel",
+      "score": 1,
+      "source": "senat",
+      "longueur": 252
+    }
+  ]
+}

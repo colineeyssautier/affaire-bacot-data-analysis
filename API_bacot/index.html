@@ -1,0 +1,3453 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Corpus Bacot — Projet Mythodologie</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+  :root {
+    --noir: #1a1714;
+    --encre: #2d2926;
+    --gris: #6b6560;
+    --gris-clair: #c8c4be;
+    --fond: #f7f4ef;
+    --fond2: #efeae2;
+    --blanc: #fdfaf5;
+    --accent: #2c4a6e;
+    --accent2: #4a6741;
+    --bleu: #2c4a6e;
+    --serif: 'Arial', 'Helvetica Neue', Arial, sans-serif;
+    --sans: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--sans);
+    background: var(--fond);
+    color: var(--encre);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--blanc);
+    border-bottom: 1px solid var(--gris-clair);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 2rem;
+    height: 56px;
+  }
+
+  .nav-logo {
+    font-family: var(--serif);
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: var(--noir);
+    text-decoration: none;
+  }
+
+  .nav-logo span {
+    color: var(--accent);
+  }
+
+  .nav-links {
+    display: flex;
+    gap: 0;
+    list-style: none;
+  }
+
+  .nav-links a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 1rem;
+    height: 56px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    color: var(--gris);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.15s;
+    border-bottom: 2px solid transparent;
+    line-height: 1.2;
+  }
+  .nav-links a .nav-sub {
+    display: block;
+    font-size: 9px;
+    letter-spacing: 0.05em;
+    opacity: 0.7;
+    text-transform: uppercase;
+    line-height: 1;
+    margin-top: 2px;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: var(--noir);
+    border-bottom-color: var(--accent);
+  }
+
+  /* ── PAGES ── */
+  .page { display: none; }
+  .page.active { display: block; }
+
+  /* ── HERO ── */
+  .hero {
+    background: var(--blanc);
+    border-bottom: 1px solid var(--gris-clair);
+    padding: 5rem 2rem 4rem;
+    text-align: center;
+  }
+
+  .hero-eyebrow {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.2rem;
+  }
+
+  .hero h1 {
+    font-family: var(--serif);
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--noir);
+    max-width: 700px;
+    margin: 0 auto 1.2rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    color: var(--gris);
+    max-width: 560px;
+    margin: 0 auto 2.5rem;
+    line-height: 1.7;
+  }
+
+  .hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--gris-clair);
+    border-bottom: 1px solid var(--gris-clair);
+    margin: 0 auto;
+    max-width: 700px;
+  }
+
+  .hero-stat {
+    flex: 1;
+    min-width: 120px;
+    padding: 1.2rem 1rem;
+    border-right: 1px solid var(--gris-clair);
+    text-align: center;
+  }
+
+  .hero-stat:last-child { border-right: none; }
+
+  .hero-stat-n {
+    font-family: var(--serif);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--noir);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.3rem;
+  }
+
+  .hero-stat-l {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gris);
+  }
+
+  /* ── CONTAINER ── */
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .container-narrow {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  /* ── SECTION TITLE ── */
+  .section-title {
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--noir);
+    margin-bottom: 0.4rem;
+  }
+
+  .section-subtitle {
+    font-size: 13px;
+    color: var(--gris);
+    margin-bottom: 2rem;
+    letter-spacing: 0.02em;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--gris-clair);
+    margin: 3rem 0;
+  }
+
+  /* ── GRID NARRATIFS ── */
+  .narratifs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 1px;
+    background: var(--gris-clair);
+    border: 1px solid var(--gris-clair);
+    margin-bottom: 3rem;
+  }
+
+  .narratif-card {
+    background: var(--blanc);
+    padding: 1.4rem;
+    cursor: pointer;
+    transition: background 0.12s;
+    position: relative;
+  }
+
+  .narratif-card:hover { background: var(--fond2); }
+
+  .narratif-card.selected {
+    background: var(--fond2);
+  }
+
+  .narratif-card.selected::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 3px;
+    background: var(--accent);
+  }
+
+  .narratif-label {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--noir);
+    margin-bottom: 0.3rem;
+  }
+
+  /* ── KEYWORDS PANEL ── */
+  #home-keywords-panel {
+    margin-top: 1.2rem;
+    border: 1px solid var(--gris-clair);
+    border-left: 3px solid var(--accent);
+    background: var(--fond2);
+    padding: 1.2rem 1.5rem 1.4rem;
+    border-radius: 2px;
+  }
+  .kw-panel-title {
+    font-family: var(--serif);
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--noir);
+    margin-bottom: .3rem;
+  }
+  .kw-panel-desc {
+    font-size: 11.5px;
+    color: var(--gris);
+    margin-bottom: .9rem;
+  }
+  .kw-chip {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    background: var(--blanc);
+    border: 1px solid var(--gris-clair);
+    color: var(--encre);
+    margin: 3px 4px 3px 0;
+    font-family: var(--sans);
+    letter-spacing: .01em;
+  }
+  .kw-chip.shared {
+    border-color: var(--accent);
+    color: var(--accent);
+    background: #f5f0ea;
+    font-weight: 500;
+  }
+  .kw-chip.shared .kw-shared-tip {
+    font-size: 10px;
+    opacity: .7;
+    margin-left: 3px;
+  }
+
+  /* ── SCORE BARS (fiche document) ── */
+  .doc-scores {
+    margin-top: .8rem;
+    padding-top: .8rem;
+    border-top: 1px solid var(--gris-clair);
+  }
+  .doc-scores-title {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+    color: var(--gris);
+    margin-bottom: .5rem;
+  }
+  .score-row {
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    margin-bottom: 4px;
+  }
+  .score-row-label {
+    width: 140px;
+    font-size: 11px;
+    flex-shrink: 0;
+    text-align: right;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: var(--gris);
+  }
+  .score-row-label.dominant {
+    color: var(--noir);
+    font-weight: 600;
+  }
+  .score-bar-bg {
+    flex: 1;
+    height: 6px;
+    background: var(--fond2);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  .score-bar-fill {
+    height: 100%;
+    border-radius: 3px;
+    background: var(--gris-clair);
+    transition: width .3s ease;
+  }
+  .score-bar-fill.dominant { background: var(--accent); }
+  .score-row-val {
+    font-size: 11px;
+    color: var(--gris);
+    width: 22px;
+    text-align: right;
+    flex-shrink: 0;
+  }
+
+  /* ── BADGE MULTI-NARRATIFS ── */
+  .multi-badge {
+    display: inline-block;
+    font-size: 10px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    background: var(--fond2);
+    border: 1px solid var(--gris-clair);
+    color: var(--gris);
+    margin-left: .4rem;
+    vertical-align: middle;
+    font-family: var(--sans);
+    letter-spacing: .02em;
+  }
+
+  .narratif-desc {
+    font-size: 12px;
+    color: var(--gris);
+    line-height: 1.5;
+    margin-bottom: 0.8rem;
+  }
+
+  .narratif-bar-wrap {
+    height: 4px;
+    background: var(--fond2);
+    border-radius: 2px;
+    overflow: hidden;
+  }
+
+  .narratif-bar {
+    height: 100%;
+    background: var(--accent);
+    border-radius: 2px;
+    transition: width 0.4s ease;
+  }
+
+  .narratif-count {
+    font-size: 11px;
+    color: var(--gris);
+    margin-top: 0.4rem;
+  }
+
+  /* ── CHART ── */
+  .chart-wrap {
+    background: var(--blanc);
+    border: 1px solid var(--gris-clair);
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  /* ── SEARCH ── */
+  .search-bar {
+    display: flex;
+    gap: 0;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--gris-clair);
+    background: var(--blanc);
+  }
+
+  .search-bar input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 15px;
+    font-family: var(--sans);
+    background: transparent;
+    color: var(--noir);
+  }
+
+  .search-bar input::placeholder { color: var(--gris-clair); }
+
+  .search-bar button {
+    border: none;
+    border-left: 1px solid var(--gris-clair);
+    background: var(--fond2);
+    padding: 0.8rem 1.4rem;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--encre);
+    transition: background 0.12s;
+    font-family: var(--sans);
+  }
+
+  .search-bar button:hover { background: var(--gris-clair); }
+
+  /* ── HOME SOURCE FILTER ── */
+  .home-source-filters {
+    display: flex;
+    gap: 0.4rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.2rem;
+  }
+  .hsf-btn {
+    border: 1px solid var(--gris-clair);
+    background: var(--blanc);
+    padding: 0.35rem 0.85rem;
+    font-size: 12px;
+    font-family: var(--sans);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    color: var(--gris);
+    cursor: pointer;
+    transition: all 0.15s;
+    white-space: nowrap;
+  }
+  .hsf-btn:hover { border-color: var(--accent); color: var(--accent); }
+  .hsf-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: var(--blanc);
+    font-weight: 500;
+  }
+  .hsf-count {
+    font-size: 10px;
+    opacity: 0.75;
+    margin-left: 0.3rem;
+  }
+
+  /* ── FILTERS ── */
+  .filters {
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+    margin-bottom: 1.5rem;
+  }
+
+  .filter-select {
+    border: 1px solid var(--gris-clair);
+    background: var(--blanc);
+    padding: 0.5rem 1rem;
+    font-size: 13px;
+    font-family: var(--sans);
+    color: var(--encre);
+    cursor: pointer;
+    outline: none;
+    appearance: none;
+    padding-right: 2rem;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236b6560'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.7rem center;
+  }
+
+  /* ── DOCS LIST ── */
+  .docs-list { display: flex; flex-direction: column; gap: 0; }
+
+  .doc-item {
+    background: var(--blanc);
+    border: 1px solid var(--gris-clair);
+    border-top: none;
+    padding: 1.2rem 1.4rem;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1rem;
+    align-items: start;
+    cursor: pointer;
+    transition: background 0.1s;
+  }
+
+  .doc-item:first-child { border-top: 1px solid var(--gris-clair); }
+  .doc-item:hover { background: var(--fond2); }
+
+  .doc-type-badge {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    border: 1px solid;
+    white-space: nowrap;
+    margin-top: 2px;
+  }
+
+  .badge-article {
+    color: var(--bleu);
+    border-color: var(--bleu);
+  }
+
+  .badge-comment {
+    color: var(--accent2);
+    border-color: var(--accent2);
+  }
+
+  .badge-tweet {
+    color: #1da1f2;
+    border-color: #1da1f2;
+  }
+
+  .doc-titre {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--noir);
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+
+  .doc-meta {
+    font-size: 12px;
+    color: var(--gris);
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .doc-narratif-tag {
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--accent);
+    white-space: nowrap;
+    padding-top: 2px;
+  }
+
+  .doc-extrait {
+    font-size: 13px;
+    color: var(--gris);
+    line-height: 1.6;
+    margin-top: 0.5rem;
+    font-style: italic;
+    padding: 0.6rem 0.8rem;
+    border-left: 2px solid var(--gris-clair);
+  }
+
+  .doc-extrait mark {
+    background: #fff3b0;
+    color: var(--noir);
+    font-style: normal;
+  }
+
+  /* ── PAGINATION ── */
+  .pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+  }
+
+  .page-btn {
+    border: 1px solid var(--gris-clair);
+    background: var(--blanc);
+    padding: 0.4rem 0.9rem;
+    font-size: 13px;
+    cursor: pointer;
+    font-family: var(--sans);
+    color: var(--encre);
+    transition: background 0.1s;
+  }
+
+  .page-btn:hover { background: var(--fond2); }
+  .page-btn.current { background: var(--encre); color: var(--blanc); border-color: var(--encre); }
+  .page-btn:disabled { opacity: 0.3; cursor: default; }
+
+  /* ── CITATIONS ── */
+  .citations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .citation-card {
+    background: var(--blanc);
+    border: 1px solid var(--gris-clair);
+    padding: 1.4rem;
+  }
+
+  .citation-cat {
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+  }
+
+  .citation-text {
+    font-family: var(--serif);
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.7;
+    color: var(--encre);
+    margin-bottom: 1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gris-clair);
+  }
+
+  .citation-source {
+    font-size: 11px;
+    color: var(--gris);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  /* ── CONTEXTE ── */
+  .contexte-block {
+    background: var(--blanc);
+    border: 1px solid var(--gris-clair);
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contexte-block h3 {
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 0.8rem;
+    color: var(--noir);
+  }
+
+  .contexte-block p {
+    font-size: 14px;
+    color: var(--gris);
+    line-height: 1.8;
+  }
+
+  /* ── LOADING ── */
+  .loading {
+    text-align: center;
+    padding: 4rem;
+    font-size: 14px;
+    color: var(--gris);
+    font-style: italic;
+  }
+
+  /* ── EMPTY ── */
+  .empty {
+    text-align: center;
+    padding: 3rem;
+    color: var(--gris);
+    font-style: italic;
+    font-size: 14px;
+    background: var(--blanc);
+    border: 1px solid var(--gris-clair);
+  }
+
+  /* ── HEATMAP ── */
+  .heatmap-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12px;
+  }
+
+  .heatmap-table th, .heatmap-table td {
+    border: 1px solid var(--gris-clair);
+    padding: 0.5rem 0.7rem;
+    text-align: center;
+  }
+
+  .heatmap-table th {
+    background: var(--fond2);
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.04em;
+    color: var(--encre);
+  }
+
+  .heatmap-table td:first-child {
+    text-align: left;
+    font-weight: 500;
+    background: var(--fond2);
+    white-space: nowrap;
+  }
+
+  /* ── TWEET TOGGLE ── */
+  .tweet-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    font-size: 12px;
+    color: var(--gris);
+    margin-bottom: 1.5rem;
+    padding: .45rem .8rem;
+    border: 1px solid var(--gris-clair);
+    background: var(--fond2);
+  }
+  .tweet-toggle label { display: flex; align-items: center; gap: .4rem; cursor: pointer; color: var(--encre); }
+  .tweet-toggle input[type=checkbox] { accent-color: #1da1f2; cursor: pointer; }
+
+  /* ── QUALITÉ — POLLUTION CHECK ── */
+  .pollution-banner {
+    background: #fffbf0;
+    border: 1px solid #e8c840;
+    border-left: 3px solid #d4a017;
+    padding: 1rem 1.4rem;
+    margin-bottom: 1.5rem;
+    font-size: 13px;
+    color: var(--encre);
+    line-height: 1.6;
+  }
+  .pollution-reason {
+    display: inline-block;
+    font-size: 10.5px;
+    font-weight: 500;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 10px;
+    background: #fff3cc;
+    color: #7a5c00;
+    border: 1px solid #e8c840;
+    margin-right: .4rem;
+    margin-bottom: .3rem;
+  }
+  .qualite-tabs {
+    display: flex;
+    gap: 0;
+    border-bottom: 2px solid var(--gris-clair);
+    margin-bottom: 1.5rem;
+  }
+  .qualite-tab {
+    padding: .6rem 1.4rem;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: .04em;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    color: var(--gris);
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+    transition: color .15s;
+    font-family: var(--sans);
+  }
+  .qualite-tab:hover { color: var(--noir); }
+  .qualite-tab.active { color: var(--accent); border-bottom-color: var(--accent); font-weight: 500; }
+  .qualite-tab .tab-count {
+    display: inline-block;
+    font-size: 11px;
+    background: var(--fond2);
+    border: 1px solid var(--gris-clair);
+    border-radius: 10px;
+    padding: 0 6px;
+    margin-left: .4rem;
+    color: var(--gris);
+  }
+  .qualite-tab.active .tab-count { background: var(--accent); border-color: var(--accent); color: var(--blanc); }
+  .btn-supprimer {
+    border: 1px solid #c0392b;
+    background: transparent;
+    color: #c0392b;
+    padding: .3rem .8rem;
+    font-size: 11.5px;
+    font-family: var(--sans);
+    cursor: pointer;
+    transition: all .15s;
+    white-space: nowrap;
+    letter-spacing: .03em;
+  }
+  .btn-supprimer:hover { background: #c0392b; color: var(--blanc); }
+  .btn-garder {
+    border: 1px solid var(--accent2);
+    background: transparent;
+    color: var(--accent2);
+    padding: .3rem .8rem;
+    font-size: 11.5px;
+    font-family: var(--sans);
+    cursor: pointer;
+    transition: all .15s;
+    white-space: nowrap;
+    letter-spacing: .03em;
+  }
+  .btn-garder:hover { background: var(--accent2); color: var(--blanc); }
+  .btn-restaurer {
+    border: 1px solid var(--gris);
+    background: transparent;
+    color: var(--gris);
+    padding: .3rem .8rem;
+    font-size: 11.5px;
+    font-family: var(--sans);
+    cursor: pointer;
+    transition: all .15s;
+    white-space: nowrap;
+    letter-spacing: .03em;
+  }
+  .btn-restaurer:hover { background: var(--gris); color: var(--blanc); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 640px) {
+    nav { padding: 0 1rem; }
+    .nav-links a { padding: 0 0.6rem; font-size: 11px; }
+    .hero { padding: 3rem 1rem 2.5rem; }
+    .container, .container-narrow { padding: 2rem 1rem; }
+    .doc-item { grid-template-columns: 1fr; }
+    .doc-narratif-tag { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#" class="nav-logo" onclick="showPage('accueil')">Corpus <span>Bacot</span></a>
+  <ul class="nav-links">
+    <li><a href="#" onclick="showPage('accueil')" id="nav-accueil" class="active">Accueil</a></li>
+    <li><a href="#" onclick="showPage('narratifs')" id="nav-narratifs">Narratifs<span class="nav-sub">articles &amp; commentaires YT</span></a></li>
+    <li><a href="#" onclick="showPage('graphiques')" id="nav-graphiques">Graphiques<span class="nav-sub">articles &amp; commentaires YT</span></a></li>
+    <li><a href="#" onclick="showPage('tweets')" id="nav-tweets">Tweets</a></li>
+    <li><a href="#" onclick="showPage('corpus')" id="nav-corpus">Corpus</a></li>
+    <li><a href="#" onclick="showPage('citations')" id="nav-citations">Citations</a></li>
+    <li><a href="#" onclick="showPage('recherche')" id="nav-recherche">Recherche</a></li>
+    <li><a href="#" onclick="showPage('rhetorique')" id="nav-rhetorique">Rhétorique</a></li>
+    <li><a href="#" onclick="showPage('qualite')" id="nav-qualite">Qualité<span class="nav-sub">pollution check</span></a></li>
+    <li><a href="#" onclick="showPage('contexte')" id="nav-contexte">Contexte</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : ACCUEIL -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-accueil" class="page active">
+  <div class="hero">
+    <p class="hero-eyebrow">Projet Mythodologie · Prototype v1.0</p>
+    <h1>Narratifs médiatiques autour de l'<em>affaire Valérie Bacot</em></h1>
+    <p class="hero-desc">Analyse computationnelle de <span id="hero-total">953</span> documents — articles de presse, commentaires YouTube et tweets X — sur le procès de juin 2021.</p>
+    <div class="hero-stats" id="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-n" id="stat-articles">—</span><span class="hero-stat-l">Articles presse</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="stat-comments">—</span><span class="hero-stat-l">Commentaires YT</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="stat-tweets">—</span><span class="hero-stat-l">Tweets X</span></div>
+      <div class="hero-stat"><span class="hero-stat-n">8</span><span class="hero-stat-l">Narratifs</span></div>
+      <div class="hero-stat"><span class="hero-stat-n">6</span><span class="hero-stat-l">Clusters</span></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:3rem">
+      <div class="contexte-block">
+        <h3>L'affaire</h3>
+        <p>Valérie Bacot a tué son mari Daniel Polette en 2012, après 25 ans de viols, violences et proxénétisme. Jugée en juin 2021, condamnée à 4 ans dont 3 avec sursis — libérée le jour même du verdict.</p>
+      </div>
+      <div class="contexte-block">
+        <h3>L'enjeu juridique</h3>
+        <p>L'affaire a relancé le débat sur la légitime défense différée, absente du droit français. Plus de 600 000 personnes ont signé une pétition de soutien avant le procès.</p>
+      </div>
+      <div class="contexte-block">
+        <h3>Ce corpus</h3>
+        <p>953 documents collectés entre 2017 et 2023, classifiés en 8 catégories de narratifs par analyse lexicale automatisée. Dataset open sous licence CC BY 4.0.</p>
+      </div>
+    </div>
+
+    <h2 class="section-title">Distribution des narratifs</h2>
+    <div class="home-source-filters">
+      <button class="hsf-btn active" data-src="all" onclick="setHomeSource('all')">Tous les documents<span class="hsf-count" id="hsf-count-all"></span></button>
+      <button class="hsf-btn" data-src="article" onclick="setHomeSource('article')">Articles de presse<span class="hsf-count" id="hsf-count-article"></span></button>
+      <button class="hsf-btn" data-src="commentaire" onclick="setHomeSource('commentaire')">Commentaires YouTube<span class="hsf-count" id="hsf-count-commentaire"></span></button>
+      <button class="hsf-btn" data-src="tweet" onclick="setHomeSource('tweet')">Tweets X<span class="hsf-count" id="hsf-count-tweet"></span></button>
+    </div>
+    <p id="home-dist-subtitle" class="section-subtitle">Tous les documents · catégorie dominante · cliquez sur une catégorie pour explorer</p>
+    <div id="narratifs-home-grid" class="narratifs-grid"></div>
+
+    <div id="home-keywords-panel" style="display:none">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:.5rem">
+        <div id="home-keywords-title" class="kw-panel-title"></div>
+        <button onclick="closeHomeKeywords()" style="border:none;background:none;font-size:18px;line-height:1;cursor:pointer;color:var(--gris);padding:0">×</button>
+      </div>
+      <div id="home-keywords-desc" class="kw-panel-desc"></div>
+      <div id="home-keywords-chips"></div>
+      <div style="margin-top:1rem">
+        <button id="home-keywords-btn" onclick="" style="border:1px solid var(--accent);background:transparent;padding:.4rem 1rem;font-size:11.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--accent)">Voir tous les documents →</button>
+      </div>
+    </div>
+
+    <div class="chart-wrap" style="height:320px;position:relative">
+      <canvas id="chart-home"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : NARRATIFS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-narratifs" class="page">
+  <div class="container">
+    <h2 class="section-title">Analyse des narratifs</h2>
+    <p class="section-subtitle">Classification lexicale en 8 catégories · scores moyens par type de source</p>
+
+    <div id="narratifs-detail-grid" class="narratifs-grid" style="margin-bottom:0"></div>
+
+    <div id="narratif-detail-panel" style="display:none;border:1px solid var(--gris-clair);border-top:none;background:var(--fond2);padding:1.5rem;margin-bottom:2rem">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:1rem">
+        <div>
+          <div id="narratif-detail-label" style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir)"></div>
+          <div id="narratif-detail-sub" style="font-size:12px;color:var(--gris);margin-top:.2rem"></div>
+        </div>
+        <button onclick="closeNarratifDetail()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.3rem .8rem;font-size:12px;cursor:pointer;font-family:var(--sans);color:var(--gris)">Fermer ×</button>
+      </div>
+      <div id="narratif-detail-list" class="docs-list"></div>
+      <div style="margin-top:1rem;text-align:center">
+        <button onclick="goToCorpusNarratif()" style="border:1px solid var(--accent);background:transparent;padding:.5rem 1.2rem;font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--accent)">Voir tous les documents →</button>
+      </div>
+    </div>
+
+    <hr class="divider">
+    <h2 class="section-title">Intensité par type de source</h2>
+    <p class="section-subtitle">Score moyen des termes caractéristiques par catégorie de narratif et par type de source</p>
+    <div class="chart-wrap" style="overflow-x:auto">
+      <table class="heatmap-table" id="heatmap-table">
+        <tbody><tr><td>Chargement…</td></tr></tbody>
+      </table>
+    </div>
+
+    <hr class="divider">
+    <h2 class="section-title">Répartition articles / commentaires</h2>
+    <div class="chart-wrap" style="max-width:360px;margin:0 auto">
+      <canvas id="chart-narratifs"></canvas>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : GRAPHIQUES -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-graphiques" class="page">
+  <div class="container">
+    <h2 class="section-title">Visualisations</h2>
+    <p class="section-subtitle">5 graphiques interactifs · chargés depuis data/graphiques.json</p>
+
+    <div id="graph-loading" class="loading">Chargement…</div>
+    <div id="graph-content" style="display:none">
+
+      <!-- G1 — Distribution -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G1 — Distribution des narratifs</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Articles et commentaires par catégorie dominante</p>
+      <div class="chart-wrap"><canvas id="g1-canvas" height="110"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- G2 — Par source -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G2 — Scores moyens par type de source</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Intensité narrative selon l'origine du document</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="g2-filter" onchange="renderG2()">
+          <option value="">Tous les narratifs</option>
+        </select>
+      </div>
+      <div class="chart-wrap" style="height:420px;position:relative"><canvas id="g2-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- G3 — Heatmap -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G3 — Heatmap intensité</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Sources × narratifs — score moyen (blanc = faible, bleu = fort)</p>
+      <div id="g3-wrap" style="overflow-x:auto;margin-bottom:.5rem"></div>
+
+      <hr class="divider">
+
+      <!-- G4 — Carte des narratifs -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G4 — Carte des narratifs</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Taille proportionnelle au volume de documents · axes : positionnement sémantique</p>
+      <div class="chart-wrap" style="height:460px;position:relative"><canvas id="g4-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- G5 — Temporel -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G5 — Évolution temporelle des narratifs</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Documents datés : <span id="g5-n-dates">—</span> sur <span id="g5-n-total">—</span></p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="g5-filter" onchange="renderG5()">
+          <option value="">Tous les narratifs</option>
+        </select>
+      </div>
+      <div class="chart-wrap" style="height:520px;position:relative"><canvas id="g5-canvas"></canvas></div>
+      <div id="g5-moments" style="margin-top:.8rem;line-height:2.2"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : TWEETS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-tweets" class="page">
+  <div class="container">
+    <h2 class="section-title">Analyse des tweets</h2>
+    <p class="section-subtitle">2 943 tweets pertinents · classifiés selon les 8 narratifs · comparaison avec les médias</p>
+
+    <div id="tw-loading" class="loading">Chargement…</div>
+    <div id="tw-content" style="display:none">
+
+      <!-- T1 — Évolution pendant le procès -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T1 — Évolution jour par jour pendant le procès</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Nombre de tweets par narratif dominant · 21–30 juin 2021</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="t1-nar" onchange="renderT1()"><option value="">Tous les narratifs</option></select>
+      </div>
+      <div class="chart-wrap" style="height:520px;position:relative"><canvas id="t1-canvas"></canvas></div>
+      <div id="t1-moments" style="margin-top:.8rem;line-height:2.2"></div>
+
+      <hr class="divider">
+
+      <!-- T2 — Évolution long terme -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T2 — Évolution long terme post-verdict</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Semaines (2021) puis mois — après le verdict du 26 juin 2021</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="t2-mode" onchange="renderT2()">
+          <option value="pct">Proportion (%) par période</option>
+          <option value="n">Nombre absolu</option>
+        </select>
+        <select class="filter-select" id="t2-nar" onchange="renderT2()"><option value="">Tous les narratifs</option></select>
+      </div>
+      <div class="chart-wrap" style="height:520px;position:relative"><canvas id="t2-canvas"></canvas></div>
+      <div id="t2-moments" style="margin-top:.8rem;line-height:2.2"></div>
+
+      <hr class="divider">
+
+      <!-- T3 — Répartition par périodes -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T3 — Répartition des narratifs par période</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Distribution (%) par phase de l'affaire</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="t3-mode" onchange="renderT3()">
+          <option value="pct">Pourcentage (%)</option>
+          <option value="n">Nombre absolu</option>
+        </select>
+        <select class="filter-select" id="t3-nar" onchange="renderT3()"><option value="">Tous les narratifs</option></select>
+      </div>
+      <div class="chart-wrap" style="height:560px;position:relative"><canvas id="t3-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- T4 — Carte des narratifs -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T4 — Carte des narratifs</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Taille proportionnelle au volume de tweets · axe X = individu → système · axe Y = émotionnel → juridique</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="t4-nar" onchange="renderT4()"><option value="">Tous les narratifs</option></select>
+      </div>
+      <div class="chart-wrap" style="height:600px;position:relative"><canvas id="t4-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- T5 — Polarité -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T5 — Polarité des réactions dans le temps</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">% de tweets dans le pôle soutien · ligne de base à 50 %</p>
+      <div class="chart-wrap" style="height:460px;position:relative"><canvas id="t5-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- C1 — Divergence tweets vs médias -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">C1 — Divergence tweets vs médias</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">% de documents avec ce narratif dominant · trié par écart absolu</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="c1-nar" onchange="renderC1()"><option value="">Tous les narratifs</option></select>
+      </div>
+      <div class="chart-wrap" style="height:520px;position:relative"><canvas id="c1-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- C2 — Évolution comparée -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">C2 — Évolution comparée tweets vs médias</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Narratif dominant par mois · <span id="c2-divergents">—</span> mois avec narratifs divergents</p>
+      <div id="c2-table" style="overflow-x:auto"></div>
+
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : CORPUS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-corpus" class="page">
+  <div class="container">
+    <h2 class="section-title">Explorer le corpus</h2>
+    <p class="section-subtitle">953 documents · filtres combinables · cliquez sur un document pour voir l'extrait</p>
+
+    <div class="filters">
+      <select class="filter-select" id="f-narratif" onchange="applyFilters()">
+        <option value="">Tous les narratifs</option>
+      </select>
+      <select class="filter-select" id="f-type" onchange="applyFilters()">
+        <option value="">Tous les types</option>
+        <option value="article">Articles</option>
+        <option value="commentaire">Commentaires</option>
+        <option value="tweet">🐦 Tweets X</option>
+      </select>
+      <select class="filter-select" id="f-source" onchange="applyFilters()">
+        <option value="">Toutes les sources</option>
+      </select>
+      <label style="display:flex;align-items:center;gap:.4rem;font-size:12.5px;color:var(--encre);cursor:pointer;white-space:nowrap">
+        <input type="checkbox" id="f-multi" onchange="applyFilters()" style="accent-color:var(--accent);cursor:pointer">
+        Documents multi-narratifs
+      </label>
+    </div>
+
+    <div id="corpus-count" style="font-size:13px;color:var(--gris);margin-bottom:1rem"></div>
+    <div id="corpus-list" class="docs-list"><div class="loading">Chargement du corpus…</div></div>
+    <div class="pagination" id="corpus-pagination"></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : CITATIONS -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-citations" class="page">
+  <div class="container">
+    <h2 class="section-title">Citations qualitatives</h2>
+    <p class="section-subtitle">Extraits de presse et voix populaires · classés par catégorie de narratif</p>
+
+    <div class="filters" style="margin-bottom:1.5rem">
+      <select class="filter-select" id="f-citation-cat" onchange="renderCitations()">
+        <option value="">Toutes les catégories</option>
+      </select>
+    </div>
+
+    <div id="citations-container"><div class="loading">Chargement des citations…</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : RECHERCHE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-recherche" class="page">
+  <div class="container-narrow">
+    <h2 class="section-title">Moteur de recherche</h2>
+    <p class="section-subtitle">Recherche un mot ou une expression dans les titres et les textes du corpus</p>
+
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Ex : emprise, légitime défense, tout le monde savait…"
+             onkeydown="if(event.key==='Enter')doSearch()">
+      <button onclick="doSearch()">Rechercher</button>
+    </div>
+
+    <div class="filters">
+      <select class="filter-select" id="f-search-type" onchange="doSearch()">
+        <option value="">Tous les types</option>
+        <option value="article">Articles uniquement</option>
+        <option value="commentaire">Commentaires uniquement</option>
+        <option value="tweet">Tweets uniquement</option>
+      </select>
+      <select class="filter-select" id="f-search-narratif" onchange="doSearch()">
+        <option value="">Tous les narratifs</option>
+      </select>
+    </div>
+
+    <div id="search-results">
+      <div class="empty">Entrez un terme pour lancer la recherche.</div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : RHÉTORIQUE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-rhetorique" class="page">
+  <div class="container">
+    <h2 class="section-title">Analyse rhétorique</h2>
+    <p class="section-subtitle">Classification LLM des unités argumentatives · Analyse KWIC des mots pivots</p>
+
+    <!-- Sources primaires -->
+    <div id="rhet-sources" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:2rem"></div>
+
+    <!-- Stats LLM -->
+    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.8rem">Distribution des catégories rhétoriques</h3>
+    <p id="rhet-note" style="font-size:12px;color:var(--gris);margin-bottom:1rem">Classification par LLM (Llama 3.3 70B via Groq)</p>
+    <div id="rhet-llm-stats" style="margin-bottom:2rem"></div>
+
+    <!-- KWIC -->
+    <hr class="divider">
+    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.4rem">Analyse KWIC — Mots pivots</h3>
+    <p style="font-size:12px;color:var(--gris);margin-bottom:1.2rem">Contexte d'usage des termes clés dans les documents primaires · cliquez sur un mot pour voir les occurrences</p>
+    <div id="rhet-kwic" style="margin-bottom:2rem"></div>
+
+    <!-- Unités argumentatives -->
+    <hr class="divider">
+    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.8rem">Unités argumentatives</h3>
+    <div class="filters" style="margin-bottom:1rem">
+      <select class="filter-select" id="f-rhet-locuteur" onchange="renderRhetorique()">
+        <option value="">Tous les locuteurs</option>
+      </select>
+      <select class="filter-select" id="f-rhet-type" onchange="renderRhetorique()">
+        <option value="">Toutes les catégories LLM</option>
+      </select>
+      <select class="filter-select" id="f-rhet-source" onchange="renderRhetorique()">
+        <option value="">Toutes les sources</option>
+      </select>
+    </div>
+    <div id="rhet-stats" style="display:flex;flex-wrap:wrap;gap:1px;background:var(--gris-clair);border:1px solid var(--gris-clair);margin-bottom:1.5rem"></div>
+    <div id="rhet-container"><div class="loading">Chargement…</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : QUALITÉ -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-qualite" class="page">
+  <div class="container">
+    <h2 class="section-title">Contrôle qualité du corpus</h2>
+    <p class="section-subtitle">Détection automatique des articles potentiellement hors-sujet · validation manuelle</p>
+
+    <div class="pollution-banner">
+      <strong>Comment ça marche :</strong> Les articles ci-dessous sont signalés automatiquement selon deux critères — titre ne mentionnant pas « Bacot », ou score de pertinence nul malgré un contenu substantiel. Vérifiez chacun et supprimez ceux qui ne concernent pas l'affaire. Les suppressions sont sauvegardées dans votre navigateur (<em>localStorage</em>) — utilisez <strong>Exporter exclus</strong> pour obtenir la liste des URLs à retirer définitivement du CSV source.
+    </div>
+
+    <div id="qualite-resume" style="display:flex;flex-wrap:wrap;gap:1px;background:var(--gris-clair);border:1px solid var(--gris-clair);margin-bottom:1.5rem"></div>
+
+    <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-bottom:0">
+      <div class="qualite-tabs" style="margin-bottom:0;border-bottom:none">
+        <button class="qualite-tab active" id="qtab-flagged" onclick="setQualiteTab('flagged')">
+          À vérifier <span class="tab-count" id="qcount-flagged">…</span>
+        </button>
+        <button class="qualite-tab" id="qtab-suppressed" onclick="setQualiteTab('suppressed')">
+          Supprimés <span class="tab-count" id="qcount-suppressed">0</span>
+        </button>
+        <button class="qualite-tab" id="qtab-ok" onclick="setQualiteTab('ok')">
+          Validés <span class="tab-count" id="qcount-ok">0</span>
+        </button>
+      </div>
+      <div style="display:flex;gap:.5rem;padding-bottom:2px">
+        <button onclick="exportSuppressed()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.4rem 1rem;font-size:12px;font-family:var(--sans);cursor:pointer;color:var(--encre);letter-spacing:.03em">Exporter exclus ↓</button>
+        <button onclick="resetQualite()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.4rem 1rem;font-size:12px;font-family:var(--sans);cursor:pointer;color:var(--gris);letter-spacing:.03em">Réinitialiser</button>
+      </div>
+    </div>
+    <div style="border-bottom:2px solid var(--gris-clair);margin-bottom:1.5rem"></div>
+
+    <div id="qualite-list"><div class="loading">Chargement…</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : CONTEXTE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-contexte" class="page">
+  <div class="container-narrow">
+    <h2 class="section-title">Contexte & méthode</h2>
+    <p class="section-subtitle">Projet Mythodologie · Note technique abrégée</p>
+
+    <div class="contexte-block">
+      <h3>L'affaire Valérie Bacot</h3>
+      <p>Valérie Bacot a été victime pendant plus de vingt-cinq ans de viols, violences physiques et proxénétisme de la part de Daniel Polette, son beau-père devenu son mari. En décembre 2012, elle l'a tué d'une balle dans la nuque. Jugée en juin 2021 aux Assises de Saône-et-Loire, elle a été condamnée à 4 ans de prison dont 3 avec sursis — libérée le jour même. En septembre 2021, elle publie <em>Tout le monde savait</em> (Fayard). En novembre 2021, elle témoigne devant la délégation aux droits des femmes du Sénat.</p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>Constitution du corpus</h3>
+      <p>953 documents collectés entre 2017 et 2023 par scraping automatisé (flux RSS Google News, API YouTube Data v3, URLs manuelles). Articles de presse extraits avec <em>trafilatura</em>. Commentaires YouTube filtrés par pertinence lexicale. Triage semi-automatique avec seuils différenciés selon le type de document.</p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>Classification lexicale</h3>
+      <p>Chaque document est scoré sur 8 catégories de narratifs à partir d'un lexique construit manuellement. Le score correspond au nombre d'occurrences des termes caractéristiques. La catégorie avec le score le plus élevé est retenue comme narratif dominant. Cette méthode détecte des registres lexicaux, pas des intentions ni des nuances.</p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>Limites importantes</h3>
+      <p>Les textes d'articles ne sont pas publiés (droit d'auteur). Le corpus surreprésente les sources en accès libre. La classification lexicale ne détecte pas l'ironie. Les commentaires YouTube sont filtrés par l'algorithme de la plateforme. Prototype v1 — résultats préliminaires.</p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>Licence & citation</h3>
+      <p>Données : CC BY 4.0. Code : MIT.<br>
+      <em>Projet Mythodologie (2026). Corpus narratifs médiatiques — Affaire Valérie Bacot. GitHub.</em></p>
+    </div>
+  </div>
+</div>
+
+<script>
+// ─── DONNÉES ─────────────────────────────────────────────────────────────────
+
+const NARRATIFS = {
+  soutien_victime:        { label: 'Soutien à la victime',   desc: 'Compassion, validation du geste comme acte de survie.' },
+  remise_en_question:     { label: 'Remise en question',      desc: 'Doute sur les choix, évocation d\'alternatives.' },
+  legitime_defense:       { label: 'Légitime défense',        desc: 'Cadre juridique, précédent Jacqueline Sauvage.' },
+  discours_feministe:     { label: 'Discours féministe',      desc: 'Approche systémique — patriarcat, féminicide.' },
+  emprise_psychologique:  { label: 'Emprise psychologique',   desc: 'Mécanisme d\'emprise, contrôle coercitif.' },
+  silence_collectif:      { label: 'Silence collectif',       desc: '"Tout le monde savait" — entourage, institutions.' },
+  sensationnalisme:       { label: 'Sensationnalisme',        desc: 'Fait divers spectaculaire, true crime.' },
+  jugement_moral:         { label: 'Jugement moral',          desc: 'Légitimité de la peine, culpabilité morale.' },
+  non_classe:             { label: 'Non classé',              desc: 'Document non classifié.' },
+};
+
+const CATS = Object.keys(NARRATIFS).filter(k => k !== 'non_classe');
+
+// Clés des colonnes score dans le CSV (sans score_total)
+const SCORE_KEYS = [
+  'soutien_victime','remise_en_question','legitime_defense',
+  'discours_feministe','emprise_psychologique','silence_collectif',
+  'sensationnalisme','jugement_moral',
+];
+
+const LEXIQUE = {
+  soutien_victime: [
+    "victime","survie","survivante","courage","brave","innocente",
+    "défendre","protéger","soutien","soutenir","solidarité","empathie",
+    "comprendre","comprends","normal","logique","aurait fait pareil",
+    "j'aurais fait pareil","a bien fait","avait raison","méritait","libre",
+    "libération","pétition","justice","enfin libre","applaudir","bravo",
+    "respect","admire","force","courageuse","admirable",
+  ],
+  remise_en_question: [
+    "partir","quitter","fuir","s'enfuir","appeler","police","gendarmerie",
+    "signaler","porter plainte","pourquoi pas","mais quand même","n'empêche",
+    "meurtre","meurtrière","tuer","tueuse","assassin","assassinat",
+    "préméditation","prémédité","aurait pu","pouvait","devait","choix",
+    "elle avait le choix","solution","autre solution","pas normale",
+    "pas excusable","même si","comprends pas","incompréhensible",
+  ],
+  legitime_defense: [
+    "légitime défense","legitime defense","défense différée","defense differee",
+    "loi","juridique","jurisprudence","droit","code pénal","article",
+    "jacqueline sauvage","sauvage","grâce présidentielle","grace presidentielle",
+    "réforme","changer la loi","modifier","angleterre","canada","étranger",
+    "pays","reconnaître","reconnu","syndrome","état de nécessité",
+    "etat de necessite","contrainte","inévitable",
+  ],
+  discours_feministe: [
+    "féminicide","feminicide","feministe","féministe","féminisme","feminisme",
+    "patriarcat","patriarcal","sexisme","sexiste","domination","oppression",
+    "violences faites aux femmes","violences conjugales","violence domestique",
+    "emprise","cycle de la violence","contrôle coercitif","nous toutes",
+    "noustoutes","metoo","me too","systémique","structurel","inégalité",
+    "gender","genre","droits des femmes",
+  ],
+  emprise_psychologique: [
+    "emprise","manipulation","manipulateur","contrôle","isolement","isolée",
+    "peur","terreur","terrifiée","traumatisme","traumatisée","syndrome",
+    "dépendance","soumission","proxénétisme","proxenete","prostitution",
+    "prostituée","forcée","obligée","contrainte","menace","chantage",
+    "survie","conditionnée","lavage de cerveau","stockholm","résignation",
+  ],
+  silence_collectif: [
+    "savait","savaient","tout le monde savait","silence","taire","se taire",
+    "complice","complicité","passif","passive","voisin","voisins","entourage",
+    "famille","institution","école","médecin","assistante sociale",
+    "signalement","signaler","protection","enfants","enfant","témoin",
+    "témoins","inaction","rien fait","n'a rien fait","fermé les yeux","ignoré",
+  ],
+  sensationnalisme: [
+    "choquant","horrible","atroce","terrifiant","incroyable","hallucinant",
+    "fou","folle","dingue","ouf","waouh","wow","true crime","crime",
+    "fait divers","story","histoire","affaire","documentaire","reportage",
+    "téléfilm","film","série","replay","regarder","abonner","like",
+    "partager","commentaire","chaîne","vidéo",
+  ],
+  jugement_moral: [
+    "mérite","méritait","méritent","punir","punition","condamner",
+    "condamnation","coupable","responsable","faute","moral","morale",
+    "éthique","bien","mal","dieu","religion","pardon","pardonner",
+    "compassion","pitié","indulgence","sévère","clément","juste",
+    "injuste","verdict","sentence","peine","prison",
+  ],
+};
+
+// Mots-clés présents dans plusieurs narratifs : { mot -> [nar1, nar2, …] }
+const KW_OVERLAP = {};
+Object.entries(LEXIQUE).forEach(([nar, mots]) => {
+  mots.forEach(m => {
+    if (!KW_OVERLAP[m]) KW_OVERLAP[m] = [];
+    KW_OVERLAP[m].push(nar);
+  });
+});
+Object.keys(KW_OVERLAP).forEach(m => { if (KW_OVERLAP[m].length < 2) delete KW_OVERLAP[m]; });
+
+let RAW_DATA = [];
+let DATA = [];
+let TWEETS = [];
+let TEXTES_MAP = {}; // url -> {texte, auteur, handle}
+
+// ─── QUALITÉ — persistance locale ────────────────────────────────────────────
+const QUAL_SUPPRESSED_KEY = 'bacot_suppressed_urls';
+const QUAL_OK_KEY         = 'bacot_ok_urls';
+let QUAL_SUPPRESSED = new Set(JSON.parse(localStorage.getItem(QUAL_SUPPRESSED_KEY) || '[]'));
+let QUAL_OK         = new Set(JSON.parse(localStorage.getItem(QUAL_OK_KEY)         || '[]'));
+let POLLUTION_FLAGS = [];  // [{ doc, reasons: [{code, label}] }]
+let QUALITE_TAB     = 'flagged';
+let SHOW_TWEETS = false;
+let HOME_SOURCE = 'all';
+let filteredData = [];
+let currentPage = 1;
+const PER_PAGE = 15;
+
+let RHET_DATA = null;
+let chartHome = null;
+let chartNarratifs = null;
+
+const LOCUTEUR_COLORS = {
+  valerie_bacot: '#2c4a6e',
+  defense:       '#4a6741',
+  accusation:    '#8b3a2a',
+  expert:        '#7a5c1e',
+  senat:         '#5a3a7a',
+  narrateur:     '#6b6560',
+};
+
+// ─── CHARGEMENT CSV ───────────────────────────────────────────────────────────
+
+function loadData() {
+  Papa.parse('data/resultats_classification.csv', {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      RAW_DATA = results.data.filter(r => r.url);
+      DATA = RAW_DATA;  // même référence pour que loadTextes puisse enrichir les objets
+      loadTextes(() => {
+        loadTweets(() => {
+          DATA = RAW_DATA.filter(d => !QUAL_SUPPRESSED.has(d.url));
+          filteredData = [...DATA];
+          detectPollutionFlags();
+          initUI();
+        });
+      });
+    },
+    error: function() {
+      document.getElementById('corpus-list').innerHTML =
+        '<div class="empty">Fichier data/resultats_classification.csv introuvable.<br>Lance d\'abord : python generer_dataset_open.py</div>';
+    }
+  });
+}
+
+function loadTweets(callback) {
+  fetch('corpus_bacot/tweets_bacot.json')
+    .then(r => { if (!r.ok) throw new Error('not found'); return r.json(); })
+    .then(tweets => {
+      TWEETS = tweets;
+      callback();
+    })
+    .catch(() => {
+      callback();
+    });
+}
+
+function loadTextes(callback) {
+  fetch('data/articles_interface.json')
+    .then(r => r.json())
+    .then(data => {
+      (data.commentaires || []).forEach(c => {
+        if (c.url) TEXTES_MAP[c.url] = { texte: c.texte };
+      });
+      (data.tweets || []).forEach(t => {
+        if (t.url) TEXTES_MAP[t.url] = { texte: t.texte, auteur: t.auteur, handle: t.handle };
+      });
+      DATA.forEach(d => {
+        const t = TEXTES_MAP[d.url];
+        if (t) Object.assign(d, t);
+      });
+      callback();
+    })
+    .catch(() => callback());
+}
+
+// ─── INIT ─────────────────────────────────────────────────────────────────────
+
+function initUI() {
+  updateStats();
+  updateHomeCounts();
+  buildNarratifFilters();
+  buildSourceFilter();
+  renderHomeNarratifs();
+  renderHomeChart();
+  renderNaratifsPage();
+  renderHeatmap();
+  renderNaratifsChart();
+  applyFilters();
+  loadCitations();
+  buildSearchFilters();
+}
+
+function getVisibleData() {
+  return SHOW_TWEETS ? DATA : DATA.filter(d => d.type_doc !== 'tweet');
+}
+
+function setShowTweets(val) {
+  SHOW_TWEETS = val;
+  document.querySelectorAll('.tweet-toggle-input').forEach(el => el.checked = val);
+  renderHomeChart();
+  renderNaratifsPage();
+  renderNaratifsChart();
+  updateStats();
+}
+
+function updateStats() {
+  const base     = getVisibleData();
+  const total    = base.length;
+  const articles = base.filter(d => d.type_doc === 'article').length;
+  const comments = base.filter(d => d.type_doc === 'commentaire').length;
+  const tweets   = DATA.filter(d => d.type_doc === 'tweet').length;
+  const stEl = document.getElementById('stat-total');
+  if (stEl) stEl.textContent = total;
+  document.getElementById('stat-articles').textContent = articles;
+  document.getElementById('stat-comments').textContent = comments;
+  const tEl = document.getElementById('stat-tweets');
+  if (tEl) tEl.textContent = tweets || '0';
+  const hEl = document.getElementById('hero-total');
+  if (hEl) hEl.textContent = DATA.length;
+}
+
+// ─── NAVIGATION ───────────────────────────────────────────────────────────────
+
+function showPage(name) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+  document.getElementById('page-' + name).classList.add('active');
+  document.getElementById('nav-' + name).classList.add('active');
+  window.scrollTo(0, 0);
+  if (name === 'rhetorique'  && !RHET_DATA)        loadRhetorique();
+  if (name === 'graphiques'  && !GRAPH_DATA)       loadGraphiques();
+  if (name === 'tweets'      && !TWEET_GRAPH_DATA) loadTweetGraphs();
+  if (name === 'qualite')                          renderQualite();
+  return false;
+}
+
+// ─── NARRATIFS — COMPTAGES ─────────────────────────────────────────────────
+
+function countNarratifs(data) {
+  const counts = {};
+  CATS.forEach(c => counts[c] = 0);
+  data.forEach(d => {
+    const cat = d.categorie_dominante;
+    if (counts[cat] !== undefined) counts[cat]++;
+  });
+  return counts;
+}
+
+// ─── HOME — NARRATIFS GRID ─────────────────────────────────────────────────
+
+let _homeSelectedCat = null;
+
+function renderHomeNarratifs() {
+  const base = getHomeData();
+  const counts = countNarratifs(base);
+  const max = Math.max(...Object.values(counts));
+  const total = base.length || 1;
+  const grid = document.getElementById('narratifs-home-grid');
+  grid.innerHTML = '';
+  CATS.forEach(cat => {
+    const n = counts[cat] || 0;
+    const pct = max > 0 ? Math.round(n / max * 100) : 0;
+    const card = document.createElement('div');
+    card.className = 'narratif-card' + (cat === _homeSelectedCat ? ' selected' : '');
+    card.dataset.cat = cat;
+    card.innerHTML = `
+      <div class="narratif-label">${NARRATIFS[cat].label}</div>
+      <div class="narratif-desc">${NARRATIFS[cat].desc}</div>
+      <div class="narratif-bar-wrap"><div class="narratif-bar" style="width:${pct}%"></div></div>
+      <div class="narratif-count">${n} documents · ${Math.round(n/total*100)}%</div>
+    `;
+    card.onclick = () => showHomeKeywords(cat);
+    grid.appendChild(card);
+  });
+}
+
+function showHomeKeywords(cat) {
+  // Toggle : re-cliquer ferme le panel
+  if (_homeSelectedCat === cat) { closeHomeKeywords(); return; }
+  _homeSelectedCat = cat;
+
+  // Mettre à jour la sélection visuelle
+  document.querySelectorAll('#narratifs-home-grid .narratif-card').forEach(c => {
+    c.classList.toggle('selected', c.dataset.cat === cat);
+  });
+
+  const mots = LEXIQUE[cat] || [];
+  document.getElementById('home-keywords-title').textContent = NARRATIFS[cat].label;
+  document.getElementById('home-keywords-desc').textContent = NARRATIFS[cat].desc;
+  document.getElementById('home-keywords-chips').innerHTML =
+    mots.map(m => {
+      const others = (KW_OVERLAP[m] || []).filter(n => n !== cat);
+      if (others.length) {
+        const tip = others.map(n => NARRATIFS[n]?.label || n).join(', ');
+        return `<span class="kw-chip shared" title="Aussi dans : ${escHtml(tip)}">${escHtml(m)}<span class="kw-shared-tip">↔ ${escHtml(tip)}</span></span>`;
+      }
+      return `<span class="kw-chip">${escHtml(m)}</span>`;
+    }).join('');
+
+  const btn = document.getElementById('home-keywords-btn');
+  btn.onclick = () => {
+    document.getElementById('f-narratif').value = cat;
+    showPage('corpus');
+    applyFilters();
+  };
+
+  const panel = document.getElementById('home-keywords-panel');
+  panel.style.display = '';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeHomeKeywords() {
+  _homeSelectedCat = null;
+  document.getElementById('home-keywords-panel').style.display = 'none';
+  document.querySelectorAll('#narratifs-home-grid .narratif-card').forEach(c => c.classList.remove('selected'));
+}
+
+// ─── HOME — FILTRE SOURCE ──────────────────────────────────────────────────
+
+function getHomeData() {
+  if (HOME_SOURCE === 'all') return DATA;
+  return DATA.filter(d => d.type_doc === HOME_SOURCE);
+}
+
+const HOME_SOURCE_LABELS = {
+  all: 'Tous les documents',
+  article: 'Articles de presse uniquement',
+  commentaire: 'Commentaires YouTube uniquement',
+  tweet: 'Tweets X uniquement'
+};
+
+function setHomeSource(src) {
+  HOME_SOURCE = src;
+  document.querySelectorAll('.hsf-btn').forEach(b => {
+    b.classList.toggle('active', b.dataset.src === src);
+  });
+  const label = HOME_SOURCE_LABELS[src] || 'Tous les documents';
+  document.getElementById('home-dist-subtitle').textContent =
+    label + ' · catégorie dominante · cliquez sur une catégorie pour explorer';
+  _homeSelectedCat = null;
+  document.getElementById('home-keywords-panel').style.display = 'none';
+  renderHomeNarratifs();
+  renderHomeChart();
+}
+
+function updateHomeCounts() {
+  const types = ['all', 'article', 'commentaire', 'tweet'];
+  types.forEach(t => {
+    const n = t === 'all' ? DATA.length : DATA.filter(d => d.type_doc === t).length;
+    const el = document.getElementById('hsf-count-' + t);
+    if (el) el.textContent = n ? '(' + n + ')' : '';
+  });
+}
+
+// ─── HOME — CHART ──────────────────────────────────────────────────────────
+
+function renderHomeChart() {
+  const ctx = document.getElementById('chart-home').getContext('2d');
+  if (chartHome) { chartHome.destroy(); chartHome = null; }
+  const base = getHomeData();
+  let datasets;
+  if (HOME_SOURCE === 'all') {
+    datasets = [
+      {
+        label: 'Articles de presse',
+        data: CATS.map(c => base.filter(d => d.categorie_dominante === c && d.type_doc === 'article').length),
+        backgroundColor: '#2c4a6e',
+      },
+      {
+        label: 'Commentaires YouTube',
+        data: CATS.map(c => base.filter(d => d.categorie_dominante === c && d.type_doc === 'commentaire').length),
+        backgroundColor: '#c8c4be',
+      },
+      {
+        label: 'Tweets X',
+        data: CATS.map(c => base.filter(d => d.categorie_dominante === c && d.type_doc === 'tweet').length),
+        backgroundColor: '#1da1f2',
+      }
+    ];
+  } else {
+    const colors = { article: '#2c4a6e', commentaire: '#4a6741', tweet: '#1da1f2' };
+    datasets = [{
+      label: HOME_SOURCE_LABELS[HOME_SOURCE] || HOME_SOURCE,
+      data: CATS.map(c => base.filter(d => d.categorie_dominante === c).length),
+      backgroundColor: colors[HOME_SOURCE] || '#2c4a6e',
+    }];
+  }
+  chartHome = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: CATS.map(c => NARRATIFS[c].label),
+      datasets
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14 } } },
+      scales: {
+        x: { stacked: true, ticks: { font: { size: 11 }, maxRotation: 40, minRotation: 30 } },
+        y: { stacked: true, ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+// ─── NARRATIFS PAGE ─────────────────────────────────────────────────────────
+
+let selectedNarratifCat = null;
+
+function renderNaratifsPage() {
+  const vd     = getVisibleData();
+  const counts = countNarratifs(vd);
+  const max = Math.max(...Object.values(counts));
+  const grid = document.getElementById('narratifs-detail-grid');
+  grid.innerHTML = '';
+  CATS.forEach(cat => {
+    const n = counts[cat] || 0;
+    const pct = max > 0 ? Math.round(n / max * 100) : 0;
+    const art = vd.filter(d => d.categorie_dominante === cat && d.type_doc === 'article').length;
+    const cmt = vd.filter(d => d.categorie_dominante === cat && d.type_doc === 'commentaire').length;
+    const card = document.createElement('div');
+    card.className = 'narratif-card' + (cat === selectedNarratifCat ? ' selected' : '');
+    card.id = 'ncard-' + cat;
+    card.innerHTML = `
+      <div class="narratif-label">${NARRATIFS[cat].label}</div>
+      <div class="narratif-desc">${NARRATIFS[cat].desc}</div>
+      <div class="narratif-bar-wrap"><div class="narratif-bar" style="width:${pct}%"></div></div>
+      <div class="narratif-count">${n} docs · ${art} articles · ${cmt} commentaires</div>
+    `;
+    card.onclick = () => openNarratifDetail(cat);
+    grid.appendChild(card);
+  });
+}
+
+function openNarratifDetail(cat) {
+  if (selectedNarratifCat === cat) { closeNarratifDetail(); return; }
+  selectedNarratifCat = cat;
+
+  // Sélection visuelle
+  document.querySelectorAll('#narratifs-detail-grid .narratif-card').forEach(c => c.classList.remove('selected'));
+  const activeCard = document.getElementById('ncard-' + cat);
+  if (activeCard) activeCard.classList.add('selected');
+
+  const vd   = getVisibleData();
+  const docs  = vd.filter(d => d.categorie_dominante === cat);
+  const arts  = docs.filter(d => d.type_doc === 'article');
+  const cmts  = docs.filter(d => d.type_doc === 'commentaire');
+  const twts  = docs.filter(d => d.type_doc === 'tweet');
+
+  document.getElementById('narratif-detail-label').textContent = NARRATIFS[cat].label;
+  document.getElementById('narratif-detail-sub').textContent =
+    `${docs.length} documents · ${arts.length} articles · ${cmts.length} commentaires${twts.length ? ' · ' + twts.length + ' tweets' : ''}`;
+
+  const list = document.getElementById('narratif-detail-list');
+  list.innerHTML = '';
+
+  // Affiche jusqu'à 10 docs : articles d'abord, puis commentaires
+  const shown = [...arts, ...cmts, ...twts].slice(0, 10);
+  shown.forEach(doc => {
+    const item = document.createElement('div');
+    item.className = 'doc-item';
+    const [badgeClass, typeLabel] = docBadge(doc);
+    item.innerHTML = `
+      <span class="doc-type-badge ${badgeClass}">${typeLabel}</span>
+      <div>
+        <div class="doc-titre">${escHtml(docTitre(doc))}</div>
+        <div class="doc-meta">${docMetaHTML(doc)}</div>
+      </div>
+      <div class="doc-narratif-tag">${escHtml(doc.sitename || doc.type_source || '')}</div>
+    `;
+    item.onclick = () => toggleExtrait(item, doc);
+    list.appendChild(item);
+  });
+
+  if (!shown.length) {
+    list.innerHTML = '<div class="empty">Aucun document pour ce narratif.</div>';
+  }
+
+  const panel = document.getElementById('narratif-detail-panel');
+  panel.style.display = 'block';
+  panel.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+}
+
+function closeNarratifDetail() {
+  selectedNarratifCat = null;
+  document.querySelectorAll('#narratifs-detail-grid .narratif-card').forEach(c => c.classList.remove('selected'));
+  document.getElementById('narratif-detail-panel').style.display = 'none';
+}
+
+function goToCorpusNarratif() {
+  if (!selectedNarratifCat) return;
+  document.getElementById('f-narratif').value = selectedNarratifCat;
+  showPage('corpus');
+  applyFilters();
+}
+
+function renderHeatmap() {
+  const sources = [...new Set(DATA.map(d => d.type_source).filter(Boolean))].filter(s => s !== 'youtube_video');
+  const table = document.getElementById('heatmap-table');
+
+  const scoreAvg = (src, cat) => {
+    const subset = DATA.filter(d => d.type_source === src);
+    if (!subset.length) return 0;
+    const sum = subset.reduce((acc, d) => acc + (parseFloat(d['score_' + cat]) || 0), 0);
+    return sum / subset.length;
+  };
+
+  const allVals = sources.flatMap(s => CATS.map(c => scoreAvg(s, c)));
+  const maxVal = Math.max(...allVals) || 1;
+
+  const heatColor = (val) => {
+    const pct = val / maxVal;
+    const r = Math.round(44 + (240 - 44) * (1 - pct));
+    const g = Math.round(74 + (235 - 74) * (1 - pct));
+    const b = Math.round(110 + (220 - 110) * (1 - pct));
+    return `rgb(${r},${g},${b})`;
+  };
+
+  let html = '<tr><th>Source</th>' + CATS.map(c => `<th>${NARRATIFS[c].label.replace(' ', '<br>')}</th>`).join('') + '</tr>';
+  sources.forEach(src => {
+    html += `<tr><td>${src}</td>`;
+    CATS.forEach(cat => {
+      const val = scoreAvg(src, cat);
+      const bg = heatColor(val);
+      html += `<td style="background:${bg};color:#fff">${val.toFixed(1)}</td>`;
+    });
+    html += '</tr>';
+  });
+  table.innerHTML = html;
+}
+
+function renderNaratifsChart() {
+  const vd  = getVisibleData();
+  const ctx = document.getElementById('chart-narratifs').getContext('2d');
+  if (chartNarratifs) { chartNarratifs.destroy(); chartNarratifs = null; }
+  const labels = ['Articles', 'Commentaires'];
+  const counts = [vd.filter(d => d.type_doc === 'article').length, vd.filter(d => d.type_doc === 'commentaire').length];
+  const colors = ['#2c4a6e', '#c8c4be'];
+  if (SHOW_TWEETS) {
+    labels.push('Tweets');
+    counts.push(DATA.filter(d => d.type_doc === 'tweet').length);
+    colors.push('#1da1f2');
+  }
+  chartNarratifs = new Chart(ctx, {
+    type: 'doughnut',
+    data: {
+      labels,
+      datasets: [{ data: counts, backgroundColor: colors, borderWidth: 0 }]
+    },
+    options: {
+      responsive: true,
+      plugins: { legend: { position: 'bottom' } }
+    }
+  });
+}
+
+// ─── FILTRES ──────────────────────────────────────────────────────────────────
+
+function buildNarratifFilters() {
+  ['f-narratif', 'f-search-narratif'].forEach(id => {
+    const sel = document.getElementById(id);
+    CATS.forEach(cat => {
+      const opt = document.createElement('option');
+      opt.value = cat;
+      opt.textContent = NARRATIFS[cat].label;
+      sel.appendChild(opt);
+    });
+  });
+}
+
+function buildSourceFilter() {
+  const sources = [...new Set(DATA.map(d => d.type_source).filter(Boolean))].sort();
+  const sel = document.getElementById('f-source');
+  sources.forEach(s => {
+    const opt = document.createElement('option');
+    opt.value = s;
+    opt.textContent = s;
+    sel.appendChild(opt);
+  });
+}
+
+
+
+function buildSearchFilters() {}
+
+// ─── CORPUS ───────────────────────────────────────────────────────────────────
+
+function isMultiNarratif(doc) {
+  const scores = SCORE_KEYS.map(k => parseFloat(doc['score_' + k]) || 0).sort((a, b) => b - a);
+  return scores[0] > 0 && scores[1] >= scores[0] * 0.5;
+}
+
+function applyFilters() {
+  const narratif = document.getElementById('f-narratif').value;
+  const type     = document.getElementById('f-type').value;
+  const source   = document.getElementById('f-source').value;
+  const multiOnly = document.getElementById('f-multi')?.checked;
+
+  filteredData = DATA.filter(d => {
+    if (narratif && d.categorie_dominante !== narratif) return false;
+    if (type && d.type_doc !== type) return false;
+    if (source && d.type_source !== source) return false;
+    if (multiOnly && !isMultiNarratif(d)) return false;
+    return true;
+  });
+
+  currentPage = 1;
+  renderCorpus();
+}
+
+function renderCorpus() {
+  const total = filteredData.length;
+  document.getElementById('corpus-count').textContent =
+    total + ' document' + (total > 1 ? 's' : '') + ' · page ' + currentPage + '/' + Math.ceil(total / PER_PAGE);
+
+  const start = (currentPage - 1) * PER_PAGE;
+  const page = filteredData.slice(start, start + PER_PAGE);
+
+  const list = document.getElementById('corpus-list');
+  if (!page.length) {
+    list.innerHTML = '<div class="empty">Aucun document ne correspond à ces filtres.</div>';
+    document.getElementById('corpus-pagination').innerHTML = '';
+    return;
+  }
+
+  list.innerHTML = '';
+  page.forEach(doc => {
+    const item = document.createElement('div');
+    item.className = 'doc-item';
+    const cat = doc.categorie_dominante || '';
+    const [badgeClass, typeLabel] = docBadge(doc);
+    const nNar = SCORE_KEYS.filter(k => parseFloat(doc['score_' + k]) > 0).length;
+    const multiBadge = nNar >= 2
+      ? `<span class="multi-badge" title="${nNar} narratifs détectés">${nNar} narratifs</span>` : '';
+    item.innerHTML = `
+      <span class="doc-type-badge ${badgeClass}">${typeLabel}</span>
+      <div>
+        <div class="doc-titre">${escHtml(docTitre(doc))}${multiBadge}</div>
+        <div class="doc-meta">${docMetaHTML(doc)}</div>
+      </div>
+      <div class="doc-narratif-tag">${NARRATIFS[cat] ? NARRATIFS[cat].label : cat}</div>
+    `;
+    item.onclick = () => toggleExtrait(item, doc);
+    list.appendChild(item);
+  });
+
+  renderPagination(total);
+}
+
+// ─── Helpers rendu document (article / commentaire / tweet) ──────────────────
+
+function docBadge(doc) {
+  if (doc.type_doc === 'tweet')      return ['badge-tweet',   '🐦 Tweet'];
+  if (doc.type_doc === 'article')    return ['badge-article', 'article'];
+  return ['badge-comment', 'commentaire'];
+}
+
+function docTitre(doc) {
+  return doc.type_doc === 'tweet' ? (doc.texte || '—') : (doc.titre || doc.url || '—');
+}
+
+function docMetaHTML(doc) {
+  const date = doc.date ? doc.date.substring(0, 10) : '—';
+  if (doc.type_doc === 'tweet') {
+    return `<span>${date}</span>
+            <span style="color:#1da1f2">${escHtml(doc.auteur || '')} ${escHtml(doc.handle || '')}</span>
+            ${doc.likes    != null ? `<span>❤ ${doc.likes}</span>`    : ''}
+            ${doc.retweets != null ? `<span>🔁 ${doc.retweets}</span>` : ''}`;
+  }
+  return `<span>${date}</span>
+          <span>${escHtml(doc.sitename || '—')}</span>
+          <span>${doc.word_count || '—'} mots</span>`;
+}
+
+function docExtraitHTML(doc) {
+  if (doc.type_doc === 'tweet') {
+    return escHtml(doc.texte || '') +
+      (doc.url ? `<br><a href="${escHtml(doc.url)}" target="_blank"
+                    style="font-size:11px;color:#1da1f2;font-style:normal">→ Voir le tweet</a>` : '');
+  }
+  return escHtml((doc.titre || '').substring(0, 300)) +
+    (doc.url ? `<br><a href="${escHtml(doc.url)}" target="_blank"
+                  style="font-size:11px;color:var(--bleu);font-style:normal">→ Source originale</a>` : '');
+}
+
+function docScoresHTML(doc) {
+  const dominant = doc.categorie_dominante || '';
+  const scores = SCORE_KEYS
+    .map(k => ({ key: k, label: NARRATIFS[k]?.label || k, val: parseFloat(doc['score_' + k]) || 0 }))
+    .filter(s => s.val > 0)
+    .sort((a, b) => b.val - a.val);
+  if (!scores.length) return '';
+  const maxVal = scores[0].val;
+  const rows = scores.map(s => `
+    <div class="score-row">
+      <div class="score-row-label ${s.key === dominant ? 'dominant' : ''}">${escHtml(s.label)}</div>
+      <div class="score-bar-bg">
+        <div class="score-bar-fill ${s.key === dominant ? 'dominant' : ''}"
+             style="width:${Math.round(s.val / maxVal * 100)}%"></div>
+      </div>
+      <div class="score-row-val">${s.val}</div>
+    </div>`).join('');
+  return `<div class="doc-scores"><div class="doc-scores-title">Scores narratifs</div>${rows}</div>`;
+}
+
+function toggleExtrait(item, doc) {
+  const existing = item.querySelector('.doc-extrait');
+  if (existing) { existing.remove(); return; }
+  const div = document.createElement('div');
+  div.className = 'doc-extrait';
+  div.innerHTML = docExtraitHTML(doc) + docScoresHTML(doc);
+  item.appendChild(div);
+}
+
+function renderPagination(total) {
+  const pages = Math.ceil(total / PER_PAGE);
+  if (pages <= 1) { document.getElementById('corpus-pagination').innerHTML = ''; return; }
+
+  let html = '';
+  html += `<button class="page-btn" onclick="goPage(${currentPage-1})" ${currentPage===1?'disabled':''}>←</button>`;
+
+  const range = [];
+  for (let i = 1; i <= pages; i++) {
+    if (i === 1 || i === pages || Math.abs(i - currentPage) <= 2) range.push(i);
+    else if (range[range.length-1] !== '…') range.push('…');
+  }
+
+  range.forEach(p => {
+    if (p === '…') html += `<span style="padding:0 0.3rem;color:var(--gris)">…</span>`;
+    else html += `<button class="page-btn ${p===currentPage?'current':''}" onclick="goPage(${p})">${p}</button>`;
+  });
+
+  html += `<button class="page-btn" onclick="goPage(${currentPage+1})" ${currentPage===pages?'disabled':''}>→</button>`;
+  document.getElementById('corpus-pagination').innerHTML = html;
+}
+
+function goPage(n) {
+  currentPage = n;
+  renderCorpus();
+  document.getElementById('page-corpus').scrollIntoView();
+}
+
+// ─── CITATIONS ─────────────────────────────────────────────────────────────
+
+let CITATIONS_DATA = null;
+
+function loadCitations() {
+  fetch('data/citations.json')
+    .then(r => r.json())
+    .then(data => {
+      CITATIONS_DATA = data;
+      buildCitationFilters();
+      renderCitations();
+    })
+    .catch(() => {
+      document.getElementById('citations-container').innerHTML =
+        '<div class="empty">Fichier data/citations.json introuvable.<br>Lance : python generer_citations_json.py</div>';
+    });
+}
+
+function buildCitationFilters() {
+  const sel = document.getElementById('f-citation-cat');
+  if (!CITATIONS_DATA) return;
+  Object.keys(CITATIONS_DATA).forEach(cat => {
+    const opt = document.createElement('option');
+    opt.value = cat;
+    opt.textContent = CITATIONS_DATA[cat].label || NARRATIFS[cat]?.label || cat;
+    sel.appendChild(opt);
+  });
+}
+
+function renderCitations() {
+  if (!CITATIONS_DATA) { loadCitations(); return; }
+
+  const catFilter = document.getElementById('f-citation-cat').value;
+  const container = document.getElementById('citations-container');
+  const cats = catFilter ? [catFilter] : Object.keys(CITATIONS_DATA);
+
+  container.innerHTML = '';
+
+  cats.forEach(cat => {
+    const bloc = CITATIONS_DATA[cat];
+    if (!bloc) return;
+
+    const articles    = bloc.articles    || [];
+    const commentaires = bloc.commentaires || [];
+    if (!articles.length && !commentaires.length) return;
+
+    // ── En-tête catégorie ──
+    const header = document.createElement('div');
+    header.style.cssText = 'margin:2.5rem 0 1.2rem;';
+    header.innerHTML = `
+      <div style="font-size:10px;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin-bottom:.3rem">
+        ${escHtml(bloc.label || cat)}
+      </div>
+      <div style="width:40px;height:2px;background:var(--accent)"></div>
+    `;
+    container.appendChild(header);
+
+    // ── Citations articles ──
+    if (articles.length) {
+      const sectionTitle = document.createElement('div');
+      sectionTitle.style.cssText = 'font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:.8rem;margin-top:1.2rem';
+      sectionTitle.textContent = 'Presse & sources institutionnelles';
+      container.appendChild(sectionTitle);
+
+      const artGrid = document.createElement('div');
+      artGrid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem;margin-bottom:1.5rem';
+
+      articles.forEach(cit => {
+        const card = document.createElement('div');
+        card.style.cssText = 'background:var(--blanc);border:1px solid var(--gris-clair);padding:1.4rem';
+        card.innerHTML = `
+          <div style="font-family:var(--serif);font-size:14px;font-style:italic;line-height:1.75;color:var(--encre);margin-bottom:1rem;padding-left:1rem;border-left:2px solid var(--gris-clair)">
+            ${escHtml(cit.texte)}
+          </div>
+          <div style="font-size:11px;color:var(--gris);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:.4rem">
+            <span style="font-weight:500;color:var(--encre)">${escHtml(cit.source || '—')}</span>
+            <span>${cit.date || '—'}</span>
+          </div>
+          ${cit.url ? `<div style="margin-top:.6rem"><a href="${escHtml(cit.url)}" target="_blank" style="font-size:11px;color:var(--bleu)">→ Source originale</a></div>` : ''}
+        `;
+        artGrid.appendChild(card);
+      });
+      container.appendChild(artGrid);
+    }
+
+    // ── Commentaires YouTube ──
+    if (commentaires.length) {
+      const sectionTitle2 = document.createElement('div');
+      sectionTitle2.style.cssText = 'font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:.8rem;margin-top:1.2rem';
+      sectionTitle2.textContent = 'Voix populaires — commentaires YouTube';
+      container.appendChild(sectionTitle2);
+
+      const cmtGrid = document.createElement('div');
+      cmtGrid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1rem;margin-bottom:1rem';
+
+      commentaires.forEach(cit => {
+        const card = document.createElement('div');
+        card.style.cssText = 'background:var(--fond2);border:1px solid var(--gris-clair);padding:1.2rem;position:relative';
+        card.innerHTML = `
+          <div style="font-size:13px;line-height:1.7;color:var(--encre);margin-bottom:.8rem">
+            ${escHtml(cit.texte)}
+          </div>
+          <div style="font-size:11px;color:var(--gris)">
+            <span style="font-weight:500">${escHtml(cit.chaine || 'YouTube')}</span>
+            ${cit.video_titre ? `<span style="display:block;margin-top:.2rem;font-style:italic">${escHtml(cit.video_titre)}</span>` : ''}
+            <span style="display:block;margin-top:.2rem">${cit.date || '—'}</span>
+          </div>
+        `;
+        cmtGrid.appendChild(card);
+      });
+      container.appendChild(cmtGrid);
+    }
+
+    // Séparateur
+    const hr = document.createElement('hr');
+    hr.style.cssText = 'border:none;border-top:1px solid var(--gris-clair);margin-top:1rem';
+    container.appendChild(hr);
+  });
+
+  if (!container.children.length) {
+    container.innerHTML = '<div class="empty">Aucune citation disponible.</div>';
+  }
+}
+
+// ─── RECHERCHE ─────────────────────────────────────────────────────────────
+
+function doSearch() {
+  const q = document.getElementById('search-input').value.trim().toLowerCase();
+  const typeFilter = document.getElementById('f-search-type').value;
+  const narratifFilter = document.getElementById('f-search-narratif').value;
+  const container = document.getElementById('search-results');
+
+  if (!q) {
+    container.innerHTML = '<div class="empty">Entrez un terme pour lancer la recherche.</div>';
+    return;
+  }
+
+  let results = DATA.filter(d => {
+    const haystack = d.type_doc === 'tweet'
+      ? ((d.texte || '') + ' ' + (d.auteur || '') + ' ' + (d.handle || '')).toLowerCase()
+      : d.type_doc === 'commentaire'
+        ? ((d.texte || '') + ' ' + (d.titre || '')).toLowerCase()
+        : (d.titre || '').toLowerCase();
+    if (!haystack.includes(q)) return false;
+    if (typeFilter    && d.type_doc             !== typeFilter)    return false;
+    if (narratifFilter && d.categorie_dominante !== narratifFilter) return false;
+    return true;
+  });
+
+  results.sort((a, b) => {
+    const scoreA = parseFloat(a.score_total) || 0;
+    const scoreB = parseFloat(b.score_total) || 0;
+    return scoreB - scoreA;
+  });
+
+  if (!results.length) {
+    container.innerHTML = `<div class="empty">Aucun résultat pour « ${escHtml(q)} ».</div>`;
+    return;
+  }
+
+  const shown = results.slice(0, 50);
+  container.innerHTML = `<div style="font-size:13px;color:var(--gris);margin-bottom:1rem">${results.length} résultat${results.length>1?'s':''} pour « ${escHtml(q)} »${results.length>50?' (50 affichés)':''}</div>`;
+
+  const list = document.createElement('div');
+  list.className = 'docs-list';
+
+  shown.forEach(doc => {
+    const item = document.createElement('div');
+    item.className = 'doc-item';
+    const cat = doc.categorie_dominante || '';
+    const [badgeClass, typeLabel] = docBadge(doc);
+    const re = new RegExp('(' + escRegex(q) + ')', 'gi');
+
+    // Contenu principal à mettre en surbrillance
+    const mainText = doc.type_doc === 'tweet'
+      ? (doc.texte || '')
+      : doc.type_doc === 'commentaire'
+        ? (doc.texte || doc.titre || doc.url || '—')
+        : (doc.titre || doc.url || '—');
+    const mainHL   = escHtml(mainText).replace(re, '<mark>$1</mark>');
+
+    // Lien source
+    const srcLink = doc.url
+      ? `<div style="margin-top:.4rem"><a href="${escHtml(doc.url)}" target="_blank"
+           style="font-size:11px;color:${doc.type_doc === 'tweet' ? '#1da1f2' : 'var(--bleu)'}">
+           ${doc.type_doc === 'tweet' ? '→ Voir le tweet' : '→ Source originale'}</a></div>`
+      : '';
+
+    item.innerHTML = `
+      <span class="doc-type-badge ${badgeClass}">${typeLabel}</span>
+      <div>
+        <div class="doc-titre">${mainHL}</div>
+        <div class="doc-meta">${docMetaHTML(doc)}</div>
+        ${srcLink}
+      </div>
+      <div class="doc-narratif-tag">${NARRATIFS[cat] ? NARRATIFS[cat].label : cat}</div>
+    `;
+    list.appendChild(item);
+  });
+
+  container.appendChild(list);
+}
+
+// ─── RHÉTORIQUE ───────────────────────────────────────────────────────────────
+
+function loadRhetorique() {
+  // Charge les deux fichiers en parallèle
+  Promise.all([
+    fetch('data/rhetorique_classifiee.json').then(r => r.json()),
+    fetch('data/kwic_mots_pivots.json').then(r => r.json()),
+  ])
+  .then(([rhet, kwic]) => {
+    RHET_DATA = rhet;
+    RHET_DATA._kwic = kwic;
+
+    // Normalise les catégories LLM (corrige fautes de frappe et casse)
+    const NORM = {
+      'TEMONGAGE_SURVIE': 'TEMOIGNAGE_SURVIE',
+      'temoignage_survie': 'TEMOIGNAGE_SURVIE',
+      'silence_institutionnel': 'SILENCE_INSTITUTIONNEL',
+    };
+    (RHET_DATA.unites || []).forEach(u => {
+      const llm = u.classification_llm;
+      if (llm?.categorie && NORM[llm.categorie]) {
+        llm.categorie = NORM[llm.categorie];
+      }
+    });
+
+    renderRhetSources();
+    renderRhetLLMStats();
+    renderKWIC();
+    buildRhetFilters();
+    renderRhetStats();
+    renderRhetorique();
+  })
+  .catch(() => {
+    document.getElementById('rhet-container').innerHTML =
+      '<div class="empty">Fichiers introuvables.<br>Lance : python classifier_rhetorique_llm.py</div>';
+  });
+}
+
+// ── Couleurs et labels LLM ──
+
+const LLM_CATS = {
+  TEMOIGNAGE_SURVIE:      { label: 'Témoignage de survie',      couleur: '#2c4a6e', desc: 'Description directe des violences, de l\'emprise, de l\'absence d\'alternative' },
+  LEGITIMATION_JURIDIQUE: { label: 'Légitimation juridique',    couleur: '#4a6741', desc: 'Arguments sur le cadre légal, légitime défense différée, Jacqueline Sauvage' },
+  EMPRISE_EXPLIQUEE:      { label: 'Emprise expliquée',         couleur: '#8b3a2a', desc: 'Mécanisme d\'emprise, contrôle coercitif, syndrome traumatique' },
+  SILENCE_INSTITUTIONNEL: { label: 'Silence institutionnel',    couleur: '#5a4a3a', desc: 'Ce que l\'entourage et les institutions n\'ont pas fait' },
+  RENVERSEMENT_VICTIMAIRE:{ label: 'Renversement victimaire',   couleur: '#c0392b', desc: 'Moments où Valérie est implicitement questionnée comme responsable' },
+  POLITISATION:           { label: 'Politisation',              couleur: '#6c3483', desc: 'Féminisme, réforme du droit, enjeux de société' },
+  DIMENSION_EMOTIONNELLE: { label: 'Dimension émotionnelle',    couleur: '#1a6b8a', desc: 'Larmes, silence, honte, dignité — registre émotionnel pur' },
+  NARRATION_FACTUELLE:    { label: 'Narration factuelle',       couleur: '#6b6560', desc: 'Description neutre des faits, sans dimension argumentative' },
+};
+
+function renderRhetSources() {
+  const meta = RHET_DATA.meta?.sources || {};
+  const container = document.getElementById('rhet-sources');
+  container.innerHTML = '';
+  Object.entries(meta).forEach(([key, src]) => {
+    const isJSL = key.startsWith('jsl');
+    const accentColor = isJSL ? 'var(--bleu)' : 'var(--violet, #6c3483)';
+
+    const block = document.createElement('div');
+    block.className = 'contexte-block';
+    block.style.cssText = `border-top:3px solid ${accentColor};margin-bottom:0`;
+    block.innerHTML = `
+      <h3 style="font-size:.95rem">${escHtml(src.titre || key)}</h3>
+      <p style="margin-bottom:.8rem;font-size:13px">${escHtml(src.desc || '')}</p>
+      <div style="font-size:12px;color:var(--gris);display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center">
+        ${src.date ? `<span>${escHtml(src.date)}</span>` : ''}
+        ${src.mots ? `<span>${src.mots.toLocaleString()} mots</span>` : ''}
+        ${src.n_unites != null ? `<span style="font-weight:500;color:${accentColor}">${src.n_unites} unités</span>` : ''}
+        ${src.url
+          ? `<a href="${escHtml(src.url)}" target="_blank" rel="noopener"
+               style="margin-left:auto;color:${accentColor};text-decoration:none;border-bottom:1px dotted currentColor">
+               → Source originale
+             </a>`
+          : ''}
+      </div>
+    `;
+    container.appendChild(block);
+  });
+}
+
+function renderRhetLLMStats() {
+  const unites = RHET_DATA.unites || [];
+  const counts = {};
+  unites.forEach(u => {
+    const cat = u.classification_llm?.categorie || 'NARRATION_FACTUELLE';
+    counts[cat] = (counts[cat] || 0) + 1;
+  });
+
+  const total = unites.length;
+  const container = document.getElementById('rhet-llm-stats');
+  container.innerHTML = '';
+
+  // Barres horizontales triées par count décroissant
+  const sorted = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const maxN = sorted[0]?.[1] || 1;
+
+  sorted.forEach(([cat, n]) => {
+    const info = LLM_CATS[cat] || { label: cat, couleur: '#999', desc: '' };
+    const pct = Math.round(n / total * 100);
+    const barPct = Math.round(n / maxN * 100);
+
+    const row = document.createElement('div');
+    row.style.cssText = 'display:grid;grid-template-columns:200px 1fr 60px;gap:1rem;align-items:center;margin-bottom:.6rem';
+    row.innerHTML = `
+      <div style="font-size:12px;font-weight:500;color:${escHtml(info.couleur)};white-space:nowrap;overflow:hidden;text-overflow:ellipsis"
+           title="${escHtml(info.desc)}">${escHtml(info.label)}</div>
+      <div style="height:8px;background:var(--fond2);border-radius:4px;overflow:hidden">
+        <div style="height:100%;width:${barPct}%;background:${escHtml(info.couleur)};border-radius:4px;transition:width .4s ease"></div>
+      </div>
+      <div style="font-size:12px;color:var(--gris);text-align:right">${n} <span style="color:var(--gris-clair)">(${pct}%)</span></div>
+    `;
+    container.appendChild(row);
+  });
+
+  // Note méthodologique
+  const note = document.createElement('p');
+  note.style.cssText = 'font-size:11px;color:var(--gris);margin-top:.8rem;font-style:italic';
+  note.textContent = `Classification par LLM (Llama 3.3 70B · Groq) sur ${total} unités argumentatives extraites de 2 documents primaires. Confiance moyenne : ~0.85.`;
+  container.appendChild(note);
+}
+
+function renderKWIC() {
+  const kwic = RHET_DATA._kwic || {};
+  const container = document.getElementById('rhet-kwic');
+  container.innerHTML = '';
+
+  if (!Object.keys(kwic).length) {
+    container.innerHTML = '<div class="empty">Données KWIC non disponibles.</div>';
+    return;
+  }
+
+  const KWIC_COLORS = ['#2c4a6e','#4a6741','#8b3a2a','#6c3483','#1a6b8a'];
+
+  Object.entries(kwic).forEach(([mot_id, data], idx) => {
+    const couleur = KWIC_COLORS[idx % KWIC_COLORS.length];
+    const total = data.total || 0;
+
+    // Carte cliquable par mot pivot
+    const card = document.createElement('div');
+    card.style.cssText = 'border:1px solid var(--gris-clair);margin-bottom:1rem;background:var(--blanc)';
+
+    // En-tête cliquable
+    const header = document.createElement('div');
+    header.style.cssText = 'padding:1rem 1.2rem;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:1rem';
+    header.innerHTML = `
+      <div style="display:flex;align-items:center;gap:.8rem">
+        <div style="width:3px;height:1.2rem;background:${escHtml(couleur)};flex-shrink:0"></div>
+        <div>
+          <span style="font-size:13px;font-weight:500;color:var(--noir)">${escHtml(data.label || mot_id)}</span>
+          <span style="font-size:12px;color:var(--gris);margin-left:.8rem">${total} occurrence${total>1?'s':''}</span>
+        </div>
+      </div>
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap">
+        ${Object.entries(data.pourcentages || {})
+          .filter(([k,v]) => v > 0 && k !== 'neutre')
+          .map(([k,v]) => `<span style="font-size:11px;padding:2px 8px;background:${escHtml(couleur)}22;color:${escHtml(couleur)};border:1px solid ${escHtml(couleur)}44">${escHtml(k)} ${v}%</span>`)
+          .join('') || '<span style="font-size:11px;color:var(--gris)">neutre 100%</span>'}
+      </div>
+      <span id="kwic-toggle-${mot_id}" style="font-size:18px;color:var(--gris);flex-shrink:0">＋</span>
+    `;
+
+    // Corps des occurrences (caché par défaut)
+    const body = document.createElement('div');
+    body.id = `kwic-body-${mot_id}`;
+    body.style.cssText = 'display:none;border-top:1px solid var(--gris-clair);padding:1rem 1.2rem;max-height:400px;overflow-y:auto';
+
+    const occ = data.occurrences || [];
+    if (occ.length) {
+      body.innerHTML = `<div style="font-size:11px;color:var(--gris);margin-bottom:.8rem">${occ.length} occurrence${occ.length>1?'s':''} dans les documents primaires</div>`;
+      occ.forEach(o => {
+        const row = document.createElement('div');
+        row.style.cssText = 'padding:.5rem 0;border-bottom:1px solid var(--fond2);font-size:12px;line-height:1.6;font-family:var(--serif)';
+        const srcLabel = o.source === 'jsl' ? '<span style="font-size:10px;color:var(--gris);font-style:normal;margin-right:.5rem">[Procès JSL]</span>' : '<span style="font-size:10px;color:var(--gris);font-style:normal;margin-right:.5rem">[Sénat]</span>';
+        row.innerHTML = `${srcLabel}<span style="color:var(--gris)">${escHtml(o.contexte_gauche)}</span> <strong style="background:${escHtml(couleur)}33;padding:0 2px;color:${escHtml(couleur)}">${escHtml(o.terme)}</strong> <span style="color:var(--gris)">${escHtml(o.contexte_droite)}</span>`;
+        body.appendChild(row);
+      });
+    } else {
+      body.innerHTML = '<p style="font-size:12px;color:var(--gris);font-style:italic">Aucune occurrence trouvée.</p>';
+    }
+
+    // Toggle
+    header.onclick = () => {
+      const open = body.style.display !== 'none';
+      body.style.display = open ? 'none' : 'block';
+      document.getElementById(`kwic-toggle-${mot_id}`).textContent = open ? '＋' : '－';
+    };
+
+    card.appendChild(header);
+    card.appendChild(body);
+    container.appendChild(card);
+  });
+}
+
+function buildRhetFilters() {
+  const unites = RHET_DATA.unites || [];
+  const locuteurs = [...new Set(unites.map(u => u.locuteur).filter(Boolean))].sort();
+  const cats = [...new Set(unites.map(u => u.classification_llm?.categorie).filter(Boolean))].sort();
+
+  const selLoc = document.getElementById('f-rhet-locuteur');
+  locuteurs.forEach(l => {
+    const opt = document.createElement('option');
+    opt.value = l;
+    opt.textContent = RHET_DATA.locuteurs?.[l]?.label || l;
+    selLoc.appendChild(opt);
+  });
+
+  const selType = document.getElementById('f-rhet-type');
+  cats.forEach(c => {
+    const opt = document.createElement('option');
+    opt.value = c;
+    opt.textContent = LLM_CATS[c]?.label || c;
+    selType.appendChild(opt);
+  });
+
+  // Sources — construites depuis meta.sources (dynamique)
+  const selSrc = document.getElementById('f-rhet-source');
+  const sources = RHET_DATA.meta?.sources || {};
+  // Ordre d'affichage : les JSL d'abord (ordre chronologique), puis Sénat
+  const srcIds = [...new Set(unites.map(u => u.source).filter(Boolean))];
+  srcIds.forEach(id => {
+    const opt = document.createElement('option');
+    opt.value = id;
+    opt.textContent = srcShortLabel(id, sources);
+    selSrc.appendChild(opt);
+  });
+
+  // Mise à jour du sous-titre avec le vrai nombre de sources
+  const nSources = Object.keys(sources).length || srcIds.length;
+  const noteEl = document.getElementById('rhet-note');
+  if (noteEl) {
+    const total = unites.length;
+    noteEl.textContent = `Classification par LLM (Llama 3.3 70B · Groq) sur ${total} unités argumentatives extraites de ${nSources} documents primaires.`;
+  }
+}
+
+function srcShortLabel(srcId, sources) {
+  // Libellé court pour affichage dans filtre ou badge
+  const FALLBACK = {
+    'jsl':     'Procès · JSL',
+    'senat':   'Audition Sénat',
+    'jsl_j1':  'JSL · Jour 1 (21/06)',
+    'jsl_j2':  'JSL · Jour 2 (22/06)',
+    'jsl_j3':  'JSL · Jour 3 (23/06)',
+    'jsl_verdict': 'JSL · Verdict (25/06)',
+  };
+  const titre = sources[srcId]?.titre;
+  if (titre) return titre.replace(/^Procès Valérie Bacot — /, '').replace(/\(JSL live\)/, '').trim();
+  return FALLBACK[srcId] || srcId;
+}
+
+function srcUrl(srcId, sources) {
+  // URL du document source — fallback pour ancien format "jsl"
+  const FALLBACK_URLS = {
+    'jsl': 'https://www.lejsl.com/faits-divers-justice/2021/06/23/suivez-le-proces-de-valerie-bacot',
+    'senat': 'https://www.senat.fr/compte-rendu-commissions/20211101/ddf_bacot.html',
+  };
+  return sources[srcId]?.url || FALLBACK_URLS[srcId] || null;
+}
+
+function renderRhetStats() {
+  const unites = RHET_DATA.unites || [];
+  const locuteurs = RHET_DATA.locuteurs || {};
+  const container = document.getElementById('rhet-stats');
+  container.innerHTML = '';
+
+  const counts = {};
+  unites.forEach(u => { counts[u.locuteur] = (counts[u.locuteur] || 0) + 1; });
+
+  Object.entries(counts).sort((a, b) => b[1] - a[1]).forEach(([loc, n]) => {
+    const color = LOCUTEUR_COLORS[loc] || 'var(--gris)';
+    const label = locuteurs[loc]?.label || loc;
+    const cell = document.createElement('div');
+    cell.style.cssText = 'background:var(--blanc);padding:1rem 1.2rem;flex:1;min-width:120px;text-align:center';
+    cell.innerHTML = `
+      <span style="display:block;font-size:1.8rem;font-weight:700;color:${escHtml(color)};line-height:1;margin-bottom:.3rem">${n}</span>
+      <span style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gris)">${escHtml(label)}</span>
+    `;
+    container.appendChild(cell);
+  });
+}
+
+function renderRhetorique() {
+  if (!RHET_DATA) return;
+
+  const locFilter  = document.getElementById('f-rhet-locuteur').value;
+  const typeFilter = document.getElementById('f-rhet-type').value;
+  const srcFilter  = document.getElementById('f-rhet-source').value;
+
+  let unites = RHET_DATA.unites || [];
+  if (locFilter)  unites = unites.filter(u => u.locuteur === locFilter);
+  if (typeFilter) unites = unites.filter(u => u.classification_llm?.categorie === typeFilter);
+  if (srcFilter)  unites = unites.filter(u => u.source === srcFilter);
+
+  const container = document.getElementById('rhet-container');
+
+  if (!unites.length) {
+    container.innerHTML = '<div class="empty">Aucune unité ne correspond à ces filtres.</div>';
+    return;
+  }
+
+  const locuteurs = RHET_DATA.locuteurs || {};
+
+  // Groupe par catégorie LLM
+  const grouped = {};
+  unites.forEach(u => {
+    const cat = u.classification_llm?.categorie || 'NARRATION_FACTUELLE';
+    if (!grouped[cat]) grouped[cat] = [];
+    grouped[cat].push(u);
+  });
+
+  container.innerHTML = '';
+
+  // Trie par count décroissant
+  Object.entries(grouped)
+    .sort((a, b) => b[1].length - a[1].length)
+    .forEach(([cat, items]) => {
+      const info = LLM_CATS[cat] || { label: cat, couleur: '#999', desc: '' };
+
+      const section = document.createElement('div');
+      section.style.cssText = 'margin-bottom:2.5rem';
+
+      // En-tête catégorie
+      section.innerHTML = `
+        <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem">
+          <div style="width:3px;height:1.2rem;background:${escHtml(info.couleur)};flex-shrink:0"></div>
+          <span style="font-size:12px;font-weight:500;color:${escHtml(info.couleur)}">${escHtml(info.label)}</span>
+          <span style="font-size:11px;color:var(--gris);background:var(--fond2);padding:2px 8px;border:1px solid var(--gris-clair)">${items.length} unité${items.length>1?'s':''}</span>
+        </div>
+        <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem;padding-left:1.1rem">${escHtml(info.desc)}</p>
+      `;
+
+      const grid = document.createElement('div');
+      grid.style.cssText = 'display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1rem';
+
+      items.forEach(u => {
+        const locColor = LOCUTEUR_COLORS[u.locuteur] || 'var(--gris)';
+        const locLabel = locuteurs[u.locuteur]?.label || u.locuteur || '—';
+        const sources  = RHET_DATA.meta?.sources || {};
+        const label    = srcShortLabel(u.source, sources);
+        const url      = srcUrl(u.source, sources);
+        const confiance = u.classification_llm?.confiance || 0;
+        const justif = u.classification_llm?.justification || '';
+
+        const srcBadge = url
+          ? `<a href="${escHtml(url)}" target="_blank" rel="noopener"
+               title="Ouvrir le document source"
+               style="font-size:10px;color:var(--gris);text-decoration:none;border-bottom:1px dotted currentColor;cursor:pointer"
+             >${escHtml(label)} ↗</a>`
+          : `<span style="font-size:10px;color:var(--gris)">${escHtml(label)}</span>`;
+
+        const card = document.createElement('div');
+        card.style.cssText = 'background:var(--blanc);border:1px solid var(--gris-clair);padding:1.2rem';
+        card.innerHTML = `
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:.8rem">
+            <span style="font-size:11px;font-weight:500;color:${escHtml(locColor)};display:flex;align-items:center;gap:.4rem">
+              <span style="display:inline-block;width:7px;height:7px;border-radius:50%;background:${escHtml(locColor)}"></span>
+              ${escHtml(locLabel)}
+            </span>
+            <span style="display:flex;align-items:center;gap:.4rem">
+              ${srcBadge}
+              <span style="font-size:10px;color:var(--gris-clair)">·</span>
+              <span style="font-size:10px;color:var(--gris)">conf. ${(confiance*100).toFixed(0)}%</span>
+            </span>
+          </div>
+          <div style="font-family:var(--serif);font-size:13px;font-style:italic;line-height:1.75;color:var(--encre);padding-left:.8rem;border-left:2px solid ${escHtml(info.couleur)};margin-bottom:.6rem">
+            ${escHtml(u.texte || '')}
+          </div>
+          ${justif ? `<p style="font-size:11px;color:var(--gris);margin-top:.4rem;font-style:normal">↳ ${escHtml(justif)}</p>` : ''}
+        `;
+        grid.appendChild(card);
+      });
+
+      section.appendChild(grid);
+      container.appendChild(section);
+
+      const hr = document.createElement('hr');
+      hr.className = 'divider';
+      hr.style.margin = '0 0 2rem';
+      container.appendChild(hr);
+    });
+}
+
+// ─── UTILS ────────────────────────────────────────────────────────────────────
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;');
+}
+
+function escRegex(str) {
+  return str.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+// ─── TWEETS — GRAPHIQUES ──────────────────────────────────────────────────────
+
+let TWEET_GRAPH_DATA = null;
+const CHARTS_T = {};
+
+function loadTweetGraphs() {
+  fetch('data/graphiques_tweets.json')
+    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+    .then(data => {
+      TWEET_GRAPH_DATA = data;
+      // Initialise NAR_COLORS depuis les bulles T4 si pas encore chargé via loadGraphiques
+      (data.t4_carte_narratifs_tweets?.bulles || []).forEach(b => { NAR_COLORS[b.categorie] = b.couleur; });
+      document.getElementById('tw-loading').style.display = 'none';
+      document.getElementById('tw-content').style.display = '';
+      const nd = data.c2_evolution_comparee?.n_mois_divergents ?? '—';
+      document.getElementById('c2-divergents').textContent = nd;
+      _populateNarSelects();
+      renderT1(); renderT2(); renderT3(); renderT4(); renderT5(); renderC1(); renderC2();
+    })
+    .catch(() => {
+      document.getElementById('tw-loading').innerHTML =
+        '<div class="empty">data/graphiques_tweets.json introuvable.<br>Lance : python generer_graphiques_tweets.py</div>';
+    });
+}
+
+// Peuple tous les selects narratif avec les options NARRATIFS
+function _populateNarSelects() {
+  const opts = '<option value="">Tous les narratifs</option>'
+    + CATS.map(k => `<option value="${k}">${NARRATIFS[k].label}</option>`).join('');
+  ['t1-nar','t2-nar','t3-nar','t4-nar','c1-nar'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.innerHTML = opts;
+  });
+}
+
+// Retourne la clé narratif sélectionnée, ou '' si tous
+function _narFilter(id) {
+  return document.getElementById(id)?.value || '';
+}
+
+// Filtre un tableau de series (objets avec .label) selon la clé narratif
+function _filterSeries(series, narKey) {
+  if (!narKey) return series;
+  const label = NARRATIFS[narKey]?.label;
+  return series.filter(s => s.label === label);
+}
+
+function _momentsBadges(moments) {
+  return (moments || []).map(m =>
+    `<span style="display:inline-block;margin:.2rem .4rem;font-size:11px;padding:3px 10px;border-left:2px solid #c0392b;background:var(--fond2)">
+      <strong>${escHtml(m.date)}</strong>&ensp;${escHtml(m.label||'')}${m.desc?' — <em style="color:var(--gris)">'+escHtml(m.desc)+'</em>':''}
+    </span>`
+  ).join('');
+}
+
+function _lineChart(canvasId, d, valueKey) {
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  if (CHARTS_T[canvasId]) CHARTS_T[canvasId].destroy();
+  CHARTS_T[canvasId] = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: d.periodes,
+      datasets: d.series.map(s => ({
+        label: s.label, data: s[valueKey || 'valeurs'],
+        borderColor: s.couleur, backgroundColor: s.couleur + '18',
+        tension: 0.3, fill: false, pointRadius: 4, borderWidth: 2.5,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 13 }, boxWidth: 16 } } },
+      scales: {
+        x: { ticks: { font: { size: 12 }, maxRotation: 45 } },
+        y: { beginAtZero: true, ticks: { font: { size: 12 } },
+             title: { display: true, text: 'Nb tweets', font: { size: 12 } } }
+      }
+    }
+  });
+}
+
+function renderT1() {
+  const d = TWEET_GRAPH_DATA.t1_proces_jour_par_jour;
+  const nar = _narFilter('t1-nar');
+  _lineChart('t1-canvas', { ...d, series: _filterSeries(d.series, nar) });
+  document.getElementById('t1-moments').innerHTML = _momentsBadges(d.moments_cles);
+}
+
+function renderT2() {
+  const d    = TWEET_GRAPH_DATA.t2_evolution_post_verdict;
+  const mode = document.getElementById('t2-mode')?.value || 'pct';
+  const nar  = _narFilter('t2-nar');
+  const ctx  = document.getElementById('t2-canvas').getContext('2d');
+  if (CHARTS_T['t2-canvas']) CHARTS_T['t2-canvas'].destroy();
+
+  const activeSeries = _filterSeries(d.series, nar);
+
+  // Totaux par période pour normaliser (sur toutes les séries, pas seulement le filtre)
+  const totals = d.periodes.map((_, i) => d.series.reduce((s, sr) => s + (sr.valeurs[i] || 0), 0));
+
+  const datasets = activeSeries.map(s => {
+    const data = d.periodes.map((_, i) => {
+      if (mode === 'pct') {
+        return totals[i] > 0 ? Math.round((s.valeurs[i] / totals[i]) * 1000) / 10 : 0;
+      }
+      return s.valeurs[i] || 0;
+    });
+    return {
+      label: s.label, data,
+      borderColor: s.couleur, backgroundColor: s.couleur + '18',
+      tension: 0.3, fill: false, pointRadius: 3, borderWidth: 2.5,
+    };
+  });
+
+  // N'afficher qu'une étiquette sur 6 pour alléger l'axe X (76 périodes)
+  const tickLabels = d.periodes.map((p, i) => (i % 6 === 0 ? p : ''));
+
+  CHARTS_T['t2-canvas'] = new Chart(ctx, {
+    type: 'line',
+    data: { labels: tickLabels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 13 }, boxWidth: 16 } } },
+      scales: {
+        x: { ticks: { font: { size: 11 }, maxRotation: 45, autoSkip: false } },
+        y: {
+          beginAtZero: true,
+          ticks: {
+            font: { size: 12 },
+            callback: v => mode === 'pct' ? v + '%' : v,
+          },
+          title: { display: true, text: mode === 'pct' ? '% par période' : 'Nb tweets', font: { size: 12 } }
+        }
+      }
+    }
+  });
+  document.getElementById('t2-moments').innerHTML = _momentsBadges(d.moments_cles);
+}
+
+function renderT3() {
+  const d    = TWEET_GRAPH_DATA.t3_periodes_comparaison;
+  const mode = document.getElementById('t3-mode')?.value || 'pct';
+  const ctx  = document.getElementById('t3-canvas').getContext('2d');
+  if (CHARTS_T.t3) CHARTS_T.t3.destroy();
+  const labels = d.periodes.map(p => p.label);
+  const nar    = _narFilter('t3-nar');
+  const cats   = (nar ? [nar] : Object.keys(NARRATIFS).filter(k => k !== 'non_classe'));
+  const datasets = cats.map(cat => {
+    const vals = d.periodes.map(p => {
+      const entry = p.distribution.find(e => e.categorie === cat);
+      return mode === 'pct' ? (entry?.pct ?? 0) : (entry?.n ?? 0);
+    });
+    return {
+      label: NARRATIFS[cat]?.label || cat, data: vals,
+      backgroundColor: (NAR_COLORS[cat] || '#999') + 'cc',
+      borderColor: NAR_COLORS[cat] || '#999', borderWidth: 1,
+    };
+  });
+  CHARTS_T.t3 = new Chart(ctx, {
+    type: 'bar',
+    data: { labels, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 13 }, boxWidth: 16 } } },
+      scales: {
+        x: { stacked: false, ticks: { font: { size: 12 } } },
+        y: { beginAtZero: true, ticks: { font: { size: 12 } },
+             title: { display: true, text: mode === 'pct' ? '%' : 'Nb', font: { size: 12 } } }
+      }
+    }
+  });
+}
+
+function renderT4() {
+  const d      = TWEET_GRAPH_DATA.t4_carte_narratifs_tweets;
+  const nar    = _narFilter('t4-nar');
+  const bulles = nar ? d.bulles.filter(b => b.categorie === nar) : d.bulles;
+  const ctx    = document.getElementById('t4-canvas').getContext('2d');
+  if (CHARTS_T.t4) CHARTS_T.t4.destroy();
+  const maxN = Math.max(...d.bulles.map(b => b.n), 1);
+  CHARTS_T.t4 = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+      datasets: bulles.map(b => ({
+        label: b.label,
+        data: [{ x: b.x, y: b.y, r: Math.max(6, Math.round(Math.sqrt(b.n / maxN) * 40)) }],
+        backgroundColor: b.couleur + 'aa', borderColor: b.couleur, borderWidth: 1.5,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 13 }, boxWidth: 16 } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              const b = d.bulles.find(b => b.label === ctx.dataset.label);
+              if (!b) return ctx.dataset.label;
+              return [`${b.label}`, `${b.n} tweets (${b.pct}%)`, b.periode_dominante ? `Période : ${b.periode_dominante}` : ''];
+            }
+          }
+        }
+      },
+      scales: {
+        x: { min: -1.2, max: 1.2, ticks: { font: { size: 12 } },
+             title: { display: true, text: '← Victime individuelle · Société / système →', font: { size: 12 } } },
+        y: { min: -1.2, max: 1.2, ticks: { font: { size: 12 } },
+             title: { display: true, text: '← Juridique / politique · Émotionnel →', font: { size: 12 } } }
+      }
+    }
+  });
+}
+
+function renderT5() {
+  const d   = TWEET_GRAPH_DATA.t5_polarite_temporelle;
+  const ctx = document.getElementById('t5-canvas').getContext('2d');
+  if (CHARTS_T.t5) CHARTS_T.t5.destroy();
+  const labels = d.valeurs.map(v => v.periode);
+  const vals   = d.valeurs.map(v => v.ratio_soutien_pct);
+  CHARTS_T.t5 = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Pôle soutien (%)',
+          data: vals,
+          borderColor: '#2c4a6e', backgroundColor: '#2c4a6e18',
+          tension: 0.3, fill: true, pointRadius: 4, borderWidth: 2.5,
+        },
+        {
+          label: 'Ligne de base 50 %',
+          data: labels.map(() => 50),
+          borderColor: '#c0392b', borderDash: [5, 4],
+          borderWidth: 2, pointRadius: 0, fill: false,
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 13 } } } },
+      scales: {
+        x: { ticks: { font: { size: 12 }, maxRotation: 45 } },
+        y: { min: 0, max: 100, ticks: { font: { size: 12 }, callback: v => v + '%' },
+             title: { display: true, text: '% soutien', font: { size: 12 } } }
+      }
+    }
+  });
+}
+
+function renderC1() {
+  const d      = TWEET_GRAPH_DATA.c1_divergence_tweets_medias;
+  const nar    = _narFilter('c1-nar');
+  const donnees = nar ? d.donnees.filter(r => r.categorie === nar) : d.donnees;
+  const ctx    = document.getElementById('c1-canvas').getContext('2d');
+  if (CHARTS_T.c1) CHARTS_T.c1.destroy();
+  CHARTS_T.c1 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: donnees.map(r => r.label),
+      datasets: [
+        { label: `Tweets (n=${d.n_tweets})`, data: donnees.map(r => r.pct_tweets),
+          backgroundColor: '#2c4a6ecc', borderColor: '#2c4a6e', borderWidth: 1 },
+        { label: `Médias (n=${d.n_medias})`, data: donnees.map(r => r.pct_medias),
+          backgroundColor: '#4a6741cc', borderColor: '#4a6741', borderWidth: 1 },
+      ]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 13 } } } },
+      scales: {
+        x: { beginAtZero: true, ticks: { font: { size: 12 }, callback: v => v + '%' } },
+        y: { ticks: { font: { size: 12 } } }
+      }
+    }
+  });
+}
+
+function renderC2() {
+  const d = TWEET_GRAPH_DATA.c2_evolution_comparee;
+  let html = '<table class="heatmap-table"><thead><tr>'
+    + '<th style="min-width:70px">Période</th>'
+    + '<th>Narratif tweets</th><th style="text-align:center;font-size:10px">N</th>'
+    + '<th>Narratif médias</th><th style="text-align:center;font-size:10px">N</th>'
+    + '<th style="text-align:center">Diverge</th>'
+    + '</tr></thead><tbody>';
+  d.donnees.forEach(row => {
+    const rowStyle = row.diverge ? 'background:#fff0ed' : '';
+    const div = row.diverge ? '<span style="color:#c0392b;font-weight:600">✗</span>' : '<span style="color:var(--gris)">—</span>';
+    const badgeTw = `<span style="display:inline-block;padding:1px 8px;border-radius:3px;font-size:11px;background:${row.couleur_tweets}22;border:1px solid ${row.couleur_tweets};color:${row.couleur_tweets}">${escHtml(row.label_tweets||'—')}</span>`;
+    const badgeMe = `<span style="display:inline-block;padding:1px 8px;border-radius:3px;font-size:11px;background:${row.couleur_medias}22;border:1px solid ${row.couleur_medias};color:${row.couleur_medias}">${escHtml(row.label_medias||'—')}</span>`;
+    html += `<tr style="${rowStyle}">
+      <td style="font-size:11px;white-space:nowrap">${escHtml(row.periode)}</td>
+      <td>${row.narratif_tweets ? badgeTw : '<span style="color:var(--gris);font-size:11px">—</span>'}</td>
+      <td style="text-align:center;font-size:11px;color:var(--gris)">${row.n_tweets || ''}</td>
+      <td>${row.narratif_medias ? badgeMe : '<span style="color:var(--gris);font-size:11px">—</span>'}</td>
+      <td style="text-align:center;font-size:11px;color:var(--gris)">${row.n_medias || ''}</td>
+      <td style="text-align:center">${div}</td>
+    </tr>`;
+  });
+  html += '</tbody></table>';
+  document.getElementById('c2-table').innerHTML = html;
+}
+
+// ─── GRAPHIQUES ───────────────────────────────────────────────────────────────
+
+let GRAPH_DATA = null;
+const CHARTS_G  = {};
+const NAR_COLORS = {};
+
+// Plugin Chart.js pour les lignes verticales des moments clés (G5)
+const momentsClesPlugin = {
+  id: 'momentsCles',
+  afterDraw(chart, _args, opts) {
+    if (!opts.moments?.length || !opts.periodes) return;
+    const ctx = chart.ctx;
+    const xs  = chart.scales.x;
+    const { top, bottom } = chart.chartArea;
+    opts.moments.forEach(m => {
+      const x = xs.getPixelForValue(opts.periodes.indexOf(m.date));
+      if (!isFinite(x)) return;
+      ctx.save();
+      ctx.strokeStyle = 'rgba(192,57,43,.7)';
+      ctx.lineWidth   = 1.5;
+      ctx.setLineDash([5, 4]);
+      ctx.beginPath(); ctx.moveTo(x, top); ctx.lineTo(x, bottom); ctx.stroke();
+      ctx.restore();
+    });
+  }
+};
+Chart.register(momentsClesPlugin);
+
+function loadGraphiques() {
+  fetch('data/graphiques.json')
+    .then(r => { if (!r.ok) throw new Error(); return r.json(); })
+    .then(data => {
+      GRAPH_DATA = data;
+      (data.g1_distribution?.donnees || []).forEach(r => { NAR_COLORS[r.categorie] = r.couleur; });
+
+      // Rempli les filtres G2 et G5
+      const g2Sel = document.getElementById('g2-filter');
+      const g5Sel = document.getElementById('g5-filter');
+      (data.g2_par_source?.series || []).forEach(s => {
+        [g2Sel, g5Sel].forEach(sel => {
+          const o = document.createElement('option');
+          o.value = s.categorie; o.textContent = s.label; sel.appendChild(o);
+        });
+      });
+
+      // Compteurs G5
+      document.getElementById('g5-n-dates').textContent = data.g5_temporel?.n_docs_dates ?? '—';
+      document.getElementById('g5-n-total').textContent = data.g5_temporel?.n_docs_total ?? '—';
+
+      document.getElementById('graph-loading').style.display = 'none';
+      document.getElementById('graph-content').style.display = '';
+
+      renderG1(); renderG2(); renderG3(); renderG4(); renderG5();
+    })
+    .catch(() => {
+      document.getElementById('graph-loading').innerHTML =
+        '<div class="empty">data/graphiques.json introuvable.<br>Lance : python generer_graphiques.py</div>';
+    });
+}
+
+// G1 — Barres horizontales empilées
+function renderG1() {
+  const d   = GRAPH_DATA.g1_distribution;
+  const ctx = document.getElementById('g1-canvas').getContext('2d');
+  if (CHARTS_G.g1) CHARTS_G.g1.destroy();
+  CHARTS_G.g1 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: d.donnees.map(r => r.label),
+      datasets: [
+        { label: 'Articles',     data: d.donnees.map(r => r.articles),     backgroundColor: d.donnees.map(r => r.couleur) },
+        { label: 'Commentaires', data: d.donnees.map(r => r.commentaires), backgroundColor: d.donnees.map(r => r.couleur + '66') }
+      ]
+    },
+    options: {
+      indexAxis: 'y', responsive: true,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 11 } } } },
+      scales: {
+        x: { stacked: true },
+        y: { stacked: true, ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+// G2 — Barres groupées par source, filtrables par narratif
+function renderG2() {
+  const d      = GRAPH_DATA.g2_par_source;
+  const filter = document.getElementById('g2-filter').value;
+  const ctx    = document.getElementById('g2-canvas').getContext('2d');
+  if (CHARTS_G.g2) CHARTS_G.g2.destroy();
+  const series = filter ? d.series.filter(s => s.categorie === filter) : d.series;
+  CHARTS_G.g2 = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: d.sources,
+      datasets: series.map(s => ({
+        label: s.label, data: s.valeurs,
+        backgroundColor: s.couleur + 'cc',
+        borderColor: s.couleur, borderWidth: 1,
+      }))
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 16 } } },
+      scales: {
+        x: { ticks: { font: { size: 11 } } },
+        y: { title: { display: true, text: 'Score moyen', font: { size: 11 } }, beginAtZero: true }
+      }
+    }
+  });
+}
+
+// G3 — Heatmap HTML (sources × narratifs)
+function renderG3() {
+  const d = GRAPH_DATA.g3_heatmap;
+  const maxVal = d.max_val || 1;
+
+  const bg  = v => { const p = v / maxVal; const r = Math.round(253-(253-44)*p), g2 = Math.round(250-(250-74)*p), b = Math.round(245-(245-110)*p); return `rgb(${r},${g2},${b})`; };
+  const fg  = v => v / maxVal > 0.5 ? '#fdfaf5' : '#2d2926';
+
+  let html = '<table class="heatmap-table"><thead><tr><th>Source</th>';
+  d.categories.forEach(cat => { html += `<th style="font-size:11px;max-width:80px;word-break:break-word">${escHtml(d.labels[cat] || cat)}</th>`; });
+  html += '</tr></thead><tbody>';
+  d.matrice.forEach(row => {
+    html += `<tr><td style="font-size:12px;white-space:nowrap">${escHtml(row.label || row.source)} <span style="color:var(--gris);font-size:11px">(${row.n})</span></td>`;
+    d.categories.forEach(cat => {
+      const v = row.scores[cat] ?? 0;
+      html += `<td style="background:${bg(v)};color:${fg(v)};text-align:center;font-size:11px">${v.toFixed(1)}</td>`;
+    });
+    html += '</tr>';
+  });
+  html += '</tbody></table>';
+  document.getElementById('g3-wrap').innerHTML = html;
+}
+
+// G4 — Scatter PCA avec 3 modes de coloration
+function buildG4Datasets(mode) {
+  const d = GRAPH_DATA.g4_pca;
+  const groups = {};
+  d.points.forEach(p => {
+    let key, color;
+    if (mode === 'cluster') {
+      key   = `Cluster ${(p.cluster ?? 0) + 1}`;
+      color = d.couleurs_clusters[p.cluster ?? 0] || '#999';
+    } else if (mode === 'narratif') {
+      key   = NARRATIFS[p.categorie]?.label || p.categorie || '—';
+      color = NAR_COLORS[p.categorie] || '#999';
+    } else {
+      key   = p.type_doc === 'article' ? 'Article presse' : 'Commentaire YouTube';
+      color = p.type_doc === 'article' ? '#2c4a6e' : '#c8a86e';
+    }
+    if (!groups[key]) groups[key] = { label: key, data: [], backgroundColor: color + 'a0', pointRadius: 3 };
+    groups[key].data.push({ x: p.x, y: p.y, titre: p.titre || '', type_doc: p.type_doc || '' });
+  });
+  return Object.values(groups);
+}
+
+function renderG4() {
+  const d   = GRAPH_DATA.g4_carte_narratifs;
+  const ctx = document.getElementById('g4-canvas').getContext('2d');
+  if (CHARTS_G.g4) CHARTS_G.g4.destroy();
+  const maxN = Math.max(...d.bulles.map(b => b.n), 1);
+  CHARTS_G.g4 = new Chart(ctx, {
+    type: 'bubble',
+    data: {
+      datasets: d.bulles.map(b => ({
+        label: b.label,
+        data: [{ x: b.x, y: b.y, r: Math.max(6, Math.round(Math.sqrt(b.n / maxN) * 44)) }],
+        backgroundColor: b.couleur + 'aa', borderColor: b.couleur, borderWidth: 1.5,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14 } },
+        tooltip: {
+          callbacks: {
+            label: ctx2 => {
+              const b = d.bulles.find(b => b.label === ctx2.dataset.label);
+              if (!b) return ctx2.dataset.label;
+              return [`${b.label}`, `${b.n} docs (${b.pct}%)`, `Score moyen : ${b.score_moyen}`];
+            }
+          }
+        }
+      },
+      scales: {
+        x: { min: -1.2, max: 1.2, ticks: { font: { size: 11 } },
+             title: { display: true, text: `← ${d.axes.x.label_negatif}  ·  ${d.axes.x.label_positif} →`, font: { size: 11 } } },
+        y: { min: -1.2, max: 1.2, ticks: { font: { size: 11 } },
+             title: { display: true, text: `← ${d.axes.y.label_negatif}  ·  ${d.axes.y.label_positif} →`, font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+// G5 — Courbes temporelles avec moments clés
+function renderG5() {
+  const d      = GRAPH_DATA.g5_temporel;
+  const filter = document.getElementById('g5-filter').value;
+  const ctx    = document.getElementById('g5-canvas').getContext('2d');
+  if (CHARTS_G.g5) CHARTS_G.g5.destroy();
+  const series = filter ? d.series.filter(s => s.categorie === filter) : d.series;
+  CHARTS_G.g5 = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: d.periodes,
+      datasets: series.map(s => ({
+        label: s.label, data: s.valeurs,
+        borderColor: s.couleur, backgroundColor: s.couleur + '22',
+        borderWidth: 2, pointRadius: 2, tension: 0.3, fill: false,
+      }))
+    },
+    options: {
+      responsive: true, animation: false,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { position: 'bottom', labels: { font: { size: 12 }, padding: 18 } },
+        momentsCles: { moments: d.moments_cles, periodes: d.periodes }
+      },
+      scales: {
+        x: { ticks: { maxTicksLimit: 24, maxRotation: 45, minRotation: 30, font: { size: 11 } } },
+        y: { title: { display: true, text: 'Nombre de documents', font: { size: 12 } }, min: 0, ticks: { precision: 0 } }
+      }
+    }
+  });
+  // Badges moments clés sous le graphique
+  document.getElementById('g5-moments').innerHTML = d.moments_cles.map(m =>
+    `<span style="display:inline-block;margin:.2rem .4rem;font-size:11px;padding:3px 10px;border-left:2px solid #c0392b;background:var(--fond2)">
+      <strong>${escHtml(m.date)}</strong>&ensp;${escHtml(m.label || '')}${m.desc ? ' — <em style="color:var(--gris)">'+escHtml(m.desc)+'</em>' : ''}
+    </span>`
+  ).join('');
+}
+
+// ─── QUALITÉ — CONTRÔLE POLLUTION ────────────────────────────────────────────
+
+function _saveQual() {
+  localStorage.setItem(QUAL_SUPPRESSED_KEY, JSON.stringify([...QUAL_SUPPRESSED]));
+  localStorage.setItem(QUAL_OK_KEY,         JSON.stringify([...QUAL_OK]));
+}
+
+function detectPollutionFlags() {
+  POLLUTION_FLAGS = [];
+  RAW_DATA.forEach(doc => {
+    if (doc.type_doc !== 'article') return;  // focus articles de presse uniquement
+    const reasons    = [];
+    const titre      = (doc.titre || '').toLowerCase();
+    const scoreTotal = parseFloat(doc.score_total) || 0;
+    const wordCount  = parseInt(doc.word_count, 10) || 0;
+
+    // Signal 1 : titre ne mentionne pas Bacot / Valérie
+    if (titre.length > 0 && !titre.includes('bacot') && !titre.includes('valérie') && !titre.includes('valerie')) {
+      reasons.push({ code: 'titre_sans_bacot', label: 'Titre sans mention de Bacot' });
+    }
+    // Signal 2 : score nul malgré un contenu substantiel
+    if (scoreTotal === 0 && wordCount > 50) {
+      reasons.push({ code: 'score_nul', label: 'Score de pertinence nul' });
+    }
+
+    if (reasons.length) POLLUTION_FLAGS.push({ doc, reasons });
+  });
+}
+
+function setQualiteTab(tab) {
+  QUALITE_TAB = tab;
+  ['flagged', 'suppressed', 'ok'].forEach(t => {
+    document.getElementById('qtab-' + t)?.classList.toggle('active', t === tab);
+  });
+  renderQualite();
+}
+
+function renderQualite() {
+  const listEl = document.getElementById('qualite-list');
+  if (!listEl) return;
+  if (!RAW_DATA.length) {
+    listEl.innerHTML = '<div class="empty">Données non encore chargées.</div>';
+    return;
+  }
+
+  const toReview    = POLLUTION_FLAGS.filter(f => !QUAL_SUPPRESSED.has(f.doc.url) && !QUAL_OK.has(f.doc.url));
+  const suppressed  = POLLUTION_FLAGS.filter(f => QUAL_SUPPRESSED.has(f.doc.url));
+  const validated   = POLLUTION_FLAGS.filter(f => QUAL_OK.has(f.doc.url));
+
+  // Docs supprimés manuellement hors des flags automatiques
+  const flaggedUrls = new Set(POLLUTION_FLAGS.map(f => f.doc.url));
+  const manualExtra = [...QUAL_SUPPRESSED]
+    .filter(url => !flaggedUrls.has(url))
+    .map(url => {
+      const doc = RAW_DATA.find(d => d.url === url);
+      return doc ? { doc, reasons: [{ code: 'manuel', label: 'Supprimé manuellement' }] } : null;
+    })
+    .filter(Boolean);
+
+  // Compteurs de tabs
+  document.getElementById('qcount-flagged').textContent    = toReview.length;
+  document.getElementById('qcount-suppressed').textContent = suppressed.length + manualExtra.length;
+  document.getElementById('qcount-ok').textContent         = validated.length;
+
+  // Résumé statistique
+  const resume = document.getElementById('qualite-resume');
+  if (resume) {
+    resume.innerHTML = [
+      { n: POLLUTION_FLAGS.length, label: 'Articles suspects',    color: '#d4a017' },
+      { n: QUAL_SUPPRESSED.size,   label: 'Supprimés du corpus',  color: '#c0392b' },
+      { n: QUAL_OK.size,           label: 'Validés manuellement', color: '#4a6741' },
+      { n: RAW_DATA.filter(d => d.type_doc === 'article').length, label: 'Articles au total', color: 'var(--gris)' },
+    ].map(s => `
+      <div style="background:var(--blanc);padding:1rem 1.5rem;flex:1;min-width:100px;text-align:center">
+        <span style="display:block;font-size:2rem;font-weight:700;color:${s.color};line-height:1;margin-bottom:.3rem">${s.n}</span>
+        <span style="font-size:11px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--gris)">${s.label}</span>
+      </div>`).join('');
+  }
+
+  // Sélection selon l'onglet actif
+  let items;
+  if (QUALITE_TAB === 'suppressed')  items = [...suppressed, ...manualExtra];
+  else if (QUALITE_TAB === 'ok')     items = validated;
+  else                               items = toReview;
+
+  const msgs = {
+    flagged:    'Aucun article suspect à vérifier — corpus propre.',
+    suppressed: 'Aucun article supprimé.',
+    ok:         'Aucun article validé manuellement.',
+  };
+  if (!items.length) {
+    listEl.innerHTML = `<div class="empty">${msgs[QUALITE_TAB] || ''}</div>`;
+    return;
+  }
+
+  const docList = document.createElement('div');
+  docList.className = 'docs-list';
+
+  items.forEach(({ doc, reasons }) => {
+    const item = document.createElement('div');
+    item.className = 'doc-item';
+
+    const [badgeClass, typeLabel] = docBadge(doc);
+
+    // Colonne 1 : badge type
+    const badge = document.createElement('span');
+    badge.className = 'doc-type-badge ' + badgeClass;
+    badge.textContent = typeLabel;
+
+    // Colonne 2 : infos
+    const infoCol = document.createElement('div');
+    infoCol.style.minWidth = '0';
+
+    const titreDiv = document.createElement('div');
+    titreDiv.className = 'doc-titre';
+    titreDiv.textContent = docTitre(doc);
+    infoCol.appendChild(titreDiv);
+
+    const metaDiv = document.createElement('div');
+    metaDiv.className = 'doc-meta';
+    metaDiv.innerHTML = docMetaHTML(doc);
+    infoCol.appendChild(metaDiv);
+
+    const reasonsDiv = document.createElement('div');
+    reasonsDiv.style.marginTop = '.5rem';
+    reasons.forEach(r => {
+      const chip = document.createElement('span');
+      chip.className = 'pollution-reason';
+      chip.textContent = r.label;
+      reasonsDiv.appendChild(chip);
+    });
+    infoCol.appendChild(reasonsDiv);
+
+    if (doc.url) {
+      const linkDiv = document.createElement('div');
+      linkDiv.style.marginTop = '.35rem';
+      const a = document.createElement('a');
+      a.href = doc.url;
+      a.target = '_blank';
+      a.style.cssText = 'font-size:11px;color:var(--bleu)';
+      a.textContent = '→ Source originale';
+      linkDiv.appendChild(a);
+      infoCol.appendChild(linkDiv);
+    }
+
+    // Colonne 3 : boutons
+    const actionsDiv = document.createElement('div');
+    actionsDiv.style.cssText = 'display:flex;flex-direction:column;gap:.4rem;align-items:flex-end;flex-shrink:0';
+
+    if (QUALITE_TAB === 'suppressed') {
+      const btnR = document.createElement('button');
+      btnR.className = 'btn-restaurer';
+      btnR.textContent = 'Restaurer ↩';
+      btnR.onclick = () => { restaurerDoc(doc.url); renderQualite(); updateStats(); };
+      actionsDiv.appendChild(btnR);
+
+    } else if (QUALITE_TAB === 'ok') {
+      const btnS2 = document.createElement('button');
+      btnS2.className = 'btn-supprimer';
+      btnS2.textContent = 'Supprimer';
+      btnS2.onclick = () => { QUAL_OK.delete(doc.url); supprimerDoc(doc.url); renderQualite(); updateStats(); };
+      actionsDiv.appendChild(btnS2);
+      const btnA = document.createElement('button');
+      btnA.className = 'btn-restaurer';
+      btnA.textContent = 'Annuler ↩';
+      btnA.onclick = () => { QUAL_OK.delete(doc.url); _saveQual(); renderQualite(); };
+      actionsDiv.appendChild(btnA);
+
+    } else {
+      const btnG = document.createElement('button');
+      btnG.className = 'btn-garder';
+      btnG.textContent = 'Garder';
+      btnG.onclick = () => { garderDoc(doc.url); renderQualite(); };
+      actionsDiv.appendChild(btnG);
+      const btnS = document.createElement('button');
+      btnS.className = 'btn-supprimer';
+      btnS.textContent = 'Supprimer';
+      btnS.onclick = () => { supprimerDoc(doc.url); renderQualite(); updateStats(); applyFilters(); };
+      actionsDiv.appendChild(btnS);
+    }
+
+    item.appendChild(badge);
+    item.appendChild(infoCol);
+    item.appendChild(actionsDiv);
+    docList.appendChild(item);
+  });
+
+  listEl.innerHTML = '';
+  listEl.appendChild(docList);
+}
+
+function supprimerDoc(url) {
+  QUAL_SUPPRESSED.add(url);
+  QUAL_OK.delete(url);
+  _saveQual();
+  DATA = DATA.filter(d => d.url !== url);
+  filteredData = filteredData.filter(d => d.url !== url);
+}
+
+function restaurerDoc(url) {
+  QUAL_SUPPRESSED.delete(url);
+  _saveQual();
+  const doc = RAW_DATA.find(d => d.url === url);
+  if (doc && !DATA.some(d => d.url === url)) {
+    DATA.push(doc);
+    applyFilters();
+  }
+}
+
+function garderDoc(url) {
+  QUAL_OK.add(url);
+  QUAL_SUPPRESSED.delete(url);
+  _saveQual();
+}
+
+function exportSuppressed() {
+  if (!QUAL_SUPPRESSED.size) {
+    alert('Aucun article supprimé à exporter.');
+    return;
+  }
+  const lines = [...QUAL_SUPPRESSED].join('\n');
+  const blob  = new Blob([lines], { type: 'text/plain;charset=utf-8' });
+  const a     = document.createElement('a');
+  a.href      = URL.createObjectURL(blob);
+  a.download  = 'urls_exclues_' + new Date().toISOString().slice(0, 10) + '.txt';
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+
+function resetQualite() {
+  if (!confirm('Réinitialiser toutes les suppressions et validations manuelles ?')) return;
+  QUAL_SUPPRESSED.clear();
+  QUAL_OK.clear();
+  _saveQual();
+  DATA = [...RAW_DATA];
+  filteredData = [...DATA];
+  updateStats();
+  applyFilters();
+  renderQualite();
+}
+
+// ─── INIT ────────────────────────────────────────────────────────────────────
+
+loadData();
+</script>
+</body>
+</html>

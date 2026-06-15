@@ -1,0 +1,27 @@
+# ============================================================
+# Fichier d'URLs — Affaire Valérie Bacot
+# Ajoute une URL par ligne. Les lignes commençant par # sont ignorées.
+# Relance scraper_nouvelles_urls.py après chaque ajout.
+# ============================================================
+
+# --- Presse nationale ---
+https://www.liberation.fr/societe/police-justice/valerie-bacot-condamnee-a-quatre-ans-de-prison-dont-trois-avec-sursis-20210625_HKLVFZQTPJE3LKWLR4VQT7ZXUU/
+https://www.lemonde.fr/societe/article/2021/06/25/valerie-bacot-condamnee-a-4-ans-de-prison-dont-3-avec-sursis_6085870_3224.html
+https://www.humanite.fr/societe/feminicides/valerie-bacot-condamnee-a-4-ans-dont-3-avec-sursis-710580
+https://www.lexpress.fr/societe/valerie-bacot-condamnee-a-4-ans-de-prison-dont-3-avec-sursis_2153369.html
+https://www.francetvinfo.fr/faits-divers/crime/valerie-bacot-condamnee-a-4-ans-de-prison-dont-3-avec-sursis_4672345.html
+
+# --- Presse militante et féministe ---
+https://www.causette.fr/societe/valerie-bacot-elle-a-tue-son-bourreau/
+https://www.madmoizelle.com/valerie-bacot-proces-verdict-1088291
+https://www.franceinter.fr/justice/valerie-bacot-jugee-pour-le-meurtre-de-son-mari-violent
+
+# --- Analyses et contexte ---
+https://www.slate.fr/story/210991/valerie-bacot-femmes-battues-tuent-maris-violents-legitime-defense-impossible
+https://www.marianne.net/societe/valerie-bacot-et-si-la-france-se-dotait-enfin-dune-loi-sur-la-legitime-defense-differee
+
+# --- À compléter au fur et à mesure ---
+
+https://www.lejsl.com/faits-divers-justice/2021/06/21/suivez-le-proces-de-valerie-bacot
+https://www.lejsl.com/faits-divers-justice/2021/06/25/proces-de-valerie-bacot-l-heure-du-verdict
+https://www.lejsl.com/faits-divers-justice/2021/06/22/proces-de-valerie-bacot-suivez-en-direct-la-deuxieme-journee-d-audience

@@ -49,9 +49,9 @@ if not DB_PATH.exists():
 app = FastAPI(
     title="API Narratifs Bacot — Projet Mythodologie",
     description=(
-        "API d'accès au corpus de 953 documents sur l'affaire Valérie Bacot. "
-        "Classification lexicale en 8 catégories de narratifs, clustering K-Means. "
-        "Prototype v1 — données préliminaires."
+        "API d'accès au corpus sur l'affaire Valérie Bacot : articles de presse, "
+        "tweets et commentaires YouTube. "
+        "Classification lexicale en 8 catégories de narratifs, clustering K-Means."
     ),
     version="1.0.0",
     contact={
@@ -208,8 +208,8 @@ def root():
         "projet":      "Mythodologie — Corpus narratifs Valérie Bacot",
         "version":     "1.0.0",
         "description": (
-            "Corpus de 953 documents sur l'affaire Valérie Bacot. "
-            "Classification lexicale en 8 catégories de narratifs médiatiques."
+            "Corpus sur l'affaire Valérie Bacot — articles de presse, tweets et "
+            "commentaires YouTube. Classification lexicale en 8 catégories de narratifs."
         ),
         "corpus": {
             "total_documents": n_docs,

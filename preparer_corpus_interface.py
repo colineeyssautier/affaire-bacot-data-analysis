@@ -29,10 +29,11 @@ CORPUS_DIR   = Path("corpus_bacot")
 DATA_DIR     = Path("data")
 OUTPUT_FILE  = DATA_DIR / "articles_interface.json"
 
-SOURCES_PRESSE = CORPUS_DIR / "corpus_bacot.json"
-SOURCES_WB     = CORPUS_DIR / "wayback_articles.json"
-SOURCES_RSS    = CORPUS_DIR / "rss_articles.json"
-SOURCES_TWEETS = CORPUS_DIR / "tweets_bacot.json"
+SOURCES_PRESSE    = CORPUS_DIR / "corpus_bacot.json"
+SOURCES_WB        = CORPUS_DIR / "wayback_articles.json"
+SOURCES_RSS       = CORPUS_DIR / "rss_articles.json"
+SOURCES_TWEETS    = CORPUS_DIR / "tweets_bacot.json"
+NOUVEAUX_CMT_CSV  = Path("commentaires_nouvelles_videos.csv")
 
 MOTS_CLES = ["bacot", "polette"]
 MOTS_CLES_TWEETS = ["bacot", "polette", "libertepourvalerie", "libérezvalérie",
@@ -224,6 +225,39 @@ def charger_rss() -> list[dict]:
     return articles
 
 
+def charger_nouveaux_commentaires() -> list[dict]:
+    """Charge commentaires_nouvelles_videos.csv — nouveaux commentaires YouTube."""
+    if not NOUVEAUX_CMT_CSV.exists():
+        print(f"  [MANQUANT] {NOUVEAUX_CMT_CSV}")
+        return []
+
+    import csv as csv_mod
+    commentaires = []
+    vus_ids = set()
+
+    with open(NOUVEAUX_CMT_CSV, encoding="utf-8", newline="") as f:
+        reader = csv_mod.DictReader(f)
+        for row in reader:
+            cid = row.get("commentaire_id", "").strip()
+            texte = row.get("texte", "").strip()
+            if not cid or not texte or cid in vus_ids:
+                continue
+            vus_ids.add(cid)
+            video_id = row.get("video_id", "").strip()
+            url = f"https://www.youtube.com/watch?v={video_id}#comment_{cid}"
+            commentaires.append({
+                "id":      "yt_" + empreinte(texte),
+                "texte":   texte,
+                "date":    normaliser_date(row.get("date", "")),
+                "url":     url,
+                "source":  "youtube",
+                "nb_mots": len(texte.split()),
+            })
+
+    print(f"  nouveaux_commentaires.csv : {len(commentaires)} commentaires")
+    return commentaires
+
+
 def charger_tweets() -> list[dict]:
     """Charge tweets_bacot.json et filtre les tweets pertinents."""
     if not SOURCES_TWEETS.exists():
@@ -298,14 +332,15 @@ def run() -> None:
     presse_wb                   = charger_wayback()
     presse_rss                  = charger_rss()
     tweets                      = charger_tweets()
+    nouveaux_cmt                = charger_nouveaux_commentaires()
 
     # Fusion articles de presse (corpus principal + wayback + rss étendu)
     tous_articles = presse_corpus + presse_wb + presse_rss
     tous_articles = dedupliquer_par_url(tous_articles)
     tous_articles.sort(key=lambda a: a.get("date", ""), reverse=True)
 
-    # Déduplication commentaires et tweets
-    commentaires = dedupliquer_par_id(commentaires)
+    # Fusion et déduplication commentaires et tweets
+    commentaires = dedupliquer_par_id(commentaires + nouveaux_cmt)
     tweets       = dedupliquer_par_id(tweets)
     tweets.sort(key=lambda t: t.get("date", ""), reverse=True)
 

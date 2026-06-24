@@ -122,7 +122,7 @@ def init_db():
                     "word_count":   int(row["word_count"]) if row.get("word_count") is not None else None,
                     "categorie_dominante": str(row.get("categorie_dominante", ""))[:40],
                     "score_total":  float(row["score_total"]) if row.get("score_total") is not None else 0,
-                    "cluster":      int(row["cluster"])   if row.get("cluster") is not None else None,
+                    "cluster":      int(row["cluster"])   if pd.notna(row.get("cluster")) else None,
                     "cluster_mots_cles": str(row["cluster_mots_cles"]) if row.get("cluster_mots_cles") else None,
                 }
                 for cat in CATEGORIES:

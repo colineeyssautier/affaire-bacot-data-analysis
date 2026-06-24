@@ -860,6 +860,7 @@
     <li><a href="#" onclick="showPage('narratifs')" id="nav-narratifs">Narratifs<span class="nav-sub">articles &amp; commentaires YT</span></a></li>
     <li><a href="#" onclick="showPage('graphiques')" id="nav-graphiques">Graphiques<span class="nav-sub">articles &amp; commentaires YT</span></a></li>
     <li><a href="#" onclick="showPage('tweets')" id="nav-tweets">Tweets</a></li>
+    <li><a href="#" onclick="showPage('youtube')" id="nav-youtube">Commentaires YT<span class="nav-sub">25 503 · 5 axes</span></a></li>
     <li><a href="#" onclick="showPage('corpus')" id="nav-corpus">Corpus</a></li>
     <li><a href="#" onclick="showPage('citations')" id="nav-citations">Citations</a></li>
     <li><a href="#" onclick="showPage('recherche')" id="nav-recherche">Recherche</a></li>
@@ -1114,6 +1115,102 @@
       <div id="c2-table" style="overflow-x:auto"></div>
 
     </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : COMMENTAIRES YOUTUBE -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-youtube" class="page">
+  <div class="container">
+    <h2 class="section-title">Commentaires YouTube</h2>
+    <p class="section-subtitle">25 503 commentaires · 93 chaînes · 167 vidéos · 5 axes comparables à la presse</p>
+
+    <div id="yt-loading" class="loading">Chargement des commentaires…</div>
+    <div id="yt-content" style="display:none">
+
+      <!-- Métriques -->
+      <div id="yt-metrics" style="display:grid;grid-template-columns:repeat(5,1fr);gap:1rem;margin-bottom:2rem"></div>
+
+      <hr class="divider">
+
+      <!-- YT1 — Narratifs vs Presse -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT1 — Narratifs : Commentaires vs Articles de presse</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">% de documents avec ce narratif dominant</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem">
+        <div>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Commentaires YouTube</p>
+          <div class="chart-wrap" style="height:290px;position:relative"><canvas id="yt1-yt-canvas"></canvas></div>
+        </div>
+        <div>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Articles de presse</p>
+          <div class="chart-wrap" style="height:290px;position:relative"><canvas id="yt1-art-canvas"></canvas></div>
+        </div>
+      </div>
+      <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Écart commentaires − presse (points de %)</p>
+      <div class="chart-wrap" style="height:210px;position:relative"><canvas id="yt1-ecart-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- YT2 — Évolution temporelle -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT2 — Évolution temporelle des commentaires</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Volume mensuel par narratif · lignes rouges = procès (21 juin 2021) et verdict (25 juin 2021)</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="yt2-mode" onchange="renderYT2()">
+          <option value="n">Nombre absolu</option>
+          <option value="pct">Proportion (%)</option>
+        </select>
+        <select class="filter-select" id="yt2-nar" onchange="renderYT2()"><option value="">Tous les narratifs</option></select>
+      </div>
+      <div class="chart-wrap" style="height:400px;position:relative"><canvas id="yt2-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- YT3 — Polarité -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT3 — Polarité et affect</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Tonalité lexicale : positif · empathique · neutre · hostile · négatif</p>
+      <div style="display:grid;grid-template-columns:1fr 2fr;gap:2rem">
+        <div>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Distribution globale</p>
+          <div class="chart-wrap" style="height:260px;position:relative"><canvas id="yt3-donut-canvas"></canvas></div>
+        </div>
+        <div>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Tonalité par narratif (%)</p>
+          <div class="chart-wrap" style="height:260px;position:relative"><canvas id="yt3-stack-canvas"></canvas></div>
+        </div>
+      </div>
+
+      <hr class="divider">
+
+      <!-- YT4 — Engagement -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT4 — Engagement par narratif</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Likes moyens par commentaire — quels narratifs mobilisent le plus ?</p>
+      <div class="chart-wrap" style="height:290px;position:relative"><canvas id="yt4-canvas"></canvas></div>
+
+      <hr class="divider">
+
+      <!-- YT5 — Explorateur -->
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT5 — Explorateur de commentaires</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Top commentaires par likes · filtrables par narratif et tonalité</p>
+      <div class="filters" style="margin-bottom:1rem">
+        <select class="filter-select" id="yt5-nar" onchange="renderYT5()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="yt5-pol" onchange="renderYT5()">
+          <option value="">Toutes les tonalités</option>
+          <option value="positif">Positif</option>
+          <option value="empathique">Empathique</option>
+          <option value="neutre">Neutre</option>
+          <option value="hostile">Hostile</option>
+          <option value="negatif">Négatif</option>
+        </select>
+        <select class="filter-select" id="yt5-n" onchange="renderYT5()">
+          <option value="20">Top 20</option>
+          <option value="50">Top 50</option>
+          <option value="100">Top 100</option>
+        </select>
+      </div>
+      <div id="yt5-list"></div>
+
+    </div><!-- /yt-content -->
   </div>
 </div>
 
@@ -1556,6 +1653,7 @@ function showPage(name) {
   if (name === 'rhetorique'  && !RHET_DATA)        loadRhetorique();
   if (name === 'graphiques'  && !GRAPH_DATA)       loadGraphiques();
   if (name === 'tweets'      && !TWEET_GRAPH_DATA) loadTweetGraphs();
+  if (name === 'youtube'     && !YT_DATA)          loadYoutubeComments();
   if (name === 'qualite')                          renderQualite();
   return false;
 }
@@ -3443,6 +3541,369 @@ function resetQualite() {
   updateStats();
   applyFilters();
   renderQualite();
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// COMMENTAIRES YOUTUBE — 5 axes
+// ════════════════════════════════════════════════════════════════════════════
+
+let YT_DATA = null;
+const CHARTS_YT = {};
+
+const YT_NAR_COLORS = {
+  soutien_victime:       '#4e9af1',
+  remise_en_question:    '#f1764e',
+  legitime_defense:      '#3ecf78',
+  discours_feministe:    '#b44ef1',
+  emprise_psychologique: '#f14eb4',
+  silence_collectif:     '#e8c44e',
+  sensationnalisme:      '#f14e4e',
+  jugement_moral:        '#f19a4e',
+  non_classe:            '#aaaaaa',
+};
+
+const YT_POL_COLORS = {
+  positif:    '#27ae60',
+  empathique: '#3498db',
+  neutre:     '#95a5a6',
+  hostile:    '#e67e22',
+  negatif:    '#e74c3c',
+};
+
+const YT_POLS = ['positif', 'empathique', 'neutre', 'hostile', 'negatif'];
+const YT_PERIODES_CLES = ['2021-06', '2021-07'];
+
+function _ytDestroyChart(id) {
+  if (CHARTS_YT[id]) { CHARTS_YT[id].destroy(); delete CHARTS_YT[id]; }
+}
+
+function loadYoutubeComments() {
+  Papa.parse('../data/resultats_commentaires_youtube.csv', {
+    download: true,
+    header: true,
+    skipEmptyLines: true,
+    complete: function(results) {
+      YT_DATA = results.data.filter(r => r.narratif);
+
+      // Peupler les selects narratif
+      const opts = '<option value="">Tous les narratifs</option>'
+        + CATS.map(k => `<option value="${k}">${NARRATIFS[k].label}</option>`).join('');
+      ['yt2-nar', 'yt5-nar'].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.innerHTML = opts;
+      });
+
+      document.getElementById('yt-loading').style.display = 'none';
+      document.getElementById('yt-content').style.display = '';
+
+      renderYT0();
+      renderYT1();
+      renderYT2();
+      renderYT3();
+      renderYT4();
+      renderYT5();
+    },
+    error: function() {
+      document.getElementById('yt-loading').innerHTML =
+        '<div class="empty">data/resultats_commentaires_youtube.csv introuvable.<br>Lance : python analyser_commentaires_youtube.py</div>';
+    }
+  });
+}
+
+// YT0 — Métriques
+function renderYT0() {
+  const total  = YT_DATA.length;
+  const classe = YT_DATA.filter(d => d.narratif !== 'non_classe').length;
+  const videos = new Set(YT_DATA.map(d => d.video_url).filter(Boolean)).size;
+  const chaines = new Set(YT_DATA.map(d => d.chaine).filter(Boolean)).size;
+  const likesMed = _median(YT_DATA.map(d => parseFloat(d.likes)||0).sort((a,b) => a-b));
+  const items = [
+    { n: total.toLocaleString('fr'), l: 'commentaires' },
+    { n: videos, l: 'vidéos' },
+    { n: chaines, l: 'chaînes' },
+    { n: classe.toLocaleString('fr'), l: 'avec narratif' },
+    { n: likesMed, l: 'likes (médiane)' },
+  ];
+  document.getElementById('yt-metrics').innerHTML = items.map(it =>
+    `<div style="background:var(--blanc);border:1px solid var(--gris-clair);border-radius:6px;padding:1rem;text-align:center">
+      <div style="font-family:var(--serif);font-size:1.6rem;font-weight:700;color:var(--noir)">${it.n}</div>
+      <div style="font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--gris);margin-top:.2rem">${it.l}</div>
+    </div>`
+  ).join('');
+}
+
+function _median(sorted) {
+  if (!sorted.length) return 0;
+  const m = Math.floor(sorted.length / 2);
+  return sorted.length % 2 ? sorted[m] : Math.round((sorted[m-1]+sorted[m])/2);
+}
+
+// YT1 — Narratifs vs Presse
+function renderYT1() {
+  const ytTotal = YT_DATA.length || 1;
+  const artData = DATA.filter(d => d.type_doc === 'article');
+  const artTotal = artData.length || 1;
+
+  const ytCounts = {}, artCounts = {};
+  CATS.forEach(c => { ytCounts[c] = 0; artCounts[c] = 0; });
+  YT_DATA.forEach(d => { if (ytCounts[d.narratif] !== undefined) ytCounts[d.narratif]++; });
+  artData.forEach(d => { if (artCounts[d.categorie_dominante] !== undefined) artCounts[d.categorie_dominante]++; });
+
+  const labels = CATS.map(c => NARRATIFS[c].label);
+  const ytPct  = CATS.map(c => +(ytCounts[c]  / ytTotal  * 100).toFixed(1));
+  const artPct = CATS.map(c => +(artCounts[c] / artTotal * 100).toFixed(1));
+  const ecart  = CATS.map((c, i) => +(ytPct[i] - artPct[i]).toFixed(1));
+
+  const commonOpts = (title) => ({
+    type: 'bar',
+    options: {
+      indexAxis: 'y',
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: { legend: { display: false }, title: { display: false } },
+      scales: {
+        x: { grid: { color: '#eee' }, ticks: { font: { size: 11 } } },
+        y: { ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+
+  _ytDestroyChart('yt1-yt');
+  const ctx1 = document.getElementById('yt1-yt-canvas').getContext('2d');
+  CHARTS_YT['yt1-yt'] = new Chart(ctx1, { ...commonOpts(), type: 'bar', data: {
+    labels, datasets: [{ data: ytPct, backgroundColor: CATS.map(c => YT_NAR_COLORS[c]+'cc'),
+      borderRadius: 3, barThickness: 18 }]
+  }, options: { ...commonOpts().options, scales: { x: { grid:{color:'#eee'}, ticks:{font:{size:11}}, title:{display:true,text:'%',font:{size:10}} }, y:{ticks:{font:{size:11}}} } } });
+
+  _ytDestroyChart('yt1-art');
+  const ctx2 = document.getElementById('yt1-art-canvas').getContext('2d');
+  CHARTS_YT['yt1-art'] = new Chart(ctx2, { type: 'bar', data: {
+    labels, datasets: [{ data: artPct, backgroundColor: CATS.map(c => YT_NAR_COLORS[c]+'cc'),
+      borderRadius: 3, barThickness: 18 }]
+  }, options: { indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{ x:{grid:{color:'#eee'},ticks:{font:{size:11}},title:{display:true,text:'%',font:{size:10}}}, y:{ticks:{font:{size:11}}} } } });
+
+  _ytDestroyChart('yt1-ecart');
+  const ctx3 = document.getElementById('yt1-ecart-canvas').getContext('2d');
+  CHARTS_YT['yt1-ecart'] = new Chart(ctx3, { type: 'bar', data: {
+    labels,
+    datasets: [{ data: ecart,
+      backgroundColor: ecart.map(v => v >= 0 ? '#27ae6088' : '#e74c3c88'),
+      borderColor:     ecart.map(v => v >= 0 ? '#27ae60' : '#e74c3c'),
+      borderWidth: 1, borderRadius: 3, barThickness: 16 }]
+  }, options: { indexAxis:'y', responsive:true, maintainAspectRatio:false,
+    plugins:{ legend:{display:false}, tooltip:{callbacks:{label:ctx=>(ctx.raw>0?'+':'')+ctx.raw+' pp'}} },
+    scales:{ x:{grid:{color:'#eee'},ticks:{font:{size:11}},title:{display:true,text:'points de %',font:{size:10}}}, y:{ticks:{font:{size:11}}} } } });
+}
+
+// YT2 — Évolution temporelle
+function renderYT2() {
+  const mode   = document.getElementById('yt2-mode')?.value || 'n';
+  const narFil = document.getElementById('yt2-nar')?.value || '';
+
+  // Agréger par mois
+  const monthMap = {};
+  YT_DATA.forEach(d => {
+    const m = (d.date || '').slice(0, 7);
+    if (!m || m.length < 7 || m < '2019-01') return;
+    if (!monthMap[m]) { monthMap[m] = { total: 0 }; CATS.forEach(c => monthMap[m][c] = 0); }
+    monthMap[m].total++;
+    if (monthMap[m][d.narratif] !== undefined) monthMap[m][d.narratif]++;
+  });
+
+  const months = Object.keys(monthMap).sort();
+  const catsToShow = narFil ? [narFil] : CATS;
+
+  const datasets = catsToShow.map(cat => ({
+    label: NARRATIFS[cat].label,
+    data: months.map(m => {
+      const v = monthMap[m][cat] || 0;
+      return mode === 'pct' ? +(v / (monthMap[m].total||1) * 100).toFixed(1) : v;
+    }),
+    backgroundColor: YT_NAR_COLORS[cat] + '88',
+    borderColor:     YT_NAR_COLORS[cat],
+    borderWidth: 1.5, fill: true, tension: 0.3, pointRadius: 0,
+  }));
+
+  _ytDestroyChart('yt2');
+  const ctx = document.getElementById('yt2-canvas').getContext('2d');
+
+  // Plugin lignes verticales procès
+  const momentPlugin = {
+    id: 'ytMoments',
+    afterDraw(chart) {
+      const xs = chart.scales.x;
+      const { top, bottom } = chart.chartArea;
+      YT_PERIODES_CLES.forEach(m => {
+        const idx = months.indexOf(m);
+        if (idx < 0) return;
+        const x = xs.getPixelForValue(idx);
+        chart.ctx.save();
+        chart.ctx.strokeStyle = 'rgba(192,57,43,.8)';
+        chart.ctx.lineWidth = 1.5;
+        chart.ctx.setLineDash([4, 3]);
+        chart.ctx.beginPath();
+        chart.ctx.moveTo(x, top);
+        chart.ctx.lineTo(x, bottom);
+        chart.ctx.stroke();
+        chart.ctx.fillStyle = '#c0392b';
+        chart.ctx.font = '10px system-ui';
+        chart.ctx.fillText(m === '2021-06' ? 'Procès' : 'Verdict', x + 4, top + 14);
+        chart.ctx.restore();
+      });
+    }
+  };
+
+  CHARTS_YT['yt2'] = new Chart(ctx, {
+    type: 'line',
+    data: { labels: months, datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 12 }, boxWidth: 14 } } },
+      scales: {
+        x: { ticks: { font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 24 }, grid: { color: '#eee' } },
+        y: { grid: { color: '#eee' }, ticks: { font: { size: 11 } },
+             title: { display: true, text: mode === 'pct' ? '%' : 'commentaires/mois', font: { size: 10 } },
+             stacked: !narFil }
+      },
+    },
+    plugins: [momentPlugin],
+  });
+}
+
+// YT3 — Polarité
+function renderYT3() {
+  const polCounts = {};
+  YT_POLS.forEach(p => polCounts[p] = 0);
+  YT_DATA.forEach(d => { if (polCounts[d.polarite] !== undefined) polCounts[d.polarite]++; });
+
+  // Donut global
+  _ytDestroyChart('yt3-donut');
+  const ctx1 = document.getElementById('yt3-donut-canvas').getContext('2d');
+  CHARTS_YT['yt3-donut'] = new Chart(ctx1, {
+    type: 'doughnut',
+    data: {
+      labels: YT_POLS,
+      datasets: [{ data: YT_POLS.map(p => polCounts[p]),
+        backgroundColor: YT_POLS.map(p => YT_POL_COLORS[p]),
+        borderWidth: 2, borderColor: '#fff' }]
+    },
+    options: { responsive: true, maintainAspectRatio: false,
+      cutout: '55%',
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12 } } } }
+  });
+
+  // Bar stacked par narratif
+  const narPolMap = {};
+  CATS.concat(['non_classe']).forEach(c => { narPolMap[c] = {}; YT_POLS.forEach(p => narPolMap[c][p] = 0); });
+  YT_DATA.forEach(d => {
+    const nar = d.narratif; const pol = d.polarite;
+    if (narPolMap[nar] && narPolMap[nar][pol] !== undefined) narPolMap[nar][pol]++;
+  });
+
+  const narLabels = CATS.map(c => NARRATIFS[c].label);
+  const narTotals = CATS.map(c => YT_POLS.reduce((s, p) => s + narPolMap[c][p], 0));
+
+  _ytDestroyChart('yt3-stack');
+  const ctx2 = document.getElementById('yt3-stack-canvas').getContext('2d');
+  CHARTS_YT['yt3-stack'] = new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: narLabels,
+      datasets: YT_POLS.map(pol => ({
+        label: pol,
+        data: CATS.map((c, i) => narTotals[i] ? +(narPolMap[c][pol] / narTotals[i] * 100).toFixed(1) : 0),
+        backgroundColor: YT_POL_COLORS[pol] + 'cc',
+        borderColor:     YT_POL_COLORS[pol],
+        borderWidth: 1,
+      }))
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, boxWidth: 12 } } },
+      scales: {
+        x: { stacked: true, ticks: { font: { size: 10 }, maxRotation: 30 }, grid: { display: false } },
+        y: { stacked: true, max: 100, ticks: { font: { size: 11 } }, title: { display: true, text: '%', font: { size: 10 } } }
+      }
+    }
+  });
+}
+
+// YT4 — Engagement (likes moyens par narratif)
+function renderYT4() {
+  const likesSums = {}, likesCounts = {};
+  CATS.forEach(c => { likesSums[c] = 0; likesCounts[c] = 0; });
+  YT_DATA.forEach(d => {
+    if (likesSums[d.narratif] === undefined) return;
+    likesSums[d.narratif] += parseFloat(d.likes) || 0;
+    likesCounts[d.narratif]++;
+  });
+
+  const pairs = CATS.map(c => ({ cat: c, moy: likesCounts[c] ? likesSums[c] / likesCounts[c] : 0 }))
+    .sort((a, b) => a.moy - b.moy);
+
+  _ytDestroyChart('yt4');
+  const ctx = document.getElementById('yt4-canvas').getContext('2d');
+  CHARTS_YT['yt4'] = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: pairs.map(p => NARRATIFS[p.cat].label),
+      datasets: [{
+        data: pairs.map(p => +p.moy.toFixed(1)),
+        backgroundColor: pairs.map(p => YT_NAR_COLORS[p.cat] + 'cc'),
+        borderColor:     pairs.map(p => YT_NAR_COLORS[p.cat]),
+        borderWidth: 1, borderRadius: 4, barThickness: 22,
+      }]
+    },
+    options: {
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => `${ctx.raw} likes en moyenne` } } },
+      scales: {
+        x: { grid: { color: '#eee' }, ticks: { font: { size: 11 } }, title: { display: true, text: 'likes moyens / commentaire', font: { size: 10 } } },
+        y: { ticks: { font: { size: 11 } } }
+      }
+    }
+  });
+}
+
+// YT5 — Explorateur de commentaires
+function renderYT5() {
+  const narFil = document.getElementById('yt5-nar')?.value || '';
+  const polFil = document.getElementById('yt5-pol')?.value || '';
+  const n      = parseInt(document.getElementById('yt5-n')?.value || '20');
+
+  let filtered = YT_DATA;
+  if (narFil) filtered = filtered.filter(d => d.narratif === narFil);
+  if (polFil) filtered = filtered.filter(d => d.polarite === polFil);
+  filtered = [...filtered].sort((a, b) => (parseFloat(b.likes)||0) - (parseFloat(a.likes)||0)).slice(0, n);
+
+  const list = document.getElementById('yt5-list');
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty">Aucun commentaire pour ces filtres.</div>';
+    return;
+  }
+
+  list.innerHTML = filtered.map(d => {
+    const nar   = d.narratif || 'non_classe';
+    const pol   = d.polarite || '';
+    const color = YT_NAR_COLORS[nar] || '#aaa';
+    const polColor = YT_POL_COLORS[pol] || '#aaa';
+    const likes = parseInt(d.likes) || 0;
+    const chaine = (d.chaine_courte || d.chaine || '').slice(0, 35);
+    const date  = (d.date || '').slice(0, 10);
+    const texte = escHtml((d.texte || '').slice(0, 400));
+    return `<div style="border:1px solid var(--gris-clair);border-radius:6px;padding:1rem;margin-bottom:.8rem;background:var(--blanc)">
+      <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem;align-items:center">
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${color};color:#fff">${NARRATIFS[nar]?.label||nar}</span>
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${polColor}22;color:${polColor};border:1px solid ${polColor}55">${pol}</span>
+        <span style="font-size:11px;color:var(--gris);margin-left:auto">${chaine} · ${date} · <strong>${likes.toLocaleString('fr')}</strong> likes</span>
+      </div>
+      <p style="font-size:14px;line-height:1.6;color:var(--encre);font-style:italic">"${texte}${d.texte?.length>400?'…':''}"</p>
+    </div>`;
+  }).join('');
 }
 
 // ─── INIT ────────────────────────────────────────────────────────────────────

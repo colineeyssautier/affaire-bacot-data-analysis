@@ -104,6 +104,16 @@ def charger_csv():
     df_c = pd.read_csv(CSV_CLUSTERS,  encoding='utf-8-sig') if CSV_CLUSTERS.exists()  else pd.DataFrame()
     return df_r, df_n, df_c
 
+CSV_COMMENTAIRES_YT = Path("data/resultats_commentaires_youtube.csv")
+
+@st.cache_data
+def charger_commentaires_yt():
+    if not CSV_COMMENTAIRES_YT.exists():
+        return pd.DataFrame()
+    df = pd.read_csv(CSV_COMMENTAIRES_YT, encoding='utf-8-sig')
+    df['date'] = pd.to_datetime(df['date'], errors='coerce')
+    return df
+
 # ─── CSS personnalisé ─────────────────────────────────────────────────────────
 
 st.markdown("""
@@ -179,6 +189,9 @@ st.markdown("""
 corpus   = charger_corpus()
 df_r, df_n, df_c = charger_csv()
 
+# Articles de presse uniquement (df_r contient aussi les commentaires YouTube)
+df_articles = df_r[df_r['type_doc'] == 'article'].copy() if not df_r.empty else pd.DataFrame()
+
 corpus_index = {doc.get('url',''): doc for doc in corpus}
 
 # ─── SIDEBAR ──────────────────────────────────────────────────────────────────
@@ -193,6 +206,7 @@ with st.sidebar:
         "Navigation",
         ["🏠 Vue d'ensemble", "📊 Narratifs", "🔵 Clusters",
          "💬 Explorer le corpus", "📈 Évolution temporelle",
+         "🎬 Commentaires YouTube",
          "🔍 Recherche qualitative"],
         label_visibility="collapsed",
     )
@@ -214,7 +228,7 @@ with st.sidebar:
 if page == "🏠 Vue d'ensemble":
 
     st.markdown('<p class="main-title">⚖️ Affaire Valérie Bacot</p>', unsafe_allow_html=True)
-    st.markdown('<p class="subtitle">Analyse computationnelle des narratifs médiatiques et populaires · Corpus 2017–2023</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Analyse computationnelle des narratifs · Articles de presse 2017–2023 · Commentaires YouTube analysés séparément</p>', unsafe_allow_html=True)
 
     # Métriques
     col1, col2, col3, col4, col5 = st.columns(5)
@@ -236,12 +250,13 @@ if page == "🏠 Vue d'ensemble":
     col_left, col_right = st.columns([3, 2])
 
     with col_left:
-        st.markdown('<p class="section-header">Distribution des narratifs dominants</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">Distribution des narratifs — Articles de presse</p>', unsafe_allow_html=True)
 
-        if not df_n.empty:
-            df_plot = df_n[df_n['categorie_dominante'] != 'non_classe'].copy()
+        if not df_articles.empty:
+            df_plot = (df_articles.groupby('categorie_dominante').size()
+                       .reset_index(name='n_documents'))
+            df_plot = df_plot[df_plot['categorie_dominante'] != 'non_classe'].copy()
             df_plot['label'] = df_plot['categorie_dominante'].map(LABELS_FR)
-            df_plot['couleur'] = df_plot['categorie_dominante'].map(COULEURS)
             df_plot = df_plot.sort_values('n_documents', ascending=True)
 
             fig = px.bar(
@@ -252,7 +267,7 @@ if page == "🏠 Vue d'ensemble":
                 color='categorie_dominante',
                 color_discrete_map=COULEURS,
                 text='n_documents',
-                labels={'n_documents': 'Nombre de documents', 'label': ''},
+                labels={'n_documents': 'Nombre d\'articles', 'label': ''},
             )
             fig.update_traces(textposition='outside', showlegend=False)
             fig.update_layout(
@@ -264,10 +279,12 @@ if page == "🏠 Vue d'ensemble":
             st.plotly_chart(fig, use_container_width=True)
 
     with col_right:
-        st.markdown('<p class="section-header">Répartition par type</p>', unsafe_allow_html=True)
+        st.markdown('<p class="section-header">Répartition des narratifs</p>', unsafe_allow_html=True)
 
-        if not df_n.empty:
-            df_pie = df_n[df_n['categorie_dominante'] != 'non_classe'].copy()
+        if not df_articles.empty:
+            df_pie = (df_articles.groupby('categorie_dominante').size()
+                      .reset_index(name='n_documents'))
+            df_pie = df_pie[df_pie['categorie_dominante'] != 'non_classe'].copy()
             df_pie['label'] = df_pie['categorie_dominante'].map(LABELS_FR)
 
             fig2 = px.pie(
@@ -307,18 +324,18 @@ if page == "🏠 Vue d'ensemble":
 elif page == "📊 Narratifs":
 
     st.markdown('<p class="main-title">📊 Analyse des narratifs</p>', unsafe_allow_html=True)
-    st.markdown('<p class="subtitle">Classification lexicale en 8 catégories · Comparaison par type de source</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Classification lexicale en 8 catégories · Articles de presse uniquement · Comparaison par source</p>', unsafe_allow_html=True)
 
-    if df_r.empty:
-        st.error("Fichier resultats_classification.csv introuvable.")
+    if df_articles.empty:
+        st.error("Aucun article de presse trouvé dans les données de classification.")
         st.stop()
 
     # Heatmap narratifs × sources
-    st.markdown('<p class="section-header">Intensité des narratifs par type de source</p>', unsafe_allow_html=True)
+    st.markdown('<p class="section-header">Intensité des narratifs par type de source — Articles de presse</p>', unsafe_allow_html=True)
     st.caption("Score moyen des termes caractéristiques par catégorie, selon le type de source. Plus la valeur est élevée, plus ce narratif est présent dans cette source.")
 
-    score_cols = [f"score_{c}" for c in CATEGORIES if f"score_{c}" in df_r.columns]
-    pivot = df_r.groupby('type_source')[score_cols].mean().round(1)
+    score_cols = [f"score_{c}" for c in CATEGORIES if f"score_{c}" in df_articles.columns]
+    pivot = df_articles.groupby('type_source')[score_cols].mean().round(1)
     pivot = pivot[pivot.index != 'youtube_video']
     pivot.columns = [c.replace('score_', '').replace('_', ' ') for c in pivot.columns]
 
@@ -355,35 +372,33 @@ elif page == "📊 Narratifs":
             st.markdown(DESCRIPTIONS.get(cat_choisie, ''))
 
         with col_stats:
-            n_docs = int((df_r['categorie_dominante'] == cat_choisie).sum())
-            pct = n_docs / len(df_r) * 100
-            st.metric("Documents dans cette catégorie", n_docs)
-            st.metric("Part du corpus", f"{pct:.1f}%")
+            n_docs = int((df_articles['categorie_dominante'] == cat_choisie).sum())
+            pct = n_docs / len(df_articles) * 100
+            st.metric("Articles dans cette catégorie", n_docs)
+            st.metric("Part du corpus presse", f"{pct:.1f}%")
 
-        # Distribution articles vs commentaires
-        subset = df_r[df_r['categorie_dominante'] == cat_choisie]
+        subset = df_articles[df_articles['categorie_dominante'] == cat_choisie]
 
         col_g1, col_g2 = st.columns(2)
 
         with col_g1:
-            type_counts = subset['type_doc'].value_counts().reset_index()
-            type_counts.columns = ['type', 'n']
+            src_type = subset['type_source'].value_counts().reset_index()
+            src_type.columns = ['source', 'n']
             fig_type = px.pie(
-                type_counts, values='n', names='type',
-                title="Articles vs Commentaires",
-                color_discrete_sequence=['#2E75B6', '#f1c44e'],
+                src_type.head(6), values='n', names='source',
+                title="Répartition par type de source",
                 hole=0.3,
             )
             fig_type.update_layout(height=280, margin=dict(t=30, b=0))
             st.plotly_chart(fig_type, use_container_width=True)
 
         with col_g2:
-            src_counts = subset['type_source'].value_counts().head(6).reset_index()
+            src_counts = subset['sitename'].value_counts().head(8).reset_index()
             src_counts.columns = ['source', 'n']
             fig_src = px.bar(
                 src_counts, x='n', y='source',
                 orientation='h',
-                title="Top sources",
+                title="Top titres de presse",
                 color_discrete_sequence=['#4e9af1'],
                 text='n',
             )
@@ -473,9 +488,9 @@ elif page == "🔵 Clusters":
 elif page == "💬 Explorer le corpus":
 
     st.markdown('<p class="main-title">💬 Explorer le corpus</p>', unsafe_allow_html=True)
-    st.markdown('<p class="subtitle">Navigue dans les 953 documents · Filtres par narratif, source et type</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Articles de presse · Filtres par narratif, source et longueur · Les commentaires YouTube sont dans la page dédiée</p>', unsafe_allow_html=True)
 
-    if df_r.empty:
+    if df_articles.empty:
         st.error("Données de classification introuvables.")
         st.stop()
 
@@ -490,28 +505,28 @@ elif page == "💬 Explorer le corpus":
             default=[]
         )
     with col_f2:
-        filtre_type = st.multiselect(
-            "Type de document",
-            options=['article', 'commentaire'],
+        filtre_source = st.multiselect(
+            "Type de source",
+            options=sorted(df_articles['type_source'].dropna().unique().tolist()),
             default=[]
         )
     with col_f3:
-        filtre_source = st.multiselect(
-            "Type de source",
-            options=sorted(df_r['type_source'].dropna().unique().tolist()),
+        filtre_sitename = st.multiselect(
+            "Titre de presse",
+            options=sorted(df_articles['sitename'].dropna().unique().tolist()),
             default=[]
         )
     with col_f4:
         min_mots = st.slider("Longueur minimale (mots)", 0, 2000, 0, step=50)
 
     # Application des filtres
-    df_filtered = df_r.copy()
+    df_filtered = df_articles.copy()
     if filtre_narratif:
         df_filtered = df_filtered[df_filtered['categorie_dominante'].isin(filtre_narratif)]
-    if filtre_type:
-        df_filtered = df_filtered[df_filtered['type_doc'].isin(filtre_type)]
     if filtre_source:
         df_filtered = df_filtered[df_filtered['type_source'].isin(filtre_source)]
+    if filtre_sitename:
+        df_filtered = df_filtered[df_filtered['sitename'].isin(filtre_sitename)]
     if min_mots > 0:
         df_filtered = df_filtered[df_filtered['word_count'] >= min_mots]
 
@@ -580,19 +595,19 @@ elif page == "💬 Explorer le corpus":
 elif page == "📈 Évolution temporelle":
 
     st.markdown('<p class="main-title">📈 Évolution temporelle des narratifs</p>', unsafe_allow_html=True)
-    st.markdown('<p class="subtitle">Comment les discours ont évolué entre 2017 et 2023</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Articles de presse uniquement · Évolution 2017–2023 · Pour les commentaires YouTube voir la page dédiée</p>', unsafe_allow_html=True)
 
-    if df_r.empty:
+    if df_articles.empty:
         st.error("Données introuvables.")
         st.stop()
 
-    df_dates = df_r[df_r['date'].notna() & (df_r['date'] != '')].copy()
+    df_dates = df_articles[df_articles['date'].notna() & (df_articles['date'] != '')].copy()
     df_dates['date_parsed'] = pd.to_datetime(df_dates['date'], errors='coerce')
     df_dates = df_dates.dropna(subset=['date_parsed'])
     df_dates['annee_mois'] = df_dates['date_parsed'].dt.to_period('M').astype(str)
 
     if df_dates.empty:
-        st.warning("Pas assez de documents datés pour l'analyse temporelle.")
+        st.warning("Pas assez d'articles datés pour l'analyse temporelle.")
         st.stop()
 
     pivot = df_dates.groupby(['annee_mois', 'categorie_dominante']).size().unstack(fill_value=0)
@@ -637,7 +652,382 @@ elif page == "📈 Évolution temporelle":
 
 
 # ════════════════════════════════════════════════════════════════════════════
-# PAGE 6 : RECHERCHE QUALITATIVE
+# PAGE 6 : COMMENTAIRES YOUTUBE
+# ════════════════════════════════════════════════════════════════════════════
+
+elif page == "🎬 Commentaires YouTube":
+
+    st.markdown('<p class="main-title">🎬 Commentaires YouTube</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Analyse des 25 503 commentaires · 93 chaînes · 5 axes comparables à la presse</p>', unsafe_allow_html=True)
+
+    df_yt = charger_commentaires_yt()
+
+    if df_yt.empty:
+        st.error("Données commentaires introuvables. Lancez d'abord : `python analyser_commentaires_youtube.py`")
+        st.stop()
+
+    # ── Métriques ──
+    col1, col2, col3, col4, col5 = st.columns(5)
+    with col1:
+        st.metric("Commentaires", f"{len(df_yt):,}")
+    with col2:
+        st.metric("Vidéos uniques", df_yt['video_url'].nunique() if 'video_url' in df_yt.columns else "—")
+    with col3:
+        st.metric("Chaînes", df_yt['chaine'].nunique() if 'chaine' in df_yt.columns else "—")
+    with col4:
+        n_classe = (df_yt['narratif'] != 'non_classe').sum() if 'narratif' in df_yt.columns else 0
+        st.metric("Avec narratif", f"{n_classe:,}")
+    with col5:
+        likes_med = int(df_yt['likes'].median()) if 'likes' in df_yt.columns else 0
+        st.metric("Likes médians", likes_med)
+
+    st.divider()
+
+    onglets = st.tabs([
+        "① Narratifs vs Presse",
+        "② Évolution temporelle",
+        "③ Polarité & affect",
+        "④ Clusters",
+        "⑤ Engagement",
+    ])
+
+    # ── Onglet 1 : Narratifs vs Presse ──
+    with onglets[0]:
+        st.markdown('<p class="section-header">Comparaison des narratifs : Commentaires vs Articles</p>', unsafe_allow_html=True)
+
+        categories_yt = [c for c in CATEGORIES if c in df_yt.get('narratif', pd.Series()).unique() or True]
+
+        col_l, col_r = st.columns(2)
+
+        with col_l:
+            st.markdown("**Commentaires YouTube**")
+            pct_yt = (df_yt['narratif'].value_counts(normalize=True) * 100
+                      ).reindex(CATEGORIES + ['non_classe'], fill_value=0).reset_index()
+            pct_yt.columns = ['narratif', 'pct']
+            pct_yt['label'] = pct_yt['narratif'].map(LABELS_FR)
+            pct_yt['couleur'] = pct_yt['narratif'].map(COULEURS)
+            pct_yt = pct_yt.sort_values('pct', ascending=True)
+            fig_yt = px.bar(pct_yt, x='pct', y='label', orientation='h',
+                            color='narratif', color_discrete_map=COULEURS,
+                            text=pct_yt['pct'].map('{:.1f}%'.format),
+                            labels={'pct': '% des commentaires', 'label': ''})
+            fig_yt.update_traces(textposition='outside', showlegend=False)
+            fig_yt.update_layout(height=380, margin=dict(l=0, r=50, t=5, b=5),
+                                 plot_bgcolor='white', xaxis=dict(showgrid=True, gridcolor='#eee'))
+            st.plotly_chart(fig_yt, use_container_width=True)
+
+        with col_r:
+            st.markdown("**Articles de presse**")
+            if not df_r.empty and 'categorie_dominante' in df_r.columns:
+                df_art = df_r[df_r.get('type_doc', pd.Series(['article'] * len(df_r))) != 'commentaire'] if 'type_doc' in df_r.columns else df_r
+                pct_art = (df_art['categorie_dominante'].value_counts(normalize=True) * 100
+                           ).reindex(CATEGORIES + ['non_classe'], fill_value=0).reset_index()
+                pct_art.columns = ['narratif', 'pct']
+                pct_art['label'] = pct_art['narratif'].map(LABELS_FR)
+                pct_art = pct_art.sort_values('pct', ascending=True)
+                fig_art = px.bar(pct_art, x='pct', y='label', orientation='h',
+                                 color='narratif', color_discrete_map=COULEURS,
+                                 text=pct_art['pct'].map('{:.1f}%'.format),
+                                 labels={'pct': '% des articles', 'label': ''})
+                fig_art.update_traces(textposition='outside', showlegend=False)
+                fig_art.update_layout(height=380, margin=dict(l=0, r=50, t=5, b=5),
+                                      plot_bgcolor='white', xaxis=dict(showgrid=True, gridcolor='#eee'))
+                st.plotly_chart(fig_art, use_container_width=True)
+            else:
+                st.info("Lancez `python Classifier_bacot.py` pour charger les résultats presse.")
+
+        # Heatmap de comparaison
+        if not df_r.empty and 'categorie_dominante' in df_r.columns:
+            st.markdown('<p class="section-header">Écart commentaires − presse (en points de %)</p>', unsafe_allow_html=True)
+            df_art2 = df_r[df_r.get('type_doc', pd.Series(['article']*len(df_r))) != 'commentaire'] if 'type_doc' in df_r.columns else df_r
+            pct_yt_s  = df_yt['narratif'].value_counts(normalize=True) * 100
+            pct_art_s = df_art2['categorie_dominante'].value_counts(normalize=True) * 100
+            ecart = (pct_yt_s.reindex(CATEGORIES, fill_value=0) -
+                     pct_art_s.reindex(CATEGORIES, fill_value=0)).rename('écart (pp)').reset_index()
+            ecart.columns = ['narratif', 'ecart']
+            ecart['label'] = ecart['narratif'].map(LABELS_FR)
+            ecart = ecart.sort_values('ecart', ascending=True)
+            colors_ecart = ['#e74c3c' if v < 0 else '#27ae60' for v in ecart['ecart']]
+            fig_ecart = go.Figure(go.Bar(
+                x=ecart['ecart'], y=ecart['label'], orientation='h',
+                marker_color=colors_ecart, opacity=0.85,
+                text=ecart['ecart'].map('{:+.1f} pp'.format), textposition='outside',
+            ))
+            fig_ecart.add_vline(x=0, line_color='#333', line_width=1)
+            fig_ecart.update_layout(height=320, margin=dict(l=0, r=80, t=5, b=5),
+                                    plot_bgcolor='white',
+                                    xaxis=dict(showgrid=True, gridcolor='#eee', title='points de pourcentage'),
+                                    yaxis=dict(title=''))
+            st.plotly_chart(fig_ecart, use_container_width=True)
+            st.caption("Vert = sur-représenté dans les commentaires · Rouge = sur-représenté dans la presse")
+
+    # ── Onglet 2 : Évolution temporelle ──
+    with onglets[1]:
+        st.markdown('<p class="section-header">Évolution mensuelle des commentaires</p>', unsafe_allow_html=True)
+
+        df_t = df_yt[df_yt['date'].notna()].copy()
+        df_t['mois'] = df_t['date'].dt.to_period('M').astype(str)
+        pivot_t = df_t.groupby(['mois', 'narratif']).size().unstack(fill_value=0).reset_index()
+
+        fig_t = go.Figure()
+        for cat in CATEGORIES:
+            if cat in pivot_t.columns:
+                fig_t.add_trace(go.Scatter(
+                    x=pivot_t['mois'], y=pivot_t[cat],
+                    name=LABELS_FR.get(cat, cat),
+                    line=dict(color=COULEURS.get(cat, '#aaa')),
+                    mode='lines', stackgroup='one', fill='tonexty',
+                ))
+        # Dates clés
+        for date_str, label in [("2021-06", "Procès"), ("2021-07", "Verdict")]:
+            fig_t.add_vline(x=date_str, line_dash="dash", line_color="#e74c3c", opacity=0.7,
+                            annotation_text=label, annotation_position="top left")
+        fig_t.update_layout(
+            height=420, margin=dict(l=0, r=0, t=10, b=10),
+            plot_bgcolor='white',
+            xaxis=dict(showgrid=True, gridcolor='#eee', tickangle=-45),
+            yaxis=dict(showgrid=True, gridcolor='#eee', title='Nb commentaires/mois'),
+            hovermode='x unified',
+            legend=dict(orientation='v', x=1.01, y=1, font=dict(size=10)),
+        )
+        st.plotly_chart(fig_t, use_container_width=True)
+
+        # Narratifs par période
+        st.markdown('<p class="section-header">Narratifs par période clé</p>', unsafe_allow_html=True)
+
+        if 'periode' in df_yt.columns:
+            periodes_ordre = ["Avant procès", "Procès (juin 2021)", "Verdict + été 2021", "2022", "2023", "2024+"]
+            pivot_p = df_yt.groupby(['periode', 'narratif']).size().unstack(fill_value=0)
+            pivot_p = pivot_p.reindex([p for p in periodes_ordre if p in pivot_p.index])
+            pivot_p_pct = pivot_p.div(pivot_p.sum(axis=1), axis=0) * 100
+
+            fig_p = go.Figure()
+            for cat in CATEGORIES:
+                if cat in pivot_p_pct.columns:
+                    fig_p.add_trace(go.Bar(
+                        name=LABELS_FR.get(cat, cat),
+                        x=pivot_p_pct.index.tolist(),
+                        y=pivot_p_pct[cat].values,
+                        marker_color=COULEURS.get(cat, '#aaa'),
+                    ))
+            fig_p.update_layout(
+                barmode='stack', height=380,
+                margin=dict(l=0, r=0, t=10, b=10),
+                plot_bgcolor='white',
+                yaxis=dict(title='% des commentaires de la période'),
+                legend=dict(font=dict(size=10)),
+            )
+            st.plotly_chart(fig_p, use_container_width=True)
+
+    # ── Onglet 3 : Polarité & affect ──
+    with onglets[2]:
+        st.markdown('<p class="section-header">Polarité et affect des commentaires</p>', unsafe_allow_html=True)
+
+        if 'polarite' not in df_yt.columns:
+            st.warning("Colonne 'polarite' absente — relancez analyser_commentaires_youtube.py")
+        else:
+            COULEURS_POL = {
+                'positif': '#27ae60', 'negatif': '#e74c3c',
+                'empathique': '#3498db', 'hostile': '#e67e22', 'neutre': '#95a5a6',
+            }
+            col_g, col_d = st.columns([1, 2])
+
+            with col_g:
+                pol_counts = df_yt['polarite'].value_counts().reset_index()
+                pol_counts.columns = ['polarite', 'n']
+                pol_counts['couleur'] = pol_counts['polarite'].map(COULEURS_POL)
+                fig_pol = px.pie(pol_counts, values='n', names='polarite',
+                                 color='polarite', color_discrete_map=COULEURS_POL,
+                                 hole=0.4, title='Distribution globale')
+                fig_pol.update_traces(textposition='inside', textinfo='percent+label')
+                fig_pol.update_layout(height=320, margin=dict(l=0, r=0, t=40, b=0),
+                                      showlegend=False)
+                st.plotly_chart(fig_pol, use_container_width=True)
+
+            with col_d:
+                pivot_pol_n = df_yt.groupby(['narratif', 'polarite']).size().unstack(fill_value=0)
+                pivot_pol_n_pct = pivot_pol_n.div(pivot_pol_n.sum(axis=1), axis=0) * 100
+                cats_ord = [c for c in CATEGORIES + ['non_classe'] if c in pivot_pol_n_pct.index]
+                pivot_pol_n_pct = pivot_pol_n_pct.loc[cats_ord]
+
+                fig_pol2 = go.Figure()
+                for pol in ['positif', 'empathique', 'neutre', 'hostile', 'negatif']:
+                    if pol in pivot_pol_n_pct.columns:
+                        fig_pol2.add_trace(go.Bar(
+                            name=pol, x=[LABELS_FR.get(c, c) for c in pivot_pol_n_pct.index],
+                            y=pivot_pol_n_pct[pol].values,
+                            marker_color=COULEURS_POL.get(pol, '#aaa'),
+                        ))
+                fig_pol2.update_layout(
+                    barmode='stack', height=320,
+                    title='Tonalité par narratif dominant',
+                    margin=dict(l=0, r=0, t=40, b=10),
+                    plot_bgcolor='white',
+                    yaxis=dict(title='%'),
+                    xaxis=dict(tickangle=-30),
+                    legend=dict(font=dict(size=9)),
+                )
+                st.plotly_chart(fig_pol2, use_container_width=True)
+
+            # Top commentaires positifs et négatifs
+            col_pos, col_neg = st.columns(2)
+            with col_pos:
+                st.markdown("**Top 5 commentaires positifs (par likes)**")
+                top_pos = df_yt[df_yt['polarite'] == 'positif'].nlargest(5, 'likes')[['texte', 'likes', 'chaine_courte']]
+                for _, row in top_pos.iterrows():
+                    st.markdown(f'<div class="citation-box">"{str(row["texte"])[:200]}..."<br>'
+                                f'<span class="source-tag">{row.get("chaine_courte", "")} · {int(row["likes"])} likes</span></div>',
+                                unsafe_allow_html=True)
+            with col_neg:
+                st.markdown("**Top 5 commentaires négatifs (par likes)**")
+                top_neg = df_yt[df_yt['polarite'] == 'negatif'].nlargest(5, 'likes')[['texte', 'likes', 'chaine_courte']]
+                for _, row in top_neg.iterrows():
+                    st.markdown(f'<div class="citation-box">"{str(row["texte"])[:200]}..."<br>'
+                                f'<span class="source-tag">{row.get("chaine_courte", "")} · {int(row["likes"])} likes</span></div>',
+                                unsafe_allow_html=True)
+
+    # ── Onglet 4 : Clusters ──
+    with onglets[3]:
+        st.markdown('<p class="section-header">Clustering TF-IDF / K-Means</p>', unsafe_allow_html=True)
+
+        if 'cluster' not in df_yt.columns or df_yt['cluster'].isna().all():
+            st.info("Clusters non disponibles — relancez analyser_commentaires_youtube.py")
+        else:
+            df_cl = df_yt[df_yt['cluster'].notna()].copy()
+            df_cl['cluster'] = df_cl['cluster'].astype(int)
+
+            # Distribution
+            cl_counts = df_cl.groupby(['cluster', 'cluster_mots']).size().reset_index(name='n')
+            cl_counts['label'] = cl_counts.apply(lambda r: f"C{int(r['cluster'])}: {str(r['cluster_mots'])[:40]}", axis=1)
+
+            col_cl1, col_cl2 = st.columns([1, 2])
+            with col_cl1:
+                fig_cl = px.bar(cl_counts, x='n', y='label', orientation='h',
+                                color='n', color_continuous_scale='Blues',
+                                labels={'n': 'Commentaires', 'label': ''},
+                                title='Taille des clusters')
+                fig_cl.update_traces(showlegend=False)
+                fig_cl.update_layout(height=320, margin=dict(l=0, r=20, t=40, b=10),
+                                     plot_bgcolor='white', coloraxis_showscale=False)
+                st.plotly_chart(fig_cl, use_container_width=True)
+
+            with col_cl2:
+                pivot_cl = df_cl.groupby(['cluster', 'narratif']).size().unstack(fill_value=0)
+                pivot_cl_pct = pivot_cl.div(pivot_cl.sum(axis=1), axis=0) * 100
+                fig_cl2 = go.Figure()
+                for cat in CATEGORIES:
+                    if cat in pivot_cl_pct.columns:
+                        fig_cl2.add_trace(go.Bar(
+                            name=LABELS_FR.get(cat, cat),
+                            x=[f"C{c}" for c in pivot_cl_pct.index],
+                            y=pivot_cl_pct[cat].values,
+                            marker_color=COULEURS.get(cat, '#aaa'),
+                        ))
+                fig_cl2.update_layout(
+                    barmode='stack', height=320, title='Composition en narratifs par cluster',
+                    margin=dict(l=0, r=0, t=40, b=10),
+                    plot_bgcolor='white',
+                    yaxis=dict(title='%'),
+                    legend=dict(font=dict(size=9)),
+                )
+                st.plotly_chart(fig_cl2, use_container_width=True)
+
+            # Exemples par cluster
+            st.markdown('<p class="section-header">Exemples par cluster</p>', unsafe_allow_html=True)
+            cluster_sel = st.selectbox("Cluster", sorted(df_cl['cluster'].unique()),
+                                       format_func=lambda c: f"Cluster {c} — {df_cl[df_cl['cluster']==c]['cluster_mots'].iloc[0][:50]}")
+            exemples = df_cl[df_cl['cluster'] == cluster_sel].nlargest(5, 'likes')[['texte', 'likes', 'narratif', 'chaine_courte']]
+            for _, row in exemples.iterrows():
+                cat = row.get('narratif', '')
+                st.markdown(
+                    f'<div class="citation-box">{str(row["texte"])[:300]}'
+                    f'<br><span class="source-tag">{row.get("chaine_courte", "")} · '
+                    f'{int(row["likes"])} likes · {LABELS_FR.get(cat, cat)}</span></div>',
+                    unsafe_allow_html=True,
+                )
+
+    # ── Onglet 5 : Engagement ──
+    with onglets[4]:
+        st.markdown('<p class="section-header">Sociologie de l\'engagement</p>', unsafe_allow_html=True)
+
+        col_e1, col_e2 = st.columns(2)
+
+        with col_e1:
+            # Likes moyens par narratif
+            likes_n = (df_yt.groupby('narratif')['likes']
+                       .agg(moy='mean', med='median', total='sum', n='count')
+                       .sort_values('moy', ascending=True).reset_index())
+            likes_n['label'] = likes_n['narratif'].map(LABELS_FR)
+            fig_eng = px.bar(likes_n, x='moy', y='label', orientation='h',
+                             color='narratif', color_discrete_map=COULEURS,
+                             text=likes_n['moy'].map('{:.1f}'.format),
+                             labels={'moy': 'Likes moyens/commentaire', 'label': ''},
+                             title='Likes moyens par narratif')
+            fig_eng.update_traces(textposition='outside', showlegend=False)
+            fig_eng.update_layout(height=360, margin=dict(l=0, r=60, t=40, b=10),
+                                  plot_bgcolor='white', xaxis=dict(showgrid=True, gridcolor='#eee'))
+            st.plotly_chart(fig_eng, use_container_width=True)
+
+        with col_e2:
+            # Top chaînes : volume + likes
+            top_ch = df_yt.groupby('chaine_courte').agg(
+                n=('likes', 'count'),
+                likes_moy=('likes', 'mean'),
+                likes_total=('likes', 'sum'),
+            ).sort_values('n', ascending=False).head(12).reset_index()
+
+            fig_ch = px.scatter(top_ch, x='n', y='likes_moy',
+                                size='likes_total', text='chaine_courte',
+                                labels={'n': 'Nb commentaires', 'likes_moy': 'Likes moyens',
+                                        'likes_total': 'Likes totaux'},
+                                title='Chaînes : volume vs engagement',
+                                color='likes_moy', color_continuous_scale='Blues')
+            fig_ch.update_traces(textposition='top center', textfont_size=8)
+            fig_ch.update_layout(height=360, margin=dict(l=0, r=0, t=40, b=10),
+                                 plot_bgcolor='white', coloraxis_showscale=False)
+            st.plotly_chart(fig_ch, use_container_width=True)
+
+        # Top commentaires globaux
+        st.markdown('<p class="section-header">Top 10 commentaires les plus likés</p>', unsafe_allow_html=True)
+        top10 = df_yt.nlargest(10, 'likes')[['texte', 'likes', 'chaine_courte', 'narratif', 'polarite', 'date']]
+        for _, row in top10.iterrows():
+            cat = row.get('narratif', '')
+            pol = row.get('polarite', '')
+            couleur_cat = COULEURS.get(cat, '#aaa')
+            st.markdown(
+                f'<div class="citation-box">'
+                f'{str(row["texte"])[:280]}'
+                f'<br><span class="source-tag">'
+                f'{row.get("chaine_courte", "")} · {int(row["likes"])} likes · '
+                f'<span class="narratif-badge" style="background:{couleur_cat}">{LABELS_FR.get(cat, cat)}</span>'
+                f'</span></div>',
+                unsafe_allow_html=True,
+            )
+
+        # Filtre par narratif
+        st.divider()
+        st.markdown("**Explorer par narratif**")
+        narratif_sel = st.selectbox("Filtrer par narratif", ['(tous)'] + CATEGORIES,
+                                    format_func=lambda x: LABELS_FR.get(x, x))
+        n_afficher = st.slider("Nombre de commentaires", 5, 50, 10)
+        df_filtree = df_yt if narratif_sel == '(tous)' else df_yt[df_yt['narratif'] == narratif_sel]
+        for _, row in df_filtree.nlargest(n_afficher, 'likes').iterrows():
+            cat = row.get('narratif', '')
+            couleur_cat = COULEURS.get(cat, '#aaa')
+            date_str = str(row['date'])[:10] if pd.notna(row.get('date')) else ''
+            st.markdown(
+                f'<div class="citation-box">'
+                f'{str(row["texte"])[:300]}'
+                f'<br><span class="source-tag">'
+                f'{row.get("chaine_courte", "")} · {date_str} · {int(row["likes"])} likes · '
+                f'<span class="narratif-badge" style="background:{couleur_cat}">{LABELS_FR.get(cat, cat)}</span>'
+                f'</span></div>',
+                unsafe_allow_html=True,
+            )
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# PAGE 7 : RECHERCHE QUALITATIVE
 # ════════════════════════════════════════════════════════════════════════════
 
 elif page == "🔍 Recherche qualitative":

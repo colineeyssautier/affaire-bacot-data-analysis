@@ -15,6 +15,7 @@ Usage :
     3. python scraper_youtube_bacot.py
 """
 
+import os
 import json
 import time
 import logging
@@ -24,9 +25,7 @@ from pathlib import Path
 from googleapiclient.discovery import build
 from googleapiclient.errors import HttpError
 
-# ─── ⚠ COLLE TA CLÉ API ICI ──────────────────────────────────────────────────
-YOUTUBE_API_KEY = "AIzaSyD_r8xosGQ8AeX_CNaMRkgXxrn4wW6_cfI"
-# ─────────────────────────────────────────────────────────────────────────────
+YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 
 # ─── Requêtes de recherche ────────────────────────────────────────────────────
 
@@ -75,9 +74,9 @@ log = logging.getLogger(__name__)
 # ─── Initialisation API ───────────────────────────────────────────────────────
 
 def init_youtube():
-    if YOUTUBE_API_KEY == "COLLE_TA_CLE_ICI":
-        log.error("⚠ Tu n'as pas renseigné ta clé API YouTube !")
-        log.error("Ouvre scraper_youtube_bacot.py et colle ta clé dans YOUTUBE_API_KEY.")
+    if not YOUTUBE_API_KEY:
+        log.error("⚠ Variable d'environnement YOUTUBE_API_KEY manquante.")
+        log.error("Copie .env.example en .env et renseigne ta clé YouTube Data v3.")
         return None
     return build("youtube", "v3", developerKey=YOUTUBE_API_KEY)
 

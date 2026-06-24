@@ -30,7 +30,7 @@ import requests
 # CONFIGURATION — à modifier selon tes besoins
 # ─────────────────────────────────────────────
 
-API_KEY = "AIzaSyD_r8xosGQ8AeX_CNaMRkgXxrn4wW6_cfI"  # Ta clé YouTube Data v3
+API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 
 INPUT_FILE = "nouvelles_videos_bacot.json"   # Fichier de vidéos découvertes
 OUTPUT_JSON = "commentaires_nouvelles_videos.json"

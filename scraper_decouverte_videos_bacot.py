@@ -21,7 +21,7 @@ from googleapiclient.errors import HttpError
 # CONFIGURATION
 # ─────────────────────────────────────────────
 
-API_KEY = "AIzaSyD_r8xosGQ8AeX_CNaMRkgXxrn4wW6_cfI"
+API_KEY = os.getenv("YOUTUBE_API_KEY", "")
 
 OUTPUT_FILE = "nouvelles_videos_bacot.json"
 LOG_FILE = "decouverte_videos.log"

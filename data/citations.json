@@ -4,61 +4,61 @@
     "articles": [
       {
         "texte": "… Pour rappel, Valérie Bacot a été condamnée pour \"assassinat\" à 4 ans de prison dont 3 avec sursis. Elle est ressortie libre, ayant déjà réalisé une année de détention après son arrestation.\nValérie Bacot, accusée et victime\nTout au long de la semaine, Valérie Bacot est une figure ambivalente. Car si elle se retrouve sur le banc des accusés, la femme de 40 ans est aussi une victime. Pendant 2 …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-26",
         "titre": "Valérie Bacot : les 10 personnalités phares du procès",
         "score": 31.0,
         "url": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/saone-et-loire/chalon-sur-saone/valerie-bacot-les-10-personnalites-phares-du-proces-2152939.html"
       },
       {
-        "texte": "… Or, ce genre de faits \"continuent à perdurer\" à notre époque.\n\"Les failles restent très importantes\"\n\"Il faut que notre société soit beaucoup plus protectrice avec les femmes victimes de violences\", martèle l'invitée d'Europe 1. \"Il faut que la société prenne réellement conscience de la dangerosité des hommes violents, et donc de la nécessité de protéger …",
-        "source": "autre",
-        "date": "2021-06-26",
-        "titre": "Procès de Valérie Bacot : \"Il faut que notre société soit plus protectrice avec les victimes\"",
-        "score": 9.0,
-        "url": "https://www.europe1.fr/societe/proces-de-valerie-bacot-il-faut-que-notre-societe-soit-plus-protectrice-avec-les-victimes-4054198"
+        "texte": "… Ça permet ensuite à la justice pénale de faire son travail. La justice et ce type d’instances peuvent très bien coexister donc je ne comprends pas tellement les propos de la ministre.\nPour rappel, si vous êtes victime de violence conjugale, le 39 19 est un numéro de téléphone gratuit et ouvert 7 jours/7 et 24 heures/24 pour les femmes victimes de violences",
+        "source": "archive_web",
+        "date": "2022-09-26",
+        "titre": "ENTRETIEN. Violences conjugales : « Le système judiciaire est totalement imparfait »",
+        "score": 26.0,
+        "url": "https://www.ouest-france.fr/faits-divers/violence-sexuelle/entretien-violences-conjugales-beaucoup-d-articles-de-loi-devraient-etre-reecrits-161c38f6-3d6d-11ed-847a-3c5a9f575a1b"
       },
       {
-        "texte": "… Environ 87% des victimes de violences conjugales sont des femmes, soit 139.200, une proportion stable par rapport à 2019 (125.840 femmes pour 142.310 victimes), selon ces chiffres du ministère, qui ne comptabilisent pas les homicides.\nEn 2020, 102 femmes avaient été tuées sous les coups de leur conjoint ou ex. Elles étaient 146 en 2019. Les victime …",
-        "source": "autre",
-        "date": "2021-11-22",
-        "titre": "En 2020, 159.400 personnes ont été victimes de violences conjugales, dont 139.200 femmes",
-        "score": 9.0,
-        "url": "https://www.huffingtonpost.fr/life/article/violences-conjugales-159-400-victimes-en-2020-dont-139-200-femmes_188851.html"
+        "texte": "Quelques mois seulement sont passés depuis le retentissant procès d’assises à Chalon-sur-Saône dont elle est ressortie condamnée mais libre, soulagée mais « vidée ». Quelques mois seulement, mais ce vendredi soir à Digoin, c’est déjà une autre Valérie Bacot qui est apparue sur la scène de la salle des fêtes. Fini la tête rentrée dans les épaules, fini l’envie de disparaître sous son écharpe, le regard terrorisé et la …",
+        "source": "archive_web",
+        "date": "2021-11-05",
+        "titre": "À Digoin face au public : une Valérie Bacot enfin libérée",
+        "score": 11.0,
+        "url": "https://www.lejsl.com/amp/faits-divers-justice/2021/11/05/a-digoin-face-au-public-une-valerie-bacot-enfin-liberee"
       }
     ],
     "commentaires": [
       {
+        "texte": "Je veux revenir sur le phénomène psychique qui se met en place à l'insu de la victime. Les victimes, en général, évoquent un contexte, des comportements mais ont beaucoup de mal à être précises sur les faits. Il y a une explication. Le cerveau suit un processus, dysfonctionne et crée à l'insu de la …",
+        "chaine": "RTS - Radio Télévision Suisse",
+        "video_titre": "Violence conjugale : pourquoi certaines victimes ne partent pas ? (diffusion 04.",
+        "date": "2025-09-08",
+        "score": 24.0,
+        "url": "https://www.youtube.com/watch?v=mTTEJ1Hue7o#comment_Ugy2kqCtAyTz4F9Yr9B4AaABAg"
+      },
+      {
+        "texte": "alexandredu41\nAlors premièrement, la loi ce n'est pas qu'appliquer des textes \"bêtement\" et \"sans réfléchir\", c'est ce qu'il faut comprendre. Mais vous n'avez pas étudier le droit, je comprend que certains concept peuvent vous sembler abstrait. \nPensez vous vraiment que le juge ici ne réfléchi pas …",
+        "chaine": "CNEWS",
+        "video_titre": "Justice : 10 ans de prison pour avoir tué son mari violeur",
+        "date": "2014-10-30",
+        "score": 15.0,
+        "url": "https://www.youtube.com/watch?v=NgPw5F9qMik#comment_Uggg2imYfkLMyngCoAEC.7-H0Z7-1AXH7-Idp3fYZHM"
+      },
+      {
+        "texte": "Triste et rageant ce témoignage.\nComment peux-ton accepter \nCes violences une fille comme vous si jolie et intelligente pourtant .\n\nVous etiez sûrement en manque daffection ,en lituge avec vos parents .\n\nÇa ressemble a une emprise psychologique a 3000%\nCe type est juste un gros malade ,drogue avec …",
+        "chaine": "Pluriel",
+        "video_titre": "Victime de violences conjugales à 17 ans. Elle témoigne.",
+        "date": "2023-08-24",
+        "score": 14.0,
+        "url": "https://www.youtube.com/watch?v=yYnJGaqRvMI#comment_UgzclXWffuEX2iIVakx4AaABAg"
+      },
+      {
         "texte": "Quelle histoire terrible... Je comprends totalement qu'elle s'en veuille de l'avoir tué, c'est normal, ça aurait dû être le rôle de l'état de la protéger et c'est un acte impardonnable. Pourtant, je pense qu'on a tous compris à quel point il y avait injustice, et à quel point elle était en danger. …",
         "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
+        "video_titre": "",
         "date": "2023-09-23",
         "score": 14.0,
         "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@MrRubikraft"
-      },
-      {
-        "texte": "L'acquittement est une évidence pour moi, ce n'est pas à elle d'être jugée,  si quelqu'un aurait dû l'être c'est cet être immonde qui lui servait de mari. C'était elle ou lui, ces enfants étaient aussi en danger permanent,  je ne comprends même pas qu'on puisse parler d'assassinat, il est évident …",
-        "chaine": "Bercrimes",
-        "video_titre": "Valérie Bacot : Doit-on la condamner lors de son procès? #bercrimes",
-        "date": "2021-05-16",
-        "score": 9.0,
-        "url": "https://www.youtube.com/watch?v=TF_7APBRN1s#comment_@chainefr3944"
-      },
-      {
-        "texte": "Bonjour,\n je ne connaissais pas bien cette affaire alors que j'habite en France !\nMerci à toi pour ta générosité et ton intérêt afin que ces \"crimes\" soient connus par le plus grand nombre.\nPour les victimes de violences physiques et/ou psychologiques c' est une survie de chaque instant et non une …",
-        "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
-        "date": "2021-02-14",
-        "score": 7.0,
-        "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@deliabarsacq16"
-      },
-      {
-        "texte": "J'ai salué les jurés dans cette affaire car je n'aurai pas aimé être à leur place. Comment juger une affaire dans laquelle la justice avait été inexistante à protéger la coupable depuis des années ?  Et en même temps un acquittement aurait pu créer une jurisprudence désastreuse.  Donc ils ont …",
-        "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
-        "date": "2023-09-23",
-        "score": 7.0,
-        "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@cybertumtum"
       }
     ]
   },
@@ -67,7 +67,7 @@
     "articles": [
       {
         "texte": "- JUSTICE - La partie civile a réclamé jeudi une condamnation pour l'exemple, mais sans exiger de peine précise, à l'encontre de Valérie Bacot, jugée pour\n- l'assassinat de son mari violent et proxénète.\nDepuis lundi, Valérie Bacot est jugée devant les Assises de Saône-et-Loire à Chalon-sur-Saône pour l'assassinat de son mari Daniel Polette. Au quatrième jour du procès, jeudi, dans sa plaidoirie, Béatrice Saggio qui …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-25",
         "titre": "Procès de Valérie Bacot : la partie civile réclame une condamnation pour l’exemple | TF1 Info",
         "score": 10.0,
@@ -75,7 +75,7 @@
       },
       {
         "texte": "… pour lui\", déclare-t-il, se souvenant que son frère lui avait \"planté une fourchette dans la main\" après qu'il eut osé lui répondre.\n\"J'habitais la maison du diable car le diable était dedans. Ce n'est pas lui la victime, c'est elle. Elle ne mérite que la liberté\", ajoute Alain Polette.\n\"Dans ses yeux, on voyait la mort\", renchérit Régine Jolivet, une ex-compagne. \"On était sa chose\".\n\"Il aurait pu la tuer\"\nMichèle N …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-24",
         "titre": "Procès de Valérie Bacot: l'accusée aimait son mari proxénète, selon sa mère",
         "score": 8.0,
@@ -83,7 +83,7 @@
       },
       {
         "texte": "Procès de Valérie Bacot : une condamnation \"pour l'exemple\", elle fait un malaise\nLa partie civile a réclamé jeudi une condamnation pour l'exemple, mais sans exiger de peine précise, à l'encontre de Valérie Bacot, jugée pour l'assassinat de son mari violent et proxénète.\nDepuis lundi, Valérie Bacot est jugée devant les Assises de Saône-et-Loire à Chalon-sur-Saône pour l'assassinat de son mari Daniel Polette. Au quatr …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-25",
         "titre": "Procès de Valérie Bacot : une condamnation \"pour l'exemple\", elle fait un malaise",
         "score": 7.0,
@@ -92,36 +92,36 @@
     ],
     "commentaires": [
       {
+        "texte": "Aide qu'elle n'a pas demandé...\nElle mérite d'être condamnée car elle a commis un assassinat, sans même avoir essayé de faire appel à la police.\r\nMais si elle l'a fait, c'est notamment parce qu'elle était sous emprise, isolée par son bourreau, et que dans cette situation d'isolement elle avait le …",
+        "chaine": "AFP",
+        "video_titre": "Violée, battue, prostituée, Valérie Bacot jugée pour avoir tuée son mari proxénè",
+        "date": "2021-06-23",
+        "score": 14.0,
+        "url": "https://www.youtube.com/watch?v=AcbE5yJod9A#comment_UgxjkjGlSXcQur2KfVx4AaABAg.9OrQ1GHCim89Ow-pnsTpEb"
+      },
+      {
+        "texte": "@Tessaiga2 \"prouve\" 😂 j'ai rien à te prouver moi\n\nNahel devait se faire abattre lors du premier délit de fuite qu'il a commis en conduisant une voiture (à 17 ans toujours)\n\nOn insulte le flic de l'avoir tué, mais si nahel avait lui, brisé une famille en roulant sur des gens, personne n'en aurai …",
+        "chaine": "HugoDécrypte - Actus du jour",
+        "video_titre": "Une femme victime de violences conjugales a déclenché son « téléphone grave dang",
+        "date": "2024-02-17",
+        "score": 12.0,
+        "url": "https://www.youtube.com/watch?v=dvAC3-ljfmI#comment_Ugx6HyiJqoI3y9gM43V4AaABAg.A-ceFnIujUWA-uCJyqWqmZ"
+      },
+      {
         "texte": "Affaire difficile...\nElle mérite d'être condamnée car elle a commis un assassinat, sans même avoir essayé de faire appel à la police.\nMais si elle l'a fait, c'est notamment parce qu'elle était sous emprise, isolée par son bourreau, et que dans cette situation d'isolement elle avait le sentiment …",
         "chaine": "Europe 1",
-        "video_titre": "Affaire Bacot : &quot;C&#39;est une femme détruite&quot;, assure Nathalie Tomasi",
+        "video_titre": "",
         "date": "2021-06-23",
         "score": 10.0,
         "url": "https://www.youtube.com/watch?v=7xOsdJh-140#comment_@fragri93"
       },
       {
-        "texte": "Et c'est reparti pour la propagande.\nCette femme est responsable de ses actes. Elle a choisi de vivre avec quelqu'un qui la violait et la prostituait. Rien ne l'empêchait de partir et d'aller porter plainte. Il y a des cas sociaux comme cette femme qui choisissent de suivre et de vivre avec des …",
-        "chaine": "Le Point",
-        "video_titre": "Valérie Bacot, une femme battue, jugée pour avoir tué son mari",
-        "date": "2021-06-23",
+        "texte": "Le problème est là, ils jugent d'abord l'homme avant les faits... \nIl ne s'agit donc pas de prioriser les victimes, leurs souffrances et les conséquences.\nL'objectif est de rendre la justice sur des actes commis pour protéger la société.\nDe permettre aux victimes d'avancer au mieux car le …",
+        "chaine": "Immersion ▸ reportages et documentaires",
+        "video_titre": "Au cœur d’un procès d’assises",
+        "date": "2026-06-21",
         "score": 8.0,
-        "url": "https://www.youtube.com/watch?v=tDji4J1rlIg#comment_@darthtleilaxu4021"
-      },
-      {
-        "texte": "Je pense pas que se faire justice soi-même est la solution mais après ont peut aussi voir les choses différemment et comprendre l'emprise psychologique et la détresse de cette femme pour qui il n'y avait sans doute aucuns échappatoire possible et qui n'a pas su parler par peur des représailles, de …",
-        "chaine": "Le Point",
-        "video_titre": "Valérie Bacot, une femme battue, jugée pour avoir tué son mari",
-        "date": "2021-06-23",
-        "score": 6.0,
-        "url": "https://www.youtube.com/watch?v=tDji4J1rlIg#comment_@aaronnitefr9069"
-      },
-      {
-        "texte": "elle avait pas besoin de tuer porter plainte d'abord après faut partir sous protection sociaux qui lui trouver un appartement  je ne suis pas d'accord avec elle  sinon n'importe quelle femme tuera  son mari dire la même chose peut-être le marais et mauvaise je ne dis pas le contraire le problème …",
-        "chaine": "Canal Crime",
-        "video_titre": "Valérie Bacot : Son procès a bouleversé l’opinion publique",
-        "date": "2025-06-08",
-        "score": 6.0,
-        "url": "https://www.youtube.com/watch?v=1DrcFK5gk9k#comment_@abdel0127"
+        "url": "https://www.youtube.com/watch?v=Wlo9FPBFZ60#comment_UgxmT7VMhGF8Tedmx2x4AaABAg"
       }
     ]
   },
@@ -130,7 +130,7 @@
     "articles": [
       {
         "texte": "… Selon le code pénal, on ne peut considérer qu’il y a légitime défense une fois que l’agression a eu lieu. De plus, l’acte de défense doit stopper \"l’exécution d’un crime ou d’un délit\".\nLors du procès de Jacqueline Sauvage, ses avocates ont plaidé la légitime défense différée, sans parvenir à convaincre les cours d’Assises d’Orléans en octobre 2014 et de Blois …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-17",
         "titre": "Valérie Bacot et Jacqueline Sauvage : quels points communs entre ces deux femmes battues qui ont tué",
         "score": 45.0,
@@ -138,53 +138,53 @@
       },
       {
         "texte": "… s) ou celle lancée par Muriel Robin (3) – « Sauvons celles qui sont encore vivantes » (plus de 780.000 signatures) – toujours sur change.org.\nFaut-il changer la loi ? Depuis plusieurs années, les associations qui luttent contre les féminicides demandent que la loi évolue. La députée LR des Alpes-Maritimes, Marine Brenier, avait même fait une proposition de loi en 2019 pour accorder la présomption de légitime défense …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-23",
         "titre": "La vive émotion provoquée par le procès de Valérie Bacot",
         "score": 25.0,
         "url": "https://www.lanouvellerepublique.fr/a-la-une/la-vive-emotion-provoquee-par-le-proces-de-valerie-bacot"
       },
       {
-        "texte": "… L'affaire devient médiatique et face à la mobilisation, François Hollande accorde une grâce totale à Jacqueline Sauvage en décembre 2016, après le rejet d'une grâce partielle. Aujourd'hui décédée, Jacqueline Sauvage reste une figure symbolique de la lutte contre les violences faites aux femmes.\n56. Affaire Jacqueline Sauvage : François Hollande raconte l …",
-        "source": "autre",
-        "date": "2024-01-16",
-        "titre": "Jaqueline Sauvage, Alexandra Lange, Valérie Bacot… Ces femmes jugées pour avoir tué leur mari violen",
-        "score": 21.0,
-        "url": "https://www.rtl.fr/actu/justice-faits-divers/jaqueline-sauvage-alexandra-lange-valerie-bacot-ces-femmes-jugees-pour-avoir-tue-leur-mari-violent-7900341830"
+        "texte": "même combat ?\nAlexandra Lange, acquittée en 2012\nElle a tué son mari d’un coup de couteau à la gorge, dans la nuit du 18 au 19 juin 2009 à Douai. Trois ans plus tard, la cour d’assises du Nord l’acquittait, reconnaissant la légitime défense. L’avocat général Luc Frémiot, magistrat chargé de porter l’accusation, avait lui-même requis un acq …",
+        "source": "article_presse",
+        "date": "2021-06-16",
+        "titre": "Justice - Saône-et-Loire. Valérie Bacot, Jacqueline Sauvage, Alexandra Lange... même combat ?",
+        "score": 22.0,
+        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/16/valerie-bacot-jacqueline-sauvage-alexandra-lange-meme-combat"
       }
     ],
     "commentaires": [
       {
         "texte": "+BERCRIMES Bien au-delà des horreurs prétendument subies que Valérie Bacot devra prouver devant la cour d'assises, l'aspect émotionnel de cette affaire, en fait et en droit, un acquittement m'« apparaît » juridiquement et légalement très peu probable pour deux raisons.\r\n\n1. L'art. 122-5 du Code …",
         "chaine": "Bercrimes",
-        "video_titre": "Valérie Bacot : Doit-on la condamner lors de son procès? #bercrimes",
+        "video_titre": "",
         "date": "2021-05-14",
         "score": 12.0,
         "url": "https://www.youtube.com/watch?v=TF_7APBRN1s#comment_@Driver-xs4zx"
       },
       {
-        "texte": "Je crois qu'il y a de l'espoir pour Valérie. Au Canada, il y a une jurisprudence prudence concernant une femme qui tue son mari d'une telle manière. C'est le syndrome de la femme battue. Si la France consulte les jurisprudence du Canada elle a des chances d'être acquittée.",
-        "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
-        "date": "2021-02-17",
-        "score": 5.0,
-        "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@annepettigrew9921"
+        "texte": "@generationst1 Il faut envoyer en courrier recommandé AR, ainsi vous avez la preuve de réception par les services du procureur de votre plainte. N'hésitez pas à contacter le tribunal (par courriel ils répondent mieux je pense) afin de confirmer la bonne réception si vous avez un doute et à relancer …",
+        "chaine": "Ça commence aujourd'hui - France Télévisions",
+        "video_titre": "Violences conjugales : son conjoint était gendarme - Ça commence aujourd&#39;hui",
+        "date": "2023-03-19",
+        "score": 10.0,
+        "url": "https://www.youtube.com/watch?v=xyaI8Pq4xWk#comment_UgyrTXka56JTFOgUnph4AaABAg.9nD3Qte9sb99nSCzvTN1qa"
       },
       {
-        "texte": "Ç  est absolument terrifiant \nOUI  Valérie  Bacot etait en légitime défense,  \nIl vat falloire changé les lois sur sa , et mettre le système Canadien",
-        "chaine": "BFMTV",
-        "video_titre": "Valérie Bacot, les coulisses de son procès",
-        "date": "2024-02-05",
-        "score": 3.0,
-        "url": "https://www.youtube.com/watch?v=cQriCTmDNYE#comment_@neyrandmax8800"
+        "texte": "Quel est ce pays sur terre où la \"Justice\" cautionne la violence des hommes sur les femmes et les enfants mais la condamne quand elle s'exerce sur les biens matériels ? Dans le magnifique pays \"\"\"civilisé\"\"\" des droits de l'Homme, la France, qui fait rêver et attire encore bien des étrangers pour …",
+        "chaine": "france tv",
+        "video_titre": "Survivantes – Documentaire complet",
+        "date": "2026-03-11",
+        "score": 9.0,
+        "url": "https://www.youtube.com/watch?v=a_2_BJyQ6k0#comment_Ugw8ZsBB7IR4DJnu7D54AaABAg"
       },
       {
-        "texte": "Je suivais cette affaire lorsque j'étais militante au Collectif Droits des Femmes à Dijon, où Valérie Bacot avait été incarcérée temporairement. Les avocates de Valérie Bacot sont les avocates qui ont défendu Jacqueline Sauvage. Elles sont très motivées à travailler avec les associations , les …",
-        "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
-        "date": "2021-02-17",
-        "score": 3.0,
-        "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@imaneod7803"
+        "texte": "​@clairevg5654 toujours les mêmes aussi, qui sont discriminé et dans la précarité.\nPar contre lors de la guerre contre l'Allemagne nazi, pour libérer la france, \"Cest\" personnes ont combattu l'Allemagne pour libérer ka france. Égaux dans les devoirs, mais pas dans les droits. Quelle belle …",
+        "chaine": "Documentaire Société",
+        "video_titre": "Relations conjugales : l&#39;enfer à domicile",
+        "date": "2024-06-12",
+        "score": 9.0,
+        "url": "https://www.youtube.com/watch?v=whE1XJrMO6w#comment_Ugydz3rt9EP86-QELXB4AaABAg.A4DXEAc1f14A4a-TAn8NdM"
       }
     ]
   },
@@ -192,62 +192,62 @@
     "label": "Discours féministe",
     "articles": [
       {
-        "texte": "… Pour la porte-parole de l'association Osez le Féminisme, Daniela Levy, un féminicide \"est le fait de tuer une femme ou une fille parce que c'est une fille ou une femme : un meurtre en raison du genre\".\nDébut 2022, il est à ce titre reproché aux bénévoles du collectif Féminicides Par Compagnons ou Ex de ne pas prendre en compte les femmes transgenres assassinées d …",
-        "source": "autre",
-        "date": "2022-03-08",
-        "titre": "Le féminicide, un meurtre au-delà des violences conjugales",
-        "score": 72.0,
-        "url": "https://www.marieclaire.fr/feminicide,1424315.asp"
-      },
-      {
         "texte": "… eurs conjoints violents, et fondatrice dès 2011 du premier cabinet spécialisé dans la défense des femmes victimes de violences.\nLe “féminicide non intime” est l’un des quatre types de féminicide recensés par l’OMS (avec le féminicide intime – sur conjoint –, le crime d’honneur et celui lié à la dot). Quel intérêt recouvre cette notion ?\nElle permet d’élargir le champ : on ne parle, en général, de féminicide que dans …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2023-02-08",
         "titre": "“Féminicide non intime” : les femmes sont-elles toujours tuées parce que femmes ?",
         "score": 25.0,
         "url": "https://www.telerama.fr/debats-reportages/feminicide-non-intime-les-femmes-sont-elles-toujours-tuees-parce-que-femmes-7014225.php"
       },
       {
-        "texte": "… outes les affaires de violences conjugales, la notion d’emprise est cette fois encore au cœur des débats. Élevée dans un foyer où le père, souvent absent, et la mère, défaillante, divorcent par deux fois, « Valérie Bacot a grandi dans une carence affective et éducative précoce », souligne Denis Prieur, psychiatre expert auprès de la cour d’appel de Dijon. Les repères fondamentaux structurels font défaut. Il n’y a pas …",
-        "source": "autre",
-        "date": "2021-06-25",
-        "titre": "Procès Valérie Bacot, jour 4 : « L’emprise ne s’arrête jamais » - Elle",
+        "texte": "… On réclame un milliard d’euros pour structurer la lutte contre les violences faites aux femmes, c’est la somme fixée par le Haut conseil de l’égalité (*) et on ne l’a pas. Il faut aussi repenser les lois, et c’est ce à quoi je travaille, en collaboration avec la sénatrice Valérie Boyer. Il y a plusieurs pistes. Une peine plancher pour les auteurs de féminicide ; une prés …",
+        "source": "archive_web",
+        "date": "2021-05-12",
+        "titre": "Crime de La Clayette. Valérie Bacot se livre : \"Tout le monde savait. Tant pis si j'en mourais.\"",
+        "score": 6.0,
+        "url": "https://www.lejsl.com/amp/faits-divers-justice/2021/05/12/les-viols-l-emprise-le-crime-valerie-bacot-se-livre-avant-le-proces"
+      },
+      {
+        "texte": "… En 2017, la jeune femme de 38 ans était décédée après une chute dans l’escalier.\nL’enquête avait alors conclu à un accident, conclusion remise en cause après le drame de 2021.\nEn février 2023, Serge Bacot était mis en examen une deuxième fois dans cette affaire.\nL’accusé nie les faits depuis le début\nC’est donc pour deux homicides, deux féminicides, que le Longiprate sera …",
+        "source": "article_presse",
+        "date": "2025-03-06",
+        "titre": "Soupçonné d'avoir tué ses deux dernières compagnes à Longpré-les-Corps-Saints, l'homme sera jugé aux",
         "score": 3.0,
-        "url": "https://www.elle.fr/Societe/News/Proces-Valerie-Bacot-jour-4-L-emprise-ne-s-arrete-jamais-3933861"
+        "url": "https://actu.fr/hauts-de-france/longpre-les-corps-saints_80488/soupconne-davoir-tue-ses-deux-dernieres-compagnes-a-longpre-les-corps-saints-lhomme-sera-juge-aux-assises_62338385.html"
       }
     ],
     "commentaires": [
       {
+        "texte": "On parle d’une personne victime de violences conjugales au cas où, sous emprise psychologique et physique et matérielle également, être là c’est genre la moindre des choses quand on est réellement amis.\nJe suis d’accord avec le fait de dire clairement les choses, mais au vu du contexte votre …",
+        "chaine": "Pluriel",
+        "video_titre": "Violences conjugales à 20 ans : “Pour la police, c’était lui la victime.”",
+        "date": "2026-04-20",
+        "score": 5.0,
+        "url": "https://www.youtube.com/watch?v=olqLvudLQXM#comment_UgyrDYgfq50ywpS2QQ14AaABAg.AVk1XT3tQ_VAVp-YBOBpiQ"
+      },
+      {
+        "texte": "Il y a quelques années maintenant, j'ai dû travailler sur la violence conjugales afin de valider une licence de psychologie.\nL'enseignante étant féministe et versée dans la psychanalyse, j'ai esquivé le chemin tout tracé en abordant la violence conjugale dans les couples gay.\nTout d'un coup, parler …",
+        "chaine": "Les Couilles sur la table",
+        "video_titre": "Violences conjugales, banalité du mâle",
+        "date": "2023-04-23",
+        "score": 5.0,
+        "url": "https://www.youtube.com/watch?v=QEYiRDyRhZ8#comment_Ugwg_NNofdrARfU9Ex94AaABAg"
+      },
+      {
         "texte": "Je ne pense pas que ce soit une domination patriarcale comme le dit Mme Cohen à la fin de son intervention mais bien une domination de *certains* hommes envers des femmes.\n\nL'amalgame est certes facile, de son point de vue, puisqu'elle considère que les lois, ds leurs ensembles, sont faites par des …",
         "chaine": "Public Sénat",
-        "video_titre": "Violences faites aux femmes : le témoignage glaçant de Valérie Bacot (04/11)",
+        "video_titre": "",
         "date": "2021-11-05",
         "score": 4.0,
         "url": "https://www.youtube.com/watch?v=WPJs7M8DKVs#comment_@k_koksi"
       },
       {
-        "texte": "C'est toujours la faute des flics qu'est-ce que vous voulez les gendarmes ils font ce qu'ils peuvent et et après il nous parle de sous emprise sous emprise y en a marre marre qu'est-ce qu'il faut faire",
-        "chaine": "ALIBI. ▸ faits divers",
-        "video_titre": "Le sort que Serge Bacot infligeait à ses épouses | Crimes Insolites",
-        "date": "2025-07-23",
-        "score": 2.0,
-        "url": "https://www.youtube.com/watch?v=rezprI9xze0#comment_@fatihaelouasdi1992"
-      },
-      {
-        "texte": "j'ai pu voir cet épisode en avant-première l'année dernière (en fin d'année; quasiment à la même période) dans l'amphithéâtre Aristote du campus de Dijon de l'Université Bourgogne Europe. cela pose des réflexions sur la condition humaine et la façon dont la violence systémique engendrée par le …",
-        "chaine": "Faites entrer l’accusé - Officielle",
-        "video_titre": "Faites entrer l&#39;accusé - Valérie Bacot, la mort pour délivrance",
-        "date": "2025-12-04",
-        "score": 2.0,
-        "url": "https://www.youtube.com/watch?v=6Uz0O5OX63o#comment_@lucas.mzrrrr"
-      },
-      {
-        "texte": "ce qui me fait le plus de peine, c'est de voir quand elle explique la manière dont elle c'est sortit de son bourreau mais 1 à 2 secondes plus tard on voit l'emprise COLOSSAL qu'il avait sur elle comme les \"j'en sais rien, je sais pas, non j'ai été la pire merd* possible\" c'est tellement triste. \nJe …",
-        "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
-        "date": "2024-07-04",
-        "score": 1.0,
-        "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@Ayn.lhaa6"
+        "texte": "Les violences conjugales ne sont pas genrées. Toujours le même genre négligé... Y’a des violences psychologiques aussi, du harcèlement, se faire pourrir la vie. Et encore ce même genre, pas écouté, mis au placard et qui est condamné à souffrir en silence. Les violences devraient etre condamnées peu …",
+        "chaine": "Les Arènes du Savoir",
+        "video_titre": "Violences conjugales : pourquoi les hommes frappent ?",
+        "date": "2026-05-09",
+        "score": 4.0,
+        "url": "https://www.youtube.com/watch?v=YFJ0CXTF4aM#comment_UgyMz9oQuJfMQkLfhGp4AaABAg"
       }
     ]
   },
@@ -255,8 +255,16 @@
     "label": "Emprise psychologique",
     "articles": [
       {
+        "texte": "… 'emprise totalitaire de ce tyran domestique » qui l'a violée dès l'âge de 12-13 ans, quand il était encore son beau-père. Elle s'est « trouvée enfermée, emprisonnée dans l'emprise de son mari totalitaire ». Une emprise « dominante » et surtout « permanente », explique l'expert.\n« Elle n'avait plus réellement de libre arbitre : elle a peur, car son mari était toujours dans sa tête. Elle était toujours terrorisée et re …",
+        "source": "archive_web",
+        "date": "2021-06-24",
+        "titre": "Procès de Valérie Bacot : les conclusions glaçantes des experts",
+        "score": 15.0,
+        "url": "https://www.lepoint.fr/societe/proces-de-valerie-bacot-les-conclusions-glacantes-des-experts-24-06-2021-2432640_23.php"
+      },
+      {
         "texte": "… Elle s'est \"trouvée enfermée, emprisonnée dans l'emprise de son mari totalitaire\". Une emprise \"dominante\" et surtout \"permanente\", explique l'expert. \"Elle n'avait plus réellement de libre arbitre: elle a peur car son mari était toujours dans sa tête. Elle était toujours terrorisée et restait avec les diktats de son mari. L'emprise es …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-24",
         "titre": "Valérie Bacot \"n'avait pas d'autre échappatoire\" que de tuer son mari proxénète",
         "score": 15.0,
@@ -264,53 +272,45 @@
       },
       {
         "texte": "… Elle s’est « trouvée enfermée, emprisonnée dans l’emprise de son mari totalitaire ». Une emprise « dominante » et surtout « permanente », explique l’expert.\nEmprise permanente\n« Elle n’avait plus réellement de libre arbitre : elle a peur car son mari était toujours dans sa tête. Elle était toujours terrorisée et restait avec les diktats de son mari. L’emprise …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-24",
         "titre": "Valérie Bacot n’avait d’autre « échappatoire » que de tuer son mari proxénète, selon des experts",
         "score": 14.0,
         "url": "https://www.sudouest.fr/justice/valerie-bacot-n-avait-d-autre-echappatoire-que-de-tuer-son-mari-proxenete-selon-des-experts-3901280.php"
-      },
-      {
-        "texte": "… \"syndrome de la femme battue\", la décrivant comme une \"marionnette dans les mains de son mari [...] soumise à l'emprise totalitaire de ce tyran domestique\". Des éléments de contextes décisifs dans le verdict rendu. Mais à quoi correspond ce \"syndrome de la femme battue\"?\n\"Certains couples sont construits sur un mode pathologique: il y a un sujet aliéné et un sujet aliénant, avec une emprise totalitaire qui devient d …",
-        "source": "autre",
-        "date": "2021-06-29",
-        "titre": "Affaire Valérie Bacot: qu'est-ce que le \"syndrome de la femme battue\"?",
-        "score": 13.0,
-        "url": "https://www.bfmtv.com/police-justice/affaire-valerie-bacot-qu-est-ce-que-le-syndrome-de-la-femme-battue_AN-202106290501.html"
       }
     ],
     "commentaires": [
       {
-        "texte": "le problème est que quelqu'un de battu a peur de déposé plainte car a peur des représailles. Le bourreau a une emprise que la personne battue pense être la cause car se croit la mauvaise personne qui énerve l'autre et a bien de la chance, qu'il reste car personne d'autre ne voudra d'elle... de …",
-        "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
-        "date": "2021-02-16",
-        "score": 4.0,
-        "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@gaelledeville1425"
+        "texte": "@LouLou5.7 \n\nBonjour,\nVous précisez que votre mère était battue et que vous ne souvenez pas de votre enfance et que c'est comme si vous n'avez pas eu d'enfance.\nVous avez dû être présente durant ces faits et même si vous n'étiez pas présente dans la pièce et dans votre chambre vous avez dû entendre …",
+        "chaine": "Ça commence aujourd'hui - France Télévisions",
+        "video_titre": "Violences sexuelles et conjugales : elles ont vécu l&#39;enfer - Ça commence auj",
+        "date": "2024-06-18",
+        "score": 5.0,
+        "url": "https://www.youtube.com/watch?v=Dcn2OpeeE7A#comment_UgynuCz6xI7my7iwb1h4AaABAg.A4beGzhKdLyA4oIccj8SUL"
       },
       {
-        "texte": "Quel triste histoire, il ne faut pas avoir honte de votre geste ultime de survie !\nUne mort instantanée n’est rien comparé à des années de manipulation, souffrance et d’humiliation.\nVous étiez sous l’emprise de ce monstre, vous avez garantie une vie meilleure à vos enfants par votre …",
-        "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
-        "date": "2024-04-09",
-        "score": 3.0,
-        "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@jeromefarineau8480"
+        "texte": "J’aimerais vraiment savoir et comprendre ce qu’elles ont trouvé chez ces hommes pour ne pas fuir dès le 1er signe de violence? Sont-ils beaux? Riches? Puissants? Charismatiques? C’est atroce ce que ces femmes ont vécu surtout qu’elles ont eu des enfants avec. Je suis fille unique et je n’ai plus de …",
+        "chaine": "Ça commence aujourd'hui - France Télévisions",
+        "video_titre": "Violences sexuelles et conjugales : elles ont vécu l&#39;enfer - Ça commence auj",
+        "date": "2024-06-13",
+        "score": 5.0,
+        "url": "https://www.youtube.com/watch?v=Dcn2OpeeE7A#comment_UgybBKhU0hktZW9NZhh4AaABAg"
       },
       {
-        "texte": "\"Il allait être pris en CDI.\" Quelqu'un lui faisait confiance alors ? Désolé, je trouve le discours de Valérie trop manipulateur. N'oublions pas qu'elle a menti, faisant croire qu'il était parti de son plein gré. Elle a dissimulé sa mort durant 14 mois. C'est pas rien !",
-        "chaine": "Faites entrer l’accusé - Officielle",
-        "video_titre": "Faites entrer l&#39;accusé - Valérie Bacot, la mort pour délivrance",
-        "date": "2025-12-03",
-        "score": 1.0,
-        "url": "https://www.youtube.com/watch?v=6Uz0O5OX63o#comment_@fafileblond9202"
+        "texte": "Elle était jeune. Elle pensait pouvoir l'aider, et elle-même a exprimé qu'il avait beaucoup d'emprise sur elle. Vous sous-estimez à quel point il est facile de tomber dans ce genre de situations lorsqu'on est vulnérable, on ne saisit pas toujours les signes ou on préfère ignorer les premiers par …",
+        "chaine": "Pluriel",
+        "video_titre": "Victime de violences conjugales à 17 ans. Elle témoigne.",
+        "date": "2024-05-29",
+        "score": 5.0,
+        "url": "https://www.youtube.com/watch?v=yYnJGaqRvMI#comment_Ugw_Ghsqmklr2ikGDwZ4AaABAg.A1ayaC86Go7A40p81qCnep"
       },
       {
-        "texte": "\"Ce dossier ressemble beaucoup à l'histoire de Jacqueline Sauvage\" ??? Non. A part le fait que ce sont deux femmes qui ont tué leur mari violent, sinon leur histoire ne se ressemble absolument pas. Chez Jacqueline Sauvage, pas de viol, encore moins de viol à l'age de 12 ans par son beau-père qui …",
-        "chaine": "20 Minutes France",
-        "video_titre": "Violences conjugales : Valérie Bacot jugée pour l’assassinat de son mari violent",
-        "date": "2021-06-21",
-        "score": 3.0,
-        "url": "https://www.youtube.com/watch?v=yYDGDvIMWIQ#comment_@AgoraFrance"
+        "texte": "​@jetfoolishness1288 elle le défend parce qu'elle a peur de lui et de ce qu'il pourrait lui faire en représailles, tout simplement... \nSi une femme battue n'arrive pas à partir c'est à cause de l'emprise que leurs conjoints ont sur elles (manipulations, chantage et menaces de violences ou de mort …",
+        "chaine": "Le Parisien",
+        "video_titre": "Mohamed Haouas condamné pour violences conjugales : les images de l’agression dé",
+        "date": "2023-06-01",
+        "score": 5.0,
+        "url": "https://www.youtube.com/watch?v=d-XM6fYKk30#comment_UgwIOmP2pRPLMFVv4AN4AaABAg.9qQPA2cVVcR9qQhrVeuVPs"
       }
     ]
   },
@@ -319,7 +319,7 @@
     "articles": [
       {
         "texte": "… Ils en ont besoin, eux aussi.\nMme Annick Billon, présidente. - Nous l'avons dit, l'État, l'institution et les gendarmes ont échoué à vous protéger. Nous avons dressé cette année un bilan sur l'application de la loi sur la prostitution. Quel regard portez-vous sur son état ? Là aussi, l'institution a-t-elle échoué, alors que les gens savaient ? Le c …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-11-04",
         "titre": "Délégation aux droits des femmes : compte rendu de la semaine du 1er novembre 2021",
         "score": 296.0,
@@ -327,53 +327,53 @@
       },
       {
         "texte": "… ue de la représentation, je me suis dit que ce travail, répété aussi régulièrement, devait être physiquement et mentalement une épreuve de haut niveau. Seule sur scène, vous avez joué tous les rôles et même fait vivre les absents : son bourreau, mais aussi tous ceux qui se sont tus, qui savaient, mais n'ont rien fait, qui auraient pu vous venir en aide, mais qui ont préféré détourner le regard. Ce silence meurtrier e …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2023-09-27",
         "titre": "Cérémonie de remise du Prix 2023 de la délégation aux droits des femmes - 19 septembre 2023 - Sénat",
         "score": 131.0,
         "url": "https://www.senat.fr/rap/r22-933/r22-933_mono.html"
       },
       {
-        "texte": "… \"On a même fait des recherches au Canada, pas de Daniel\"\nLe directeur d'enquête\n14 h 35 : \"Le médecin de famille avait dit qu'il n'y avait pas de problèmes particuliers\"\nLe directeur d'enquête expose ce que les investigations ont permis de savoir sur l'enfance de Valérie. Il cite ce témoignage singulier du médecin de famille qui …",
-        "source": "autre",
+        "texte": "… \"On a même fait des recherches au Canada, pas de Daniel\"\nLe directeur d'enquête\n14 h 35 : \"Le médecin de famille avait dit qu'il n'y avait pas de problèmes particuliers\"\nLe directeur d'enquête expose ce que les investigations ont permis de savoir sur l'enfance de Valérie. Il cite ce témoignage singulier du médecin de famille …",
+        "source": "archive_web",
         "date": "2021-06-21",
-        "titre": "Justice / Chalon-sur-Saône. Procès de Valérie Bacot : \"Vous ne comprenez pas ce que je vivais\"",
-        "score": 114.0,
-        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/21/suivez-le-proces-de-valerie-bacot"
+        "titre": "Justice / Chalon-sur-Saône Procès de Valérie Bacot : \"Vous ne comprenez pas ce que je vivais\"",
+        "score": 118.0,
+        "url": "https://www.lejsl.com/amp/faits-divers-justice/2021/06/21/suivez-le-proces-de-valerie-bacot"
       }
     ],
     "commentaires": [
       {
+        "texte": "@pupaklahumak Franchement, ton message donne surtout l’impression que t’as décidé de la conclusion avant même de regarder les faits. Peu importe le sujet, tu ramènes tout à misogynie ou patriarcat, comme si c’était la seule explication possible. C’est pas une analyse, c’est un filtre que tu poses …",
+        "chaine": "AJ+ français",
+        "video_titre": "Féminicide : une étudiante au procès de son agresseur",
+        "date": "2026-04-17",
+        "score": 34.0,
+        "url": "https://www.youtube.com/watch?v=wcGU5OTcHVM#comment_UgyImCYnemxrvjOLalR4AaABAg.AVf7NPVIgsUAVgTJqHyAxn"
+      },
+      {
         "texte": "Moi j’ai été victime de violence physique et morale avec le père de mes enfants,il n’a jamais touché mes enfants mais ils étaient témoins,je suis partie dès que mes deux grands voulaient poignarde leur père. Je ne voulais pas qu’ils payent toute leur vie pour une personne qui en valait pas la …",
         "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
+        "video_titre": "",
         "date": "2021-05-17",
         "score": 25.0,
         "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@isabellesoquet2275"
       },
       {
-        "texte": "Il y a une question que je me pose vraiment. Cette dame (qui est d’un courage EXTRÊME et pour qui j’ai beaucoup de peine et d’empathie ❤) parle de ses enfants de façon assez particulière. Enfin, elle affirme les aimer et je n’en doute pas du tout ! Mais quand elle parle d’eux souvent elle dit « les …",
-        "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
-        "date": "2025-01-27",
-        "score": 20.0,
-        "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@Elnaé_off"
+        "texte": "@Leo Álvarez apprend à comprendre ce que tu lis... je ne défends ni le mari, ni la femme ! A aucuns moment...\nJe condamne les actes des deux moi... aussi ignobles et inhumains l’un que l’autre ! ( les actes)\nLes seuls victimes dans tout ce merdier, ce sont les gosses pour avoir eu des parents aussi …",
+        "chaine": "AFP",
+        "video_titre": "Violée, battue, prostituée, Valérie Bacot jugée pour avoir tuée son mari proxénè",
+        "date": "2021-06-25",
+        "score": 23.0,
+        "url": "https://www.youtube.com/watch?v=AcbE5yJod9A#comment_UgwxD8_TBW_JNbRykvZ4AaABAg.9OrO_TK30pd9P05F3N3nJc"
       },
       {
-        "texte": "C'est les yeux rempli de larmes que j'écris ce commentaire. Quelle peine je ressens en entendant sa réaction face à son verdict, et aux dures paroles quelle a envers elle ! Je n'ai pas les mots pour exprimer à quel point cette ordure mérite ce qui lui est arrivé, et j'espère qu'il finira au fin …",
-        "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
-        "date": "2023-10-02",
-        "score": 19.0,
-        "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@amelaouadi2781"
-      },
-      {
-        "texte": "C'est difficile pour la victime de lire les commentaires qui sont des avis des gens de fois mal vaillant mais si jamais un jour tu passe par ici lore les commentaires sache que tu es une femme forte tu la pas tuer par plaisir tu te défendue et protéger tes enfants tu es une victime et lui coupable …",
-        "chaine": "Tibo InShape",
-        "video_titre": "Elle tue son mari violent et proxénète : la terrible histoire de Valérie Bacot",
-        "date": "2023-11-18",
-        "score": 17.0,
-        "url": "https://www.youtube.com/watch?v=zA3etFUNYLA#comment_@âgedeglace"
+        "texte": "Ces témoignages sont poignants. Ces hommes sont juste inhumains et abjectes. Je vous plains mesdames d avoir subi tout ça personne ne le mérite. Si j’ose, Je ne comprends pas pourquoi Clemence dit qu elle protège ses enfants en étant restée. Les enfants ne sont pas dupes ils sentent les choses, ils …",
+        "chaine": "Ça commence aujourd'hui - France Télévisions",
+        "video_titre": "Violences conjugales : quand l&#39;amour devient un enfer - Ça commence aujourd&",
+        "date": "2025-01-11",
+        "score": 23.0,
+        "url": "https://www.youtube.com/watch?v=BWScRZs37aM#comment_UgzuBpGZm55XsjviNfN4AaABAg"
       }
     ]
   },
@@ -382,61 +382,61 @@
     "articles": [
       {
         "texte": "… er le menu principal\nTéléfilms\nSport\nInfo\nDocs\nJeunesse\nImpact\nPeople\nPodcasts\nDirect\nLes Anges\nÀ la carte\nNouveau\nPASSER À TF1+ SANS PUB\nValérie Bacot : Pourquoi j'ai tué mon mari\nReplay de Valérie Bacot : Pourquoi j'ai tué mon mari\nVidéos\nNews\nTout\nReplay\nReplay\nTout\nReplay\n57m\n57m\nValérie Bacot : Pourquoi j'ai tué mon mari\n12 janv. 2026 à 20:09\nAccueil\nNOVO19\nValérie Bacot : Pourquoi j'ai tué mon mari\nVidéos - Val",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2026-01-12",
         "titre": "Replay de Valérie Bacot : Pourquoi j'ai tué mon mari (Documentaire) | TF1+",
         "score": 15.0,
         "url": "https://www.tf1.fr/novo19/valerie-bacot-pourquoi-jai-tue-mon-mari/videos/replay"
       },
       {
+        "texte": "Le meurtre qui va nous intéresser a lieu le 13 mars 2016. Une histoire de femme que son mari oblige à se prostituer mais une femme qui un beau jour va dire stop en se débarrassant de son bourreau.\nAlors que l’on sort tout juste de l’affaire Pélicot, il est intéressant de constater que d’autres histoires du même type ont existé au fil des années. C’est …",
+        "source": "article_presse",
+        "date": "2025-04-08",
+        "titre": "La victime qui voulait mettre fin à son calvaire - ICI",
+        "score": 11.0,
+        "url": "https://www.ici.fr/emissions/crimes-en-bourgogne/la-victime-qui-voulait-mettre-fin-a-son-calvaire-5562074"
+      },
+      {
         "texte": "Procès Valérie Bacot : \"C’est le symbole de ces femmes qu’on ne voit pas souffrir le martyre\"\nDepuis lundi se tient le procès de Valérie Bacot au tribunal de Chalon-sur-Saône. Un procès largement médiatisé qui met en lumière la question des violences conjugales. Pendant 25 ans, Valérie Bacot a vécu l’enfer : violée dès l’âge de 12 ans par le compagnon de sa mère qui deviendra quelques années plus tard son mari, elle …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-23",
         "titre": "Procès Valérie Bacot : \"C’est le symbole de ces femmes qu’on ne voit pas souffrir le martyre\" - Quot",
         "score": 8.0,
         "url": "https://www.tf1.fr/tmc/quotidien-avec-yann-barthes/videos/proces-valerie-bacot-cest-le-symbole-de-ces-femmes-quon-ne-voit-pas-souffrir-le-martyre-58238897.html"
-      },
-      {
-        "texte": "cœur du procès des viols de Mazan\nIl y a un an débutait au tribunal d’Avignon le procès des viols de Mazan, devenu depuis historique par l’ampleur de l’affaire, et le statut d’icône obtenu par Gisèle Pelicot, la victime principale. Le dessinateur côte-d'orien ZZIIGG, collaborateur régulier de notre titre, a suivi l’intégralité des trois mois d’audience. Un an plus tard, il raconte.\nL’affaire des viols de Mazan, ZZIIG …",
-        "source": "autre",
-        "date": "2025-09-02",
-        "titre": "Côte-d’Or. ZZIIGG, un témoin clé au cœur du procès des viols de Mazan",
-        "score": 4.0,
-        "url": "https://www.bienpublic.com/encadres/2025/09/02/rester-tout-le-proces-m-a-permis-de-mettre-de-la-nuance"
       }
     ],
     "commentaires": [
       {
+        "texte": "@guy-patrickb6611 Nous ne connaissons pas les circonstances de cette altercation, et Monsieur Schmitt reste innocent, jusqu’à preuve du contraire. C’est un soutien à une femme qui semble psychologiquement et physiquement détruite, souffrante. Mais mon expérience dans les arts martiaux me font …",
+        "chaine": "BFMTV",
+        "video_titre": "Violences conjugales: le témoignage de Margaux Pinot en intégralité",
+        "date": "2021-12-03",
+        "score": 7.0,
+        "url": "https://www.youtube.com/watch?v=WIKDY6E-ucM#comment_UgwKAYJIPOacaIl9jPJ4AaABAg.9VT7uAe2NST9VUMn6Uisyr"
+      },
+      {
+        "texte": "​@dam2433Mais de quoi tu parles ? Ce n’est pas la première fois qu’un média fait ça : ils font du sensationnel et oublient d’ajouter des éléments ou les modifient à leur sauce en fonction des goûts de leur audience et de ce qui va faire parler, comme dans le cas de ces vidéos. Moi, je fais un …",
+        "chaine": "AJ+ français",
+        "video_titre": "Féminicide : une étudiante au procès de son agresseur",
+        "date": "2026-04-17",
+        "score": 7.0,
+        "url": "https://www.youtube.com/watch?v=wcGU5OTcHVM#comment_UgwxNdo4jtyGHumhmpZ4AaABAg.AVfAF_v1opfAViBy7a0XXP"
+      },
+      {
+        "texte": "Quelle horrible histoire, ça me rappelle un peu le film \"The Girl Next Door\". Je sais bien qu'il existe vraiment des personnes monstueuses sur terre mais quand même c'est toujours incroyable (dans le mauvais sens du terme) de voir à quel point certains humains sont horrible... \nJe suis bien content …",
+        "chaine": "Phoenixia",
+        "video_titre": "Valérie Bacot: Abusée par son beau-père",
+        "date": "2021-10-13",
+        "score": 6.0,
+        "url": "https://www.youtube.com/watch?v=TtWXjVh5hgg#comment_UgxcD25sqPP5vLXbxBx4AaABAg"
+      },
+      {
         "texte": "Bon documentaire sur une histoire sordide mais Madame la voix off (IA ou pas ?), aux Assises, il n’y a pas de Procureur mais un Avocat General qui demande une peine au nom de la société.\nOn ne se fait pas justice soi-même, heureusement et dans cette affaire, elle a très bien fait son travail, …",
         "chaine": "Canal Crime",
-        "video_titre": "Affaire Valérie Bacot : &quot;Pourquoi j&#39;ai tué mon mari&quot;",
+        "video_titre": "",
         "date": "2026-05-24",
         "score": 5.0,
         "url": "https://www.youtube.com/watch?v=nwax-EdNYMA#comment_@monpetitgraindesel6192"
-      },
-      {
-        "texte": "Wow, j'habite en France et je n'ai jamais entendu parler de cette affaire...\n2 ans pour un viol? Et il peut retourner auprès de sa victime?\nElle a souffert toute sa vie, si justice lui avait été rendue à ce moment là, elle n'aurait pas eu à le faire elle même... \nJe vais signer la pétition! \nMerci …",
-        "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
-        "date": "2021-02-16",
-        "score": 5.0,
-        "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@cassandralbh8043"
-      },
-      {
-        "texte": "Cette histoire me fait penser à un film l emprise avec fred testot. Tiré d une vraie histoire est ce que c est la même histoire",
-        "chaine": "Canal Crime",
-        "video_titre": "Valérie Bacot : Son procès a bouleversé l’opinion publique",
-        "date": "2025-12-25",
-        "score": 4.0,
-        "url": "https://www.youtube.com/watch?v=1DrcFK5gk9k#comment_@christineminin7044"
-      },
-      {
-        "texte": "Encore une fois une histoire sordide ou la manipulation avait pris au piège une enfant devenue femme\nDans cette histoire il est important qu'elle parle devant la justice en espérant que cette justice cette fois ci écoute une personne qui sous l'emprise la peur en est arrivé à tuer\nJe n'excuse en …",
-        "chaine": "Bercrimes",
-        "video_titre": "Valérie Bacot : son histoire , sa vie , sa liberté. #bercrimes",
-        "date": "2021-06-21",
-        "score": 4.0,
-        "url": "https://www.youtube.com/watch?v=wvM1BFu2-LI#comment_@marianne.liberty5267"
       }
     ]
   },
@@ -445,7 +445,7 @@
     "articles": [
       {
         "texte": "… franceinfo : Est-ce que c'est un verdict symbolique ?\nMichelle Dayan : C'est un verdict juste. Cette femme est ressortie libre de la cour d'assises. Et pour une femme qui a vécu plus qu'un calvaire, plus que des violences, une emprise, c’est-à-dire l'abolition de toute liberté depuis tellement de temps, le symbole de la liberté, c'est très fort. J'ai accueilli ce verdict comme un espoir pour elle, un …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-25",
         "titre": "Valérie Bacot libérée : \"C'est un verdict qui est juste\", selon l'association Lawyers For Women",
         "score": 28.0,
@@ -453,53 +453,53 @@
       },
       {
         "texte": "Valérie Bacot a été jugée coupable de l’assassinat de son mari et condamnée à quatre ans de prison dont trois avec sursis, mais elle est ressortie libre du tribunal vendredi 25 juin. Selon ses avocates, c’est un verdict \"de clémence\" mais aussi \"symbolique\".\nLe verdict est tombé. Après cinq jours de procès aux Assises de Chalon-sur-Saône, en Saône-et-Loire, Valérie Bacot a été condamnée à quatre ans d’emprisonnement, …",
-        "source": "autre",
+        "source": "article_presse",
         "date": "2021-06-26",
         "titre": "Procès de Valérie Bacot : comment interpréter sa condamnation à quatre ans de prison dont trois avec",
         "score": 27.0,
         "url": "https://france3-regions.franceinfo.fr/bourgogne-franche-comte/saone-et-loire/chalon-sur-saone/proces-de-valerie-bacot-comment-interpreter-sa-condamnation-a-quatre-ans-de-prison-dont-trois-avec-sursis-2154523.html"
       },
       {
-        "texte": "… La préméditation est retenue.\nValérie Bacot est condamnée à quatre ans de prison, dont trois ans avec sursis probatoire et obligation de soins pendant trois ans. Elle ne sera pas incarcérée à nouveau.\nUne partie du public a applaudi lorsque la présidente a expliqué à Valérie Bacot qu'elle sortirait libre du palais de justice.\nLa peine prononcée …",
-        "source": "autre",
+        "texte": "… La préméditation est retenue.\nValérie Bacot est condamnée à quatre ans de prison, dont trois ans avec sursis probatoire et obligation de soins pendant trois ans. Elle ne sera pas incarcérée à nouveau.\nUne partie du public a applaudi lorsque la présidente a expliqué à Valérie Bacot qu'elle sortirait libre du palais de justice.\nLa pei …",
+        "source": "archive_web",
         "date": "2021-06-25",
         "titre": "Justice. Valérie Bacot libre : \"Un nouveau combat maintenant, pour toutes les autres femmes\"",
         "score": 20.0,
-        "url": "https://www.lejsl.com/faits-divers-justice/2021/06/25/proces-de-valerie-bacot-l-heure-du-verdict"
+        "url": "https://www.lejsl.com/amp/faits-divers-justice/2021/06/25/proces-de-valerie-bacot-l-heure-du-verdict"
       }
     ],
     "commentaires": [
       {
         "texte": "Tout d’abord Victoria merci pour ta vidéo car je ne connaissais pas cette histoire malgré que ce soit similaire à pas mal de cas de violences conjugales… J’aimerais bien donner mon avis sur la chose si certains veulent échanger je suis tout à fait pour, mais je pense que beaucoup auront le même …",
         "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
+        "video_titre": "",
         "date": "2021-02-19",
         "score": 22.0,
         "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@iskully2019"
       },
       {
-        "texte": "En tant qu'homme et pas aveuglément féministe , je félicite cet heureux dénouement !\nA toutes les personnes ( que je respecte ) qui crient à l'inégalité de traitement judiciaire entre les sexes , il serait souhaitable , avant toute chose , de prendre connaissance du dossier , en occurrence , et de …",
-        "chaine": "Le Parisien",
-        "video_titre": "Valérie Bacot sort libre de son procès pour le meurtre de son mari violent",
-        "date": "2021-06-26",
-        "score": 10.0,
-        "url": "https://www.youtube.com/watch?v=23HDisPUTVs#comment_@taharserbis5649"
+        "texte": "melanieteynat4515 Bah c'est votre choix de laisser les gens dans l'ignorance, ce n'est pas mon choix, je ne vous demande pas de faire comme moi, pas plus que je cherche à faire comme vous. Si on vous écoutes, les Messagers de Dieu, les prédicateurs qui les ont suivi sont en tords d'avoir prodiguer …",
+        "chaine": "Pluriel",
+        "video_titre": "Victime de violences conjugales à 17 ans. Elle témoigne.",
+        "date": "2023-08-16",
+        "score": 21.0,
+        "url": "https://www.youtube.com/watch?v=yYnJGaqRvMI#comment_UgzETS8yBiOdHUi2qA94AaABAg.9tPmcxBzyRS9tUXeC4_1-N"
       },
       {
-        "texte": "Elle doit aller en prison pour le principe mais elle ne mérite même pas d'y rester 10 ans.\nEn France quand une personne tue 2 ou 3 personnes de sang froid il fait 20 ans ou alors il ressort avec une remise de peine au bout de 10 ans. Valérie Bacot n'ira jamais en prison jusqu'à la fin de sa vie …",
-        "chaine": "Victoria Charlton",
-        "video_titre": "L&#39;AFFAIRE VALÉRIE BACOT : UN MEURTRE À LA CLAYETTE",
-        "date": "2021-02-14",
-        "score": 9.0,
-        "url": "https://www.youtube.com/watch?v=l4EYSK6xKZc#comment_@regardemoi4459"
+        "texte": "en effet ,   j'ai parlé  à une dame dans les années 2005  qui s'est mariée à un ami de jeunesse.  Au bout de quelques mois il acheté un voyage d'un cout de 2 ans de revenus  et divorce instantané   de quelques semaines et il a pas aimé et a commencé des délits.    dégradations  de jardins ,     …",
+        "chaine": "Ça commence aujourd'hui - France Télévisions",
+        "video_titre": "Violences conjugales : ces femmes témoignent de leur enfer - Ça commence aujourd",
+        "date": "2019-09-01",
+        "score": 21.0,
+        "url": "https://www.youtube.com/watch?v=dBBp7hirmDo#comment_UgwB8ayrMDHDWRJJBrp4AaABAg.8skdr-SJ20J8zLkpjznF1t"
       },
       {
-        "texte": "Histoire boulversante. Je crois que si elle avait été lourdement condamnée j'aurais eu une crise de nerfs. Merci á tous ceux qui l'on soutenue, merci á la justice qui a fait du bon boulo. Á mon avis elle devrait même être remerciée elle-même d'avoir nettoyé l'environnement. Pourtant, d'habitude je …",
-        "chaine": "Faites entrer l’accusé - Officielle",
-        "video_titre": "Faites entrer l&#39;accusé - Valérie Bacot, la mort pour délivrance",
-        "date": "2025-12-03",
-        "score": 8.0,
-        "url": "https://www.youtube.com/watch?v=6Uz0O5OX63o#comment_@Nacera-hn4hc"
+        "texte": "J'ai connu beaucoup de personnes dans mon entourage qui étaient alcooliques, moi qui ne boit même pas une bière dans l'année, je déteste l'alcool et surtout le mal que cette fichu boisson peut faire à l'entourage de ceux qui en boivent de façon excessive et répété. L'alcoolisme est une drogue, mais …",
+        "chaine": "Esprit de justice",
+        "video_titre": "Il bat sa femme après 22 ans de mariage devant ses enfants - En direct du tribun",
+        "date": "2025-02-26",
+        "score": 19.0,
+        "url": "https://www.youtube.com/watch?v=KrgSiNzLrhA#comment_UgzWwItZ4t6eEkzmJtt4AaABAg.9wANl9B7Z5XAF02Ca65iaA"
       }
     ]
   }

@@ -857,10 +857,11 @@
   <a href="#" class="nav-logo" onclick="showPage('accueil')">Corpus <span>Bacot</span></a>
   <ul class="nav-links">
     <li><a href="#" onclick="showPage('accueil')" id="nav-accueil" class="active">Accueil</a></li>
-    <li><a href="#" onclick="showPage('narratifs')" id="nav-narratifs">Narratifs<span class="nav-sub">articles &amp; commentaires YT</span></a></li>
-    <li><a href="#" onclick="showPage('graphiques')" id="nav-graphiques">Graphiques<span class="nav-sub">articles &amp; commentaires YT</span></a></li>
+    <li><a href="#" onclick="showPage('narratifs')" id="nav-narratifs">Narratifs<span class="nav-sub">analyse d'articles</span></a></li>
+    <li><a href="#" onclick="showPage('graphiques')" id="nav-graphiques">Graphiques<span class="nav-sub">analyse d'articles</span></a></li>
     <li><a href="#" onclick="showPage('tweets')" id="nav-tweets">Tweets</a></li>
     <li><a href="#" onclick="showPage('youtube')" id="nav-youtube">Commentaires YT<span class="nav-sub">25 503 · 5 axes</span></a></li>
+    <li><a href="#" onclick="showPage('llm')" id="nav-llm">Analyse LLM<span class="nav-sub">860 docs · Groq</span></a></li>
     <li><a href="#" onclick="showPage('corpus')" id="nav-corpus">Corpus</a></li>
     <li><a href="#" onclick="showPage('citations')" id="nav-citations">Citations</a></li>
     <li><a href="#" onclick="showPage('recherche')" id="nav-recherche">Recherche</a></li>
@@ -1411,6 +1412,53 @@
   </div>
 </div>
 
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<!-- PAGE : ANALYSE LLM -->
+<!-- ═══════════════════════════════════════════════════════════════ -->
+<div id="page-llm" class="page">
+  <div class="hero">
+    <p class="hero-eyebrow">Classification sémantique · Groq Llama-3.3-70b</p>
+    <h1>Analyse LLM des commentaires et tweets</h1>
+    <p class="hero-desc">860 documents classifiés par intelligence artificielle — comparaison avec la classification lexicale automatisée.</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-total">860</span><span class="hero-stat-l">Documents analysés</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-comm">—</span><span class="hero-stat-l">Commentaires YT</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-tw">—</span><span class="hero-stat-l">Tweets X</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-conc">—</span><span class="hero-stat-l">Concordance LLM/Lex.</span></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h2 class="section-title">Distribution par narratif (LLM)</h2>
+    <p class="section-subtitle">Catégorie dominante attribuée par Groq Llama-3.3-70b</p>
+    <div class="chart-wrap" style="height:320px;position:relative">
+      <canvas id="chart-llm-dist"></canvas>
+    </div>
+
+    <h2 class="section-title" style="margin-top:3rem">Lexical vs LLM — comparaison par catégorie</h2>
+    <p class="section-subtitle">Pour les 860 documents · nombre de documents par catégorie selon chaque méthode</p>
+    <div class="chart-wrap" style="height:360px;position:relative">
+      <canvas id="chart-llm-compare"></canvas>
+    </div>
+
+    <h2 class="section-title" style="margin-top:3rem">Documents analysés</h2>
+    <p class="section-subtitle">Badge de gauche = classification lexicale · badge de droite = LLM · ✓ concordance · ✗ divergence</p>
+    <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
+      <button class="hsf-btn active" onclick="setLLMFilter('type','all')" id="llm-f-all">Tous <span id="llm-fc-all"></span></button>
+      <button class="hsf-btn" onclick="setLLMFilter('type','commentaire')" id="llm-f-commentaire">Commentaires <span id="llm-fc-comm"></span></button>
+      <button class="hsf-btn" onclick="setLLMFilter('type','tweet')" id="llm-f-tweet">Tweets <span id="llm-fc-tw"></span></button>
+      <label style="display:flex;align-items:center;gap:.4rem;font-size:13px;margin-left:1.5rem;cursor:pointer;color:var(--encre)">
+        <input type="checkbox" id="llm-discordance-only" onchange="renderLLMList()" style="accent-color:var(--accent);cursor:pointer">
+        Discordances uniquement
+      </label>
+    </div>
+    <div id="llm-list"></div>
+    <div id="llm-more" style="text-align:center;margin-top:1rem;display:none">
+      <button onclick="llmShowMore()" style="border:1px solid var(--accent);background:transparent;padding:.5rem 1.5rem;font-size:13px;cursor:pointer;font-family:var(--sans);color:var(--accent)">Afficher plus →</button>
+    </div>
+  </div>
+</div>
+
 <script>
 // ─── DONNÉES ─────────────────────────────────────────────────────────────────
 
@@ -1654,6 +1702,7 @@ function showPage(name) {
   if (name === 'graphiques'  && !GRAPH_DATA)       loadGraphiques();
   if (name === 'tweets'      && !TWEET_GRAPH_DATA) loadTweetGraphs();
   if (name === 'youtube'     && !YT_DATA)          loadYoutubeComments();
+  if (name === 'llm'         && !LLM_DATA)         loadLLMData();
   if (name === 'qualite')                          renderQualite();
   return false;
 }
@@ -3904,6 +3953,168 @@ function renderYT5() {
       <p style="font-size:14px;line-height:1.6;color:var(--encre);font-style:italic">"${texte}${d.texte?.length>400?'…':''}"</p>
     </div>`;
   }).join('');
+}
+
+// ════════════════════════════════════════════════════════════════════════════
+// PAGE LLM — Classification Groq / Llama-3.3-70b
+// ════════════════════════════════════════════════════════════════════════════
+
+let LLM_DATA = null;
+let llmTypeFilter = 'all';
+let llmPage = 0;
+const LLM_PAGE_SIZE = 30;
+
+async function loadLLMData() {
+  const list = document.getElementById('llm-list');
+  list.innerHTML = '<div class="empty">Chargement…</div>';
+  try {
+    const resp = await fetch('data/corpus_llm_resultats.json');
+    LLM_DATA = await resp.json();
+    renderLLM();
+  } catch(e) {
+    list.innerHTML = '<div class="empty">Erreur de chargement (data/corpus_llm_resultats.json introuvable).</div>';
+  }
+}
+
+function setLLMFilter(type, val) {
+  llmTypeFilter = val;
+  document.querySelectorAll('[id^="llm-f-"]').forEach(b => b.classList.remove('active'));
+  const id = val === 'all' ? 'llm-f-all' : (val === 'commentaire' ? 'llm-f-commentaire' : 'llm-f-tweet');
+  const el = document.getElementById(id);
+  if (el) el.classList.add('active');
+  llmPage = 0;
+  renderLLMList();
+}
+
+function getLLMFiltered() {
+  let d = LLM_DATA || [];
+  if (llmTypeFilter !== 'all') d = d.filter(x => x.type_doc === llmTypeFilter);
+  if (document.getElementById('llm-discordance-only')?.checked)
+    d = d.filter(x => x.categorie_dominante !== x.categorie_dominante_llm);
+  return d;
+}
+
+function renderLLM() {
+  if (!LLM_DATA) return;
+  const total = LLM_DATA.length;
+  const comm  = LLM_DATA.filter(d => d.type_doc === 'commentaire').length;
+  const tw    = LLM_DATA.filter(d => d.type_doc === 'tweet').length;
+  const conc  = LLM_DATA.filter(d => d.categorie_dominante === d.categorie_dominante_llm).length;
+  document.getElementById('llm-stat-total').textContent = total.toLocaleString('fr');
+  document.getElementById('llm-stat-comm').textContent  = comm.toLocaleString('fr');
+  document.getElementById('llm-stat-tw').textContent    = tw.toLocaleString('fr');
+  document.getElementById('llm-stat-conc').textContent  = Math.round(conc / total * 100) + '%';
+  document.getElementById('llm-fc-all').textContent  = total;
+  document.getElementById('llm-fc-comm').textContent = comm;
+  document.getElementById('llm-fc-tw').textContent   = tw;
+  renderLLMDistChart();
+  renderLLMCompareChart();
+  renderLLMList();
+}
+
+function renderLLMDistChart() {
+  const ALL = [...CATS, 'non_classe'];
+  const counts = Object.fromEntries(ALL.map(c => [c, 0]));
+  LLM_DATA.forEach(d => {
+    const c = d.categorie_dominante_llm || 'non_classe';
+    if (counts[c] !== undefined) counts[c]++;
+    else counts['non_classe']++;
+  });
+  const ctx = document.getElementById('chart-llm-dist');
+  if (ctx._chart) ctx._chart.destroy();
+  ctx._chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ALL.map(c => NARRATIFS[c]?.label || c),
+      datasets: [{
+        data: ALL.map(c => counts[c]),
+        backgroundColor: ALL.map(c => (YT_NAR_COLORS[c] || '#aaa') + 'cc'),
+        borderColor:     ALL.map(c =>  YT_NAR_COLORS[c] || '#aaa'),
+        borderWidth: 1,
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: false } },
+      scales: { x: { beginAtZero: true } }
+    }
+  });
+}
+
+function renderLLMCompareChart() {
+  const ALL = [...CATS, 'non_clase'];
+  const lex = Object.fromEntries(ALL.map(c => [c, 0]));
+  const llm = Object.fromEntries(ALL.map(c => [c, 0]));
+  LLM_DATA.forEach(d => {
+    const cl = d.categorie_dominante     || 'non_clase';
+    const cm = d.categorie_dominante_llm || 'non_clase';
+    if (lex[cl] !== undefined) lex[cl]++;
+    if (llm[cm] !== undefined) llm[cm]++;
+  });
+  const ALL_FULL = [...CATS, 'non_classe'];
+  const ctx = document.getElementById('chart-llm-compare');
+  if (ctx._chart) ctx._chart.destroy();
+  ctx._chart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ALL_FULL.map(c => NARRATIFS[c]?.label || c),
+      datasets: [
+        { label: 'Lexical',     data: ALL_FULL.map(c => lex[c] || 0), backgroundColor: '#2c4a6e88', borderColor: '#2c4a6e', borderWidth: 1 },
+        { label: 'LLM (Groq)',  data: ALL_FULL.map(c => llm[c] || 0), backgroundColor: '#4a674188', borderColor: '#4a6741', borderWidth: 1 },
+      ]
+    },
+    options: {
+      indexAxis: 'y',
+      plugins: { legend: { display: true, position: 'top' } },
+      scales: { x: { beginAtZero: true } }
+    }
+  });
+}
+
+function renderLLMList() {
+  llmPage = 0;
+  const filtered = getLLMFiltered();
+  _llmRenderCards(filtered, false);
+}
+
+function llmShowMore() {
+  llmPage++;
+  _llmRenderCards(getLLMFiltered(), true);
+}
+
+function _llmRenderCards(filtered, append) {
+  const start = llmPage * LLM_PAGE_SIZE;
+  const slice = filtered.slice(start, start + LLM_PAGE_SIZE);
+  const hasMore = filtered.length > (llmPage + 1) * LLM_PAGE_SIZE;
+  const list = document.getElementById('llm-list');
+  const moreBtn = document.getElementById('llm-more');
+  if (!append) list.innerHTML = '';
+  if (!filtered.length) {
+    list.innerHTML = '<div class="empty">Aucun document pour ce filtre.</div>';
+    moreBtn.style.display = 'none';
+    return;
+  }
+  list.insertAdjacentHTML('beforeend', slice.map(d => {
+    const lex  = d.categorie_dominante     || 'non_classe';
+    const llm  = d.categorie_dominante_llm || 'non_classe';
+    const match = lex === llm;
+    const cLex = YT_NAR_COLORS[lex]  || '#aaa';
+    const cLLM = YT_NAR_COLORS[llm]  || '#aaa';
+    const typeLbl = d.type_doc === 'tweet' ? '🐦 Tweet' : '▶ YT';
+    const site    = (d.sitename || '').slice(0, 45);
+    const texte   = escHtml((d.texte || '').slice(0, 260));
+    return `<div style="border:1px solid ${match ? 'var(--gris-clair)' : '#f1764e66'};border-radius:6px;padding:1rem;margin-bottom:.7rem;background:var(--blanc)">
+      <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.5rem;align-items:center">
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${cLex};color:#fff" title="Classification lexicale">${NARRATIFS[lex]?.label||lex}</span>
+        <span style="font-size:11px;color:var(--gris)">→ LLM :</span>
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${cLLM};color:#fff" title="Classification LLM">${NARRATIFS[llm]?.label||llm}</span>
+        <span style="font-size:13px;margin-left:.2rem;color:${match?'#27ae60':'#e74c3c'}">${match?'✓':'✗'}</span>
+        <span style="font-size:11px;color:var(--gris);margin-left:auto">${typeLbl} · ${site}</span>
+      </div>
+      <p style="font-size:13.5px;line-height:1.6;color:var(--encre);font-style:italic">"${texte}${(d.texte||'').length>260?'…':''}"</p>
+    </div>`;
+  }).join(''));
+  moreBtn.style.display = hasMore ? 'block' : 'none';
 }
 
 // ─── INIT ────────────────────────────────────────────────────────────────────

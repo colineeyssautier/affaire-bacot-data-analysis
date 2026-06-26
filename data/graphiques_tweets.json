@@ -2055,77 +2055,37 @@
     "sous_titre": "% de documents avec ce narratif dominant — écart trié par ampleur absolue",
     "type": "dumbbell",
     "n_tweets": 2943,
-    "n_medias": 1118,
+    "n_medias": 18188,
     "donnees": [
-      {
-        "categorie": "silence_collectif",
-        "label": "Silence collectif",
-        "couleur": "#7a5c1e",
-        "pct_tweets": 27.0,
-        "pct_medias": 40.3,
-        "ecart_pts": -13.3,
-        "n_tweets": 796,
-        "n_medias": 451
-      },
-      {
-        "categorie": "soutien_victime",
-        "label": "Soutien à la victime",
-        "couleur": "#2c4a6e",
-        "pct_tweets": 22.1,
-        "pct_medias": 30.9,
-        "ecart_pts": -8.8,
-        "n_tweets": 650,
-        "n_medias": 345
-      },
       {
         "categorie": "legitime_defense",
         "label": "Légitime défense",
         "couleur": "#4a6741",
         "pct_tweets": 8.7,
-        "pct_medias": 4.6,
-        "ecart_pts": 4.1,
+        "pct_medias": 3.8,
+        "ecart_pts": 4.9,
         "n_tweets": 257,
-        "n_medias": 51
+        "n_medias": 698
       },
       {
-        "categorie": "discours_feministe",
-        "label": "Discours féministe",
-        "couleur": "#6c3483",
-        "pct_tweets": 3.1,
-        "pct_medias": 1.1,
-        "ecart_pts": 2.0,
-        "n_tweets": 92,
-        "n_medias": 12
-      },
-      {
-        "categorie": "remise_en_question",
-        "label": "Remise en question",
-        "couleur": "#8b3a2a",
-        "pct_tweets": 5.8,
-        "pct_medias": 4.1,
-        "ecart_pts": 1.7,
-        "n_tweets": 171,
-        "n_medias": 46
-      },
-      {
-        "categorie": "emprise_psychologique",
-        "label": "Emprise psychologique",
-        "couleur": "#b03060",
-        "pct_tweets": 2.4,
-        "pct_medias": 0.8,
-        "ecart_pts": 1.6,
-        "n_tweets": 70,
-        "n_medias": 9
+        "categorie": "silence_collectif",
+        "label": "Silence collectif",
+        "couleur": "#7a5c1e",
+        "pct_tweets": 27.0,
+        "pct_medias": 23.2,
+        "ecart_pts": 3.8,
+        "n_tweets": 796,
+        "n_medias": 4213
       },
       {
         "categorie": "jugement_moral",
         "label": "Jugement moral",
         "couleur": "#1a6b8a",
         "pct_tweets": 10.2,
-        "pct_medias": 11.5,
-        "ecart_pts": -1.3,
+        "pct_medias": 12.9,
+        "ecart_pts": -2.7,
         "n_tweets": 300,
-        "n_medias": 129
+        "n_medias": 2351
       },
       {
         "categorie": "sensationnalisme",
@@ -2135,7 +2095,47 @@
         "pct_medias": 5.0,
         "ecart_pts": 0.7,
         "n_tweets": 169,
-        "n_medias": 56
+        "n_medias": 908
+      },
+      {
+        "categorie": "emprise_psychologique",
+        "label": "Emprise psychologique",
+        "couleur": "#b03060",
+        "pct_tweets": 2.4,
+        "pct_medias": 1.8,
+        "ecart_pts": 0.6,
+        "n_tweets": 70,
+        "n_medias": 334
+      },
+      {
+        "categorie": "remise_en_question",
+        "label": "Remise en question",
+        "couleur": "#8b3a2a",
+        "pct_tweets": 5.8,
+        "pct_medias": 6.3,
+        "ecart_pts": -0.5,
+        "n_tweets": 171,
+        "n_medias": 1144
+      },
+      {
+        "categorie": "soutien_victime",
+        "label": "Soutien à la victime",
+        "couleur": "#2c4a6e",
+        "pct_tweets": 22.1,
+        "pct_medias": 21.9,
+        "ecart_pts": 0.2,
+        "n_tweets": 650,
+        "n_medias": 3977
+      },
+      {
+        "categorie": "discours_feministe",
+        "label": "Discours féministe",
+        "couleur": "#6c3483",
+        "pct_tweets": 3.1,
+        "pct_medias": 3.2,
+        "ecart_pts": -0.1,
+        "n_tweets": 92,
+        "n_medias": 580
       }
     ]
   },
@@ -2217,8 +2217,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 343,
-        "n_medias_dominant": 150,
+        "n_medias": 1726,
+        "n_medias_dominant": 464,
         "diverge": false
       },
       {
@@ -2231,8 +2231,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 30,
-        "n_medias_dominant": 13,
+        "n_medias": 162,
+        "n_medias_dominant": 58,
         "diverge": false
       },
       {
@@ -2245,8 +2245,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
+        "n_medias": 39,
+        "n_medias_dominant": 12,
         "diverge": true
       },
       {
@@ -2259,8 +2259,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 5,
-        "n_medias_dominant": 3,
+        "n_medias": 38,
+        "n_medias_dominant": 12,
         "diverge": true
       },
       {
@@ -2273,8 +2273,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 7,
-        "n_medias_dominant": 4,
+        "n_medias": 82,
+        "n_medias_dominant": 25,
         "diverge": true
       },
       {
@@ -2287,8 +2287,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 28,
-        "n_medias_dominant": 18,
+        "n_medias": 62,
+        "n_medias_dominant": 29,
         "diverge": true
       },
       {
@@ -2301,8 +2301,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 11,
-        "n_medias_dominant": 7,
+        "n_medias": 650,
+        "n_medias_dominant": 171,
         "diverge": false
       },
       {
@@ -2312,11 +2312,11 @@
         "couleur_tweets": "#2c4a6e",
         "n_tweets": 8,
         "n_tweets_dominant": 3,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 3,
-        "n_medias_dominant": 2,
+        "narratif_medias": "jugement_moral",
+        "label_medias": "Jugement moral",
+        "couleur_medias": "#1a6b8a",
+        "n_medias": 64,
+        "n_medias_dominant": 14,
         "diverge": true
       },
       {
@@ -2329,8 +2329,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
+        "n_medias": 26,
+        "n_medias_dominant": 8,
         "diverge": true
       },
       {
@@ -2343,8 +2343,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 2,
-        "n_medias_dominant": 1,
+        "n_medias": 150,
+        "n_medias_dominant": 42,
         "diverge": true
       },
       {
@@ -2357,8 +2357,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 2,
-        "n_medias_dominant": 2,
+        "n_medias": 44,
+        "n_medias_dominant": 15,
         "diverge": false
       },
       {
@@ -2368,12 +2368,12 @@
         "couleur_tweets": "#999",
         "n_tweets": 7,
         "n_tweets_dominant": 3,
-        "narratif_medias": null,
-        "label_medias": "",
-        "couleur_medias": "#999",
-        "n_medias": 0,
-        "n_medias_dominant": 0,
-        "diverge": false
+        "narratif_medias": "silence_collectif",
+        "label_medias": "Silence collectif",
+        "couleur_medias": "#7a5c1e",
+        "n_medias": 47,
+        "n_medias_dominant": 15,
+        "diverge": true
       },
       {
         "periode": "2022-06",
@@ -2385,8 +2385,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
+        "n_medias": 41,
+        "n_medias_dominant": 12,
         "diverge": false
       },
       {
@@ -2396,11 +2396,11 @@
         "couleur_tweets": "#c0392b",
         "n_tweets": 8,
         "n_tweets_dominant": 4,
-        "narratif_medias": "legitime_defense",
-        "label_medias": "Légitime défense",
-        "couleur_medias": "#4a6741",
-        "n_medias": 4,
-        "n_medias_dominant": 1,
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 28,
+        "n_medias_dominant": 8,
         "diverge": true
       },
       {
@@ -2410,12 +2410,12 @@
         "couleur_tweets": "#4a6741",
         "n_tweets": 10,
         "n_tweets_dominant": 2,
-        "narratif_medias": null,
-        "label_medias": "",
-        "couleur_medias": "#999",
-        "n_medias": 0,
-        "n_medias_dominant": 0,
-        "diverge": false
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 18,
+        "n_medias_dominant": 5,
+        "diverge": true
       },
       {
         "periode": "2022-09",
@@ -2427,8 +2427,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 5,
-        "n_medias_dominant": 4,
+        "n_medias": 36,
+        "n_medias_dominant": 11,
         "diverge": false
       },
       {
@@ -2441,8 +2441,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 10,
-        "n_medias_dominant": 9,
+        "n_medias": 32,
+        "n_medias_dominant": 13,
         "diverge": false
       },
       {
@@ -2455,8 +2455,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 9,
-        "n_medias_dominant": 8,
+        "n_medias": 37,
+        "n_medias_dominant": 17,
         "diverge": true
       },
       {
@@ -2466,12 +2466,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 18,
         "n_tweets_dominant": 11,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
-        "diverge": false
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 63,
+        "n_medias_dominant": 21,
+        "diverge": true
       },
       {
         "periode": "2023-01",
@@ -2480,12 +2480,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 5,
         "n_tweets_dominant": 2,
-        "narratif_medias": null,
+        "narratif_medias": "non_classe",
         "label_medias": "",
         "couleur_medias": "#999",
-        "n_medias": 0,
-        "n_medias_dominant": 0,
-        "diverge": false
+        "n_medias": 50,
+        "n_medias_dominant": 14,
+        "diverge": true
       },
       {
         "periode": "2023-02",
@@ -2494,11 +2494,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 5,
         "n_tweets_dominant": 5,
-        "narratif_medias": "discours_feministe",
-        "label_medias": "Discours féministe",
-        "couleur_medias": "#6c3483",
-        "n_medias": 2,
-        "n_medias_dominant": 1,
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 23,
+        "n_medias_dominant": 9,
         "diverge": true
       },
       {
@@ -2511,8 +2511,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 3,
-        "n_medias_dominant": 2,
+        "n_medias": 68,
+        "n_medias_dominant": 17,
         "diverge": true
       },
       {
@@ -2525,8 +2525,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 8,
-        "n_medias_dominant": 6,
+        "n_medias": 86,
+        "n_medias_dominant": 27,
         "diverge": false
       },
       {
@@ -2536,11 +2536,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 7,
         "n_tweets_dominant": 3,
-        "narratif_medias": null,
-        "label_medias": "",
-        "couleur_medias": "#999",
-        "n_medias": 0,
-        "n_medias_dominant": 0,
+        "narratif_medias": "silence_collectif",
+        "label_medias": "Silence collectif",
+        "couleur_medias": "#7a5c1e",
+        "n_medias": 26,
+        "n_medias_dominant": 8,
         "diverge": false
       },
       {
@@ -2550,11 +2550,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 9,
         "n_tweets_dominant": 4,
-        "narratif_medias": "sensationnalisme",
-        "label_medias": "Sensationnalisme",
-        "couleur_medias": "#c0392b",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 917,
+        "n_medias_dominant": 281,
         "diverge": true
       },
       {
@@ -2564,12 +2564,12 @@
         "couleur_tweets": "#999",
         "n_tweets": 9,
         "n_tweets_dominant": 3,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
-        "diverge": true
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 60,
+        "n_medias_dominant": 22,
+        "diverge": false
       },
       {
         "periode": "2023-08",
@@ -2578,11 +2578,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 12,
         "n_tweets_dominant": 4,
-        "narratif_medias": null,
-        "label_medias": "",
-        "couleur_medias": "#999",
-        "n_medias": 0,
-        "n_medias_dominant": 0,
+        "narratif_medias": "silence_collectif",
+        "label_medias": "Silence collectif",
+        "couleur_medias": "#7a5c1e",
+        "n_medias": 373,
+        "n_medias_dominant": 101,
         "diverge": false
       },
       {
@@ -2592,12 +2592,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 18,
         "n_tweets_dominant": 5,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 99,
-        "n_medias_dominant": 42,
-        "diverge": false
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 263,
+        "n_medias_dominant": 76,
+        "diverge": true
       },
       {
         "periode": "2023-10",
@@ -2609,8 +2609,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 21,
-        "n_medias_dominant": 12,
+        "n_medias": 88,
+        "n_medias_dominant": 30,
         "diverge": true
       },
       {
@@ -2623,8 +2623,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 10,
-        "n_medias_dominant": 7,
+        "n_medias": 55,
+        "n_medias_dominant": 17,
         "diverge": false
       },
       {
@@ -2637,8 +2637,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 8,
-        "n_medias_dominant": 4,
+        "n_medias": 44,
+        "n_medias_dominant": 15,
         "diverge": false
       },
       {
@@ -2651,8 +2651,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 22,
-        "n_medias_dominant": 10,
+        "n_medias": 133,
+        "n_medias_dominant": 48,
         "diverge": false
       },
       {
@@ -2662,11 +2662,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 6,
         "n_tweets_dominant": 5,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 5,
-        "n_medias_dominant": 3,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 612,
+        "n_medias_dominant": 140,
         "diverge": true
       },
       {
@@ -2676,11 +2676,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 24,
         "n_tweets_dominant": 10,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 371,
+        "n_medias_dominant": 176,
         "diverge": true
       },
       {
@@ -2690,12 +2690,12 @@
         "couleur_tweets": "#999",
         "n_tweets": 7,
         "n_tweets_dominant": 4,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 4,
-        "n_medias_dominant": 2,
-        "diverge": true
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 220,
+        "n_medias_dominant": 58,
+        "diverge": false
       },
       {
         "periode": "2024-05",
@@ -2707,8 +2707,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 3,
-        "n_medias_dominant": 2,
+        "n_medias": 194,
+        "n_medias_dominant": 40,
         "diverge": true
       },
       {
@@ -2718,12 +2718,12 @@
         "couleur_tweets": "#999",
         "n_tweets": 3,
         "n_tweets_dominant": 1,
-        "narratif_medias": "jugement_moral",
-        "label_medias": "Jugement moral",
-        "couleur_medias": "#1a6b8a",
-        "n_medias": 3,
-        "n_medias_dominant": 3,
-        "diverge": true
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 712,
+        "n_medias_dominant": 176,
+        "diverge": false
       },
       {
         "periode": "2024-07",
@@ -2735,8 +2735,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 8,
-        "n_medias_dominant": 5,
+        "n_medias": 269,
+        "n_medias_dominant": 68,
         "diverge": true
       },
       {
@@ -2749,8 +2749,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 3,
-        "n_medias_dominant": 3,
+        "n_medias": 244,
+        "n_medias_dominant": 54,
         "diverge": false
       },
       {
@@ -2763,8 +2763,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 5,
-        "n_medias_dominant": 4,
+        "n_medias": 194,
+        "n_medias_dominant": 54,
         "diverge": true
       },
       {
@@ -2777,8 +2777,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 2,
-        "n_medias_dominant": 1,
+        "n_medias": 399,
+        "n_medias_dominant": 105,
         "diverge": true
       },
       {
@@ -2788,12 +2788,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 17,
         "n_tweets_dominant": 7,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 2,
-        "n_medias_dominant": 1,
-        "diverge": false
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 422,
+        "n_medias_dominant": 110,
+        "diverge": true
       },
       {
         "periode": "2024-12",
@@ -2802,12 +2802,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 16,
         "n_tweets_dominant": 6,
-        "narratif_medias": null,
+        "narratif_medias": "non_classe",
         "label_medias": "",
         "couleur_medias": "#999",
-        "n_medias": 0,
-        "n_medias_dominant": 0,
-        "diverge": false
+        "n_medias": 391,
+        "n_medias_dominant": 103,
+        "diverge": true
       },
       {
         "periode": "2025-01",
@@ -2816,12 +2816,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 7,
         "n_tweets_dominant": 4,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 2,
-        "n_medias_dominant": 2,
-        "diverge": false
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 224,
+        "n_medias_dominant": 71,
+        "diverge": true
       },
       {
         "periode": "2025-02",
@@ -2830,11 +2830,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 2,
         "n_tweets_dominant": 1,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 148,
+        "n_medias_dominant": 40,
         "diverge": true
       },
       {
@@ -2844,12 +2844,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 10,
         "n_tweets_dominant": 6,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 4,
-        "n_medias_dominant": 1,
-        "diverge": false
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 745,
+        "n_medias_dominant": 178,
+        "diverge": true
       },
       {
         "periode": "2025-04",
@@ -2858,11 +2858,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 9,
         "n_tweets_dominant": 5,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 2,
-        "n_medias_dominant": 1,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 326,
+        "n_medias_dominant": 78,
         "diverge": true
       },
       {
@@ -2872,12 +2872,12 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 9,
         "n_tweets_dominant": 3,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 1,
-        "n_medias_dominant": 1,
-        "diverge": false
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 307,
+        "n_medias_dominant": 91,
+        "diverge": true
       },
       {
         "periode": "2025-06",
@@ -2886,11 +2886,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 9,
         "n_tweets_dominant": 4,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 50,
-        "n_medias_dominant": 22,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 485,
+        "n_medias_dominant": 108,
         "diverge": true
       },
       {
@@ -2900,11 +2900,11 @@
         "couleur_tweets": "#8b3a2a",
         "n_tweets": 17,
         "n_tweets_dominant": 5,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 8,
-        "n_medias_dominant": 3,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 288,
+        "n_medias_dominant": 70,
         "diverge": true
       },
       {
@@ -2917,8 +2917,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 18,
-        "n_medias_dominant": 9,
+        "n_medias": 134,
+        "n_medias_dominant": 33,
         "diverge": false
       },
       {
@@ -2928,12 +2928,12 @@
         "couleur_tweets": "#999",
         "n_tweets": 11,
         "n_tweets_dominant": 3,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 8,
-        "n_medias_dominant": 4,
-        "diverge": true
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 226,
+        "n_medias_dominant": 62,
+        "diverge": false
       },
       {
         "periode": "2025-10",
@@ -2942,11 +2942,11 @@
         "couleur_tweets": "#4a6741",
         "n_tweets": 4,
         "n_tweets_dominant": 1,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 7,
-        "n_medias_dominant": 3,
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 620,
+        "n_medias_dominant": 164,
         "diverge": true
       },
       {
@@ -2956,12 +2956,12 @@
         "couleur_tweets": "#999",
         "n_tweets": 3,
         "n_tweets_dominant": 1,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 9,
-        "n_medias_dominant": 5,
-        "diverge": true
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 258,
+        "n_medias_dominant": 68,
+        "diverge": false
       },
       {
         "periode": "2025-12",
@@ -2973,8 +2973,8 @@
         "narratif_medias": "soutien_victime",
         "label_medias": "Soutien à la victime",
         "couleur_medias": "#2c4a6e",
-        "n_medias": 55,
-        "n_medias_dominant": 22,
+        "n_medias": 324,
+        "n_medias_dominant": 85,
         "diverge": true
       },
       {
@@ -2984,11 +2984,11 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 9,
         "n_tweets_dominant": 4,
-        "narratif_medias": "soutien_victime",
-        "label_medias": "Soutien à la victime",
-        "couleur_medias": "#2c4a6e",
-        "n_medias": 18,
-        "n_medias_dominant": 5,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 434,
+        "n_medias_dominant": 112,
         "diverge": true
       },
       {
@@ -2998,11 +2998,11 @@
         "couleur_tweets": "#c0392b",
         "n_tweets": 16,
         "n_tweets_dominant": 4,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 8,
-        "n_medias_dominant": 2,
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 190,
+        "n_medias_dominant": 47,
         "diverge": true
       },
       {
@@ -3015,8 +3015,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 6,
-        "n_medias_dominant": 4,
+        "n_medias": 405,
+        "n_medias_dominant": 109,
         "diverge": false
       },
       {
@@ -3026,11 +3026,11 @@
         "couleur_tweets": "#999",
         "n_tweets": 4,
         "n_tweets_dominant": 2,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 6,
-        "n_medias_dominant": 2,
+        "narratif_medias": "soutien_victime",
+        "label_medias": "Soutien à la victime",
+        "couleur_medias": "#2c4a6e",
+        "n_medias": 909,
+        "n_medias_dominant": 234,
         "diverge": true
       },
       {
@@ -3043,8 +3043,8 @@
         "narratif_medias": "silence_collectif",
         "label_medias": "Silence collectif",
         "couleur_medias": "#7a5c1e",
-        "n_medias": 31,
-        "n_medias_dominant": 13,
+        "n_medias": 226,
+        "n_medias_dominant": 62,
         "diverge": true
       },
       {
@@ -3054,14 +3054,14 @@
         "couleur_tweets": "#7a5c1e",
         "n_tweets": 13,
         "n_tweets_dominant": 7,
-        "narratif_medias": "silence_collectif",
-        "label_medias": "Silence collectif",
-        "couleur_medias": "#7a5c1e",
-        "n_medias": 2,
-        "n_medias_dominant": 1,
-        "diverge": false
+        "narratif_medias": "non_classe",
+        "label_medias": "",
+        "couleur_medias": "#999",
+        "n_medias": 120,
+        "n_medias_dominant": 33,
+        "diverge": true
       }
     ],
-    "n_mois_divergents": 34
+    "n_mois_divergents": 40
   }
 }

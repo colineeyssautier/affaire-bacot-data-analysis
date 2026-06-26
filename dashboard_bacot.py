@@ -105,6 +105,13 @@ def charger_csv():
     return df_r, df_n, df_c
 
 CSV_COMMENTAIRES_YT = Path("data/resultats_commentaires_youtube.csv")
+JSON_LLM = Path("data/corpus_llm_classe.json")
+
+VALID_CATS = [
+    "soutien_victime", "remise_en_question", "legitime_defense",
+    "discours_feministe", "emprise_psychologique", "silence_collectif",
+    "sensationnalisme", "jugement_moral", "non_classe",
+]
 
 @st.cache_data
 def charger_commentaires_yt():
@@ -112,6 +119,22 @@ def charger_commentaires_yt():
         return pd.DataFrame()
     df = pd.read_csv(CSV_COMMENTAIRES_YT, encoding='utf-8-sig')
     df['date'] = pd.to_datetime(df['date'], errors='coerce')
+    return df
+
+@st.cache_data
+def charger_llm():
+    if not JSON_LLM.exists():
+        return pd.DataFrame()
+    with open(JSON_LLM, encoding='utf-8') as f:
+        data = json.load(f)
+    df = pd.DataFrame([d for d in data if d.get('categorie_dominante_llm') is not None])
+    # Corriger les catégories LLM mal formatées (ex: "jugement_moral_llm")
+    def clean_cat(cat):
+        for v in VALID_CATS:
+            if str(cat) == v or str(cat).startswith(v):
+                return v
+        return 'non_classe'
+    df['categorie_dominante_llm'] = df['categorie_dominante_llm'].apply(clean_cat)
     return df
 
 # ─── CSS personnalisé ─────────────────────────────────────────────────────────
@@ -202,22 +225,27 @@ with st.sidebar:
     st.markdown("*Analyse computationnelle des discours*")
     st.divider()
 
-    page = st.radio(
-        "Navigation",
-        ["🏠 Vue d'ensemble", "📊 Narratifs", "🔵 Clusters",
-         "💬 Explorer le corpus", "📈 Évolution temporelle",
-         "🎬 Commentaires YouTube",
-         "🔍 Recherche qualitative"],
-        label_visibility="collapsed",
-    )
+    PAGES = [
+        "🏠 Vue d'ensemble",
+        "📊 Narratifs",
+        "🔵 Clusters",
+        "💬 Explorer le corpus",
+        "📈 Évolution temporelle",
+        "🎬 Commentaires YouTube",
+        "🤖 Analyse LLM (échantillon)",
+        "🔍 Recherche qualitative",
+    ]
+    page = st.selectbox("Navigation", PAGES, label_visibility="collapsed")
 
     st.divider()
     st.markdown(f"**Corpus :** {len(corpus)} documents")
     if not df_r.empty:
-        n_art = (df_r['type_doc'] == 'article').sum()
-        n_cmt = (df_r['type_doc'] == 'commentaire').sum()
+        n_art   = int((df_r['type_doc'] == 'article').sum())
+        n_cmt   = int((df_r['type_doc'] == 'commentaire').sum())
+        n_tweet = int((df_r['type_doc'] == 'tweet').sum())
         st.markdown(f"📰 {n_art} articles de presse")
         st.markdown(f"💬 {n_cmt} commentaires YouTube")
+        st.markdown(f"🐦 {n_tweet} tweets")
     st.divider()
     st.caption("Projet SciLit · Prototype v1.0")
 
@@ -419,66 +447,133 @@ elif page == "📊 Narratifs":
 elif page == "🔵 Clusters":
 
     st.markdown('<p class="main-title">🔵 Clustering K-Means</p>', unsafe_allow_html=True)
-    st.markdown('<p class="subtitle">6 groupes naturels identifiés par similarité lexicale globale</p>', unsafe_allow_html=True)
+    st.markdown('<p class="subtitle">Groupes identifiés par similarité lexicale · Breakdown par type de source</p>', unsafe_allow_html=True)
 
-    if df_c.empty:
-        st.error("Fichier resume_clusters.csv introuvable.")
+    if df_r.empty:
+        st.error("Données de classification introuvables.")
         st.stop()
 
-    st.info("Le clustering regroupe les documents par similarité lexicale **sans catégories prédéfinies**. Il révèle des patterns que la classification supervisée n'aurait pas anticipés.")
+    st.info("Le clustering regroupe les documents par similarité lexicale **sans catégories prédéfinies**. Les tweets (cluster -1) n'ont pas été inclus dans le clustering. Les clusters 1–5 sont dominés par les commentaires YouTube.")
 
-    # Tableau des clusters
-    st.markdown('<p class="section-header">Résumé des clusters</p>', unsafe_allow_html=True)
+    # ── Calcul dynamique depuis df_r ──────────────────────────────────────────
+
+    df_cl_src = df_r[df_r['cluster'] != -1].copy()
+
+    # Comptages par cluster × type_doc
+    ct = df_cl_src.groupby(['cluster', 'type_doc']).size().unstack(fill_value=0)
+    for col in ['article', 'commentaire', 'tweet']:
+        if col not in ct.columns:
+            ct[col] = 0
+    ct['total'] = ct.sum(axis=1)
+    ct['pct_articles']     = (ct['article']     / ct['total'] * 100).round(1)
+    ct['pct_commentaires'] = (ct['commentaire'] / ct['total'] * 100).round(1)
+    ct['pct_tweets']       = (ct['tweet']       / ct['total'] * 100).round(1)
+
+    # Narratif dominant et mots clés par cluster
+    def cluster_meta(cluster_id):
+        sub = df_cl_src[df_cl_src['cluster'] == cluster_id]
+        narr = sub['categorie_dominante'].value_counts().idxmax() if not sub.empty else 'non_classe'
+        mots = sub['cluster_mots_cles'].dropna().iloc[0] if not sub['cluster_mots_cles'].dropna().empty else ''
+        return narr, mots
 
     INTERP_CLUSTERS = {
-        0: "Presse dense — articles longs sur le procès. Journalisme de fond, profil des protagonistes.",
+        0: "Presse dense — articles longs sur le procès, journalisme de fond, profil des protagonistes.",
         1: "Commentaires de soutien directs — courts, émotionnels, adressés à Valérie personnellement.",
-        2: "Articles factuels — couverture standard du procès, faits et chronologie.",
-        3: "Commentaires engagés — plus longs, mêlent soutien et réflexion sur justice et société.",
-        4: "Cluster pétition/mobilisation — liés à la campagne de soutien, signatures.",
+        2: "Commentaires engagés — mêlent soutien et réflexion sur justice et violences.",
+        3: "Commentaires génériques — très courts, vocabulaire ordinaire, peu de signal narratif.",
+        4: "Cluster personnel — récits à la 1ère personne, identification à la situation de Valérie.",
         5: "Encouragements — très courts, adressés directement à Valérie.",
     }
 
-    for _, row in df_c.iterrows():
-        cluster_id = int(row['cluster'])
+    # ── Filtre par type de source ─────────────────────────────────────────────
+
+    filtre_type_cl = st.radio(
+        "Afficher les clusters pour :",
+        ["Tous les types", "Articles uniquement", "Commentaires uniquement"],
+        horizontal=True,
+    )
+    if filtre_type_cl == "Articles uniquement":
+        df_cl_src = df_cl_src[df_cl_src['type_doc'] == 'article']
+    elif filtre_type_cl == "Commentaires uniquement":
+        df_cl_src = df_cl_src[df_cl_src['type_doc'] == 'commentaire']
+
+    st.divider()
+
+    # ── Tableau des clusters ──────────────────────────────────────────────────
+    st.markdown('<p class="section-header">Résumé des clusters</p>', unsafe_allow_html=True)
+
+    for cluster_id in sorted(ct.index):
+        row = ct.loc[cluster_id]
+        narr, mots = cluster_meta(cluster_id)
+        n_total = int(row['total'])
+        n_art   = int(row['article'])
+        n_cmt   = int(row['commentaire'])
+
         with st.expander(
-            f"**Cluster {cluster_id}** — {int(row['n_documents'])} documents · "
-            f"Narratif dominant : {LABELS_FR.get(row['narratif_dominant'], row['narratif_dominant'])}",
+            f"**Cluster {cluster_id}** — {n_total} documents · "
+            f"Narratif dominant : {LABELS_FR.get(narr, narr)}",
             expanded=(cluster_id == 0),
         ):
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.metric("Documents", int(row['n_documents']))
-            with col2:
-                st.metric("% Articles", f"{row['pct_articles']:.0f}%")
-            with col3:
-                st.metric("% Commentaires", f"{row['pct_commentaires']:.0f}%")
+            col1, col2, col3, col4 = st.columns(4)
+            col1.metric("Total", n_total)
+            col2.metric("Articles",      f"{n_art} ({row['pct_articles']:.0f}%)")
+            col3.metric("Commentaires",  f"{n_cmt} ({row['pct_commentaires']:.0f}%)")
+            col4.metric("Tweets",        f"{int(row['tweet'])} ({row['pct_tweets']:.0f}%)")
 
-            st.markdown(f"**Mots caractéristiques :** `{row['mots_cles']}`")
+            st.markdown(f"**Mots caractéristiques :** `{mots}`")
             st.markdown(f"**Interprétation :** {INTERP_CLUSTERS.get(cluster_id, '')}")
 
     st.divider()
 
-    # Graphique composition des clusters
-    st.markdown('<p class="section-header">Composition des clusters</p>', unsafe_allow_html=True)
+    # ── Graphique composition des clusters ────────────────────────────────────
+    st.markdown('<p class="section-header">Composition des clusters par type de source</p>', unsafe_allow_html=True)
 
+    labels_cl = [f"Cluster {c}" for c in ct.index]
     fig_cl = go.Figure()
-    fig_cl.add_trace(go.Bar(
-        name='Articles', x=[f"Cluster {int(r['cluster'])}" for _, r in df_c.iterrows()],
-        y=df_c['pct_articles'], marker_color='#2E75B6',
-    ))
-    fig_cl.add_trace(go.Bar(
-        name='Commentaires', x=[f"Cluster {int(r['cluster'])}" for _, r in df_c.iterrows()],
-        y=df_c['pct_commentaires'], marker_color='#f1c44e',
-    ))
+    fig_cl.add_trace(go.Bar(name='Articles',      x=labels_cl, y=ct['pct_articles'],     marker_color='#2E75B6'))
+    fig_cl.add_trace(go.Bar(name='Commentaires',  x=labels_cl, y=ct['pct_commentaires'], marker_color='#f1c44e'))
+    fig_cl.add_trace(go.Bar(name='Tweets',        x=labels_cl, y=ct['pct_tweets'],       marker_color='#4ef1c4'))
     fig_cl.update_layout(
-        barmode='stack', height=320,
+        barmode='stack', height=340,
         margin=dict(l=0, r=0, t=10, b=10),
         plot_bgcolor='white',
         yaxis_title="% du cluster",
         legend=dict(orientation='h', y=1.1),
     )
     st.plotly_chart(fig_cl, use_container_width=True)
+
+    # ── Narratif dominant par cluster ─────────────────────────────────────────
+    st.markdown('<p class="section-header">Narratif dominant par cluster</p>', unsafe_allow_html=True)
+
+    narr_data = []
+    for cluster_id in sorted(ct.index):
+        sub = df_cl_src[df_cl_src['cluster'] == cluster_id] if filtre_type_cl == "Tous les types" else df_cl_src[df_cl_src['cluster'] == cluster_id]
+        if sub.empty:
+            continue
+        dist = sub['categorie_dominante'].value_counts(normalize=True) * 100
+        for cat, pct in dist.items():
+            narr_data.append({'cluster': f"Cluster {cluster_id}", 'categorie': cat, 'pct': pct})
+
+    if narr_data:
+        df_narr_cl = pd.DataFrame(narr_data)
+        fig_narr_cl = go.Figure()
+        for cat in CATEGORIES + ['non_classe']:
+            sub_cat = df_narr_cl[df_narr_cl['categorie'] == cat]
+            if not sub_cat.empty:
+                fig_narr_cl.add_trace(go.Bar(
+                    name=LABELS_FR.get(cat, cat),
+                    x=sub_cat['cluster'],
+                    y=sub_cat['pct'],
+                    marker_color=COULEURS.get(cat, '#aaa'),
+                ))
+        fig_narr_cl.update_layout(
+            barmode='stack', height=360,
+            margin=dict(l=0, r=0, t=10, b=10),
+            plot_bgcolor='white',
+            yaxis=dict(title='% des documents du cluster'),
+            legend=dict(font=dict(size=10), orientation='h', y=1.1),
+        )
+        st.plotly_chart(fig_narr_cl, use_container_width=True)
 
 
 # ════════════════════════════════════════════════════════════════════════════
@@ -1139,4 +1234,239 @@ elif page == "🔍 Recherche qualitative":
 
     elif query and len(query) < 2:
         st.caption("Entrez au moins 2 caractères.")
+
+
+# ════════════════════════════════════════════════════════════════════════════
+# PAGE 8 : ANALYSE LLM (ÉCHANTILLON)
+# ════════════════════════════════════════════════════════════════════════════
+
+elif page == "🤖 Analyse LLM (échantillon)":
+
+    st.markdown('<p class="main-title">🤖 Analyse LLM — Échantillon Groq</p>', unsafe_allow_html=True)
+    st.markdown(
+        '<p class="subtitle">860 commentaires YouTube reclassifiés par Llama 3.3-70B via Groq · '
+        'Comparaison avec la classification lexicale de base</p>',
+        unsafe_allow_html=True
+    )
+
+    df_llm = charger_llm()
+
+    if df_llm.empty:
+        st.error("Fichier data/corpus_llm_classe.json introuvable ou vide.")
+        st.stop()
+
+    st.info(
+        "**Contexte méthodologique** — La classification lexicale (basée sur des dictionnaires de termes) "
+        "a été appliquée à l'ensemble du corpus (~20 000 documents). "
+        "Un sous-échantillon de **860 commentaires YouTube** a ensuite été soumis à un LLM "
+        "(**Llama 3.3-70B**, via l'API Groq) pour une classification contextuelle enrichie. "
+        "Les limites de quota de l'API Groq ont empêché d'aller au-delà de 860 documents sur "
+        "l'objectif initial de 5 000. Cet échantillon est donc présenté à titre exploratoire."
+    )
+
+    st.divider()
+
+    # ── Métriques ──────────────────────────────────────────────────────────────
+
+    n_total      = len(df_llm)
+    n_accord     = (df_llm['categorie_dominante'] == df_llm['categorie_dominante_llm']).sum()
+    pct_accord   = n_accord / n_total * 100
+
+    c1, c2, c3, c4 = st.columns(4)
+    c1.metric("Documents analysés par LLM", n_total)
+    c2.metric("Accord lex / LLM", f"{pct_accord:.1f}%")
+    c3.metric("Modèle LLM", "Llama 3.3-70B")
+    c4.metric("Catégories narratifs", 9)
+
+    st.divider()
+
+    # ── Comparaison distribution ────────────────────────────────────────────────
+
+    st.markdown('<p class="section-header">Distribution des catégories : lexicale vs LLM</p>', unsafe_allow_html=True)
+    st.caption(
+        "Sur le même sous-ensemble de 860 commentaires — la classification lexicale (dictionnaire) "
+        "vs la classification contextuelle (LLM)."
+    )
+
+    cat_lex = df_llm['categorie_dominante'].value_counts()
+    cat_llm = df_llm['categorie_dominante_llm'].value_counts()
+
+    cats_all = sorted(set(cat_lex.index) | set(cat_llm.index))
+    df_cmp = pd.DataFrame({
+        'categorie': cats_all,
+        'Lexicale': [cat_lex.get(c, 0) for c in cats_all],
+        'LLM (Llama)': [cat_llm.get(c, 0) for c in cats_all],
+    })
+    df_cmp['label'] = df_cmp['categorie'].map(LABELS_FR).fillna(df_cmp['categorie'])
+    df_cmp = df_cmp.sort_values('LLM (Llama)', ascending=True)
+
+    fig_cmp = go.Figure()
+    fig_cmp.add_trace(go.Bar(
+        name='Classification lexicale',
+        x=df_cmp['Lexicale'], y=df_cmp['label'],
+        orientation='h', marker_color='#4e9af1',
+        text=df_cmp['Lexicale'], textposition='outside',
+    ))
+    fig_cmp.add_trace(go.Bar(
+        name='Classification LLM',
+        x=df_cmp['LLM (Llama)'], y=df_cmp['label'],
+        orientation='h', marker_color='#b44ef1',
+        text=df_cmp['LLM (Llama)'], textposition='outside',
+    ))
+    fig_cmp.update_layout(
+        barmode='group',
+        height=420,
+        margin=dict(l=0, r=60, t=10, b=10),
+        plot_bgcolor='white',
+        xaxis=dict(showgrid=True, gridcolor='#eee', title='Nombre de documents'),
+        legend=dict(orientation='h', y=1.05),
+    )
+    st.plotly_chart(fig_cmp, use_container_width=True)
+
+    # ── Matrice de concordance ──────────────────────────────────────────────────
+
+    st.divider()
+    st.markdown('<p class="section-header">Matrice de concordance — Lexicale × LLM</p>', unsafe_allow_html=True)
+    st.caption(
+        "Chaque cellule indique combien de documents classifiés dans la catégorie en ligne (lexicale) "
+        "ont été reclassifiés dans la catégorie en colonne (LLM). "
+        "La diagonale = accords. Hors diagonale = désaccords."
+    )
+
+    cats_matrix = [c for c in VALID_CATS if c != 'non_classe']
+    cats_matrix.append('non_classe')
+
+    matrix = pd.crosstab(
+        df_llm['categorie_dominante'],
+        df_llm['categorie_dominante_llm'],
+    ).reindex(index=cats_matrix, columns=cats_matrix, fill_value=0)
+
+    labels_matrix = [LABELS_FR.get(c, c).replace('💙 ', '').replace('❓ ', '').replace('⚖️ ', '')
+                     .replace('✊ ', '').replace('🔗 ', '').replace('🤫 ', '')
+                     .replace('📺 ', '').replace('🔍 ', '').replace('❔ ', '') for c in cats_matrix]
+
+    fig_mat = px.imshow(
+        matrix.values,
+        x=labels_matrix,
+        y=labels_matrix,
+        text_auto=True,
+        color_continuous_scale='Blues',
+        aspect='auto',
+        labels=dict(x='LLM (Llama)', y='Lexicale', color='Documents'),
+    )
+    fig_mat.update_layout(
+        height=460,
+        margin=dict(l=0, r=0, t=10, b=10),
+        xaxis=dict(tickangle=-35),
+    )
+    st.plotly_chart(fig_mat, use_container_width=True)
+
+    # ── Principaux désaccords ───────────────────────────────────────────────────
+
+    st.divider()
+    st.markdown('<p class="section-header">Principaux désaccords et interprétation</p>', unsafe_allow_html=True)
+
+    df_desac = df_llm[df_llm['categorie_dominante'] != df_llm['categorie_dominante_llm']].copy()
+    pivot_desac = (
+        df_desac.groupby(['categorie_dominante', 'categorie_dominante_llm'])
+        .size()
+        .reset_index(name='n')
+        .sort_values('n', ascending=False)
+        .head(8)
+    )
+    pivot_desac['label_lex'] = pivot_desac['categorie_dominante'].map(LABELS_FR).fillna(pivot_desac['categorie_dominante'])
+    pivot_desac['label_llm'] = pivot_desac['categorie_dominante_llm'].map(LABELS_FR).fillna(pivot_desac['categorie_dominante_llm'])
+    pivot_desac['transition'] = pivot_desac['label_lex'] + ' → ' + pivot_desac['label_llm']
+
+    fig_desac = px.bar(
+        pivot_desac,
+        x='n', y='transition',
+        orientation='h',
+        color_discrete_sequence=['#f14e4e'],
+        text='n',
+        labels={'n': 'Nombre de documents', 'transition': ''},
+    )
+    fig_desac.update_traces(textposition='outside')
+    fig_desac.update_layout(
+        height=340,
+        margin=dict(l=0, r=60, t=10, b=10),
+        plot_bgcolor='white',
+        xaxis=dict(showgrid=True, gridcolor='#eee'),
+    )
+    st.plotly_chart(fig_desac, use_container_width=True)
+
+    st.info(
+        "**Lecture** — Le désaccord le plus fréquent est la reclassification de documents "
+        "étiquetés **Silence collectif** (lexical) en **Soutien à la victime** (LLM). "
+        "Le LLM capte mieux la tonalité globale du commentaire, là où le classifieur lexical "
+        "s'arrête au terme dominant. Les documents courts ou ambigus tendent à être reclassifiés "
+        "en *Non classé* par le LLM, plus conservateur que le lexique."
+    )
+
+    # ── Exemples côte à côte ────────────────────────────────────────────────────
+
+    st.divider()
+    st.markdown('<p class="section-header">Exemples — Accord et désaccord entre les deux méthodes</p>', unsafe_allow_html=True)
+
+    col_f1, col_f2 = st.columns(2)
+    with col_f1:
+        mode_ex = st.selectbox(
+            "Filtrer par",
+            ["Désaccords uniquement", "Accords uniquement", "Tous"],
+            key="llm_mode_ex"
+        )
+    with col_f2:
+        cat_ex = st.selectbox(
+            "Catégorie lexicale",
+            ["Toutes"] + [LABELS_FR.get(c, c) for c in VALID_CATS if c != 'non_classe'],
+            key="llm_cat_ex"
+        )
+
+    df_ex = df_llm.copy()
+    if mode_ex == "Désaccords uniquement":
+        df_ex = df_ex[df_ex['categorie_dominante'] != df_ex['categorie_dominante_llm']]
+    elif mode_ex == "Accords uniquement":
+        df_ex = df_ex[df_ex['categorie_dominante'] == df_ex['categorie_dominante_llm']]
+    if cat_ex != "Toutes":
+        cat_code = next((k for k, v in LABELS_FR.items() if v == cat_ex), None)
+        if cat_code:
+            df_ex = df_ex[df_ex['categorie_dominante'] == cat_code]
+
+    df_ex = df_ex.dropna(subset=['texte'])
+    df_ex = df_ex[df_ex['texte'].str.strip() != '']
+    sample = df_ex.sample(min(6, len(df_ex)), random_state=42) if len(df_ex) > 0 else df_ex
+
+    if sample.empty:
+        st.warning("Aucun exemple pour ces filtres.")
+    else:
+        for _, row in sample.iterrows():
+            cat_lex_r = row['categorie_dominante']
+            cat_llm_r = row['categorie_dominante_llm']
+            accord = cat_lex_r == cat_llm_r
+            couleur_lex = COULEURS.get(cat_lex_r, '#aaa')
+            couleur_llm = COULEURS.get(cat_llm_r, '#aaa')
+            icon = "✅" if accord else "⚠️"
+
+            with st.container():
+                st.markdown(
+                    f'<div class="citation-box">{row["texte"][:400]}'
+                    f'{"..." if len(str(row["texte"])) > 400 else ""}</div>',
+                    unsafe_allow_html=True
+                )
+                col_a, col_b, col_c = st.columns([1, 1, 2])
+                with col_a:
+                    st.markdown(
+                        f'<span class="narratif-badge" style="background:{couleur_lex}">'
+                        f'Lex : {LABELS_FR.get(cat_lex_r, cat_lex_r)}</span>',
+                        unsafe_allow_html=True
+                    )
+                with col_b:
+                    st.markdown(
+                        f'<span class="narratif-badge" style="background:{couleur_llm}">'
+                        f'LLM : {LABELS_FR.get(cat_llm_r, cat_llm_r)}</span>',
+                        unsafe_allow_html=True
+                    )
+                with col_c:
+                    st.caption(f"{icon} {'Accord' if accord else 'Désaccord'}  ·  {row.get('sitename', '')}  ·  {str(row.get('date', ''))[:10]}")
+                st.divider()
 

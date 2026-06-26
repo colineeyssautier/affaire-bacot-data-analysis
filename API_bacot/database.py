@@ -11,6 +11,7 @@ Structure :
     └── narratifs    (résumé par catégorie)
 """
 
+import json
 import pandas as pd
 from pathlib import Path
 from sqlalchemy import (
@@ -20,10 +21,11 @@ from sqlalchemy import (
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 
-DB_PATH       = Path("bacot.db")
-CSV_RESULTATS = Path("../analyse_bacot/resultats_classification.csv")
-CSV_CLUSTERS  = Path("../analyse_bacot/resume_clusters.csv")
-CSV_NARRATIFS = Path("../analyse_bacot/resume_narratifs.csv")
+DB_PATH           = Path("bacot.db")
+CSV_RESULTATS     = Path("../analyse_bacot/resultats_classification.csv")
+CSV_CLUSTERS      = Path("../analyse_bacot/resume_clusters.csv")
+CSV_NARRATIFS     = Path("../analyse_bacot/resume_narratifs.csv")
+CORPUS_LLM_CLASSE = Path("../data/corpus_llm_classe.json")
 
 CATEGORIES = [
     'soutien_victime', 'remise_en_question', 'legitime_defense',
@@ -59,6 +61,17 @@ documents_table = Table("documents", metadata,
     Column("score_silence_collectif",     Float, default=0),
     Column("score_sensationnalisme",      Float, default=0),
     Column("score_jugement_moral",        Float, default=0),
+    # Scores LLM (null pour les docs hors échantillon)
+    Column("categorie_dominante_llm",         String(40)),
+    Column("score_soutien_victime_llm",       Float),
+    Column("score_remise_en_question_llm",    Float),
+    Column("score_legitime_defense_llm",      Float),
+    Column("score_discours_feministe_llm",    Float),
+    Column("score_emprise_psychologique_llm", Float),
+    Column("score_silence_collectif_llm",     Float),
+    Column("score_sensationnalisme_llm",      Float),
+    Column("score_jugement_moral_llm",        Float),
+    Column("score_total_llm",                 Float),
 )
 
 clusters_table = Table("clusters", metadata,
@@ -86,6 +99,7 @@ narratifs_table = Table("narratifs", metadata,
 
 def init_db():
     print(f"Initialisation de la base : {DB_PATH}")
+    metadata.drop_all(engine)
     metadata.create_all(engine)
 
     with engine.begin() as conn:
@@ -180,6 +194,50 @@ def init_db():
             if rows_n:
                 conn.execute(narratifs_table.insert(), rows_n)
                 print(f"  ✓ {len(rows_n)} narratifs insérés")
+
+        # ── Scores LLM ──
+        if not CORPUS_LLM_CLASSE.exists():
+            print(f"  ⚠ corpus LLM introuvable : {CORPUS_LLM_CLASSE}")
+        else:
+            with open(CORPUS_LLM_CLASSE, encoding="utf-8") as f:
+                corpus_llm = json.load(f)
+
+            llm_par_url = {
+                d["url"]: d for d in corpus_llm
+                if d.get("url") and d.get("categorie_dominante_llm") is not None
+            }
+
+            nb_maj = 0
+            for url, d in llm_par_url.items():
+                conn.execute(text("""
+                    UPDATE documents SET
+                        categorie_dominante_llm         = :cat_llm,
+                        score_soutien_victime_llm       = :sv,
+                        score_remise_en_question_llm    = :rq,
+                        score_legitime_defense_llm      = :ld,
+                        score_discours_feministe_llm    = :df,
+                        score_emprise_psychologique_llm = :ep,
+                        score_silence_collectif_llm     = :sc,
+                        score_sensationnalisme_llm      = :ss,
+                        score_jugement_moral_llm        = :jm,
+                        score_total_llm                 = :total
+                    WHERE url = :url
+                """), {
+                    "cat_llm": d.get("categorie_dominante_llm"),
+                    "sv":    d.get("score_soutien_victime_llm"),
+                    "rq":    d.get("score_remise_en_question_llm"),
+                    "ld":    d.get("score_legitime_defense_llm"),
+                    "df":    d.get("score_discours_feministe_llm"),
+                    "ep":    d.get("score_emprise_psychologique_llm"),
+                    "sc":    d.get("score_silence_collectif_llm"),
+                    "ss":    d.get("score_sensationnalisme_llm"),
+                    "jm":    d.get("score_jugement_moral_llm"),
+                    "total": d.get("score_total_llm"),
+                    "url":   url,
+                })
+                nb_maj += 1
+
+            print(f"  ✓ {nb_maj} documents mis à jour avec scores LLM")
 
     print(f"\n✓ Base de données prête : {DB_PATH}")
     print("  Lance maintenant : python -m uvicorn main:app --reload")

@@ -233,7 +233,8 @@ def root():
 
 @app.get("/documents", tags=["Documents"])
 def list_documents(
-    narratif:    Optional[str] = Query(None, description="Filtrer par catégorie dominante"),
+    narratif:     Optional[str] = Query(None, description="Filtrer par catégorie dominante (lexical)"),
+    narratif_llm: Optional[str] = Query(None, description="Filtrer par catégorie dominante LLM"),
     type_doc:    Optional[str] = Query(None, description="'article' ou 'commentaire'"),
     type_source: Optional[str] = Query(None, description="Type de source"),
     cluster:     Optional[int] = Query(None, description="Numéro de cluster (0-5)"),
@@ -256,6 +257,8 @@ def list_documents(
         "score_total", "word_count", "date", "score_soutien_victime",
         "score_discours_feministe", "score_legitime_defense",
         "score_silence_collectif", "score_emprise_psychologique",
+        "score_total_llm", "score_soutien_victime_llm",
+        "score_discours_feministe_llm", "score_legitime_defense_llm",
     }
     if tri not in colonnes_valides:
         tri = "score_total"
@@ -268,6 +271,9 @@ def list_documents(
     if narratif:
         conditions.append("categorie_dominante = :narratif")
         params["narratif"] = narratif
+    if narratif_llm:
+        conditions.append("categorie_dominante_llm = :narratif_llm")
+        params["narratif_llm"] = narratif_llm
     if type_doc:
         conditions.append("type_doc = :type_doc")
         params["type_doc"] = type_doc
@@ -298,7 +304,12 @@ def list_documents(
                        score_soutien_victime, score_remise_en_question,
                        score_legitime_defense, score_discours_feministe,
                        score_emprise_psychologique, score_silence_collectif,
-                       score_sensationnalisme, score_jugement_moral
+                       score_sensationnalisme, score_jugement_moral,
+                       categorie_dominante_llm, score_total_llm,
+                       score_soutien_victime_llm, score_remise_en_question_llm,
+                       score_legitime_defense_llm, score_discours_feministe_llm,
+                       score_emprise_psychologique_llm, score_silence_collectif_llm,
+                       score_sensationnalisme_llm, score_jugement_moral_llm
                 FROM documents {where}
                 ORDER BY {tri} {ordre}
                 LIMIT :limit OFFSET :offset
@@ -308,7 +319,8 @@ def list_documents(
 
     docs = [row_to_dict(r) for r in rows]
     for d in docs:
-        d["label_narratif"] = LABELS_FR.get(d.get("categorie_dominante", ""), "")
+        d["label_narratif"]     = LABELS_FR.get(d.get("categorie_dominante", ""), "")
+        d["label_narratif_llm"] = LABELS_FR.get(d.get("categorie_dominante_llm") or "", "")
 
     return {
         "total":   total,
@@ -331,7 +343,8 @@ def get_document(doc_id: int):
         raise HTTPException(status_code=404, detail=f"Document {doc_id} introuvable")
 
     doc = row_to_dict(row)
-    doc["label_narratif"] = LABELS_FR.get(doc.get("categorie_dominante", ""), "")
+    doc["label_narratif"]     = LABELS_FR.get(doc.get("categorie_dominante", ""), "")
+    doc["label_narratif_llm"] = LABELS_FR.get(doc.get("categorie_dominante_llm") or "", "")
     return doc
 
 
@@ -436,6 +449,52 @@ def stats_clusters():
     return {
         "n_clusters": len(resultats),
         "clusters":   resultats,
+    }
+
+
+@app.get("/stats/narratifs_llm", tags=["Statistiques"])
+def stats_narratifs_llm():
+    """
+    Distribution des catégories LLM et comparaison avec la classification lexicale.
+    Inclut le taux de concordance LLM/lexical et le nombre de docs classifiés.
+    """
+    with engine.connect() as conn:
+        total_llm = conn.execute(
+            text("SELECT COUNT(*) FROM documents WHERE categorie_dominante_llm IS NOT NULL")
+        ).scalar()
+
+        dist = conn.execute(text("""
+            SELECT categorie_dominante_llm as categorie,
+                   COUNT(*) as n_documents,
+                   AVG(score_total_llm) as score_moyen_llm,
+                   SUM(CASE WHEN type_doc = 'commentaire' THEN 1 ELSE 0 END) as n_commentaires,
+                   SUM(CASE WHEN type_doc = 'tweet'       THEN 1 ELSE 0 END) as n_tweets
+            FROM documents
+            WHERE categorie_dominante_llm IS NOT NULL
+            GROUP BY categorie_dominante_llm
+            ORDER BY n_documents DESC
+        """)).fetchall()
+
+        concordance = conn.execute(text("""
+            SELECT COUNT(*) FROM documents
+            WHERE categorie_dominante_llm IS NOT NULL
+              AND categorie_dominante_llm = categorie_dominante
+        """)).scalar()
+
+    resultats = []
+    for row in dist:
+        d = row_to_dict(row)
+        d["label_fr"] = LABELS_FR.get(d.get("categorie", ""), d.get("categorie", ""))
+        d["pct"] = round(d["n_documents"] / total_llm * 100, 1) if total_llm else 0
+        resultats.append(d)
+
+    taux_concordance = round(concordance / total_llm * 100, 1) if total_llm else 0
+
+    return {
+        "n_classes_llm":      total_llm,
+        "taux_concordance":   taux_concordance,
+        "nb_concordants":     concordance,
+        "distribution":       resultats,
     }
 
 

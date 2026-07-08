@@ -41,10 +41,12 @@ PROJECT_DIR = ROOT_DIR.parent
 
 # ─── Initialisation ───────────────────────────────────────────────────────────
 
-# Crée la DB si elle n'existe pas encore
-if not DB_PATH.exists():
-    print("Base de données absente — initialisation automatique...")
-    init_db()
+# Reconstruit la DB à chaque démarrage à partir des CSV/JSON les plus récents
+# (indispensable sur Render : le disque persiste entre les déploiements, donc
+# sans ce rebuild systématique bacot.db resterait figée sur sa toute première
+# initialisation malgré les push suivants)
+print("Initialisation de la base de données...")
+init_db()
 
 app = FastAPI(
     title="API Narratifs Bacot — Projet Mythodologie",

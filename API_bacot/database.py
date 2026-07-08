@@ -11,6 +11,7 @@ Structure :
     └── narratifs    (résumé par catégorie)
 """
 
+import sys
 import json
 import pandas as pd
 from pathlib import Path
@@ -19,13 +20,23 @@ from sqlalchemy import (
     MetaData, Table, text
 )
 
-# ─── Configuration ────────────────────────────────────────────────────────────
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-DB_PATH           = Path("bacot.db")
-CSV_RESULTATS     = Path("../analyse_bacot/resultats_classification.csv")
-CSV_CLUSTERS      = Path("../analyse_bacot/resume_clusters.csv")
-CSV_NARRATIFS     = Path("../analyse_bacot/resume_narratifs.csv")
-CORPUS_LLM_CLASSE = Path("../data/corpus_llm_classe.json")
+# ─── Configuration ────────────────────────────────────────────────────────────
+# Chemins absolus (basés sur l'emplacement de ce fichier, pas le dossier de
+# travail courant) : indispensable pour que le rebuild fonctionne peu importe
+# d'où le process est lancé (uvicorn depuis API_bacot/, depuis la racine, ou
+# sur Render selon sa propre configuration de démarrage).
+
+BASE_DIR          = Path(__file__).resolve().parent
+PROJECT_DIR       = BASE_DIR.parent
+
+DB_PATH           = BASE_DIR / "bacot.db"
+CSV_RESULTATS     = PROJECT_DIR / "analyse_bacot" / "resultats_classification.csv"
+CSV_CLUSTERS      = PROJECT_DIR / "analyse_bacot" / "resume_clusters.csv"
+CSV_NARRATIFS     = PROJECT_DIR / "analyse_bacot" / "resume_narratifs.csv"
+CORPUS_LLM_CLASSE = PROJECT_DIR / "data" / "corpus_llm_classe.json"
 
 CATEGORIES = [
     'soutien_victime', 'remise_en_question', 'legitime_defense',

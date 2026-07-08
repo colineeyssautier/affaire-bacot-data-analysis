@@ -23,12 +23,22 @@ Usage :
     python orchestrer_pipeline_analyse.py
 """
 
+import os
 import subprocess
 import sys
 from datetime import datetime
 from pathlib import Path
 
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
+
 BASE = Path(__file__).parent
+
+# Force l'UTF-8 pour chaque étape lancée en sous-processus : garantit que les
+# print() avec symboles Unicode (✓, ✗, ⚠…) ne font pas planter la chaîne quand
+# la sortie est redirigée vers un fichier log (codepage cp1252 par défaut sur
+# Windows), même si un script individuel oublie le reconfigure() de stdout.
+ENV_ETAPES = {**os.environ, "PYTHONUTF8": "1", "PYTHONIOENCODING": "utf-8"}
 
 ETAPES = [
     ("Classification lexicale + clustering", [sys.executable, "Classifier_bacot.py"], BASE),
@@ -54,7 +64,7 @@ def main():
     for nom, commande, cwd in ETAPES:
         log(f"\n--- {nom} ---")
         debut = datetime.now()
-        resultat = subprocess.run(commande, cwd=cwd)
+        resultat = subprocess.run(commande, cwd=cwd, env=ENV_ETAPES)
         duree = (datetime.now() - debut).total_seconds()
 
         if resultat.returncode == 0:

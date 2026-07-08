@@ -15,6 +15,7 @@ Usage :
     python classifier_bacot.py
 """
 
+import sys
 import json
 import re
 import logging
@@ -28,6 +29,9 @@ from pathlib import Path
 from collections import Counter
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.cluster import KMeans
+
+if hasattr(sys.stdout, "reconfigure"):
+    sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 from sklearn.decomposition import PCA
 from sklearn.preprocessing import normalize
 from wordcloud import WordCloud

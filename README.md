@@ -18,6 +18,7 @@ A Python data pipeline that collects, cleans, classifies, and serves a corpus of
    - [Rhetorical analysis](#7-rhetorical-analysis)
    - [YouTube comment analysis](#8-youtube-comment-analysis)
    - [Database initialization](#9-database-initialization)
+   - [Automated pipeline](#10-automated-pipeline)
 4. [Narrative Lexicon](#narrative-lexicon)
 5. [API Reference](#api-reference)
 6. [Database Schema](#database-schema)
@@ -225,16 +226,20 @@ python trier_corpus.py --mode appliquer
 
 ### 6. LLM classification
 
-`classifier_rhetorique_llm.py` sends a subset (~400 documents) to the **Groq API** for independent classification. This second classification track is used to validate and compare against the lexical approach.
+`classifier_llm_corpus.py` sends the full comments + tweets corpus (~20,700 documents with matched text — everything `fusionner_corpus_llm.py` produces in `data/corpus_llm.json`) to the **Groq API** (`llama-3.3-70b-versatile`) for independent, document-by-document classification. This second classification track is used to validate and compare against the lexical approach.
 
 **Workflow:**
-- Requires `GROQ_API_KEY` in environment
-- Checkpointed processing (resumes from `data/checkpoint_llm.json` if interrupted)
-- Outputs `data/corpus_llm_classe.json` and `data/corpus_llm_resultats.json`
-- Results are merged back into the main corpus via `fusionner_corpus_llm.py`
+- Requires at least `GROQ_API_KEY_1` in environment (falls back to a single `GROQ_API_KEY` if no numbered keys are set)
+- Rotates automatically across `GROQ_API_KEY_1`, `_2`, `_3`, … when a key's daily quota (TPD) is exhausted, so a single run can span several free-tier accounts
+- Checkpointed by document URL (resumes from `data/checkpoint_llm.json` if interrupted or if the daily quota runs out on all keys — safe to re-run at any time)
+- Distinguishes permanent per-document errors (bad JSON, malformed response — document marked done with no score) from transient/systemic errors (network, 5xx — document left unmarked so it's retried next run)
+- Saves progress to `data/corpus_llm_classe.json` every 10 successful classifications, not just at the end
+- Runs unattended every 12h via Windows Task Scheduler — see [Automated pipeline](#10-automated-pipeline)
 - Concordance rate between lexical and LLM classifications is exposed via `GET /stats/narratifs_llm`
 
 The API stores LLM scores alongside lexical scores in the `documents` table (see [Database Schema](#database-schema)).
+
+> `classifier_rhetorique_llm.py` is a related but separate script: it annotates rhetorical units from primary sources (see [Rhetorical analysis](#7-rhetorical-analysis)) rather than classifying the general comments/tweets corpus.
 
 ### 7. Rhetorical analysis
 
@@ -268,7 +273,35 @@ cd API_bacot/
 python database.py
 ```
 
-Reads `data/corpus_bacot_metadata.csv`, `data/corpus_youtube_commentaires.csv`, `analyse_bacot/resume_clusters.csv`, and `analyse_bacot/resume_narratifs.csv`, then populates `bacot.db` via SQLAlchemy bulk inserts. Run once — or re-run to reset the database from CSVs.
+Reads `analyse_bacot/resultats_classification.csv`, `analyse_bacot/resume_clusters.csv`, `analyse_bacot/resume_narratifs.csv`, and `data/corpus_llm_classe.json`, then rebuilds `bacot.db` from scratch via SQLAlchemy (`drop_all` + `create_all` + bulk inserts, matched by URL for the LLM scores). Idempotent — safe to re-run at any time to pick up newer classification results; this is exactly what the automated pipeline does every 12h.
+
+### 10. Automated pipeline
+
+`orchestrer_pipeline_analyse.py` chains steps 5, 6, 8 and 9 above end-to-end so the corpus never needs to be re-analyzed by hand after new data comes in:
+
+```
+Classifier_bacot.py  →  fusionner_corpus_llm.py  →  classifier_llm_corpus.py
+        →  generer_graphiques.py  →  generer_graphiques_tweets.py  →  database.py
+```
+
+- Each step writes only its own output files, so a failure in one step is logged and the rest still run against the latest available data (best-effort, not all-or-nothing)
+- The SQLite rebuild (`database.py`) always runs last, so the API/dashboard never lag further behind than the most recent successful step
+- `classifier_llm_corpus.py`'s own checkpointing means an interrupted or quota-limited run picks up exactly where it left off next time, whether that's triggered manually or by the scheduler
+
+**In production**, this is triggered every 12h by [`run_classification_llm.bat`](run_classification_llm.bat) through a Windows Task Scheduler task named `BacotClassificationLLM`:
+
+| Setting | Value |
+|---|---|
+| Trigger | Every 12h, indefinitely |
+| Overlap policy | `IgnoreNew` — skips a new trigger if the previous run is still in progress |
+| Execution time limit | 10h (auto-terminated if exceeded) |
+| Logs | `logs/pipeline_analyse_YYYYMMDD_HHMM.log` (one file per run) |
+
+To run the whole pipeline manually (e.g. after a scraping/curation pass):
+
+```bash
+python orchestrer_pipeline_analyse.py
+```
 
 ---
 
@@ -805,12 +838,20 @@ python Classifier_bacot.py
 ### Run the LLM classification (requires Groq API key)
 
 ```bash
-python classifier_rhetorique_llm.py
-# → reads corpus_bacot/corpus_final.json
+python classifier_llm_corpus.py
+# → reads data/corpus_llm.json
 # → writes data/corpus_llm_classe.json (checkpointed — safe to interrupt)
 python fusionner_corpus_llm.py
-# → merges LLM results back into the corpus
+# → rebuilds data/corpus_llm.json from the latest lexical classification
 ```
+
+### Automated pipeline (no manual steps required)
+
+```bash
+python orchestrer_pipeline_analyse.py
+```
+
+Runs the full chain above (steps 5–6, 8–9) in one command — see [Automated pipeline](#10-automated-pipeline) for what it does, its failure handling, and the Windows Task Scheduler setup that runs it every 12h unattended.
 
 ### Run a scraper
 
@@ -837,12 +878,20 @@ Copy `.env.example` to `.env` and fill in the values:
 ```dotenv
 YOUTUBE_API_KEY=your_youtube_data_v3_api_key_here
 GROQ_API_KEY=your_groq_api_key_here
+
+# Optional — key rotation for classifier_llm_corpus.py (see below)
+GROQ_API_KEY_1=your_first_groq_api_key_here
+GROQ_API_KEY_2=your_second_groq_api_key_here
+GROQ_API_KEY_3=your_third_groq_api_key_here
 ```
 
 | Variable | Required for | Where to obtain |
 |---|---|---|
 | `YOUTUBE_API_KEY` | `scraper_youtube_bacot.py`, `scraper_decouverte_videos_bacot.py` | [Google Cloud Console](https://console.cloud.google.com/apis/credentials) — enable "YouTube Data API v3" |
 | `GROQ_API_KEY` | `classifier_rhetorique_llm.py` | [Groq Console](https://console.groq.com/keys) |
+| `GROQ_API_KEY_1`, `_2`, `_3`, … | `classifier_llm_corpus.py` (optional — falls back to `GROQ_API_KEY` alone if unset) | [Groq Console](https://console.groq.com/keys) — one key per free-tier account, numbered contiguously from `_1` |
+
+`classifier_llm_corpus.py` rotates automatically to the next numbered key once the current one hits its daily quota (TPD), so a single unattended run can burn through several free-tier accounts' worth of quota before checkpointing and stopping cleanly.
 
 The API server (`main.py`) and the Streamlit dashboard do **not** require any API keys.
 
@@ -868,10 +917,13 @@ Affaire-bacot-data-analysis/
 │   ├── rhetorique.json                     Rhetorical segments from primary sources
 │   ├── rhetorique_classifiee.json          LLM-annotated rhetorical segments
 │   ├── kwic_mots_pivots.json               Keyword-in-context (KWIC) extractions
-│   ├── corpus_llm_classe.json              LLM classification results (~400 docs)
+│   ├── corpus_llm.json                     Comments + tweets with text, input to classifier_llm_corpus.py
+│   ├── corpus_llm_classe.json              LLM classification results (full comments/tweets corpus)
 │   ├── corpus_llm_resultats.json           Final merged LLM results
-│   ├── checkpoint_llm.json                 LLM processing checkpoint (resumable)
+│   ├── checkpoint_llm.json                 LLM processing checkpoint (resumable, by URL)
 │   ├── articles_interface.json             Formatted data for API/dashboard
+│   ├── graphiques.json                     Chart data — press/comments (generer_graphiques.py)
+│   ├── graphiques_tweets.json              Chart data — tweets (generer_graphiques_tweets.py)
 │   └── classification_llm.log             LLM processing log
 │
 ├── corpus_bacot/                           Raw corpus data (not in open dataset)
@@ -906,7 +958,8 @@ Affaire-bacot-data-analysis/
 │
 ├── Classification & Analysis
 │   ├── Classifier_bacot.py                 Lexical classification + K-Means clustering
-│   ├── classifier_rhetorique_llm.py        Groq API LLM classification (checkpointed)
+│   ├── classifier_llm_corpus.py            Groq API LLM classification, full corpus (checkpointed, key rotation)
+│   ├── classifier_rhetorique_llm.py        Groq API LLM classification of rhetorical units (primary sources)
 │   ├── analyser_commentaires_youtube.py    5-axis YouTube comment analysis
 │   ├── analyser_rhetorique.py              Rhetorical unit segmentation
 │   └── collecteur_urls_presse.py           URL aggregation utility
@@ -914,7 +967,7 @@ Affaire-bacot-data-analysis/
 ├── Corpus Management
 │   ├── trier_corpus.py                     Semi-automated curation (2-mode CLI)
 │   ├── fusionner_corpus.py                 Merge scraped JSON files
-│   ├── fusionner_corpus_llm.py             Integrate LLM results into main corpus
+│   ├── fusionner_corpus_llm.py             Build data/corpus_llm.json (text + lexical scores, LLM input)
 │   ├── integrer_nouveaux_commentaires.py   Update corpus with new comments
 │   └── preparer_corpus_interface.py        Format corpus for API/dashboard
 │
@@ -925,6 +978,11 @@ Affaire-bacot-data-analysis/
 │   ├── generer_graphiques_tweets.py        Twitter-specific visualizations
 │   ├── extraire_citations.py               Extract representative quotes to Excel
 │   └── generer_citations_json.py           Export quotes to data/citations.json
+│
+├── Automation
+│   ├── orchestrer_pipeline_analyse.py      Chains steps 5-6, 8-9 into one unattended run
+│   ├── run_classification_llm.bat          Entry point for the Windows Task Scheduler task
+│   └── logs/                               One pipeline log per scheduled run
 │
 ├── Utilities
 │   ├── debug_scraper.py                    Scraper debugging

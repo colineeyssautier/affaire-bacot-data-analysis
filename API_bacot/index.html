@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Corpus Bacot — Projet Mythodologie</title>
+<title>Corpus Bacot — Mythodologie Project</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -857,18 +857,18 @@
 <nav>
   <a href="#" class="nav-logo" onclick="showPage('accueil')">Corpus <span>Bacot</span></a>
   <ul class="nav-links">
-    <li><a href="#" onclick="showPage('accueil')" id="nav-accueil" class="active">Accueil</a></li>
-    <li><a href="#" onclick="showPage('narratifs')" id="nav-narratifs">Narratifs<span class="nav-sub">analyse d'articles</span></a></li>
-    <li><a href="#" onclick="showPage('graphiques')" id="nav-graphiques">Graphiques<span class="nav-sub">analyse d'articles</span></a></li>
+    <li><a href="#" onclick="showPage('accueil')" id="nav-accueil" class="active">Home</a></li>
+    <li><a href="#" onclick="showPage('narratifs')" id="nav-narratifs">Narratives<span class="nav-sub">article analysis</span></a></li>
+    <li><a href="#" onclick="showPage('graphiques')" id="nav-graphiques">Charts<span class="nav-sub">article analysis</span></a></li>
     <li><a href="#" onclick="showPage('tweets')" id="nav-tweets">Tweets</a></li>
-    <li><a href="#" onclick="showPage('youtube')" id="nav-youtube">Commentaires YT<span class="nav-sub">25 503 · 5 axes</span></a></li>
-    <li><a href="#" onclick="showPage('llm')" id="nav-llm">Analyse LLM<span class="nav-sub">860 docs · Groq</span></a></li>
+    <li><a href="#" onclick="showPage('youtube')" id="nav-youtube">YT Comments<span class="nav-sub">25,503 · 5 axes</span></a></li>
+    <li><a href="#" onclick="showPage('llm')" id="nav-llm">LLM Analysis<span class="nav-sub">860 docs · Groq</span></a></li>
     <li><a href="#" onclick="showPage('corpus')" id="nav-corpus">Corpus</a></li>
     <li><a href="#" onclick="showPage('citations')" id="nav-citations">Citations</a></li>
-    <li><a href="#" onclick="showPage('recherche')" id="nav-recherche">Recherche</a></li>
-    <li><a href="#" onclick="showPage('rhetorique')" id="nav-rhetorique">Rhétorique</a></li>
-    <li><a href="#" onclick="showPage('qualite')" id="nav-qualite">Qualité<span class="nav-sub">pollution check</span></a></li>
-    <li><a href="#" onclick="showPage('contexte')" id="nav-contexte">Contexte</a></li>
+    <li><a href="#" onclick="showPage('recherche')" id="nav-recherche">Search</a></li>
+    <li><a href="#" onclick="showPage('rhetorique')" id="nav-rhetorique">Rhetoric</a></li>
+    <li><a href="#" onclick="showPage('qualite')" id="nav-qualite">Quality<span class="nav-sub">pollution check</span></a></li>
+    <li><a href="#" onclick="showPage('contexte')" id="nav-contexte">Background</a></li>
   </ul>
 </nav>
 
@@ -877,14 +877,14 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-accueil" class="page active">
   <div class="hero">
-    <p class="hero-eyebrow">Projet Mythodologie · Prototype v1.0</p>
-    <h1>Narratifs médiatiques autour de l'<em>affaire Valérie Bacot</em></h1>
-    <p class="hero-desc">Analyse computationnelle de <span id="hero-total">953</span> documents — articles de presse, commentaires YouTube et tweets X — sur le procès de juin 2021.</p>
+    <p class="hero-eyebrow">Mythodologie Project · Prototype v1.0</p>
+    <h1>Media narratives surrounding the <em>Valérie Bacot case</em></h1>
+    <p class="hero-desc">Computational analysis of <span id="hero-total">953</span> documents — press articles, YouTube comments, and X (Twitter) posts — covering the June 2021 trial.</p>
     <div class="hero-stats" id="hero-stats">
-      <div class="hero-stat"><span class="hero-stat-n" id="stat-articles">—</span><span class="hero-stat-l">Articles presse</span></div>
-      <div class="hero-stat"><span class="hero-stat-n" id="stat-comments">—</span><span class="hero-stat-l">Commentaires YT</span></div>
-      <div class="hero-stat"><span class="hero-stat-n" id="stat-tweets">—</span><span class="hero-stat-l">Tweets X</span></div>
-      <div class="hero-stat"><span class="hero-stat-n">8</span><span class="hero-stat-l">Narratifs</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="stat-articles">—</span><span class="hero-stat-l">Press articles</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="stat-comments">—</span><span class="hero-stat-l">YT comments</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="stat-tweets">—</span><span class="hero-stat-l">Tweets</span></div>
+      <div class="hero-stat"><span class="hero-stat-n">8</span><span class="hero-stat-l">Narratives</span></div>
       <div class="hero-stat"><span class="hero-stat-n">6</span><span class="hero-stat-l">Clusters</span></div>
     </div>
   </div>
@@ -892,27 +892,27 @@
   <div class="container">
     <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:3rem">
       <div class="contexte-block">
-        <h3>L'affaire</h3>
-        <p>Valérie Bacot a tué son mari Daniel Polette en 2012, après 25 ans de viols, violences et proxénétisme. Jugée en juin 2021, condamnée à 4 ans dont 3 avec sursis — libérée le jour même du verdict.</p>
+        <h3>The case</h3>
+        <p>Valérie Bacot killed her husband Daniel Polette in 2012, after 25 years of rape, violence, and forced prostitution. Tried in June 2021, she was sentenced to 4 years, 3 of them suspended — and released the same day as the verdict.</p>
       </div>
       <div class="contexte-block">
-        <h3>L'enjeu juridique</h3>
-        <p>L'affaire a relancé le débat sur la légitime défense différée, absente du droit français. Plus de 600 000 personnes ont signé une pétition de soutien avant le procès.</p>
+        <h3>The legal issue</h3>
+        <p>The case reignited the debate over deferred self-defense, which has no basis in French law. More than 600,000 people signed a petition of support before the trial.</p>
       </div>
       <div class="contexte-block">
-        <h3>Ce corpus</h3>
-        <p>953 documents collectés entre 2017 et 2023, classifiés en 8 catégories de narratifs par analyse lexicale automatisée. Dataset open sous licence CC BY 4.0.</p>
+        <h3>This corpus</h3>
+        <p>953 documents collected between 2017 and 2023, classified into 8 narrative categories through automated lexical analysis. Open dataset under a CC BY 4.0 license.</p>
       </div>
     </div>
 
-    <h2 class="section-title">Distribution des narratifs</h2>
+    <h2 class="section-title">Narrative distribution</h2>
     <div class="home-source-filters">
-      <button class="hsf-btn active" data-src="all" onclick="setHomeSource('all')">Tous les documents<span class="hsf-count" id="hsf-count-all"></span></button>
-      <button class="hsf-btn" data-src="article" onclick="setHomeSource('article')">Articles de presse<span class="hsf-count" id="hsf-count-article"></span></button>
-      <button class="hsf-btn" data-src="commentaire" onclick="setHomeSource('commentaire')">Commentaires YouTube<span class="hsf-count" id="hsf-count-commentaire"></span></button>
-      <button class="hsf-btn" data-src="tweet" onclick="setHomeSource('tweet')">Tweets X<span class="hsf-count" id="hsf-count-tweet"></span></button>
+      <button class="hsf-btn active" data-src="all" onclick="setHomeSource('all')">All documents<span class="hsf-count" id="hsf-count-all"></span></button>
+      <button class="hsf-btn" data-src="article" onclick="setHomeSource('article')">Press articles<span class="hsf-count" id="hsf-count-article"></span></button>
+      <button class="hsf-btn" data-src="commentaire" onclick="setHomeSource('commentaire')">YouTube comments<span class="hsf-count" id="hsf-count-commentaire"></span></button>
+      <button class="hsf-btn" data-src="tweet" onclick="setHomeSource('tweet')">Tweets<span class="hsf-count" id="hsf-count-tweet"></span></button>
     </div>
-    <p id="home-dist-subtitle" class="section-subtitle">Tous les documents · catégorie dominante · cliquez sur une catégorie pour explorer</p>
+    <p id="home-dist-subtitle" class="section-subtitle">All documents · dominant category · click a category to explore</p>
     <div id="narratifs-home-grid" class="narratifs-grid"></div>
 
     <div id="home-keywords-panel" style="display:none">
@@ -923,7 +923,7 @@
       <div id="home-keywords-desc" class="kw-panel-desc"></div>
       <div id="home-keywords-chips"></div>
       <div style="margin-top:1rem">
-        <button id="home-keywords-btn" onclick="" style="border:1px solid var(--accent);background:transparent;padding:.4rem 1rem;font-size:11.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--accent)">Voir tous les documents →</button>
+        <button id="home-keywords-btn" onclick="" style="border:1px solid var(--accent);background:transparent;padding:.4rem 1rem;font-size:11.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--accent)">View all documents →</button>
       </div>
     </div>
 
@@ -938,8 +938,8 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-narratifs" class="page">
   <div class="container">
-    <h2 class="section-title">Analyse des narratifs</h2>
-    <p class="section-subtitle">Classification lexicale en 8 catégories · scores moyens par type de source</p>
+    <h2 class="section-title">Narrative analysis</h2>
+    <p class="section-subtitle">Lexical classification into 8 categories · average scores by source type</p>
 
     <div id="narratifs-detail-grid" class="narratifs-grid" style="margin-bottom:0"></div>
 
@@ -949,25 +949,25 @@
           <div id="narratif-detail-label" style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir)"></div>
           <div id="narratif-detail-sub" style="font-size:12px;color:var(--gris);margin-top:.2rem"></div>
         </div>
-        <button onclick="closeNarratifDetail()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.3rem .8rem;font-size:12px;cursor:pointer;font-family:var(--sans);color:var(--gris)">Fermer ×</button>
+        <button onclick="closeNarratifDetail()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.3rem .8rem;font-size:12px;cursor:pointer;font-family:var(--sans);color:var(--gris)">Close ×</button>
       </div>
       <div id="narratif-detail-list" class="docs-list"></div>
       <div style="margin-top:1rem;text-align:center">
-        <button onclick="goToCorpusNarratif()" style="border:1px solid var(--accent);background:transparent;padding:.5rem 1.2rem;font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--accent)">Voir tous les documents →</button>
+        <button onclick="goToCorpusNarratif()" style="border:1px solid var(--accent);background:transparent;padding:.5rem 1.2rem;font-size:12px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;font-family:var(--sans);color:var(--accent)">View all documents →</button>
       </div>
     </div>
 
     <hr class="divider">
-    <h2 class="section-title">Intensité par type de source</h2>
-    <p class="section-subtitle">Score moyen des termes caractéristiques par catégorie de narratif et par type de source</p>
+    <h2 class="section-title">Intensity by source type</h2>
+    <p class="section-subtitle">Average score of characteristic terms by narrative category and source type</p>
     <div class="chart-wrap" style="overflow-x:auto">
       <table class="heatmap-table" id="heatmap-table">
-        <tbody><tr><td>Chargement…</td></tr></tbody>
+        <tbody><tr><td>Loading…</td></tr></tbody>
       </table>
     </div>
 
     <hr class="divider">
-    <h2 class="section-title">Répartition articles / commentaires</h2>
+    <h2 class="section-title">Article / comment breakdown</h2>
     <div class="chart-wrap" style="max-width:360px;margin:0 auto">
       <canvas id="chart-narratifs"></canvas>
     </div>
@@ -979,25 +979,25 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-graphiques" class="page">
   <div class="container">
-    <h2 class="section-title">Visualisations</h2>
-    <p class="section-subtitle">5 graphiques interactifs · chargés depuis data/graphiques.json</p>
+    <h2 class="section-title">Visualizations</h2>
+    <p class="section-subtitle">5 interactive charts · loaded from data/graphiques.json</p>
 
-    <div id="graph-loading" class="loading">Chargement…</div>
+    <div id="graph-loading" class="loading">Loading…</div>
     <div id="graph-content" style="display:none">
 
       <!-- G1 — Distribution -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G1 — Distribution des narratifs</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Articles et commentaires par catégorie dominante</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G1 — Narrative distribution</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Articles and comments by dominant category</p>
       <div class="chart-wrap"><canvas id="g1-canvas" height="110"></canvas></div>
 
       <hr class="divider">
 
       <!-- G2 — Par source -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G2 — Scores moyens par type de source</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Intensité narrative selon l'origine du document</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G2 — Average scores by source type</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Narrative intensity by document origin</p>
       <div class="filters" style="margin-bottom:1rem">
         <select class="filter-select" id="g2-filter" onchange="renderG2()">
-          <option value="">Tous les narratifs</option>
+          <option value="">All narratives</option>
         </select>
       </div>
       <div class="chart-wrap" style="height:420px;position:relative"><canvas id="g2-canvas"></canvas></div>
@@ -1005,25 +1005,25 @@
       <hr class="divider">
 
       <!-- G3 — Heatmap -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G3 — Heatmap intensité</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Sources × narratifs — score moyen (blanc = faible, bleu = fort)</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G3 — Intensity heatmap</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Sources × narratives — average score (white = low, blue = high)</p>
       <div id="g3-wrap" style="overflow-x:auto;margin-bottom:.5rem"></div>
 
       <hr class="divider">
 
       <!-- G4 — Carte des narratifs -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G4 — Carte des narratifs</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Taille proportionnelle au volume de documents · axes : positionnement sémantique</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G4 — Narrative map</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Size proportional to document volume · axes: semantic positioning</p>
       <div class="chart-wrap" style="height:460px;position:relative"><canvas id="g4-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- G5 — Temporel -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G5 — Évolution temporelle des narratifs</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Documents datés : <span id="g5-n-dates">—</span> sur <span id="g5-n-total">—</span></p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">G5 — Narrative evolution over time</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Dated documents: <span id="g5-n-dates">—</span> of <span id="g5-n-total">—</span></p>
       <div class="filters" style="margin-bottom:1rem">
         <select class="filter-select" id="g5-filter" onchange="renderG5()">
-          <option value="">Tous les narratifs</option>
+          <option value="">All narratives</option>
         </select>
       </div>
       <div class="chart-wrap" style="height:520px;position:relative"><canvas id="g5-canvas"></canvas></div>
@@ -1038,17 +1038,17 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-tweets" class="page">
   <div class="container">
-    <h2 class="section-title">Analyse des tweets</h2>
-    <p class="section-subtitle">2 943 tweets pertinents · classifiés selon les 8 narratifs · comparaison avec les médias</p>
+    <h2 class="section-title">Tweet analysis</h2>
+    <p class="section-subtitle">2,943 relevant tweets · classified across 8 narratives · compared with media coverage</p>
 
-    <div id="tw-loading" class="loading">Chargement…</div>
+    <div id="tw-loading" class="loading">Loading…</div>
     <div id="tw-content" style="display:none">
 
       <!-- T1 — Évolution pendant le procès -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T1 — Évolution jour par jour pendant le procès</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Nombre de tweets par narratif dominant · 21–30 juin 2021</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T1 — Day-by-day evolution during the trial</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Number of tweets by dominant narrative · June 21–30, 2021</p>
       <div class="filters" style="margin-bottom:1rem">
-        <select class="filter-select" id="t1-nar" onchange="renderT1()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="t1-nar" onchange="renderT1()"><option value="">All narratives</option></select>
       </div>
       <div class="chart-wrap" style="height:520px;position:relative"><canvas id="t1-canvas"></canvas></div>
       <div id="t1-moments" style="margin-top:.8rem;line-height:2.2"></div>
@@ -1056,14 +1056,14 @@
       <hr class="divider">
 
       <!-- T2 — Évolution long terme -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T2 — Évolution long terme post-verdict</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Semaines (2021) puis mois — après le verdict du 26 juin 2021</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T2 — Long-term evolution post-verdict</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Weeks (2021) then months — after the June 26, 2021 verdict</p>
       <div class="filters" style="margin-bottom:1rem">
         <select class="filter-select" id="t2-mode" onchange="renderT2()">
-          <option value="pct">Proportion (%) par période</option>
-          <option value="n">Nombre absolu</option>
+          <option value="pct">Proportion (%) per period</option>
+          <option value="n">Absolute count</option>
         </select>
-        <select class="filter-select" id="t2-nar" onchange="renderT2()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="t2-nar" onchange="renderT2()"><option value="">All narratives</option></select>
       </div>
       <div class="chart-wrap" style="height:520px;position:relative"><canvas id="t2-canvas"></canvas></div>
       <div id="t2-moments" style="margin-top:.8rem;line-height:2.2"></div>
@@ -1071,49 +1071,49 @@
       <hr class="divider">
 
       <!-- T3 — Répartition par périodes -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T3 — Répartition des narratifs par période</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Distribution (%) par phase de l'affaire</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T3 — Narrative breakdown by period</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Distribution (%) by phase of the case</p>
       <div class="filters" style="margin-bottom:1rem">
         <select class="filter-select" id="t3-mode" onchange="renderT3()">
-          <option value="pct">Pourcentage (%)</option>
-          <option value="n">Nombre absolu</option>
+          <option value="pct">Percentage (%)</option>
+          <option value="n">Absolute count</option>
         </select>
-        <select class="filter-select" id="t3-nar" onchange="renderT3()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="t3-nar" onchange="renderT3()"><option value="">All narratives</option></select>
       </div>
       <div class="chart-wrap" style="height:560px;position:relative"><canvas id="t3-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- T4 — Carte des narratifs -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T4 — Carte des narratifs</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Taille proportionnelle au volume de tweets · axe X = individu → système · axe Y = émotionnel → juridique</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T4 — Narrative map</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Size proportional to tweet volume · X axis = individual → system · Y axis = emotional → legal</p>
       <div class="filters" style="margin-bottom:1rem">
-        <select class="filter-select" id="t4-nar" onchange="renderT4()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="t4-nar" onchange="renderT4()"><option value="">All narratives</option></select>
       </div>
       <div class="chart-wrap" style="height:600px;position:relative"><canvas id="t4-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- T5 — Polarité -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T5 — Polarité des réactions dans le temps</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">% de tweets dans le pôle soutien · ligne de base à 50 %</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">T5 — Polarity of reactions over time</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">% of tweets in the support pole · 50% baseline</p>
       <div class="chart-wrap" style="height:460px;position:relative"><canvas id="t5-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- C1 — Divergence tweets vs médias -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">C1 — Divergence tweets vs médias</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">% de documents avec ce narratif dominant · trié par écart absolu</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">C1 — Tweets vs. media divergence</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">% of documents with this dominant narrative · sorted by absolute gap</p>
       <div class="filters" style="margin-bottom:1rem">
-        <select class="filter-select" id="c1-nar" onchange="renderC1()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="c1-nar" onchange="renderC1()"><option value="">All narratives</option></select>
       </div>
       <div class="chart-wrap" style="height:520px;position:relative"><canvas id="c1-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- C2 — Évolution comparée -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">C2 — Évolution comparée tweets vs médias</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Narratif dominant par mois · <span id="c2-divergents">—</span> mois avec narratifs divergents</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">C2 — Compared evolution: tweets vs. media</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Dominant narrative by month · <span id="c2-divergents">—</span> months with diverging narratives</p>
       <div id="c2-table" style="overflow-x:auto"></div>
 
     </div>
@@ -1125,10 +1125,10 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-youtube" class="page">
   <div class="container">
-    <h2 class="section-title">Commentaires YouTube</h2>
-    <p class="section-subtitle">25 503 commentaires · 93 chaînes · 167 vidéos · 5 axes comparables à la presse</p>
+    <h2 class="section-title">YouTube comments</h2>
+    <p class="section-subtitle">25,503 comments · 93 channels · 167 videos · 5 axes comparable to the press</p>
 
-    <div id="yt-loading" class="loading">Chargement des commentaires…</div>
+    <div id="yt-loading" class="loading">Loading comments…</div>
     <div id="yt-content" style="display:none">
 
       <!-- Métriques -->
@@ -1137,47 +1137,47 @@
       <hr class="divider">
 
       <!-- YT1 — Narratifs vs Presse -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT1 — Narratifs : Commentaires vs Articles de presse</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">% de documents avec ce narratif dominant</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT1 — Narratives: Comments vs. press articles</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">% of documents with this dominant narrative</p>
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;margin-bottom:1.5rem">
         <div>
-          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Commentaires YouTube</p>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">YouTube comments</p>
           <div class="chart-wrap" style="height:290px;position:relative"><canvas id="yt1-yt-canvas"></canvas></div>
         </div>
         <div>
-          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Articles de presse</p>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Press articles</p>
           <div class="chart-wrap" style="height:290px;position:relative"><canvas id="yt1-art-canvas"></canvas></div>
         </div>
       </div>
-      <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Écart commentaires − presse (points de %)</p>
+      <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Gap: comments − press (percentage points)</p>
       <div class="chart-wrap" style="height:210px;position:relative"><canvas id="yt1-ecart-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- YT2 — Évolution temporelle -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT2 — Évolution temporelle des commentaires</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Volume mensuel par narratif · lignes rouges = procès (21 juin 2021) et verdict (25 juin 2021)</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT2 — Comment evolution over time</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Monthly volume by narrative · red lines = trial (June 21, 2021) and verdict (June 25, 2021)</p>
       <div class="filters" style="margin-bottom:1rem">
         <select class="filter-select" id="yt2-mode" onchange="renderYT2()">
-          <option value="n">Nombre absolu</option>
+          <option value="n">Absolute count</option>
           <option value="pct">Proportion (%)</option>
         </select>
-        <select class="filter-select" id="yt2-nar" onchange="renderYT2()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="yt2-nar" onchange="renderYT2()"><option value="">All narratives</option></select>
       </div>
       <div class="chart-wrap" style="height:400px;position:relative"><canvas id="yt2-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- YT3 — Polarité -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT3 — Polarité et affect</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Tonalité lexicale : positif · empathique · neutre · hostile · négatif</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT3 — Polarity and affect</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Lexical tone: positive · empathetic · neutral · hostile · negative</p>
       <div style="display:grid;grid-template-columns:1fr 2fr;gap:2rem">
         <div>
-          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Distribution globale</p>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Overall distribution</p>
           <div class="chart-wrap" style="height:260px;position:relative"><canvas id="yt3-donut-canvas"></canvas></div>
         </div>
         <div>
-          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Tonalité par narratif (%)</p>
+          <p style="font-size:11px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--gris);margin-bottom:.5rem">Tone by narrative (%)</p>
           <div class="chart-wrap" style="height:260px;position:relative"><canvas id="yt3-stack-canvas"></canvas></div>
         </div>
       </div>
@@ -1185,24 +1185,24 @@
       <hr class="divider">
 
       <!-- YT4 — Engagement -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT4 — Engagement par narratif</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Likes moyens par commentaire — quels narratifs mobilisent le plus ?</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT4 — Engagement by narrative</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:1rem">Average likes per comment — which narratives drive the most engagement?</p>
       <div class="chart-wrap" style="height:290px;position:relative"><canvas id="yt4-canvas"></canvas></div>
 
       <hr class="divider">
 
       <!-- YT5 — Explorateur -->
-      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT5 — Explorateur de commentaires</h3>
-      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Top commentaires par likes · filtrables par narratif et tonalité</p>
+      <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;margin-bottom:.3rem">YT5 — Comment explorer</h3>
+      <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem">Top comments by likes · filterable by narrative and tone</p>
       <div class="filters" style="margin-bottom:1rem">
-        <select class="filter-select" id="yt5-nar" onchange="renderYT5()"><option value="">Tous les narratifs</option></select>
+        <select class="filter-select" id="yt5-nar" onchange="renderYT5()"><option value="">All narratives</option></select>
         <select class="filter-select" id="yt5-pol" onchange="renderYT5()">
-          <option value="">Toutes les tonalités</option>
-          <option value="positif">Positif</option>
-          <option value="empathique">Empathique</option>
-          <option value="neutre">Neutre</option>
+          <option value="">All tones</option>
+          <option value="positif">Positive</option>
+          <option value="empathique">Empathetic</option>
+          <option value="neutre">Neutral</option>
           <option value="hostile">Hostile</option>
-          <option value="negatif">Négatif</option>
+          <option value="negatif">Negative</option>
         </select>
         <select class="filter-select" id="yt5-n" onchange="renderYT5()">
           <option value="20">Top 20</option>
@@ -1221,30 +1221,30 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-corpus" class="page">
   <div class="container">
-    <h2 class="section-title">Explorer le corpus</h2>
-    <p class="section-subtitle">953 documents · filtres combinables · cliquez sur un document pour voir l'extrait</p>
+    <h2 class="section-title">Explore the corpus</h2>
+    <p class="section-subtitle">953 documents · combinable filters · click a document to see the excerpt</p>
 
     <div class="filters">
       <select class="filter-select" id="f-narratif" onchange="applyFilters()">
-        <option value="">Tous les narratifs</option>
+        <option value="">All narratives</option>
       </select>
       <select class="filter-select" id="f-type" onchange="applyFilters()">
-        <option value="">Tous les types</option>
+        <option value="">All types</option>
         <option value="article">Articles</option>
-        <option value="commentaire">Commentaires</option>
-        <option value="tweet">🐦 Tweets X</option>
+        <option value="commentaire">Comments</option>
+        <option value="tweet">🐦 Tweets</option>
       </select>
       <select class="filter-select" id="f-source" onchange="applyFilters()">
-        <option value="">Toutes les sources</option>
+        <option value="">All sources</option>
       </select>
       <label style="display:flex;align-items:center;gap:.4rem;font-size:12.5px;color:var(--encre);cursor:pointer;white-space:nowrap">
         <input type="checkbox" id="f-multi" onchange="applyFilters()" style="accent-color:var(--accent);cursor:pointer">
-        Documents multi-narratifs
+        Multi-narrative documents
       </label>
     </div>
 
     <div id="corpus-count" style="font-size:13px;color:var(--gris);margin-bottom:1rem"></div>
-    <div id="corpus-list" class="docs-list"><div class="loading">Chargement du corpus…</div></div>
+    <div id="corpus-list" class="docs-list"><div class="loading">Loading corpus…</div></div>
     <div class="pagination" id="corpus-pagination"></div>
   </div>
 </div>
@@ -1254,16 +1254,16 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-citations" class="page">
   <div class="container">
-    <h2 class="section-title">Citations qualitatives</h2>
-    <p class="section-subtitle">Extraits de presse et voix populaires · classés par catégorie de narratif</p>
+    <h2 class="section-title">Qualitative quotes</h2>
+    <p class="section-subtitle">Press excerpts and popular voices · sorted by narrative category</p>
 
     <div class="filters" style="margin-bottom:1.5rem">
       <select class="filter-select" id="f-citation-cat" onchange="renderCitations()">
-        <option value="">Toutes les catégories</option>
+        <option value="">All categories</option>
       </select>
     </div>
 
-    <div id="citations-container"><div class="loading">Chargement des citations…</div></div>
+    <div id="citations-container"><div class="loading">Loading citations…</div></div>
   </div>
 </div>
 
@@ -1272,29 +1272,29 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-recherche" class="page">
   <div class="container-narrow">
-    <h2 class="section-title">Moteur de recherche</h2>
-    <p class="section-subtitle">Recherche un mot ou une expression dans les titres et les textes du corpus</p>
+    <h2 class="section-title">Search engine</h2>
+    <p class="section-subtitle">Search for a word or phrase in the corpus titles and texts</p>
 
     <div class="search-bar">
-      <input type="text" id="search-input" placeholder="Ex : emprise, légitime défense, tout le monde savait…"
+      <input type="text" id="search-input" placeholder="e.g.: emprise, légitime défense, tout le monde savait… (French terms — the corpus is in French)"
              onkeydown="if(event.key==='Enter')doSearch()">
-      <button onclick="doSearch()">Rechercher</button>
+      <button onclick="doSearch()">Search</button>
     </div>
 
     <div class="filters">
       <select class="filter-select" id="f-search-type" onchange="doSearch()">
-        <option value="">Tous les types</option>
-        <option value="article">Articles uniquement</option>
-        <option value="commentaire">Commentaires uniquement</option>
-        <option value="tweet">Tweets uniquement</option>
+        <option value="">All types</option>
+        <option value="article">Articles only</option>
+        <option value="commentaire">Comments only</option>
+        <option value="tweet">Tweets only</option>
       </select>
       <select class="filter-select" id="f-search-narratif" onchange="doSearch()">
-        <option value="">Tous les narratifs</option>
+        <option value="">All narratives</option>
       </select>
     </div>
 
     <div id="search-results">
-      <div class="empty">Entrez un terme pour lancer la recherche.</div>
+      <div class="empty">Enter a term to search.</div>
     </div>
   </div>
 </div>
@@ -1304,39 +1304,39 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-rhetorique" class="page">
   <div class="container">
-    <h2 class="section-title">Analyse rhétorique</h2>
-    <p class="section-subtitle">Classification LLM des unités argumentatives · Analyse KWIC des mots pivots</p>
+    <h2 class="section-title">Rhetorical analysis</h2>
+    <p class="section-subtitle">LLM classification of argumentative units · KWIC analysis of pivot words</p>
 
     <!-- Sources primaires -->
     <div id="rhet-sources" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;margin-bottom:2rem"></div>
 
     <!-- Stats LLM -->
-    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.8rem">Distribution des catégories rhétoriques</h3>
-    <p id="rhet-note" style="font-size:12px;color:var(--gris);margin-bottom:1rem">Classification par LLM (Llama 3.3 70B via Groq)</p>
+    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.8rem">Distribution of rhetorical categories</h3>
+    <p id="rhet-note" style="font-size:12px;color:var(--gris);margin-bottom:1rem">LLM classification (Llama 3.3 70B via Groq)</p>
     <div id="rhet-llm-stats" style="margin-bottom:2rem"></div>
 
     <!-- KWIC -->
     <hr class="divider">
-    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.4rem">Analyse KWIC — Mots pivots</h3>
-    <p style="font-size:12px;color:var(--gris);margin-bottom:1.2rem">Contexte d'usage des termes clés dans les documents primaires · cliquez sur un mot pour voir les occurrences</p>
+    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.4rem">KWIC analysis — Pivot words</h3>
+    <p style="font-size:12px;color:var(--gris);margin-bottom:1.2rem">Usage context of key terms in the primary documents · click a word to see occurrences</p>
     <div id="rhet-kwic" style="margin-bottom:2rem"></div>
 
     <!-- Unités argumentatives -->
     <hr class="divider">
-    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.8rem">Unités argumentatives</h3>
+    <h3 style="font-family:var(--serif);font-size:1rem;font-weight:700;color:var(--noir);margin-bottom:.8rem">Argumentative units</h3>
     <div class="filters" style="margin-bottom:1rem">
       <select class="filter-select" id="f-rhet-locuteur" onchange="renderRhetorique()">
-        <option value="">Tous les locuteurs</option>
+        <option value="">All speakers</option>
       </select>
       <select class="filter-select" id="f-rhet-type" onchange="renderRhetorique()">
-        <option value="">Toutes les catégories LLM</option>
+        <option value="">All LLM categories</option>
       </select>
       <select class="filter-select" id="f-rhet-source" onchange="renderRhetorique()">
-        <option value="">Toutes les sources</option>
+        <option value="">All sources</option>
       </select>
     </div>
     <div id="rhet-stats" style="display:flex;flex-wrap:wrap;gap:1px;background:var(--gris-clair);border:1px solid var(--gris-clair);margin-bottom:1.5rem"></div>
-    <div id="rhet-container"><div class="loading">Chargement…</div></div>
+    <div id="rhet-container"><div class="loading">Loading…</div></div>
   </div>
 </div>
 
@@ -1345,11 +1345,11 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-qualite" class="page">
   <div class="container">
-    <h2 class="section-title">Contrôle qualité du corpus</h2>
-    <p class="section-subtitle">Détection automatique des articles potentiellement hors-sujet · validation manuelle</p>
+    <h2 class="section-title">Corpus quality control</h2>
+    <p class="section-subtitle">Automatic detection of potentially off-topic articles · manual validation</p>
 
     <div class="pollution-banner">
-      <strong>Comment ça marche :</strong> Les articles ci-dessous sont signalés automatiquement selon deux critères — titre ne mentionnant pas « Bacot », ou score de pertinence nul malgré un contenu substantiel. Vérifiez chacun et supprimez ceux qui ne concernent pas l'affaire. Les suppressions sont sauvegardées dans votre navigateur (<em>localStorage</em>) — utilisez <strong>Exporter exclus</strong> pour obtenir la liste des URLs à retirer définitivement du CSV source.
+      <strong>How it works:</strong> The articles below are flagged automatically based on two criteria — a title that doesn't mention "Bacot", or a zero relevance score despite substantial content. Review each one and delete those unrelated to the case. Deletions are saved in your browser (<em>localStorage</em>) — use <strong>Export excluded</strong> to get the list of URLs to permanently remove from the source CSV.
     </div>
 
     <div id="qualite-resume" style="display:flex;flex-wrap:wrap;gap:1px;background:var(--gris-clair);border:1px solid var(--gris-clair);margin-bottom:1.5rem"></div>
@@ -1357,23 +1357,23 @@
     <div style="display:flex;align-items:flex-end;justify-content:space-between;flex-wrap:wrap;gap:.8rem;margin-bottom:0">
       <div class="qualite-tabs" style="margin-bottom:0;border-bottom:none">
         <button class="qualite-tab active" id="qtab-flagged" onclick="setQualiteTab('flagged')">
-          À vérifier <span class="tab-count" id="qcount-flagged">…</span>
+          To review <span class="tab-count" id="qcount-flagged">…</span>
         </button>
         <button class="qualite-tab" id="qtab-suppressed" onclick="setQualiteTab('suppressed')">
-          Supprimés <span class="tab-count" id="qcount-suppressed">0</span>
+          Removed <span class="tab-count" id="qcount-suppressed">0</span>
         </button>
         <button class="qualite-tab" id="qtab-ok" onclick="setQualiteTab('ok')">
-          Validés <span class="tab-count" id="qcount-ok">0</span>
+          Validated <span class="tab-count" id="qcount-ok">0</span>
         </button>
       </div>
       <div style="display:flex;gap:.5rem;padding-bottom:2px">
-        <button onclick="exportSuppressed()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.4rem 1rem;font-size:12px;font-family:var(--sans);cursor:pointer;color:var(--encre);letter-spacing:.03em">Exporter exclus ↓</button>
-        <button onclick="resetQualite()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.4rem 1rem;font-size:12px;font-family:var(--sans);cursor:pointer;color:var(--gris);letter-spacing:.03em">Réinitialiser</button>
+        <button onclick="exportSuppressed()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.4rem 1rem;font-size:12px;font-family:var(--sans);cursor:pointer;color:var(--encre);letter-spacing:.03em">Export excluded ↓</button>
+        <button onclick="resetQualite()" style="border:1px solid var(--gris-clair);background:var(--blanc);padding:.4rem 1rem;font-size:12px;font-family:var(--sans);cursor:pointer;color:var(--gris);letter-spacing:.03em">Reset</button>
       </div>
     </div>
     <div style="border-bottom:2px solid var(--gris-clair);margin-bottom:1.5rem"></div>
 
-    <div id="qualite-list"><div class="loading">Chargement…</div></div>
+    <div id="qualite-list"><div class="loading">Loading…</div></div>
   </div>
 </div>
 
@@ -1382,33 +1382,33 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-contexte" class="page">
   <div class="container-narrow">
-    <h2 class="section-title">Contexte & méthode</h2>
-    <p class="section-subtitle">Projet Mythodologie · Note technique abrégée</p>
+    <h2 class="section-title">Background & methodology</h2>
+    <p class="section-subtitle">Mythodologie Project · Abridged technical note</p>
 
     <div class="contexte-block">
-      <h3>L'affaire Valérie Bacot</h3>
-      <p>Valérie Bacot a été victime pendant plus de vingt-cinq ans de viols, violences physiques et proxénétisme de la part de Daniel Polette, son beau-père devenu son mari. En décembre 2012, elle l'a tué d'une balle dans la nuque. Jugée en juin 2021 aux Assises de Saône-et-Loire, elle a été condamnée à 4 ans de prison dont 3 avec sursis — libérée le jour même. En septembre 2021, elle publie <em>Tout le monde savait</em> (Fayard). En novembre 2021, elle témoigne devant la délégation aux droits des femmes du Sénat.</p>
+      <h3>The Valérie Bacot case</h3>
+      <p>Valérie Bacot was the victim, for more than twenty-five years, of rape, physical violence, and forced prostitution at the hands of Daniel Polette, her stepfather turned husband. In December 2012, she killed him with a gunshot to the back of the neck. Tried in June 2021 before the Assize Court of Saône-et-Loire, she was sentenced to 4 years in prison, 3 of them suspended — and was released the same day. In September 2021, she published <em>Tout le monde savait</em> ("Everyone knew", Fayard). In November 2021, she testified before the French Senate's delegation for women's rights.</p>
     </div>
 
     <div class="contexte-block">
-      <h3>Constitution du corpus</h3>
-      <p>953 documents collectés entre 2017 et 2023 par scraping automatisé (flux RSS Google News, API YouTube Data v3, URLs manuelles). Articles de presse extraits avec <em>trafilatura</em>. Commentaires YouTube filtrés par pertinence lexicale. Triage semi-automatique avec seuils différenciés selon le type de document.</p>
+      <h3>Corpus construction</h3>
+      <p>953 documents collected between 2017 and 2023 through automated scraping (Google News RSS feeds, YouTube Data API v3, manual URLs). Press articles extracted with <em>trafilatura</em>. YouTube comments filtered by lexical relevance. Semi-automated triage with thresholds tailored to each document type.</p>
     </div>
 
     <div class="contexte-block">
-      <h3>Classification lexicale</h3>
-      <p>Chaque document est scoré sur 8 catégories de narratifs à partir d'un lexique construit manuellement. Le score correspond au nombre d'occurrences des termes caractéristiques. La catégorie avec le score le plus élevé est retenue comme narratif dominant. Cette méthode détecte des registres lexicaux, pas des intentions ni des nuances.</p>
+      <h3>Lexical classification</h3>
+      <p>Each document is scored across 8 narrative categories using a manually constructed lexicon. The score corresponds to the number of occurrences of characteristic terms. The category with the highest score is retained as the dominant narrative. This method detects lexical registers, not intent or nuance.</p>
     </div>
 
     <div class="contexte-block">
-      <h3>Limites importantes</h3>
-      <p>Les textes d'articles ne sont pas publiés (droit d'auteur). Le corpus surreprésente les sources en accès libre. La classification lexicale ne détecte pas l'ironie. Les commentaires YouTube sont filtrés par l'algorithme de la plateforme. Prototype v1 — résultats préliminaires.</p>
+      <h3>Key limitations</h3>
+      <p>Article texts are not published (copyright). The corpus over-represents freely accessible sources. Lexical classification does not detect irony. YouTube comments are filtered by the platform's algorithm. Prototype v1 — preliminary results.</p>
     </div>
 
     <div class="contexte-block">
-      <h3>Licence & citation</h3>
-      <p>Données : CC BY 4.0. Code : MIT.<br>
-      <em>Projet Mythodologie (2026). Corpus narratifs médiatiques — Affaire Valérie Bacot. GitHub.</em></p>
+      <h3>License & citation</h3>
+      <p>Data: CC BY 4.0. Code: MIT.<br>
+      <em>Mythodologie Project (2026). Media Narrative Corpus — Valérie Bacot Case. GitHub.</em></p>
     </div>
   </div>
 </div>
@@ -1418,44 +1418,44 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-llm" class="page">
   <div class="hero">
-    <p class="hero-eyebrow">Classification sémantique · Groq Llama-3.3-70b</p>
-    <h1>Analyse LLM des commentaires et tweets</h1>
-    <p class="hero-desc">860 documents classifiés par intelligence artificielle — comparaison avec la classification lexicale automatisée.</p>
+    <p class="hero-eyebrow">Semantic classification · Groq Llama-3.3-70b</p>
+    <h1>LLM analysis of comments and tweets</h1>
+    <p class="hero-desc">860 documents classified by artificial intelligence — compared against automated lexical classification.</p>
     <div class="hero-stats">
-      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-total">860</span><span class="hero-stat-l">Documents analysés</span></div>
-      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-comm">—</span><span class="hero-stat-l">Commentaires YT</span></div>
-      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-tw">—</span><span class="hero-stat-l">Tweets X</span></div>
-      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-conc">—</span><span class="hero-stat-l">Concordance LLM/Lex.</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-total">860</span><span class="hero-stat-l">Documents analyzed</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-comm">—</span><span class="hero-stat-l">YT comments</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-tw">—</span><span class="hero-stat-l">Tweets</span></div>
+      <div class="hero-stat"><span class="hero-stat-n" id="llm-stat-conc">—</span><span class="hero-stat-l">LLM/Lexical agreement</span></div>
     </div>
   </div>
 
   <div class="container">
-    <h2 class="section-title">Distribution par narratif (LLM)</h2>
-    <p class="section-subtitle">Catégorie dominante attribuée par Groq Llama-3.3-70b</p>
+    <h2 class="section-title">Distribution by narrative (LLM)</h2>
+    <p class="section-subtitle">Dominant category assigned by Groq Llama-3.3-70b</p>
     <div class="chart-wrap" style="height:320px;position:relative">
       <canvas id="chart-llm-dist"></canvas>
     </div>
 
-    <h2 class="section-title" style="margin-top:3rem">Lexical vs LLM — comparaison par catégorie</h2>
-    <p class="section-subtitle">Pour les 860 documents · nombre de documents par catégorie selon chaque méthode</p>
+    <h2 class="section-title" style="margin-top:3rem">Lexical vs. LLM — comparison by category</h2>
+    <p class="section-subtitle">Across the 860 documents · document count per category by each method</p>
     <div class="chart-wrap" style="height:360px;position:relative">
       <canvas id="chart-llm-compare"></canvas>
     </div>
 
-    <h2 class="section-title" style="margin-top:3rem">Documents analysés</h2>
-    <p class="section-subtitle">Badge de gauche = classification lexicale · badge de droite = LLM · ✓ concordance · ✗ divergence</p>
+    <h2 class="section-title" style="margin-top:3rem">Documents analyzed</h2>
+    <p class="section-subtitle">Left badge = lexical classification · right badge = LLM · ✓ match · ✗ mismatch</p>
     <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem;align-items:center">
-      <button class="hsf-btn active" onclick="setLLMFilter('type','all')" id="llm-f-all">Tous <span id="llm-fc-all"></span></button>
-      <button class="hsf-btn" onclick="setLLMFilter('type','commentaire')" id="llm-f-commentaire">Commentaires <span id="llm-fc-comm"></span></button>
+      <button class="hsf-btn active" onclick="setLLMFilter('type','all')" id="llm-f-all">All <span id="llm-fc-all"></span></button>
+      <button class="hsf-btn" onclick="setLLMFilter('type','commentaire')" id="llm-f-commentaire">Comments <span id="llm-fc-comm"></span></button>
       <button class="hsf-btn" onclick="setLLMFilter('type','tweet')" id="llm-f-tweet">Tweets <span id="llm-fc-tw"></span></button>
       <label style="display:flex;align-items:center;gap:.4rem;font-size:13px;margin-left:1.5rem;cursor:pointer;color:var(--encre)">
         <input type="checkbox" id="llm-discordance-only" onchange="renderLLMList()" style="accent-color:var(--accent);cursor:pointer">
-        Discordances uniquement
+        Discrepancies only
       </label>
     </div>
     <div id="llm-list"></div>
     <div id="llm-more" style="text-align:center;margin-top:1rem;display:none">
-      <button onclick="llmShowMore()" style="border:1px solid var(--accent);background:transparent;padding:.5rem 1.5rem;font-size:13px;cursor:pointer;font-family:var(--sans);color:var(--accent)">Afficher plus →</button>
+      <button onclick="llmShowMore()" style="border:1px solid var(--accent);background:transparent;padding:.5rem 1.5rem;font-size:13px;cursor:pointer;font-family:var(--sans);color:var(--accent)">Show more →</button>
     </div>
   </div>
 </div>
@@ -1464,15 +1464,15 @@
 // ─── DONNÉES ─────────────────────────────────────────────────────────────────
 
 const NARRATIFS = {
-  soutien_victime:        { label: 'Soutien à la victime',   desc: 'Compassion, validation du geste comme acte de survie.' },
-  remise_en_question:     { label: 'Remise en question',      desc: 'Doute sur les choix, évocation d\'alternatives.' },
-  legitime_defense:       { label: 'Légitime défense',        desc: 'Cadre juridique, précédent Jacqueline Sauvage.' },
-  discours_feministe:     { label: 'Discours féministe',      desc: 'Approche systémique — patriarcat, féminicide.' },
-  emprise_psychologique:  { label: 'Emprise psychologique',   desc: 'Mécanisme d\'emprise, contrôle coercitif.' },
-  silence_collectif:      { label: 'Silence collectif',       desc: '"Tout le monde savait" — entourage, institutions.' },
-  sensationnalisme:       { label: 'Sensationnalisme',        desc: 'Fait divers spectaculaire, true crime.' },
-  jugement_moral:         { label: 'Jugement moral',          desc: 'Légitimité de la peine, culpabilité morale.' },
-  non_classe:             { label: 'Non classé',              desc: 'Document non classifié.' },
+  soutien_victime:        { label: 'Support for the victim',   desc: 'Compassion, validating the act as survival.' },
+  remise_en_question:     { label: 'Questioning',      desc: 'Doubt about her choices, mention of alternatives.' },
+  legitime_defense:       { label: 'Self-defense',        desc: 'Legal framing, the Jacqueline Sauvage precedent.' },
+  discours_feministe:     { label: 'Feminist discourse',      desc: 'Systemic approach — patriarchy, femicide.' },
+  emprise_psychologique:  { label: 'Psychological hold',   desc: 'Mechanism of coercive control.' },
+  silence_collectif:      { label: 'Collective silence',       desc: '"Everyone knew" — those around her, institutions.' },
+  sensationnalisme:       { label: 'Sensationalism',        desc: 'Spectacular true-crime story.' },
+  jugement_moral:         { label: 'Moral judgment',          desc: 'Legitimacy of the sentence, moral guilt.' },
+  non_classe:             { label: 'Unclassified',              desc: 'Unclassified document.' },
 };
 
 const CATS = Object.keys(NARRATIFS).filter(k => k !== 'non_classe');
@@ -1588,6 +1588,15 @@ const LOCUTEUR_COLORS = {
   narrateur:     '#6b6560',
 };
 
+// Display labels for tone/polarity data keys (keys stay in French to match fetched data)
+const TONE_LABELS = {
+  positif: 'positive',
+  empathique: 'empathetic',
+  neutre: 'neutral',
+  hostile: 'hostile',
+  negatif: 'negative',
+};
+
 // ─── CHARGEMENT CSV ───────────────────────────────────────────────────────────
 
 function loadData() {
@@ -1609,7 +1618,7 @@ function loadData() {
     },
     error: function() {
       document.getElementById('corpus-list').innerHTML =
-        '<div class="empty">Fichier data/resultats_classification.csv introuvable.<br>Lance d\'abord : python generer_dataset_open.py</div>';
+        '<div class="empty">File data/resultats_classification.csv not found.<br>Run first: python generer_dataset_open.py</div>';
     }
   });
 }
@@ -1766,7 +1775,7 @@ function showHomeKeywords(cat) {
       const others = (KW_OVERLAP[m] || []).filter(n => n !== cat);
       if (others.length) {
         const tip = others.map(n => NARRATIFS[n]?.label || n).join(', ');
-        return `<span class="kw-chip shared" title="Aussi dans : ${escHtml(tip)}">${escHtml(m)}<span class="kw-shared-tip">↔ ${escHtml(tip)}</span></span>`;
+        return `<span class="kw-chip shared" title="Also in: ${escHtml(tip)}">${escHtml(m)}<span class="kw-shared-tip">↔ ${escHtml(tip)}</span></span>`;
       }
       return `<span class="kw-chip">${escHtml(m)}</span>`;
     }).join('');
@@ -1797,10 +1806,10 @@ function getHomeData() {
 }
 
 const HOME_SOURCE_LABELS = {
-  all: 'Tous les documents',
-  article: 'Articles de presse uniquement',
-  commentaire: 'Commentaires YouTube uniquement',
-  tweet: 'Tweets X uniquement'
+  all: 'All documents',
+  article: 'Press articles only',
+  commentaire: 'YouTube comments only',
+  tweet: 'Tweets only'
 };
 
 function setHomeSource(src) {
@@ -1808,9 +1817,9 @@ function setHomeSource(src) {
   document.querySelectorAll('.hsf-btn').forEach(b => {
     b.classList.toggle('active', b.dataset.src === src);
   });
-  const label = HOME_SOURCE_LABELS[src] || 'Tous les documents';
+  const label = HOME_SOURCE_LABELS[src] || 'All documents';
   document.getElementById('home-dist-subtitle').textContent =
-    label + ' · catégorie dominante · cliquez sur une catégorie pour explorer';
+    label + ' · dominant category · click a category to explore';
   _homeSelectedCat = null;
   document.getElementById('home-keywords-panel').style.display = 'none';
   renderHomeNarratifs();
@@ -1836,17 +1845,17 @@ function renderHomeChart() {
   if (HOME_SOURCE === 'all') {
     datasets = [
       {
-        label: 'Articles de presse',
+        label: 'Press articles',
         data: CATS.map(c => base.filter(d => d.categorie_dominante === c && d.type_doc === 'article').length),
         backgroundColor: '#2c4a6e',
       },
       {
-        label: 'Commentaires YouTube',
+        label: 'YouTube comments',
         data: CATS.map(c => base.filter(d => d.categorie_dominante === c && d.type_doc === 'commentaire').length),
         backgroundColor: '#c8c4be',
       },
       {
-        label: 'Tweets X',
+        label: 'Tweets',
         data: CATS.map(c => base.filter(d => d.categorie_dominante === c && d.type_doc === 'tweet').length),
         backgroundColor: '#1da1f2',
       }
@@ -1899,7 +1908,7 @@ function renderNaratifsPage() {
       <div class="narratif-label">${NARRATIFS[cat].label}</div>
       <div class="narratif-desc">${NARRATIFS[cat].desc}</div>
       <div class="narratif-bar-wrap"><div class="narratif-bar" style="width:${pct}%"></div></div>
-      <div class="narratif-count">${n} docs · ${art} articles · ${cmt} commentaires</div>
+      <div class="narratif-count">${n} docs · ${art} articles · ${cmt} comments</div>
     `;
     card.onclick = () => openNarratifDetail(cat);
     grid.appendChild(card);
@@ -1923,7 +1932,7 @@ function openNarratifDetail(cat) {
 
   document.getElementById('narratif-detail-label').textContent = NARRATIFS[cat].label;
   document.getElementById('narratif-detail-sub').textContent =
-    `${docs.length} documents · ${arts.length} articles · ${cmts.length} commentaires${twts.length ? ' · ' + twts.length + ' tweets' : ''}`;
+    `${docs.length} documents · ${arts.length} articles · ${cmts.length} comments${twts.length ? ' · ' + twts.length + ' tweets' : ''}`;
 
   const list = document.getElementById('narratif-detail-list');
   list.innerHTML = '';
@@ -1947,7 +1956,7 @@ function openNarratifDetail(cat) {
   });
 
   if (!shown.length) {
-    list.innerHTML = '<div class="empty">Aucun document pour ce narratif.</div>';
+    list.innerHTML = '<div class="empty">No documents for this narrative.</div>';
   }
 
   const panel = document.getElementById('narratif-detail-panel');
@@ -2092,7 +2101,7 @@ function renderCorpus() {
 
   const list = document.getElementById('corpus-list');
   if (!page.length) {
-    list.innerHTML = '<div class="empty">Aucun document ne correspond à ces filtres.</div>';
+    list.innerHTML = '<div class="empty">No documents match these filters.</div>';
     document.getElementById('corpus-pagination').innerHTML = '';
     return;
   }
@@ -2105,7 +2114,7 @@ function renderCorpus() {
     const [badgeClass, typeLabel] = docBadge(doc);
     const nNar = SCORE_KEYS.filter(k => parseFloat(doc['score_' + k]) > 0).length;
     const multiBadge = nNar >= 2
-      ? `<span class="multi-badge" title="${nNar} narratifs détectés">${nNar} narratifs</span>` : '';
+      ? `<span class="multi-badge" title="${nNar} narratives detected">${nNar} narratives</span>` : '';
     item.innerHTML = `
       <span class="doc-type-badge ${badgeClass}">${typeLabel}</span>
       <div>
@@ -2126,7 +2135,7 @@ function renderCorpus() {
 function docBadge(doc) {
   if (doc.type_doc === 'tweet')      return ['badge-tweet',   '🐦 Tweet'];
   if (doc.type_doc === 'article')    return ['badge-article', 'article'];
-  return ['badge-comment', 'commentaire'];
+  return ['badge-comment', 'comment'];
 }
 
 function docTitre(doc) {
@@ -2143,18 +2152,18 @@ function docMetaHTML(doc) {
   }
   return `<span>${date}</span>
           <span>${escHtml(doc.sitename || '—')}</span>
-          <span>${doc.word_count || '—'} mots</span>`;
+          <span>${doc.word_count || '—'} words</span>`;
 }
 
 function docExtraitHTML(doc) {
   if (doc.type_doc === 'tweet') {
     return escHtml(doc.texte || '') +
       (doc.url ? `<br><a href="${escHtml(doc.url)}" target="_blank"
-                    style="font-size:11px;color:#1da1f2;font-style:normal">→ Voir le tweet</a>` : '');
+                    style="font-size:11px;color:#1da1f2;font-style:normal">→ View tweet</a>` : '');
   }
   return escHtml((doc.titre || '').substring(0, 300)) +
     (doc.url ? `<br><a href="${escHtml(doc.url)}" target="_blank"
-                  style="font-size:11px;color:var(--bleu);font-style:normal">→ Source originale</a>` : '');
+                  style="font-size:11px;color:var(--bleu);font-style:normal">→ Original source</a>` : '');
 }
 
 function docScoresHTML(doc) {
@@ -2174,7 +2183,7 @@ function docScoresHTML(doc) {
       </div>
       <div class="score-row-val">${s.val}</div>
     </div>`).join('');
-  return `<div class="doc-scores"><div class="doc-scores-title">Scores narratifs</div>${rows}</div>`;
+  return `<div class="doc-scores"><div class="doc-scores-title">Narrative scores</div>${rows}</div>`;
 }
 
 function toggleExtrait(item, doc) {
@@ -2228,7 +2237,7 @@ function loadCitations() {
     })
     .catch(() => {
       document.getElementById('citations-container').innerHTML =
-        '<div class="empty">Fichier data/citations.json introuvable.<br>Lance : python generer_citations_json.py</div>';
+        '<div class="empty">File data/citations.json not found.<br>Run: python generer_citations_json.py</div>';
     });
 }
 
@@ -2275,7 +2284,7 @@ function renderCitations() {
     if (articles.length) {
       const sectionTitle = document.createElement('div');
       sectionTitle.style.cssText = 'font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:.8rem;margin-top:1.2rem';
-      sectionTitle.textContent = 'Presse & sources institutionnelles';
+      sectionTitle.textContent = 'Press & institutional sources';
       container.appendChild(sectionTitle);
 
       const artGrid = document.createElement('div');
@@ -2292,7 +2301,7 @@ function renderCitations() {
             <span style="font-weight:500;color:var(--encre)">${escHtml(cit.source || '—')}</span>
             <span>${cit.date || '—'}</span>
           </div>
-          ${cit.url ? `<div style="margin-top:.6rem"><a href="${escHtml(cit.url)}" target="_blank" style="font-size:11px;color:var(--bleu)">→ Source originale</a></div>` : ''}
+          ${cit.url ? `<div style="margin-top:.6rem"><a href="${escHtml(cit.url)}" target="_blank" style="font-size:11px;color:var(--bleu)">→ Original source</a></div>` : ''}
         `;
         artGrid.appendChild(card);
       });
@@ -2303,7 +2312,7 @@ function renderCitations() {
     if (commentaires.length) {
       const sectionTitle2 = document.createElement('div');
       sectionTitle2.style.cssText = 'font-size:11px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--gris);margin-bottom:.8rem;margin-top:1.2rem';
-      sectionTitle2.textContent = 'Voix populaires — commentaires YouTube';
+      sectionTitle2.textContent = 'Popular voices — YouTube comments';
       container.appendChild(sectionTitle2);
 
       const cmtGrid = document.createElement('div');
@@ -2334,7 +2343,7 @@ function renderCitations() {
   });
 
   if (!container.children.length) {
-    container.innerHTML = '<div class="empty">Aucune citation disponible.</div>';
+    container.innerHTML = '<div class="empty">No quotes available.</div>';
   }
 }
 
@@ -2347,7 +2356,7 @@ function doSearch() {
   const container = document.getElementById('search-results');
 
   if (!q) {
-    container.innerHTML = '<div class="empty">Entrez un terme pour lancer la recherche.</div>';
+    container.innerHTML = '<div class="empty">Enter a term to search.</div>';
     return;
   }
 
@@ -2370,12 +2379,12 @@ function doSearch() {
   });
 
   if (!results.length) {
-    container.innerHTML = `<div class="empty">Aucun résultat pour « ${escHtml(q)} ».</div>`;
+    container.innerHTML = `<div class="empty">No results for "${escHtml(q)}".</div>`;
     return;
   }
 
   const shown = results.slice(0, 50);
-  container.innerHTML = `<div style="font-size:13px;color:var(--gris);margin-bottom:1rem">${results.length} résultat${results.length>1?'s':''} pour « ${escHtml(q)} »${results.length>50?' (50 affichés)':''}</div>`;
+  container.innerHTML = `<div style="font-size:13px;color:var(--gris);margin-bottom:1rem">${results.length} result${results.length>1?'s':''} for "${escHtml(q)}"${results.length>50?' (50 shown)':''}</div>`;
 
   const list = document.createElement('div');
   list.className = 'docs-list';
@@ -2399,7 +2408,7 @@ function doSearch() {
     const srcLink = doc.url
       ? `<div style="margin-top:.4rem"><a href="${escHtml(doc.url)}" target="_blank"
            style="font-size:11px;color:${doc.type_doc === 'tweet' ? '#1da1f2' : 'var(--bleu)'}">
-           ${doc.type_doc === 'tweet' ? '→ Voir le tweet' : '→ Source originale'}</a></div>`
+           ${doc.type_doc === 'tweet' ? '→ View tweet' : '→ Original source'}</a></div>`
       : '';
 
     item.innerHTML = `
@@ -2451,21 +2460,21 @@ function loadRhetorique() {
   })
   .catch(() => {
     document.getElementById('rhet-container').innerHTML =
-      '<div class="empty">Fichiers introuvables.<br>Lance : python classifier_rhetorique_llm.py</div>';
+      '<div class="empty">Files not found.<br>Run: python classifier_rhetorique_llm.py</div>';
   });
 }
 
 // ── Couleurs et labels LLM ──
 
 const LLM_CATS = {
-  TEMOIGNAGE_SURVIE:      { label: 'Témoignage de survie',      couleur: '#2c4a6e', desc: 'Description directe des violences, de l\'emprise, de l\'absence d\'alternative' },
-  LEGITIMATION_JURIDIQUE: { label: 'Légitimation juridique',    couleur: '#4a6741', desc: 'Arguments sur le cadre légal, légitime défense différée, Jacqueline Sauvage' },
-  EMPRISE_EXPLIQUEE:      { label: 'Emprise expliquée',         couleur: '#8b3a2a', desc: 'Mécanisme d\'emprise, contrôle coercitif, syndrome traumatique' },
-  SILENCE_INSTITUTIONNEL: { label: 'Silence institutionnel',    couleur: '#5a4a3a', desc: 'Ce que l\'entourage et les institutions n\'ont pas fait' },
-  RENVERSEMENT_VICTIMAIRE:{ label: 'Renversement victimaire',   couleur: '#c0392b', desc: 'Moments où Valérie est implicitement questionnée comme responsable' },
-  POLITISATION:           { label: 'Politisation',              couleur: '#6c3483', desc: 'Féminisme, réforme du droit, enjeux de société' },
-  DIMENSION_EMOTIONNELLE: { label: 'Dimension émotionnelle',    couleur: '#1a6b8a', desc: 'Larmes, silence, honte, dignité — registre émotionnel pur' },
-  NARRATION_FACTUELLE:    { label: 'Narration factuelle',       couleur: '#6b6560', desc: 'Description neutre des faits, sans dimension argumentative' },
+  TEMOIGNAGE_SURVIE:      { label: 'Survival testimony',      couleur: '#2c4a6e', desc: 'Direct description of the abuse, the coercive control, the absence of alternatives' },
+  LEGITIMATION_JURIDIQUE: { label: 'Legal legitimation',    couleur: '#4a6741', desc: 'Arguments about the legal framework, deferred self-defense, Jacqueline Sauvage' },
+  EMPRISE_EXPLIQUEE:      { label: 'Coercive control explained',         couleur: '#8b3a2a', desc: 'Mechanism of control, coercive control, traumatic syndrome' },
+  SILENCE_INSTITUTIONNEL: { label: 'Institutional silence',    couleur: '#5a4a3a', desc: 'What those around her and the institutions failed to do' },
+  RENVERSEMENT_VICTIMAIRE:{ label: 'Victim-blaming reversal',   couleur: '#c0392b', desc: 'Moments where Valérie is implicitly questioned as responsible' },
+  POLITISATION:           { label: 'Politicization',              couleur: '#6c3483', desc: 'Feminism, legal reform, societal issues' },
+  DIMENSION_EMOTIONNELLE: { label: 'Emotional dimension',    couleur: '#1a6b8a', desc: 'Tears, silence, shame, dignity — purely emotional register' },
+  NARRATION_FACTUELLE:    { label: 'Factual narration',       couleur: '#6b6560', desc: 'Neutral description of facts, without argumentative dimension' },
 };
 
 function renderRhetSources() {
@@ -2484,12 +2493,12 @@ function renderRhetSources() {
       <p style="margin-bottom:.8rem;font-size:13px">${escHtml(src.desc || '')}</p>
       <div style="font-size:12px;color:var(--gris);display:flex;gap:1.2rem;flex-wrap:wrap;align-items:center">
         ${src.date ? `<span>${escHtml(src.date)}</span>` : ''}
-        ${src.mots ? `<span>${src.mots.toLocaleString()} mots</span>` : ''}
-        ${src.n_unites != null ? `<span style="font-weight:500;color:${accentColor}">${src.n_unites} unités</span>` : ''}
+        ${src.mots ? `<span>${src.mots.toLocaleString()} words</span>` : ''}
+        ${src.n_unites != null ? `<span style="font-weight:500;color:${accentColor}">${src.n_unites} units</span>` : ''}
         ${src.url
           ? `<a href="${escHtml(src.url)}" target="_blank" rel="noopener"
                style="margin-left:auto;color:${accentColor};text-decoration:none;border-bottom:1px dotted currentColor">
-               → Source originale
+               → Original source
              </a>`
           : ''}
       </div>
@@ -2535,7 +2544,7 @@ function renderRhetLLMStats() {
   // Note méthodologique
   const note = document.createElement('p');
   note.style.cssText = 'font-size:11px;color:var(--gris);margin-top:.8rem;font-style:italic';
-  note.textContent = `Classification par LLM (Llama 3.3 70B · Groq) sur ${total} unités argumentatives extraites de 2 documents primaires. Confiance moyenne : ~0.85.`;
+  note.textContent = `LLM classification (Llama 3.3 70B · Groq) on ${total} argumentative units extracted from 2 primary documents. Average confidence: ~0.85.`;
   container.appendChild(note);
 }
 
@@ -2545,7 +2554,7 @@ function renderKWIC() {
   container.innerHTML = '';
 
   if (!Object.keys(kwic).length) {
-    container.innerHTML = '<div class="empty">Données KWIC non disponibles.</div>';
+    container.innerHTML = '<div class="empty">KWIC data not available.</div>';
     return;
   }
 
@@ -2573,8 +2582,8 @@ function renderKWIC() {
       <div style="display:flex;gap:.5rem;flex-wrap:wrap">
         ${Object.entries(data.pourcentages || {})
           .filter(([k,v]) => v > 0 && k !== 'neutre')
-          .map(([k,v]) => `<span style="font-size:11px;padding:2px 8px;background:${escHtml(couleur)}22;color:${escHtml(couleur)};border:1px solid ${escHtml(couleur)}44">${escHtml(k)} ${v}%</span>`)
-          .join('') || '<span style="font-size:11px;color:var(--gris)">neutre 100%</span>'}
+          .map(([k,v]) => `<span style="font-size:11px;padding:2px 8px;background:${escHtml(couleur)}22;color:${escHtml(couleur)};border:1px solid ${escHtml(couleur)}44">${escHtml(TONE_LABELS[k]||k)} ${v}%</span>`)
+          .join('') || `<span style="font-size:11px;color:var(--gris)">${TONE_LABELS.neutre} 100%</span>`}
       </div>
       <span id="kwic-toggle-${mot_id}" style="font-size:18px;color:var(--gris);flex-shrink:0">＋</span>
     `;
@@ -2586,16 +2595,16 @@ function renderKWIC() {
 
     const occ = data.occurrences || [];
     if (occ.length) {
-      body.innerHTML = `<div style="font-size:11px;color:var(--gris);margin-bottom:.8rem">${occ.length} occurrence${occ.length>1?'s':''} dans les documents primaires</div>`;
+      body.innerHTML = `<div style="font-size:11px;color:var(--gris);margin-bottom:.8rem">${occ.length} occurrence${occ.length>1?'s':''} in the primary documents</div>`;
       occ.forEach(o => {
         const row = document.createElement('div');
         row.style.cssText = 'padding:.5rem 0;border-bottom:1px solid var(--fond2);font-size:12px;line-height:1.6;font-family:var(--serif)';
-        const srcLabel = o.source === 'jsl' ? '<span style="font-size:10px;color:var(--gris);font-style:normal;margin-right:.5rem">[Procès JSL]</span>' : '<span style="font-size:10px;color:var(--gris);font-style:normal;margin-right:.5rem">[Sénat]</span>';
+        const srcLabel = o.source === 'jsl' ? '<span style="font-size:10px;color:var(--gris);font-style:normal;margin-right:.5rem">[JSL Trial]</span>' : '<span style="font-size:10px;color:var(--gris);font-style:normal;margin-right:.5rem">[Senate]</span>';
         row.innerHTML = `${srcLabel}<span style="color:var(--gris)">${escHtml(o.contexte_gauche)}</span> <strong style="background:${escHtml(couleur)}33;padding:0 2px;color:${escHtml(couleur)}">${escHtml(o.terme)}</strong> <span style="color:var(--gris)">${escHtml(o.contexte_droite)}</span>`;
         body.appendChild(row);
       });
     } else {
-      body.innerHTML = '<p style="font-size:12px;color:var(--gris);font-style:italic">Aucune occurrence trouvée.</p>';
+      body.innerHTML = '<p style="font-size:12px;color:var(--gris);font-style:italic">No occurrences found.</p>';
     }
 
     // Toggle
@@ -2649,19 +2658,19 @@ function buildRhetFilters() {
   const noteEl = document.getElementById('rhet-note');
   if (noteEl) {
     const total = unites.length;
-    noteEl.textContent = `Classification par LLM (Llama 3.3 70B · Groq) sur ${total} unités argumentatives extraites de ${nSources} documents primaires.`;
+    noteEl.textContent = `LLM classification (Llama 3.3 70B · Groq) on ${total} argumentative units extracted from ${nSources} primary documents.`;
   }
 }
 
 function srcShortLabel(srcId, sources) {
   // Libellé court pour affichage dans filtre ou badge
   const FALLBACK = {
-    'jsl':     'Procès · JSL',
-    'senat':   'Audition Sénat',
-    'jsl_j1':  'JSL · Jour 1 (21/06)',
-    'jsl_j2':  'JSL · Jour 2 (22/06)',
-    'jsl_j3':  'JSL · Jour 3 (23/06)',
-    'jsl_verdict': 'JSL · Verdict (25/06)',
+    'jsl':     'Trial · JSL',
+    'senat':   'Senate Hearing',
+    'jsl_j1':  'JSL · Day 1 (06/21)',
+    'jsl_j2':  'JSL · Day 2 (06/22)',
+    'jsl_j3':  'JSL · Day 3 (06/23)',
+    'jsl_verdict': 'JSL · Verdict (06/25)',
   };
   const titre = sources[srcId]?.titre;
   if (titre) return titre.replace(/^Procès Valérie Bacot — /, '').replace(/\(JSL live\)/, '').trim();
@@ -2714,7 +2723,7 @@ function renderRhetorique() {
   const container = document.getElementById('rhet-container');
 
   if (!unites.length) {
-    container.innerHTML = '<div class="empty">Aucune unité ne correspond à ces filtres.</div>';
+    container.innerHTML = '<div class="empty">No units match these filters.</div>';
     return;
   }
 
@@ -2744,7 +2753,7 @@ function renderRhetorique() {
         <div style="display:flex;align-items:center;gap:.8rem;margin-bottom:.4rem">
           <div style="width:3px;height:1.2rem;background:${escHtml(info.couleur)};flex-shrink:0"></div>
           <span style="font-size:12px;font-weight:500;color:${escHtml(info.couleur)}">${escHtml(info.label)}</span>
-          <span style="font-size:11px;color:var(--gris);background:var(--fond2);padding:2px 8px;border:1px solid var(--gris-clair)">${items.length} unité${items.length>1?'s':''}</span>
+          <span style="font-size:11px;color:var(--gris);background:var(--fond2);padding:2px 8px;border:1px solid var(--gris-clair)">${items.length} unit${items.length>1?'s':''}</span>
         </div>
         <p style="font-size:12px;color:var(--gris);margin-bottom:.8rem;padding-left:1.1rem">${escHtml(info.desc)}</p>
       `;
@@ -2835,13 +2844,13 @@ function loadTweetGraphs() {
     })
     .catch(() => {
       document.getElementById('tw-loading').innerHTML =
-        '<div class="empty">data/graphiques_tweets.json introuvable.<br>Lance : python generer_graphiques_tweets.py</div>';
+        '<div class="empty">data/graphiques_tweets.json not found.<br>Run: python generer_graphiques_tweets.py</div>';
     });
 }
 
 // Peuple tous les selects narratif avec les options NARRATIFS
 function _populateNarSelects() {
-  const opts = '<option value="">Tous les narratifs</option>'
+  const opts = '<option value="">All narratives</option>'
     + CATS.map(k => `<option value="${k}">${NARRATIFS[k].label}</option>`).join('');
   ['t1-nar','t2-nar','t3-nar','t4-nar','c1-nar'].forEach(id => {
     const el = document.getElementById(id);
@@ -2888,7 +2897,7 @@ function _lineChart(canvasId, d, valueKey) {
       scales: {
         x: { ticks: { font: { size: 12 }, maxRotation: 45 } },
         y: { beginAtZero: true, ticks: { font: { size: 12 } },
-             title: { display: true, text: 'Nb tweets', font: { size: 12 } } }
+             title: { display: true, text: 'Number of tweets', font: { size: 12 } } }
       }
     }
   });
@@ -2944,7 +2953,7 @@ function renderT2() {
             font: { size: 12 },
             callback: v => mode === 'pct' ? v + '%' : v,
           },
-          title: { display: true, text: mode === 'pct' ? '% par période' : 'Nb tweets', font: { size: 12 } }
+          title: { display: true, text: mode === 'pct' ? '% per period' : 'Number of tweets', font: { size: 12 } }
         }
       }
     }
@@ -3011,16 +3020,16 @@ function renderT4() {
             label: ctx => {
               const b = d.bulles.find(b => b.label === ctx.dataset.label);
               if (!b) return ctx.dataset.label;
-              return [`${b.label}`, `${b.n} tweets (${b.pct}%)`, b.periode_dominante ? `Période : ${b.periode_dominante}` : ''];
+              return [`${b.label}`, `${b.n} tweets (${b.pct}%)`, b.periode_dominante ? `Period: ${b.periode_dominante}` : ''];
             }
           }
         }
       },
       scales: {
         x: { min: -1.2, max: 1.2, ticks: { font: { size: 12 } },
-             title: { display: true, text: '← Victime individuelle · Société / système →', font: { size: 12 } } },
+             title: { display: true, text: '← Individual victim · Society / system →', font: { size: 12 } } },
         y: { min: -1.2, max: 1.2, ticks: { font: { size: 12 } },
-             title: { display: true, text: '← Juridique / politique · Émotionnel →', font: { size: 12 } } }
+             title: { display: true, text: '← Legal / political · Emotional →', font: { size: 12 } } }
       }
     }
   });
@@ -3038,13 +3047,13 @@ function renderT5() {
       labels,
       datasets: [
         {
-          label: 'Pôle soutien (%)',
+          label: 'Support pole (%)',
           data: vals,
           borderColor: '#2c4a6e', backgroundColor: '#2c4a6e18',
           tension: 0.3, fill: true, pointRadius: 4, borderWidth: 2.5,
         },
         {
-          label: 'Ligne de base 50 %',
+          label: '50% baseline',
           data: labels.map(() => 50),
           borderColor: '#c0392b', borderDash: [5, 4],
           borderWidth: 2, pointRadius: 0, fill: false,
@@ -3057,7 +3066,7 @@ function renderT5() {
       scales: {
         x: { ticks: { font: { size: 12 }, maxRotation: 45 } },
         y: { min: 0, max: 100, ticks: { font: { size: 12 }, callback: v => v + '%' },
-             title: { display: true, text: '% soutien', font: { size: 12 } } }
+             title: { display: true, text: '% support', font: { size: 12 } } }
       }
     }
   });
@@ -3076,7 +3085,7 @@ function renderC1() {
       datasets: [
         { label: `Tweets (n=${d.n_tweets})`, data: donnees.map(r => r.pct_tweets),
           backgroundColor: '#2c4a6ecc', borderColor: '#2c4a6e', borderWidth: 1 },
-        { label: `Médias (n=${d.n_medias})`, data: donnees.map(r => r.pct_medias),
+        { label: `Media (n=${d.n_medias})`, data: donnees.map(r => r.pct_medias),
           backgroundColor: '#4a6741cc', borderColor: '#4a6741', borderWidth: 1 },
       ]
     },
@@ -3094,10 +3103,10 @@ function renderC1() {
 function renderC2() {
   const d = TWEET_GRAPH_DATA.c2_evolution_comparee;
   let html = '<table class="heatmap-table"><thead><tr>'
-    + '<th style="min-width:70px">Période</th>'
-    + '<th>Narratif tweets</th><th style="text-align:center;font-size:10px">N</th>'
-    + '<th>Narratif médias</th><th style="text-align:center;font-size:10px">N</th>'
-    + '<th style="text-align:center">Diverge</th>'
+    + '<th style="min-width:70px">Period</th>'
+    + '<th>Tweet narrative</th><th style="text-align:center;font-size:10px">N</th>'
+    + '<th>Media narrative</th><th style="text-align:center;font-size:10px">N</th>'
+    + '<th style="text-align:center">Diverges</th>'
     + '</tr></thead><tbody>';
   d.donnees.forEach(row => {
     const rowStyle = row.diverge ? 'background:#fff0ed' : '';
@@ -3173,7 +3182,7 @@ function loadGraphiques() {
     })
     .catch(() => {
       document.getElementById('graph-loading').innerHTML =
-        '<div class="empty">data/graphiques.json introuvable.<br>Lance : python generer_graphiques.py</div>';
+        '<div class="empty">data/graphiques.json not found.<br>Run: python generer_graphiques.py</div>';
     });
 }
 
@@ -3188,7 +3197,7 @@ function renderG1() {
       labels: d.donnees.map(r => r.label),
       datasets: [
         { label: 'Articles',     data: d.donnees.map(r => r.articles),     backgroundColor: d.donnees.map(r => r.couleur) },
-        { label: 'Commentaires', data: d.donnees.map(r => r.commentaires), backgroundColor: d.donnees.map(r => r.couleur + '66') }
+        { label: 'Comments', data: d.donnees.map(r => r.commentaires), backgroundColor: d.donnees.map(r => r.couleur + '66') }
       ]
     },
     options: {
@@ -3225,7 +3234,7 @@ function renderG2() {
       plugins: { legend: { position: 'bottom', labels: { font: { size: 11 }, padding: 16 } } },
       scales: {
         x: { ticks: { font: { size: 11 } } },
-        y: { title: { display: true, text: 'Score moyen', font: { size: 11 } }, beginAtZero: true }
+        y: { title: { display: true, text: 'Average score', font: { size: 11 } }, beginAtZero: true }
       }
     }
   });
@@ -3267,7 +3276,7 @@ function buildG4Datasets(mode) {
       key   = NARRATIFS[p.categorie]?.label || p.categorie || '—';
       color = NAR_COLORS[p.categorie] || '#999';
     } else {
-      key   = p.type_doc === 'article' ? 'Article presse' : 'Commentaire YouTube';
+      key   = p.type_doc === 'article' ? 'Press article' : 'YouTube comment';
       color = p.type_doc === 'article' ? '#2c4a6e' : '#c8a86e';
     }
     if (!groups[key]) groups[key] = { label: key, data: [], backgroundColor: color + 'a0', pointRadius: 3 };
@@ -3299,7 +3308,7 @@ function renderG4() {
             label: ctx2 => {
               const b = d.bulles.find(b => b.label === ctx2.dataset.label);
               if (!b) return ctx2.dataset.label;
-              return [`${b.label}`, `${b.n} docs (${b.pct}%)`, `Score moyen : ${b.score_moyen}`];
+              return [`${b.label}`, `${b.n} docs (${b.pct}%)`, `Average score: ${b.score_moyen}`];
             }
           }
         }
@@ -3340,7 +3349,7 @@ function renderG5() {
       },
       scales: {
         x: { ticks: { maxTicksLimit: 24, maxRotation: 45, minRotation: 30, font: { size: 11 } } },
-        y: { title: { display: true, text: 'Nombre de documents', font: { size: 12 } }, min: 0, ticks: { precision: 0 } }
+        y: { title: { display: true, text: 'Number of documents', font: { size: 12 } }, min: 0, ticks: { precision: 0 } }
       }
     }
   });
@@ -3370,11 +3379,11 @@ function detectPollutionFlags() {
 
     // Signal 1 : titre ne mentionne pas Bacot / Valérie
     if (titre.length > 0 && !titre.includes('bacot') && !titre.includes('valérie') && !titre.includes('valerie')) {
-      reasons.push({ code: 'titre_sans_bacot', label: 'Titre sans mention de Bacot' });
+      reasons.push({ code: 'titre_sans_bacot', label: 'Title does not mention Bacot' });
     }
     // Signal 2 : score nul malgré un contenu substantiel
     if (scoreTotal === 0 && wordCount > 50) {
-      reasons.push({ code: 'score_nul', label: 'Score de pertinence nul' });
+      reasons.push({ code: 'score_nul', label: 'Zero relevance score' });
     }
 
     if (reasons.length) POLLUTION_FLAGS.push({ doc, reasons });
@@ -3393,7 +3402,7 @@ function renderQualite() {
   const listEl = document.getElementById('qualite-list');
   if (!listEl) return;
   if (!RAW_DATA.length) {
-    listEl.innerHTML = '<div class="empty">Données non encore chargées.</div>';
+    listEl.innerHTML = '<div class="empty">Data not loaded yet.</div>';
     return;
   }
 
@@ -3407,7 +3416,7 @@ function renderQualite() {
     .filter(url => !flaggedUrls.has(url))
     .map(url => {
       const doc = RAW_DATA.find(d => d.url === url);
-      return doc ? { doc, reasons: [{ code: 'manuel', label: 'Supprimé manuellement' }] } : null;
+      return doc ? { doc, reasons: [{ code: 'manuel', label: 'Manually removed' }] } : null;
     })
     .filter(Boolean);
 
@@ -3420,10 +3429,10 @@ function renderQualite() {
   const resume = document.getElementById('qualite-resume');
   if (resume) {
     resume.innerHTML = [
-      { n: POLLUTION_FLAGS.length, label: 'Articles suspects',    color: '#d4a017' },
-      { n: QUAL_SUPPRESSED.size,   label: 'Supprimés du corpus',  color: '#c0392b' },
-      { n: QUAL_OK.size,           label: 'Validés manuellement', color: '#4a6741' },
-      { n: RAW_DATA.filter(d => d.type_doc === 'article').length, label: 'Articles au total', color: 'var(--gris)' },
+      { n: POLLUTION_FLAGS.length, label: 'Suspect articles',    color: '#d4a017' },
+      { n: QUAL_SUPPRESSED.size,   label: 'Removed from corpus',  color: '#c0392b' },
+      { n: QUAL_OK.size,           label: 'Manually validated', color: '#4a6741' },
+      { n: RAW_DATA.filter(d => d.type_doc === 'article').length, label: 'Total articles', color: 'var(--gris)' },
     ].map(s => `
       <div style="background:var(--blanc);padding:1rem 1.5rem;flex:1;min-width:100px;text-align:center">
         <span style="display:block;font-size:2rem;font-weight:700;color:${s.color};line-height:1;margin-bottom:.3rem">${s.n}</span>
@@ -3438,9 +3447,9 @@ function renderQualite() {
   else                               items = toReview;
 
   const msgs = {
-    flagged:    'Aucun article suspect à vérifier — corpus propre.',
-    suppressed: 'Aucun article supprimé.',
-    ok:         'Aucun article validé manuellement.',
+    flagged:    'No suspect articles to review — clean corpus.',
+    suppressed: 'No articles removed.',
+    ok:         'No manually validated articles.',
   };
   if (!items.length) {
     listEl.innerHTML = `<div class="empty">${msgs[QUALITE_TAB] || ''}</div>`;
@@ -3492,7 +3501,7 @@ function renderQualite() {
       a.href = doc.url;
       a.target = '_blank';
       a.style.cssText = 'font-size:11px;color:var(--bleu)';
-      a.textContent = '→ Source originale';
+      a.textContent = '→ Original source';
       linkDiv.appendChild(a);
       infoCol.appendChild(linkDiv);
     }
@@ -3504,31 +3513,31 @@ function renderQualite() {
     if (QUALITE_TAB === 'suppressed') {
       const btnR = document.createElement('button');
       btnR.className = 'btn-restaurer';
-      btnR.textContent = 'Restaurer ↩';
+      btnR.textContent = 'Restore ↩';
       btnR.onclick = () => { restaurerDoc(doc.url); renderQualite(); updateStats(); };
       actionsDiv.appendChild(btnR);
 
     } else if (QUALITE_TAB === 'ok') {
       const btnS2 = document.createElement('button');
       btnS2.className = 'btn-supprimer';
-      btnS2.textContent = 'Supprimer';
+      btnS2.textContent = 'Delete';
       btnS2.onclick = () => { QUAL_OK.delete(doc.url); supprimerDoc(doc.url); renderQualite(); updateStats(); };
       actionsDiv.appendChild(btnS2);
       const btnA = document.createElement('button');
       btnA.className = 'btn-restaurer';
-      btnA.textContent = 'Annuler ↩';
+      btnA.textContent = 'Cancel ↩';
       btnA.onclick = () => { QUAL_OK.delete(doc.url); _saveQual(); renderQualite(); };
       actionsDiv.appendChild(btnA);
 
     } else {
       const btnG = document.createElement('button');
       btnG.className = 'btn-garder';
-      btnG.textContent = 'Garder';
+      btnG.textContent = 'Keep';
       btnG.onclick = () => { garderDoc(doc.url); renderQualite(); };
       actionsDiv.appendChild(btnG);
       const btnS = document.createElement('button');
       btnS.className = 'btn-supprimer';
-      btnS.textContent = 'Supprimer';
+      btnS.textContent = 'Delete';
       btnS.onclick = () => { supprimerDoc(doc.url); renderQualite(); updateStats(); applyFilters(); };
       actionsDiv.appendChild(btnS);
     }
@@ -3569,7 +3578,7 @@ function garderDoc(url) {
 
 function exportSuppressed() {
   if (!QUAL_SUPPRESSED.size) {
-    alert('Aucun article supprimé à exporter.');
+    alert('No deleted articles to export.');
     return;
   }
   const lines = [...QUAL_SUPPRESSED].join('\n');
@@ -3582,7 +3591,7 @@ function exportSuppressed() {
 }
 
 function resetQualite() {
-  if (!confirm('Réinitialiser toutes les suppressions et validations manuelles ?')) return;
+  if (!confirm('Reset all manual deletions and validations?')) return;
   QUAL_SUPPRESSED.clear();
   QUAL_OK.clear();
   _saveQual();
@@ -3636,7 +3645,7 @@ function loadYoutubeComments() {
       YT_DATA = results.data.filter(r => r.narratif);
 
       // Peupler les selects narratif
-      const opts = '<option value="">Tous les narratifs</option>'
+      const opts = '<option value="">All narratives</option>'
         + CATS.map(k => `<option value="${k}">${NARRATIFS[k].label}</option>`).join('');
       ['yt2-nar', 'yt5-nar'].forEach(id => {
         const el = document.getElementById(id);
@@ -3655,7 +3664,7 @@ function loadYoutubeComments() {
     },
     error: function() {
       document.getElementById('yt-loading').innerHTML =
-        '<div class="empty">data/resultats_commentaires_youtube.csv introuvable.<br>Lance : python analyser_commentaires_youtube.py</div>';
+        '<div class="empty">data/resultats_commentaires_youtube.csv not found.<br>Run: python analyser_commentaires_youtube.py</div>';
     }
   });
 }
@@ -3668,11 +3677,11 @@ function renderYT0() {
   const chaines = new Set(YT_DATA.map(d => d.chaine).filter(Boolean)).size;
   const likesMed = _median(YT_DATA.map(d => parseFloat(d.likes)||0).sort((a,b) => a-b));
   const items = [
-    { n: total.toLocaleString('fr'), l: 'commentaires' },
-    { n: videos, l: 'vidéos' },
-    { n: chaines, l: 'chaînes' },
-    { n: classe.toLocaleString('fr'), l: 'avec narratif' },
-    { n: likesMed, l: 'likes (médiane)' },
+    { n: total.toLocaleString('fr'), l: 'comments' },
+    { n: videos, l: 'videos' },
+    { n: chaines, l: 'channels' },
+    { n: classe.toLocaleString('fr'), l: 'with narrative' },
+    { n: likesMed, l: 'likes (median)' },
   ];
   document.getElementById('yt-metrics').innerHTML = items.map(it =>
     `<div style="background:var(--blanc);border:1px solid var(--gris-clair);border-radius:6px;padding:1rem;text-align:center">
@@ -3799,7 +3808,7 @@ function renderYT2() {
         chart.ctx.stroke();
         chart.ctx.fillStyle = '#c0392b';
         chart.ctx.font = '10px system-ui';
-        chart.ctx.fillText(m === '2021-06' ? 'Procès' : 'Verdict', x + 4, top + 14);
+        chart.ctx.fillText(m === '2021-06' ? 'Trial' : 'Verdict', x + 4, top + 14);
         chart.ctx.restore();
       });
     }
@@ -3815,7 +3824,7 @@ function renderYT2() {
       scales: {
         x: { ticks: { font: { size: 10 }, maxRotation: 45, autoSkip: true, maxTicksLimit: 24 }, grid: { color: '#eee' } },
         y: { grid: { color: '#eee' }, ticks: { font: { size: 11 } },
-             title: { display: true, text: mode === 'pct' ? '%' : 'commentaires/mois', font: { size: 10 } },
+             title: { display: true, text: mode === 'pct' ? '%' : 'comments/month', font: { size: 10 } },
              stacked: !narFil }
       },
     },
@@ -3835,7 +3844,7 @@ function renderYT3() {
   CHARTS_YT['yt3-donut'] = new Chart(ctx1, {
     type: 'doughnut',
     data: {
-      labels: YT_POLS,
+      labels: YT_POLS.map(p => TONE_LABELS[p] || p),
       datasets: [{ data: YT_POLS.map(p => polCounts[p]),
         backgroundColor: YT_POLS.map(p => YT_POL_COLORS[p]),
         borderWidth: 2, borderColor: '#fff' }]
@@ -3863,7 +3872,7 @@ function renderYT3() {
     data: {
       labels: narLabels,
       datasets: YT_POLS.map(pol => ({
-        label: pol,
+        label: TONE_LABELS[pol] || pol,
         data: CATS.map((c, i) => narTotals[i] ? +(narPolMap[c][pol] / narTotals[i] * 100).toFixed(1) : 0),
         backgroundColor: YT_POL_COLORS[pol] + 'cc',
         borderColor:     YT_POL_COLORS[pol],
@@ -3910,9 +3919,9 @@ function renderYT4() {
     options: {
       indexAxis: 'y', responsive: true, maintainAspectRatio: false,
       plugins: { legend: { display: false },
-        tooltip: { callbacks: { label: ctx => `${ctx.raw} likes en moyenne` } } },
+        tooltip: { callbacks: { label: ctx => `${ctx.raw} average likes` } } },
       scales: {
-        x: { grid: { color: '#eee' }, ticks: { font: { size: 11 } }, title: { display: true, text: 'likes moyens / commentaire', font: { size: 10 } } },
+        x: { grid: { color: '#eee' }, ticks: { font: { size: 11 } }, title: { display: true, text: 'average likes / comment', font: { size: 10 } } },
         y: { ticks: { font: { size: 11 } } }
       }
     }
@@ -3932,7 +3941,7 @@ function renderYT5() {
 
   const list = document.getElementById('yt5-list');
   if (!filtered.length) {
-    list.innerHTML = '<div class="empty">Aucun commentaire pour ces filtres.</div>';
+    list.innerHTML = '<div class="empty">No comments match these filters.</div>';
     return;
   }
 
@@ -3948,7 +3957,7 @@ function renderYT5() {
     return `<div style="border:1px solid var(--gris-clair);border-radius:6px;padding:1rem;margin-bottom:.8rem;background:var(--blanc)">
       <div style="display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:.6rem;align-items:center">
         <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${color};color:#fff">${NARRATIFS[nar]?.label||nar}</span>
-        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${polColor}22;color:${polColor};border:1px solid ${polColor}55">${pol}</span>
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${polColor}22;color:${polColor};border:1px solid ${polColor}55">${TONE_LABELS[pol] || pol}</span>
         <span style="font-size:11px;color:var(--gris);margin-left:auto">${chaine} · ${date} · <strong>${likes.toLocaleString('fr')}</strong> likes</span>
       </div>
       <p style="font-size:14px;line-height:1.6;color:var(--encre);font-style:italic">"${texte}${d.texte?.length>400?'…':''}"</p>
@@ -3967,13 +3976,13 @@ const LLM_PAGE_SIZE = 30;
 
 async function loadLLMData() {
   const list = document.getElementById('llm-list');
-  list.innerHTML = '<div class="empty">Chargement…</div>';
+  list.innerHTML = '<div class="empty">Loading…</div>';
   try {
     const resp = await fetch('data/corpus_llm_resultats.json');
     LLM_DATA = await resp.json();
     renderLLM();
   } catch(e) {
-    list.innerHTML = '<div class="empty">Erreur de chargement (data/corpus_llm_resultats.json introuvable).</div>';
+    list.innerHTML = '<div class="empty">Loading error (data/corpus_llm_resultats.json not found).</div>';
   }
 }
 
@@ -4091,7 +4100,7 @@ function _llmRenderCards(filtered, append) {
   const moreBtn = document.getElementById('llm-more');
   if (!append) list.innerHTML = '';
   if (!filtered.length) {
-    list.innerHTML = '<div class="empty">Aucun document pour ce filtre.</div>';
+    list.innerHTML = '<div class="empty">No documents match this filter.</div>';
     moreBtn.style.display = 'none';
     return;
   }
@@ -4106,9 +4115,9 @@ function _llmRenderCards(filtered, append) {
     const texte   = escHtml((d.texte || '').slice(0, 260));
     return `<div style="border:1px solid ${match ? 'var(--gris-clair)' : '#f1764e66'};border-radius:6px;padding:1rem;margin-bottom:.7rem;background:var(--blanc)">
       <div style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.5rem;align-items:center">
-        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${cLex};color:#fff" title="Classification lexicale">${NARRATIFS[lex]?.label||lex}</span>
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${cLex};color:#fff" title="Lexical classification">${NARRATIFS[lex]?.label||lex}</span>
         <span style="font-size:11px;color:var(--gris)">→ LLM :</span>
-        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${cLLM};color:#fff" title="Classification LLM">${NARRATIFS[llm]?.label||llm}</span>
+        <span style="font-size:11px;font-weight:600;padding:2px 8px;border-radius:20px;background:${cLLM};color:#fff" title="LLM classification">${NARRATIFS[llm]?.label||llm}</span>
         <span style="font-size:13px;margin-left:.2rem;color:${match?'#27ae60':'#e74c3c'}">${match?'✓':'✗'}</span>
         <span style="font-size:11px;color:var(--gris);margin-left:auto">${typeLbl} · ${site}</span>
       </div>

@@ -190,6 +190,16 @@ def read_root():
     return FileResponse(os.path.join(os.path.dirname(__file__), "index.html"))
 
 
+@app.get("/readme", tags=["Info"])
+def get_readme():
+    """Télécharge le README.md du projet (documentation complète)."""
+    return FileResponse(
+        str(PROJECT_DIR / "README.md"),
+        media_type="text/markdown",
+        filename="README.md",
+    )
+
+
 # ── Info API ──────────────────────────────────────────────────────────────────
 
 @app.get("/info", tags=["Info"])

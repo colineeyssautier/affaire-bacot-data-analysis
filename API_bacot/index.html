@@ -680,6 +680,42 @@
     line-height: 1.8;
   }
 
+  .contexte-block table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    margin-top: 0.8rem;
+  }
+
+  .contexte-block th, .contexte-block td {
+    border: 1px solid var(--gris-clair);
+    padding: 0.5rem 0.7rem;
+    text-align: left;
+    vertical-align: top;
+  }
+
+  .contexte-block th {
+    background: var(--fond2);
+    font-weight: 500;
+    color: var(--noir);
+  }
+
+  .btn-readme {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: var(--accent);
+    color: var(--blanc);
+    border: none;
+    padding: 0.7rem 1.4rem;
+    font-size: 13px;
+    letter-spacing: .03em;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+  }
+
+  .btn-readme:hover { background: var(--noir); }
+
   /* ── LOADING ── */
   .loading {
     text-align: center;
@@ -868,7 +904,7 @@
     <li><a href="#" onclick="showPage('recherche')" id="nav-recherche">Search</a></li>
     <li><a href="#" onclick="showPage('rhetorique')" id="nav-rhetorique">Rhetoric</a></li>
     <li><a href="#" onclick="showPage('qualite')" id="nav-qualite">Quality<span class="nav-sub">pollution check</span></a></li>
-    <li><a href="#" onclick="showPage('contexte')" id="nav-contexte">Background</a></li>
+    <li><a href="#" onclick="showPage('contexte')" id="nav-contexte">Readme</a></li>
   </ul>
 </nav>
 
@@ -1382,32 +1418,90 @@
 <!-- ═══════════════════════════════════════════════════════════════ -->
 <div id="page-contexte" class="page">
   <div class="container-narrow">
-    <h2 class="section-title">Background & methodology</h2>
-    <p class="section-subtitle">Mythodologie Project · Abridged technical note</p>
+    <h2 class="section-title">Readme</h2>
+    <p class="section-subtitle">Affaire Bacot — Media Corpus & Analysis API · Full project documentation</p>
+
+    <a class="btn-readme" href="/readme" download="README.md">⬇ Download README.md</a>
+
+    <div class="contexte-block">
+      <h3>About this project</h3>
+      <p>A Python data pipeline that collects, cleans, classifies, and serves a corpus of <strong>21,087 media documents</strong> (390 press articles + 17,797 YouTube comments + 2,900 tweets) related to the <em>Valérie Bacot</em> criminal case (France, 2021). Built as a complete backend project: multi-source scraping → semi-automated curation → dual-track classification (lexical + LLM) → SQLite storage → async REST API → interactive dashboard.</p>
+    </div>
 
     <div class="contexte-block">
       <h3>The Valérie Bacot case</h3>
-      <p>Valérie Bacot was the victim, for more than twenty-five years, of rape, physical violence, and forced prostitution at the hands of Daniel Polette, her stepfather turned husband. In December 2012, she killed him with a gunshot to the back of the neck. Tried in June 2021 before the Assize Court of Saône-et-Loire, she was sentenced to 4 years in prison, 3 of them suspended — and was released the same day. In September 2021, she published <em>Tout le monde savait</em> ("Everyone knew", Fayard). In November 2021, she testified before the French Senate's delegation for women's rights.</p>
+      <p>Valérie Bacot was tried in June 2021 for the 2012 killing of her husband Daniel Polette, who had sexually abused her since she was 12 and later forced her into prostitution. After 25 years under his control, she shot him and buried his body in the woods. Her trial became a national event in France, prompting a petition with over 600,000 signatures and intense media debate on the limits of self-defense law (<em>légitime défense différée</em>), psychological coercion (<em>emprise</em>) as a mitigating factor, institutional silence, and the feminist framing of femicide and gender-based violence. The corpus (2017–2023) tracks how press articles, YouTube comments, and tweets framed the case across these axes. She received a suspended sentence, published a memoir (<em>Tout le monde savait</em>, 2021), and became an advocate for victims of domestic violence.</p>
     </div>
 
     <div class="contexte-block">
-      <h3>Corpus construction</h3>
-      <p>953 documents collected between 2017 and 2023 through automated scraping (Google News RSS feeds, YouTube Data API v3, manual URLs). Press articles extracted with <em>trafilatura</em>. YouTube comments filtered by lexical relevance. Semi-automated triage with thresholds tailored to each document type.</p>
+      <h3>Tech stack</h3>
+      <table>
+        <thead><tr><th>Layer</th><th>Technology</th></tr></thead>
+        <tbody>
+          <tr><td>API</td><td>FastAPI 0.115, Uvicorn 0.30</td></tr>
+          <tr><td>ORM / DB</td><td>SQLAlchemy 2.0 (async), aiosqlite 0.20, SQLite</td></tr>
+          <tr><td>Scraping</td><td>trafilatura, feedparser, gnews, googlenewsdecoder, yt-dlp, playwright</td></tr>
+          <tr><td>Data processing</td><td>pandas, scikit-learn, scipy, numpy, nltk</td></tr>
+          <tr><td>Visualization</td><td>Streamlit, Plotly, matplotlib, seaborn, wordcloud</td></tr>
+          <tr><td>LLM classification</td><td>Groq API (llama-3.3-70b-versatile)</td></tr>
+          <tr><td>Language</td><td>Python 3.10+</td></tr>
+        </tbody>
+      </table>
     </div>
 
     <div class="contexte-block">
-      <h3>Lexical classification</h3>
-      <p>Each document is scored across 8 narrative categories using a manually constructed lexicon. The score corresponds to the number of occurrences of characteristic terms. The category with the highest score is retained as the dominant narrative. This method detects lexical registers, not intent or nuance.</p>
+      <h3>Data pipeline</h3>
+      <p>
+        1. <strong>Multi-source URL collection</strong> — 8 independent scrapers (Google News RSS, GNews, Bing, direct newspaper scraping, manual curation, Wayback Machine).<br>
+        2. <strong>Content extraction</strong> — trafilatura strips boilerplate and extracts structured text + metadata.<br>
+        3. <strong>YouTube comments</strong> — yt-dlp + YouTube Data API v3, 17,797 comments collected.<br>
+        4. <strong>Semi-automated curation</strong> — CLI review workflow with word-count thresholds, domain blocklist, and keyword relevance checks.<br>
+        5. <strong>Lexical classification & clustering</strong> — 8-category keyword scoring + TF-IDF vectorization + K-Means clustering (k=6).<br>
+        6. <strong>LLM classification</strong> — Groq API classifies the full comments/tweets corpus (checkpointed, key-rotated across free-tier accounts), compared against the lexical track.<br>
+        7. <strong>Rhetorical analysis</strong> — segmentation + LLM annotation of primary sources (trial transcripts, Senate hearings) with keyword-in-context (KWIC) extraction.<br>
+        8. <strong>YouTube comment analysis</strong> — temporal, sentiment, clustering, and engagement analysis specific to the comment corpus.<br>
+        9. <strong>Database initialization</strong> — SQLAlchemy rebuilds <code>bacot.db</code> from the latest classification outputs.<br>
+        10. <strong>Automated pipeline</strong> — chains steps 5–6, 8–9 and runs unattended every 12h via Windows Task Scheduler.
+      </p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>Narrative lexicon</h3>
+      <p>Each document is scored against 8 manually built keyword lexicons; the highest-scoring category becomes its dominant narrative. This method detects lexical registers, not intent or nuance.</p>
+      <table>
+        <thead><tr><th>Category</th><th>Intent</th></tr></thead>
+        <tbody>
+          <tr><td>Soutien à la victime</td><td>Compassion, validation of self-defense as survival</td></tr>
+          <tr><td>Remise en question</td><td>Moral doubt, exploration of alternatives, possible condemnation</td></tr>
+          <tr><td>Légitime défense</td><td>Legal discourse, precedent law, reform advocacy</td></tr>
+          <tr><td>Discours féministe</td><td>Systemic analysis of gender-based violence</td></tr>
+          <tr><td>Emprise psychologique</td><td>Mechanisms of coercion and psychological control</td></tr>
+          <tr><td>Silence collectif</td><td>Institutional and social complicity</td></tr>
+          <tr><td>Sensationnalisme</td><td>Spectacle-driven coverage without critical lens</td></tr>
+          <tr><td>Jugement moral</td><td>Moral evaluation, verdict framing, legality judgment</td></tr>
+        </tbody>
+      </table>
+      <p style="margin-top:0.8rem">Full lexicon exposed at <code>GET /lexique</code>.</p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>API & database</h3>
+      <p>An async FastAPI serves the corpus from a SQLite database (3 tables: <code>documents</code>, <code>clusters</code>, <code>narratifs</code>) through filterable, paginated endpoints — document listing, full-text search, live classification (<code>POST /classify</code>), and aggregate statistics on narratives, clusters, sources, and temporal evolution. Interactive documentation: <a href="/docs" target="_blank" rel="noopener">/docs</a> (Swagger UI).</p>
+    </div>
+
+    <div class="contexte-block">
+      <h3>Open dataset</h3>
+      <p>Published under <strong>CC BY 4.0</strong>: metadata for all 21,087 documents, full YouTube comment text, complete classification results, the narrative lexicon, representative citations, and KWIC extractions. Press article <strong>texts are not included</strong> for copyright reasons — only URLs and metadata are published. Comment texts are included, as user-generated content.</p>
     </div>
 
     <div class="contexte-block">
       <h3>Key limitations</h3>
-      <p>Article texts are not published (copyright). The corpus over-represents freely accessible sources. Lexical classification does not detect irony. YouTube comments are filtered by the platform's algorithm. Prototype v1 — preliminary results.</p>
+      <p>Article texts are not published (copyright). The corpus over-represents freely accessible sources. Lexical classification does not detect irony or nuance. YouTube comments are filtered by the platform's algorithm. The lexical and LLM tracks are compared via a concordance rate, exposed at <code>GET /stats/narratifs_llm</code>.</p>
     </div>
 
     <div class="contexte-block">
       <h3>License & citation</h3>
-      <p>Data: CC BY 4.0. Code: MIT.<br>
+      <p>Data: <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a>. Code: <a href="https://opensource.org/licenses/MIT" target="_blank" rel="noopener">MIT</a>.<br>
       <em>Mythodologie Project (2026). Media Narrative Corpus — Valérie Bacot Case. GitHub.</em></p>
     </div>
   </div>

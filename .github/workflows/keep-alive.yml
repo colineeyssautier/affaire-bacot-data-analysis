@@ -12,4 +12,4 @@ jobs:
     steps:
       - name: Ping bacot-corpus
         run: |
-          curl -sS -o /dev/null -w "Status: %{http_code}\n" https://bacot-corpus.onrender.com
+          curl -sS -o /dev/null -w "Status: %{http_code}\n" https://corpus-bacot.onrender.com/
